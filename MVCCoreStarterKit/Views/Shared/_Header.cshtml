@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using MVCCoreStarterKit.Areas.Identity.Model
+@inject SignInManager<IzendaUser> SignInManager
+<li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link text-dark" })</li>
+<li>@Html.ActionLink("ReadMe", "ReadMe", "Home", null, new { @class = "nav-link text-dark" })</li>
+<li>@Html.ActionLink("API", "API", "Home", null, new { @class = "nav-link text-dark" })</li>
+@if (SignInManager.IsSignedIn(User))
+{
+    <li>@Html.ActionLink("Izenda", "Izenda", "Home", null, new { @class = "nav-link text-dark" })</li>
+    <li>@Html.ActionLink("Settings", "Settings", "Home", null, new { @class = "nav-link text-dark" })</li>
+    <li>@Html.ActionLink("Mixed Parts", "MixedParts", "Home", null, new { @class = "nav-link text-dark" })</li>
+
+    @* Reports *@
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">
+            Reports
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("New Report", "ReportDesigner", "Home", null, new { @class = "nav-link text-dark" })</li>
+            <li>@Html.ActionLink("Report List", "Reports", "Home", null, new { @class = "nav-link text-dark" })</li>
+            @* Add to report Viewer to Demo, hardcode Report ID to link user to a specific report - please update the report id with one created in your enviroment*@
+            <li>@Html.ActionLink("Report Viewer", "ReportViewer", "Report", new { id = "[your report id]" }, new { @class = "nav-link text-dark" })</li>
+            <li>@Html.ActionLink("Report Parts", "ReportParts", "Report", null, new { @class = "nav-link text-dark" })</li>
+        </ul>
+    </li>
+
+    @* Dashboards *@
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">
+            Dashboards
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("New Dashboard", "DashboardDesigner", "Home", null, new { @class = "nav-link text-dark" })</li>
+            <li>@Html.ActionLink("Dashboard List", "Dashboards", "Home", null, new { @class = "nav-link text-dark" })</li>
+            @* Add to report Viewer to Demo, hardcode Report ID to link user to a specific report - please update the report id with one created in your enviroment*@
+            <li>@Html.ActionLink("Dashboard Viewer", "DashboardViewer", "Dashboard", new { id = "[your dashboard id]" }, new { @class = "nav-link text-dark" })</li>
+        </ul>
+    </li>
+}

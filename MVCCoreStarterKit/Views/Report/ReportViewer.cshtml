@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Report Viewer";
+}
+@section scripts
+    {
+    <script type="text/javascript">
+    $(document).ready(function () {
+        var overridingFilterQueries = JSON.parse('@Html.Raw(System.Net.WebUtility.HtmlDecode(ViewBag.overridingFilterQueries))');
+        izendaInitReportViewer('@ViewBag.Id', {
+          overridingFilterValue: overridingFilterQueries
+        }
+      );
+    });
+    </script>
+}
+<div class="loader" id="progressLoader"> </div>
+<div class="izenda-container" id="izenda-root"></div>

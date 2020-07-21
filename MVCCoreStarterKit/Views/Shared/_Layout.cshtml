@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVCCoreStarterKit</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/izenda_visualizations.css" rel="stylesheet" />
+    @* Apply css based on the users tenant *@
+    <link href="~/js/izenda/izenda-ui.css" rel="stylesheet" />
+
+    @*Add Custom CSS based on the tenantId and path set in izendaCssPath above *@
+    <link href=@ViewBag.izendaCssPath rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("MVCCore StarterKit", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="nav navbar-nav">
+                        <partial name="_Header" />
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <footer>
+            <partial name="_CopyRight" />
+        </footer>
+    </div>
+    <script rel="preload" src="~/js/jquery-1.10.2.min.js"></script>
+    <script rel="preload" src="~/js/bootstrap.min.js"></script>
+    <script rel="preload" src="~/js/site.js" asp-append-version="true"></script>
+    <script rel="preload" src="~/js/alertify.js"></script>
+    <script rel="prefetch" src="~/js/izenda/izenda_common.js"></script>
+    <script rel="prefetch" src="~/js/izenda/izenda_locales.js"></script>
+    <script rel="prefetch" src="~/js/izenda/izenda_vendors.js"></script>
+    <script rel="prefetch" src="~/js/izenda/izenda_ui.js"></script>
+    <script rel="prefetch" src="~/js/izenda.integrate.js"></script>
+    <script rel="prefetch" src="~/js/izenda.utils.js"></script>
+    <script rel="prefetch" src="~/js/izenda_visualizations.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            DoIzendaConfig();
+            $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="dropdown"]').dropdown();
+            $("#reportPartLoader").hide();
+            $("#reportPartLoaderText").hide();
+        });
+    </script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

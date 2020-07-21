@@ -1,0 +1,393 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.2</TargetFrameworks>
+    <UserSecretsId>aspnet-MVCCoreStarterKit-D8F50BF2-7640-4165-9F4E-BD414DD7DE71</UserSecretsId>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\**" />
+    <Content Remove="Data\Migrations\**" />
+    <EmbeddedResource Remove="Data\Migrations\**" />
+    <None Remove="Data\Migrations\**" />
+  </ItemGroup>
+  
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.60.6" />
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="MethodBoundaryAspect.Fody" Version="2.0.113" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Quartz" Version="3.0.7" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="4.5.0" />
+    <PackageReference Include="System.Composition" Version="1.0.31" />
+    <PackageReference Include="System.Composition.Hosting" Version="1.0.31" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Owin" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="2.2.10" />
+    <PackageReference Include="Nancy" Version="2.0.0-clinteastwood" />
+    <PackageReference Include="System.Composition.TypedParts" Version="1.0.31" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="IzendaBoundary\" />
+    <Folder Include="logs\" />
+    <Folder Include="IzendaReferences\" />
+    <Folder Include="wwwroot\css\Content\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="IzendaResources\Resources\CustomFunctionSample.config" />
+    <None Include="wwwroot\js\izenda\assets\fontello.svg" />
+    <None Include="wwwroot\js\izenda\assets\fontello.woff2" />
+    <None Include="wwwroot\js\izenda\assets\izenda-graphic-logo.svg" />
+    <None Include="wwwroot\js\izenda\assets\Proxima-Bold.svg" />
+    <None Include="wwwroot\js\izenda\assets\Proxima-Bold.woff2" />
+    <None Include="wwwroot\js\izenda\assets\Proxima-Regular.svg" />
+    <None Include="wwwroot\js\izenda\assets\Proxima-Regular.woff2" />
+    <None Include="wwwroot\js\izenda\assets\Proxima-Semibold.svg" />
+    <None Include="wwwroot\js\izenda\assets\Proxima-Semibold.woff2" />
+    <None Include="wwwroot\js\izenda\assets\Roboto-Bold.svg" />
+    <None Include="wwwroot\js\izenda\assets\Roboto-Bold.woff2" />
+    <None Include="wwwroot\js\izenda\assets\Roboto-Medium.svg" />
+    <None Include="wwwroot\js\izenda\assets\Roboto-Medium.woff2" />
+    <None Include="wwwroot\js\izenda\assets\Roboto-Regular.svg" />
+    <None Include="wwwroot\js\izenda\assets\Roboto-Regular.woff2" />
+    <None Include="wwwroot\js\izenda\plugins\advlist\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\advlist\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\advlist\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\anchor\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\anchor\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\anchor\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\autolink\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\autolink\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\autolink\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\autoresize\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\autoresize\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\autoresize\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\autosave\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\autosave\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\autosave\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\bbcode\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\bbcode\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\bbcode\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\charmap\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\charmap\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\charmap\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\codesample\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\codesample\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\codesample\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\code\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\code\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\code\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\colorpicker\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\colorpicker\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\colorpicker\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\contextmenu\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\contextmenu\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\contextmenu\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\directionality\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\directionality\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\directionality\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\emoticons\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\emoticons\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\emoticons\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\fullpage\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\fullpage\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\fullpage\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\fullscreen\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\fullscreen\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\fullscreen\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\hr\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\hr\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\hr\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\imagetools\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\imagetools\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\imagetools\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\image\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\image\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\image\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\importcss\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\importcss\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\importcss\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\insertdatetime\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\insertdatetime\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\insertdatetime\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\legacyoutput\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\legacyoutput\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\legacyoutput\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\link\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\link\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\link\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\lists\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\lists\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\lists\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\media\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\media\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\media\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\nonbreaking\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\nonbreaking\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\nonbreaking\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\noneditable\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\noneditable\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\noneditable\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\pagebreak\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\pagebreak\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\pagebreak\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\paste\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\paste\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\paste\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\preview\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\preview\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\preview\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\print\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\print\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\print\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\save\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\save\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\save\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\searchreplace\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\searchreplace\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\searchreplace\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\spellchecker\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\spellchecker\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\spellchecker\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\tabfocus\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\tabfocus\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\tabfocus\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\table\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\table\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\table\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\template\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\template\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\template\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\textcolor\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\textcolor\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\textcolor\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\textpattern\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\textpattern\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\textpattern\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\toc\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\toc\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\toc\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\visualblocks\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\visualblocks\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\visualblocks\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\visualchars\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\visualchars\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\visualchars\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\plugins\wordcount\index.js" />
+    <None Include="wwwroot\js\izenda\plugins\wordcount\plugin.js" />
+    <None Include="wwwroot\js\izenda\plugins\wordcount\plugin.min.js" />
+    <None Include="wwwroot\js\izenda\skins\lightgray\fonts\tinymce-small.svg" />
+    <None Include="wwwroot\js\izenda\skins\lightgray\fonts\tinymce.svg" />
+    <None Include="wwwroot\js\izenda\themes\inlite\index.js" />
+    <None Include="wwwroot\js\izenda\themes\inlite\theme.js" />
+    <None Include="wwwroot\js\izenda\themes\inlite\theme.min.js" />
+    <None Include="wwwroot\js\izenda\themes\modern\index.js" />
+    <None Include="wwwroot\js\izenda\themes\modern\theme.js" />
+    <None Include="wwwroot\js\izenda\themes\modern\theme.min.js" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Reference Include="Izenda.BI.API">
+      <HintPath>IzendaResources\Izenda.BI.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Cache">
+      <HintPath>IzendaResources\Izenda.BI.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Cache.ExternalStorageCache">
+      <HintPath>IzendaResources\Izenda.BI.Cache.ExternalStorageCache.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Cache.MemCache">
+      <HintPath>IzendaResources\Izenda.BI.Cache.MemCache.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Cache.Metadata">
+      <HintPath>IzendaResources\Izenda.BI.Cache.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Cache.Schedule">
+      <HintPath>IzendaResources\Izenda.BI.Cache.Schedule.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.CacheProvider">
+      <HintPath>IzendaResources\Izenda.BI.CacheProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.CacheProvider.Memcache">
+      <HintPath>IzendaResources\Izenda.BI.CacheProvider.Memcache.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Core">
+      <HintPath>IzendaResources\Izenda.BI.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.DataAdaptor.RDBMS">
+      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.Azure">
+      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.Elasticsearch">
+      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.Elasticsearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.Mongo">
+      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.Mongo.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.Excel">
+      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.MySQL">
+      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.MySQL.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.Oracle">
+      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.Oracle.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.PostgreSQL">
+      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.PostgreSQL.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.Redshift">
+      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.Redshift.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.SQL">
+      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.SQL.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.DataSourceAdapter">
+      <HintPath>IzendaResources\Izenda.BI.DataSourceAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Exporting">
+      <HintPath>IzendaResources\Izenda.BI.Exporting.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Exporting.Csv">
+      <HintPath>IzendaResources\Izenda.BI.Exporting.Csv.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Exporting.Definition">
+      <HintPath>IzendaResources\Izenda.BI.Exporting.Definition.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Exporting.Excel">
+      <HintPath>IzendaResources\Izenda.BI.Exporting.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Exporting.Html">
+      <HintPath>IzendaResources\Izenda.BI.Exporting.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Exporting.Json">
+      <HintPath>IzendaResources\Izenda.BI.Exporting.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Exporting.Pdf">
+      <HintPath>IzendaResources\Izenda.BI.Exporting.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Exporting.Word">
+      <HintPath>IzendaResources\Izenda.BI.Exporting.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Exporting.Xml">
+      <HintPath>IzendaResources\Izenda.BI.Exporting.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Framework">
+      <HintPath>IzendaResources\Izenda.BI.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Licensing.Validator">
+      <HintPath>IzendaResources\Izenda.BI.Licensing.Validator.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Logging">
+      <HintPath>IzendaResources\Izenda.BI.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Logging.Log4Net">
+      <HintPath>IzendaResources\Izenda.BI.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Logic">
+      <HintPath>IzendaResources\Izenda.BI.Logic.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.QueryNormalizer.MySQL">
+      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.MySQL.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.QueryNormalizer.Oracle">
+      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.Oracle.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.QueryNormalizer.PostgreSQL">
+      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.PostgreSQL.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.QueryNormalizer.Redshift">
+      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.Redshift.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.QueryNormalizer.SQL">
+      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.SQL.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.QueryNormalizer.Mongo">
+      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.Mongo.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.QueryNormalizer.Excel">
+      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.QueryNormalizer.Elasticsearch">
+      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.Elasticsearch.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.QueryNormalizer.Utility">
+      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.RDBMS">
+      <HintPath>IzendaResources\Izenda.BI.RDBMS.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Resource">
+      <HintPath>IzendaResources\Izenda.BI.Resource.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Statistic">
+      <HintPath>IzendaResources\Izenda.BI.Statistic.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Statistic.FileSystem">
+      <HintPath>IzendaResources\Izenda.BI.Statistic.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.StorageProvider">
+      <HintPath>IzendaResources\Izenda.BI.StorageProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.StorageProvider.FileSystem">
+      <HintPath>IzendaResources\Izenda.BI.StorageProvider.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.SystemRepository">
+      <HintPath>IzendaResources\Izenda.BI.SystemRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.SystemRepository.RDBMS">
+      <HintPath>IzendaResources\Izenda.BI.SystemRepository.RDBMS.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.SystemRepository.RDBMS.Azure">
+      <HintPath>IzendaResources\Izenda.BI.SystemRepository.RDBMS.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.SystemRepository.RDBMS.MySQL">
+      <HintPath>IzendaResources\Izenda.BI.SystemRepository.RDBMS.MySQL.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.SystemRepository.RDBMS.Oracle">
+      <HintPath>IzendaResources\Izenda.BI.SystemRepository.RDBMS.Oracle.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.SystemRepository.RDBMS.PostgreSQL">
+      <HintPath>IzendaResources\Izenda.BI.SystemRepository.RDBMS.PostgreSQL.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.SystemRepository.RDBMS.SQL">
+      <HintPath>IzendaResources\Izenda.BI.SystemRepository.RDBMS.SQL.dll</HintPath>
+    </Reference>
+    <Reference Include="Izenda.BI.Utility">
+      <HintPath>IzendaResources\Izenda.BI.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Licensing">
+      <HintPath>IzendaResources\Rhino.Licensing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Content Update="izendadb - Copy.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="izendadb.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

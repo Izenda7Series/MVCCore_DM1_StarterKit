@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVCCoreStarterKit</title>
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    @* Apply css based on the users tenant *@
+    <link href="~/js/izenda/izenda-ui.css" rel="stylesheet" />
+    <link href="~/css/izenda_visualizations.css" rel="stylesheet" />
+
+    @*Add Custom CSS based on the tenantId and path set in izendaCssPath above *@
+    <link href=@ViewBag.izendaCssPath rel="stylesheet">
+</head>
+<body>
+
+    <div class="container-fluid body-content">
+        @RenderBody()
+    </div>
+
+    <script src="~/js/jquery-1.10.2.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/alertify.js"></script>
+    <script src="~/js/izenda/izenda_common.js"></script>
+    <script src="~/js/izenda/izenda_locales.js"></script>
+    <script src="~/js/izenda/izenda_vendors.js"></script>
+    <script src="~/js/izenda/izenda_ui.js"></script>
+    <script src="~/js/izenda.integrate.js"></script>
+    <script src="~/js/izenda.utils.js"></script>
+    <script src="~/js/izenda_visualizations.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            DoIzendaConfig();
+            $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="dropdown"]').dropdown();
+            $("#reportPartLoader").hide();
+            $("#reportPartLoaderText").hide();
+        });
+    </script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
