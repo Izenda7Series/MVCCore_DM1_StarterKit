@@ -1,5 +1,4 @@
-﻿using Izenda.BI.Utility.AppSetting;
-using IzendaBoundary;
+﻿using IzendaBoundary;
 using IzendaBoundary.Models;
 using IzendaBoundary.Models.Permissions;
 using log4net;
