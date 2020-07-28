@@ -378,7 +378,7 @@
   </ItemGroup>
 
 
-  <ItemGroup>
+  <!--<ItemGroup>
     <Content Update="izendadb - Copy.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -388,6 +388,6 @@
     <Content Update="log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
+  </ItemGroup>-->
 
 </Project>
