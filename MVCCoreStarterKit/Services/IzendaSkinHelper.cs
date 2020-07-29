@@ -9,30 +9,35 @@ namespace MVCCoreStarterKit.Services
 {
     public sealed class IzendaSkinHelper
     {
-        private static readonly Lazy<IzendaSkinHelper> lazy =
-        new Lazy<IzendaSkinHelper>(() => new IzendaSkinHelper());
-        private string productVersion;
-        private ILog logger;
+        #region Variables
+        private static readonly Lazy<IzendaSkinHelper> _lazy = new Lazy<IzendaSkinHelper>(() => new IzendaSkinHelper());
+        private string _productVersion;
+        private readonly ILog _logger;
+        #endregion
 
-        public static IzendaSkinHelper Instance { get { return lazy.Value; } }
-
+        #region Properties
+        public static IzendaSkinHelper Instance { get { return _lazy.Value; } }
 
         public string ProductVersion
         {
             get
             {
-                if (Instance.productVersion == null)
-                    Instance.productVersion = GetCurrentProductVersion();
+                if (Instance._productVersion == null)
+                    Instance._productVersion = GetCurrentProductVersion();
 
-                return Instance.productVersion;
+                return Instance._productVersion;
             }
         }
+        #endregion
 
+        #region Singleton CTOR 
         private IzendaSkinHelper()
         {
-            logger = LogManager.GetLogger(System.Reflection.Assembly.GetEntryAssembly(), "MVCCoreStarterKit");
+            _logger = LogManager.GetLogger(System.Reflection.Assembly.GetEntryAssembly(), "MVCCoreStarterKit");
         }
+        #endregion
 
+        #region Methods
         private string GetCurrentProductVersion()
         {
             var hostingEnvironment = new HttpContextAccessor().HttpContext.RequestServices.GetService(typeof(IHostingEnvironment)) as HostingEnvironment;
@@ -40,7 +45,7 @@ namespace MVCCoreStarterKit.Services
             var apiAssemblyName = "Izenda.Synergy.WebAPICore.dll";
             var izendaApiLib = hostingEnvironment.IsDevelopment() ? @"\bin\Debug\netcoreapp2.2\" : @"\";
             var fullIzendaApiPath = $"{contentRootPath}{izendaApiLib}{apiAssemblyName}";
-            logger.Info(fullIzendaApiPath);
+            _logger.Info(fullIzendaApiPath);
             try
             {
                 return FileVersionInfo.GetVersionInfo(fullIzendaApiPath)?.ProductVersion;
@@ -49,6 +54,7 @@ namespace MVCCoreStarterKit.Services
             {
                 return string.Empty;
             }
-        }
+        } 
+        #endregion
     }
 }
