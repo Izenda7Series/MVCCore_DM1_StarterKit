@@ -34,16 +34,29 @@ namespace MVCCoreStarterKit.Areas.Identity
 
         public async Task<IzendaUser> FindTenantUserAsync(string tenant, string username, string password)
         {
-            var user = await dbContext.Users
-                .Include(x => x.Tenant)
-                .Where(x => x.UserName.Equals(username, StringComparison.InvariantCultureIgnoreCase))
-                .Where(x => x.Tenant.Name.Equals(tenant, StringComparison.InvariantCultureIgnoreCase))
-                .SingleOrDefaultAsync();
+            IzendaUser user = null;
+
+            if (!string.IsNullOrWhiteSpace(tenant))
+            {
+                user = await dbContext.Users
+                  .Include(x => x.Tenant)
+                  .Where(x => x.UserName.Equals(username, StringComparison.InvariantCultureIgnoreCase))
+                  .Where(x => x.Tenant.Name.Equals(tenant, StringComparison.InvariantCultureIgnoreCase))
+                  .SingleOrDefaultAsync();
+            }
+            else
+            {
+                user = await dbContext.Users
+                    .Include(x=> x.Tenant)
+                    .Where(x => x.UserName.Equals(username, StringComparison.InvariantCultureIgnoreCase))
+                    .Where(x => !x.Tenant_Id.HasValue)
+                    .SingleOrDefaultAsync();
+            }
 
             if (await CheckPasswordAsync(user, password))
                 return user;
 
-            return null;
+            return user;
         }
 
         public override async Task<IdentityResult> AddToRoleAsync(IzendaUser user, string role)

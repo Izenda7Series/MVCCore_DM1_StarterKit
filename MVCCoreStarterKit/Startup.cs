@@ -38,10 +38,10 @@ namespace MVCCoreStarterKit
             {
                 Console.WriteLine($"{env.Key}={env.Value}");
             }
-            if (File.Exists("izendadb.config"))
-            {
-                Console.WriteLine($"in file: {File.ReadAllText("izendadb.config")}");
-            }
+            //if (File.Exists("izendadb.config"))
+            //{
+            //    Console.WriteLine($"in file: {File.ReadAllText("izendadb.config")}");
+            //}
         }
 
         public IConfiguration Configuration { get; }

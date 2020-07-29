@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using MVCCoreStarterKit.Areas.Identity.Model;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace MVCCoreStarterKit.Areas.Identity.Pages.Account
 {
@@ -17,6 +15,7 @@ namespace MVCCoreStarterKit.Areas.Identity.Pages.Account
     public class LoginModel : PageModel
     {
         private readonly ApplicationSignInManager _signInManager;
+
         private readonly ILogger<LoginModel> _logger;
 
         public LoginModel(ApplicationSignInManager signInManager, ILogger<LoginModel> logger)
@@ -37,8 +36,9 @@ namespace MVCCoreStarterKit.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
+            // Tenant is not required. Null value is allowed
             [DataType(DataType.Text)]
+            [Display(Name = "Tenant", Prompt = "System level login does not require tenant field input")]
             public string Tenant { get; set; }
 
             [Required]
