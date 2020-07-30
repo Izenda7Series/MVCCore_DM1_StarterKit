@@ -8,13 +8,31 @@
 
   <ItemGroup>
     <Compile Remove="Data\Migrations\**" />
+    <Compile Remove="IzendaReferences\**" />
+    <Compile Remove="IzendaResources\**" />
     <Content Remove="Data\Migrations\**" />
+    <Content Remove="IzendaReferences\**" />
+    <Content Remove="IzendaResources\**" />
     <EmbeddedResource Remove="Data\Migrations\**" />
+    <EmbeddedResource Remove="IzendaReferences\**" />
+    <EmbeddedResource Remove="IzendaResources\**" />
     <None Remove="Data\Migrations\**" />
+    <None Remove="IzendaReferences\**" />
+    <None Remove="IzendaResources\**" />
   </ItemGroup>
   
   <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
     <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Remove="IzendaConfig.cs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Remove="appsettings.Development.json" />
+    <Content Remove="izendadb.config" />
+    <Content Remove="log4net.config" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,15 +57,12 @@
 
 
   <ItemGroup>
-    <Folder Include="IzendaBoundary\" />
     <Folder Include="logs\" />
-    <Folder Include="IzendaReferences\" />
     <Folder Include="wwwroot\css\Content\" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <None Include="IzendaResources\Resources\CustomFunctionSample.config" />
     <None Include="wwwroot\js\izenda\assets\fontello.svg" />
     <None Include="wwwroot\js\izenda\assets\fontello.woff2" />
     <None Include="wwwroot\js\izenda\assets\izenda-graphic-logo.svg" />
@@ -197,184 +212,6 @@
     <None Include="wwwroot\js\izenda\themes\modern\index.js" />
     <None Include="wwwroot\js\izenda\themes\modern\theme.js" />
     <None Include="wwwroot\js\izenda\themes\modern\theme.min.js" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Reference Include="Izenda.BI.API">
-      <HintPath>IzendaResources\Izenda.BI.API.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Cache">
-      <HintPath>IzendaResources\Izenda.BI.Cache.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Cache.ExternalStorageCache">
-      <HintPath>IzendaResources\Izenda.BI.Cache.ExternalStorageCache.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Cache.MemCache">
-      <HintPath>IzendaResources\Izenda.BI.Cache.MemCache.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Cache.Metadata">
-      <HintPath>IzendaResources\Izenda.BI.Cache.Metadata.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Cache.Schedule">
-      <HintPath>IzendaResources\Izenda.BI.Cache.Schedule.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.CacheProvider">
-      <HintPath>IzendaResources\Izenda.BI.CacheProvider.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.CacheProvider.Memcache">
-      <HintPath>IzendaResources\Izenda.BI.CacheProvider.Memcache.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Core">
-      <HintPath>IzendaResources\Izenda.BI.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.DataAdaptor.RDBMS">
-      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.Azure">
-      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.Azure.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.Elasticsearch">
-      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.Elasticsearch.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.Mongo">
-      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.Mongo.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.Excel">
-      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.Excel.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.MySQL">
-      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.MySQL.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.Oracle">
-      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.Oracle.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.PostgreSQL">
-      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.PostgreSQL.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.Redshift">
-      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.Redshift.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.DataAdaptor.RDBMS.SQL">
-      <HintPath>IzendaResources\Izenda.BI.DataAdaptor.RDBMS.SQL.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.DataSourceAdapter">
-      <HintPath>IzendaResources\Izenda.BI.DataSourceAdapter.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Exporting">
-      <HintPath>IzendaResources\Izenda.BI.Exporting.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Exporting.Csv">
-      <HintPath>IzendaResources\Izenda.BI.Exporting.Csv.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Exporting.Definition">
-      <HintPath>IzendaResources\Izenda.BI.Exporting.Definition.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Exporting.Excel">
-      <HintPath>IzendaResources\Izenda.BI.Exporting.Excel.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Exporting.Html">
-      <HintPath>IzendaResources\Izenda.BI.Exporting.Html.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Exporting.Json">
-      <HintPath>IzendaResources\Izenda.BI.Exporting.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Exporting.Pdf">
-      <HintPath>IzendaResources\Izenda.BI.Exporting.Pdf.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Exporting.Word">
-      <HintPath>IzendaResources\Izenda.BI.Exporting.Word.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Exporting.Xml">
-      <HintPath>IzendaResources\Izenda.BI.Exporting.Xml.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Framework">
-      <HintPath>IzendaResources\Izenda.BI.Framework.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Licensing.Validator">
-      <HintPath>IzendaResources\Izenda.BI.Licensing.Validator.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Logging">
-      <HintPath>IzendaResources\Izenda.BI.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Logging.Log4Net">
-      <HintPath>IzendaResources\Izenda.BI.Logging.Log4Net.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Logic">
-      <HintPath>IzendaResources\Izenda.BI.Logic.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.QueryNormalizer.MySQL">
-      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.MySQL.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.QueryNormalizer.Oracle">
-      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.Oracle.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.QueryNormalizer.PostgreSQL">
-      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.PostgreSQL.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.QueryNormalizer.Redshift">
-      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.Redshift.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.QueryNormalizer.SQL">
-      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.SQL.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.QueryNormalizer.Mongo">
-      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.Mongo.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.QueryNormalizer.Excel">
-      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.Excel.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.QueryNormalizer.Elasticsearch">
-      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.Elasticsearch.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.QueryNormalizer.Utility">
-      <HintPath>IzendaResources\Izenda.BI.QueryNormalizer.Utility.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.RDBMS">
-      <HintPath>IzendaResources\Izenda.BI.RDBMS.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Resource">
-      <HintPath>IzendaResources\Izenda.BI.Resource.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Statistic">
-      <HintPath>IzendaResources\Izenda.BI.Statistic.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Statistic.FileSystem">
-      <HintPath>IzendaResources\Izenda.BI.Statistic.FileSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.StorageProvider">
-      <HintPath>IzendaResources\Izenda.BI.StorageProvider.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.StorageProvider.FileSystem">
-      <HintPath>IzendaResources\Izenda.BI.StorageProvider.FileSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.SystemRepository">
-      <HintPath>IzendaResources\Izenda.BI.SystemRepository.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.SystemRepository.RDBMS">
-      <HintPath>IzendaResources\Izenda.BI.SystemRepository.RDBMS.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.SystemRepository.RDBMS.Azure">
-      <HintPath>IzendaResources\Izenda.BI.SystemRepository.RDBMS.Azure.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.SystemRepository.RDBMS.MySQL">
-      <HintPath>IzendaResources\Izenda.BI.SystemRepository.RDBMS.MySQL.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.SystemRepository.RDBMS.Oracle">
-      <HintPath>IzendaResources\Izenda.BI.SystemRepository.RDBMS.Oracle.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.SystemRepository.RDBMS.PostgreSQL">
-      <HintPath>IzendaResources\Izenda.BI.SystemRepository.RDBMS.PostgreSQL.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.SystemRepository.RDBMS.SQL">
-      <HintPath>IzendaResources\Izenda.BI.SystemRepository.RDBMS.SQL.dll</HintPath>
-    </Reference>
-    <Reference Include="Izenda.BI.Utility">
-      <HintPath>IzendaResources\Izenda.BI.Utility.dll</HintPath>
-    </Reference>
-    <Reference Include="Rhino.Licensing">
-      <HintPath>IzendaResources\Rhino.Licensing.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 

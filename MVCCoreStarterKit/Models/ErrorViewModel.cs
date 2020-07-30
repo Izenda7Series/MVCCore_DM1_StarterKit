@@ -1,5 +1,3 @@
-using System;
-
 namespace MVCCoreStarterKit.Models
 {
     public class ErrorViewModel

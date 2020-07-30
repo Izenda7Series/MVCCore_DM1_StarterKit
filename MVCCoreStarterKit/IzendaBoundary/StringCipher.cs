@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace IzendaBoundary
+namespace MVCCoreStarterKit.IzendaBoundary
 {
     public static class StringCipher
     {

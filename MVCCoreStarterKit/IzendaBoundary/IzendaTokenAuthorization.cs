@@ -3,7 +3,7 @@ using MVCCoreStarterKit.Models;
 using System;
 using System.IO;
 
-namespace IzendaBoundary
+namespace MVCCoreStarterKit.IzendaBoundary
 {
     public class IzendaTokenAuthorization
     {
