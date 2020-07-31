@@ -10,15 +10,19 @@
     <Compile Remove="Data\Migrations\**" />
     <Compile Remove="IzendaReferences\**" />
     <Compile Remove="IzendaResources\**" />
+    <Compile Remove="logs\**" />
     <Content Remove="Data\Migrations\**" />
     <Content Remove="IzendaReferences\**" />
     <Content Remove="IzendaResources\**" />
+    <Content Remove="logs\**" />
     <EmbeddedResource Remove="Data\Migrations\**" />
     <EmbeddedResource Remove="IzendaReferences\**" />
     <EmbeddedResource Remove="IzendaResources\**" />
+    <EmbeddedResource Remove="logs\**" />
     <None Remove="Data\Migrations\**" />
     <None Remove="IzendaReferences\**" />
     <None Remove="IzendaResources\**" />
+    <None Remove="logs\**" />
   </ItemGroup>
   
   <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
@@ -57,7 +61,6 @@
 
 
   <ItemGroup>
-    <Folder Include="logs\" />
     <Folder Include="wwwroot\css\Content\" />
   </ItemGroup>
 
