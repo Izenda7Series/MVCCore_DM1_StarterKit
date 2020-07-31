@@ -1,4 +1,6 @@
-﻿using MVCCoreStarterKit.IzendaBoundary.Models;
+﻿using MVCCoreStarterKit.Areas.Identity.Model;
+using MVCCoreStarterKit.Data;
+using MVCCoreStarterKit.IzendaBoundary.Models;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;

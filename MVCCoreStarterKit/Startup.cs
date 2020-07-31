@@ -19,25 +19,30 @@ namespace MVCCoreStarterKit
 {
     public class Startup
     {
+        #region Properties
+        public IConfiguration Configuration { get; } 
+        #endregion
+
+        #region CTOR
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-           
+
             foreach (DictionaryEntry env in Environment.GetEnvironmentVariables())
             {
                 Console.WriteLine($"{env.Key}={env.Value}");
             }
         }
+        #endregion
 
-        public IConfiguration Configuration { get; }
-
+        #region Methods
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDataProtection()
                 .SetApplicationName("Izenda")
                 .PersistKeysToFileSystem(new DirectoryInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "KeyFile")));
-           
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -113,6 +118,7 @@ namespace MVCCoreStarterKit
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-        }
+        } 
+        #endregion
     }
 }

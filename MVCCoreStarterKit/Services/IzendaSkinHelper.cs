@@ -30,7 +30,7 @@ namespace MVCCoreStarterKit.Services
         }
         #endregion
 
-        #region Singleton CTOR 
+        #region CTOR 
         private IzendaSkinHelper()
         {
             _logger = LogManager.GetLogger(System.Reflection.Assembly.GetEntryAssembly(), "MVCCoreStarterKit");

@@ -9,6 +9,7 @@ namespace MVCCoreStarterKit.Services
     public interface ITenantManager
     {
         Tenant GetTenantByName(string name);
+
         Task<Tenant> SaveTenantAsync(Tenant tenant);
     }
 
