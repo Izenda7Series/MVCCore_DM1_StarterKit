@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MVCCoreStarterKit.Models;
+using MVCCoreStarterKit.IzendaBoundary;
 
 namespace MVCCoreStarterKit.Controllers.ApiController
 {
@@ -13,7 +14,7 @@ namespace MVCCoreStarterKit.Controllers.ApiController
         [Route("validateIzendaAuthToken")]
         public UserInfo ValidateIzendaAuthToken(string access_token)
         {
-            var userInfo = IzendaBoundary.IzendaTokenAuthorization.GetUserInfo(access_token);
+            var userInfo = IzendaTokenAuthorization.GetUserInfo(access_token);
             return userInfo;
         }
 
@@ -22,8 +23,8 @@ namespace MVCCoreStarterKit.Controllers.ApiController
         [Route("GetIzendaAccessToken")]
         public IActionResult GetIzendaAccessToken(string message)
         {
-            var userInfo = IzendaBoundary.IzendaTokenAuthorization.DecryptIzendaAuthenticationMessage(message);
-            var token = IzendaBoundary.IzendaTokenAuthorization.GetToken(userInfo);
+            var userInfo = IzendaTokenAuthorization.DecryptIzendaAuthenticationMessage(message);
+            var token = IzendaTokenAuthorization.GetToken(userInfo);
 
             return Ok(new { Token = token });
         } 

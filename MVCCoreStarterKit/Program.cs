@@ -5,14 +5,13 @@ namespace MVCCoreStarterKit
 {
     public class Program
     {
+        #region Methods
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                //.UseUrls("http://0.0.0.0:9213")
-                .UseStartup<Startup>();
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args) => WebHost.CreateDefaultBuilder(args).UseStartup<Startup>(); 
+        #endregion
     }
 }

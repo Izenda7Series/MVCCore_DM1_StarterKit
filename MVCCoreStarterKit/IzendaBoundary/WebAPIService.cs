@@ -1,15 +1,14 @@
-﻿using Izenda.BI.Utility.AppSetting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IzendaBoundary
+namespace MVCCoreStarterKit.IzendaBoundary
 {
     public class WebAPIService
     {
@@ -26,10 +25,11 @@ namespace IzendaBoundary
             get
             {
                 if (_instance != null) return _instance;
-                var configuration = new HttpContextAccessor().HttpContext.RequestServices.GetService(typeof(IConfiguration)) as IConfiguration;
-                var izendaConfig = configuration.Get<AppSettings>();
 
-                return _instance = new WebAPIService(izendaConfig["IzendaApiUrl"]);
+                IConfigurationRoot configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
+                var _basedUri = configuration.GetValue<string>("AppSettings:Settings:IzendaApiUrl");
+
+                return _instance = new WebAPIService(_basedUri);
             }
         }
 
@@ -55,9 +55,10 @@ namespace IzendaBoundary
                     return JsonConvert.DeserializeObject<T>(responeJson);
 
                 }
+#pragma warning disable IDE0034 // Simplify 'default' expression
                 return default(T);
+#pragma warning restore IDE0034 // Simplify 'default' expression
             }
-
         }
 
         public async Task PostAsync<T>(string action, T data, string authToken = null)
@@ -95,7 +96,10 @@ namespace IzendaBoundary
                 string responseJson = await httpResponse.Content.ReadAsStringAsync();
                 if (responseJson != "null")
                     return JsonConvert.DeserializeObject<TResult>(responseJson);
+
+#pragma warning disable IDE0034 // Simplify 'default' expression
                 return default(TResult);
+#pragma warning restore IDE0034 // Simplify 'default' expression
             }
         }
 
@@ -132,7 +136,9 @@ namespace IzendaBoundary
                 }
 
                 var responseJson = await httpResponse.Content.ReadAsStringAsync();
+#pragma warning disable IDE0034 // Simplify 'default' expression
                 return responseJson != "null" ? JsonConvert.DeserializeObject<TResult>(responseJson) : default(TResult);
+#pragma warning restore IDE0034 // Simplify 'default' expression
             }
         }
 

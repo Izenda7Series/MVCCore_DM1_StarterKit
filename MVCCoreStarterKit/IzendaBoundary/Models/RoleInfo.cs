@@ -2,14 +2,12 @@
 
 namespace MVCCoreStarterKit.IzendaBoundary.Models
 {
-    public class UserDetail
+    public class RoleInfo
     {
         #region Properties
         public Guid Id { get; set; }
 
-        public string UserName { get; set; }
-
-        public string EmailAddress { get; set; } 
+        public string Name { get; set; }
         #endregion
     }
 }

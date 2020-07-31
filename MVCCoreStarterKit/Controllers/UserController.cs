@@ -19,7 +19,6 @@ namespace MVCCoreStarterKit.Controllers
             return Json(new { token });
         }
 
-
         [HttpGet]
         public JsonResult GetCurrentTenant()
         {

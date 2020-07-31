@@ -132,15 +132,15 @@ var izendaInitReportPartDemo = function () {
         // Add the report part ID's in the <add your report part id here> area
         IzendaSynergy.setCurrentUserContext(currentUserContext);
         IzendaSynergy.renderReportPart(document.getElementById('izenda-report-part1'), {
-            "id": "3aec96e8-8b81-4e04-bd3c-10d0aa1f48e8",
+            "id": "96761AFF-159B-493A-B45C-2635556EFE78",
         });
 
         IzendaSynergy.renderReportPart(document.getElementById('izenda-report-part2'), {
-            "id": "284d6791-f740-4029-82ad-1cfa45e2aed4",
+            "id": "96761AFF-159B-493A-B45C-2635556EFE78",
         });
  
         IzendaSynergy.renderReportPart(document.getElementById('izenda-report-part3'), {
-            "id": "318b7c5b-3cfc-4851-bafb-b48da31c0daf"
+            "id": "515A5D07-922B-4A03-AA09-B445F4B69FE6"
         });
     }
     this.DoRender(successFunc);
