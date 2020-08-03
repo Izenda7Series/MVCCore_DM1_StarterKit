@@ -56,7 +56,7 @@ namespace MVCCoreStarterKit.IzendaBoundary
         {
             IConfigurationRoot configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
 
-            var rsaPrivateKey = configuration.GetValue<string>("rsaPrivateKey:rsaPrivateKey"); // TODO: make sure this is working correctly
+            var rsaPrivateKey = configuration.GetValue<string>("AppSettings:Settings:rsaPrivateKey");
             var cipher = new System.Security.Cryptography.RSACryptoServiceProvider();
 
             //Decrypt using RSA private key in PEM format.

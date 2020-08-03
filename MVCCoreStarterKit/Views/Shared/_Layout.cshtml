@@ -14,10 +14,17 @@
     <link href=@ViewBag.izendaCssPath rel="stylesheet">
 </head>
 <body>
+
     <header>
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
+                    <div class="navbar-header pull-left">
+                        <a class="navbar-brand" href="https://www.izenda.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="https://3u8npt2xyr3u2fgvai49zopv-wpengine.netdna-ssl.com/wp-content/uploads/2019/05/izenda-logo-white.png"
+                                 alt="Site Logo" style="height:18px; width: 100px" />
+                        </a>
+                    </div>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -36,10 +43,13 @@
     </header>
     <div class="container-fluid body-content">
         @RenderBody()
+    </div>
+    <div style="bottom:0;position: fixed; width:100%;">
         <footer>
-            <partial name="_CopyRight" />
+            <p>&copy; @DateTime.Now.Year - Izenda Integrated BI Platform</p>
         </footer>
     </div>
+
     <script rel="preload" src="~/js/jquery-1.10.2.min.js"></script>
     <script rel="preload" src="~/js/bootstrap.min.js"></script>
     <script rel="preload" src="~/js/site.js" asp-append-version="true"></script>
