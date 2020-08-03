@@ -11,18 +11,22 @@
     <Compile Remove="IzendaReferences\**" />
     <Compile Remove="IzendaResources\**" />
     <Compile Remove="logs\**" />
+    <Compile Remove="wwwroot\css\Content\**" />
     <Content Remove="Data\Migrations\**" />
     <Content Remove="IzendaReferences\**" />
     <Content Remove="IzendaResources\**" />
     <Content Remove="logs\**" />
+    <Content Remove="wwwroot\css\Content\**" />
     <EmbeddedResource Remove="Data\Migrations\**" />
     <EmbeddedResource Remove="IzendaReferences\**" />
     <EmbeddedResource Remove="IzendaResources\**" />
     <EmbeddedResource Remove="logs\**" />
+    <EmbeddedResource Remove="wwwroot\css\Content\**" />
     <None Remove="Data\Migrations\**" />
     <None Remove="IzendaReferences\**" />
     <None Remove="IzendaResources\**" />
     <None Remove="logs\**" />
+    <None Remove="wwwroot\css\Content\**" />
   </ItemGroup>
   
   <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
@@ -57,11 +61,6 @@
     <PackageReference Include="Nancy" Version="2.0.0-clinteastwood" />
     <PackageReference Include="System.Composition.TypedParts" Version="1.0.31" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Folder Include="wwwroot\css\Content\" />
   </ItemGroup>
 
 
