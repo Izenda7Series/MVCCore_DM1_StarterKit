@@ -1,14 +1,111 @@
-﻿using MVCCoreStarterKit.Areas.Identity.Model;
-using MVCCoreStarterKit.Data;
-using MVCCoreStarterKit.IzendaBoundary.Models;
+﻿using MVCCoreStarterKit.IzendaBoundary.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace MVCCoreStarterKit.IzendaBoundary
 {
     public class IzendaUtility
     {
+        #region Methods
+        /// <summary>
+        /// Create a tenant
+        /// For more information, please refer to https://www.izenda.com/docs/ref/api_tenant.html#tenant-apis
+        /// </summary>
+        public static async Task<bool> CreateTenant(string tenantName, string tenantId, string authToken)
+        {
+            var existingTenant = await GetIzendaTenantByName(tenantId, authToken);
+            if (existingTenant != null)
+                return false;
+
+            var tenantDetail = new TenantDetail
+            {
+                Active = true,
+                Disable = false,
+                Name = tenantName,
+                TenantId = tenantId
+            };
+
+            // For more information, please refer to https://www.izenda.com/docs/ref/api_tenant.html#post-tenant
+            return await WebAPIService.Instance.PostReturnBooleanAsync("tenant", tenantDetail, authToken);
+        }
+
+        /// <summary>
+        /// Create a user
+        /// For more information, please refer to https://www.izenda.com/docs/ref/api_user.html#post-external-user
+        /// ATTN: please don't use this deprecated end point https://www.izenda.com/docs/ref/api_user.html#post-user-integration-saveuser
+        /// </summary>
+        public static async Task<bool> CreateIzendaUser(string tenant, string userID, string lastName, string firstName, bool isAdmin, string roleName, string authToken)
+        {
+            var izendaTenant = !string.IsNullOrEmpty(tenant) ? await GetIzendaTenantByName(tenant, authToken) : null;
+
+            var izendaUser = new UserDetail
+            {
+                Username = userID,
+                TenantId = izendaTenant != null ? (Guid?)izendaTenant.Id : null,
+                LastName = lastName,
+                FirstName = firstName,
+                TenantDisplayId = izendaTenant != null ? izendaTenant.Name : string.Empty,
+                InitPassword = false,
+                SystemAdmin = isAdmin
+            };
+
+            if (!string.IsNullOrWhiteSpace(roleName))
+            {
+                var izendaRole = await CreateRole(roleName, izendaTenant, authToken);
+                izendaUser.Roles.Add(izendaRole);
+            }
+
+            bool success = await WebAPIService.Instance.PostReturnBooleanAsync("external/user", izendaUser, authToken);
+
+            return success;
+        }
+
+        public static async Task<RoleDetail> CreateRole(string roleName, TenantDetail izendaTenant, string authToken)
+        {
+            var role = await GetIzendaRoleByTenantAndName(izendaTenant != null ? (Guid?)izendaTenant.Id : null, roleName, authToken);
+
+            if (role == null)
+            {
+                role = new RoleDetail
+                {
+                    Active = true,
+                    Deleted = false,
+                    NotAllowSharing = false,
+                    Name = roleName,
+                    TenantId = izendaTenant != null ? (Guid?)izendaTenant.Id : null
+                };
+
+                var response = await WebAPIService.Instance.PostReturnValueAsync<AddRoleResponeMessage, RoleDetail>("role", role, authToken);
+                role = response.Role;
+            }
+
+            return role;
+        }
+
+        /// <summary>
+        /// Get a matched role from the list of Izenda Roles under the selected tenant
+        /// </summary>
+        private static async Task<RoleDetail> GetIzendaRoleByTenantAndName(Guid? tenantId, string roleName, string authToken)
+        {
+            var roles = await GetAllIzendaRoleByTenant(tenantId, authToken);
+
+            if (roles.Any())
+                return roles.FirstOrDefault(r => r.Name.Equals(roleName, StringComparison.InvariantCultureIgnoreCase));
+
+            return null;
+        }
+
+        public static async Task<TenantDetail> GetIzendaTenantByName(string tenantName, string authToken)
+        {
+            var tenants = await WebAPIService.Instance.GetAsync<IList<TenantDetail>>("/tenant/allTenants", authToken);
+            if (tenants != null)
+                return tenants.FirstOrDefault(x => x.TenantId.Equals(tenantName, StringComparison.InvariantCultureIgnoreCase));
+
+            return null;
+        }
+
         /// <summary>
         /// Get all Izenda Roles by tenant
         /// For more information, please refer to https://www.izenda.com/docs/ref/api_role.html#get-role-all-tenant-id
@@ -18,6 +115,7 @@ namespace MVCCoreStarterKit.IzendaBoundary
             var roleList = await WebAPIService.Instance.GetAsync<IList<RoleDetail>>("/role/all/" + (tenantId.HasValue ? tenantId.ToString() : null), authToken);
 
             return roleList;
-        }
+        } 
+        #endregion
     }
 }
