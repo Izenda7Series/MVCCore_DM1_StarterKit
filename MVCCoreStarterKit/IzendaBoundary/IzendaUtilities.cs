@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MVCCoreStarterKit.IzendaBoundary
 {
-    public class IzendaUtility
+    public class IzendaUtilities
     {
         #region Methods
         /// <summary>

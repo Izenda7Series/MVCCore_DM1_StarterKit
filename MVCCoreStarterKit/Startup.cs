@@ -53,6 +53,8 @@ namespace MVCCoreStarterKit
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddTransient<ApplicationDbContext>();
+
             services.AddScoped<ITenantManager, TenantManager>();
 
             services.ConfigureApplicationCookie(options =>

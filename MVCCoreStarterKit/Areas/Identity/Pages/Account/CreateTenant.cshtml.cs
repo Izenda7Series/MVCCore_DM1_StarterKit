@@ -53,7 +53,7 @@ namespace MVCCoreStarterKit.Areas.Identity.Pages.Account
                 if (isTenantExist == null)
                 {
                     // try to create a new tenant at izenda DB
-                    var success = await IzendaUtility.CreateTenant(tenantName, Input.TenantID, izendaAdminAuthToken);
+                    var success = await IzendaUtilities.CreateTenant(tenantName, Input.TenantID, izendaAdminAuthToken);
 
                     if (success)
                     {

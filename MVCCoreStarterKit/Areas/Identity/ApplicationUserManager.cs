@@ -59,6 +59,33 @@ namespace MVCCoreStarterKit.Areas.Identity
             return user;
         }
 
+        /// <summary>
+        /// Overload FindTenantUserAsync. In case of Active Directory authentication, password is not required for finding tenant
+        /// </summary>
+        public async Task<IzendaUser> FindTenantUserAsync(string tenant, string username)
+        {
+            IzendaUser user = null;
+
+            if (!string.IsNullOrWhiteSpace(tenant))
+            {
+                user = await dbContext.Users
+                  .Include(x => x.Tenant)
+                  .Where(x => x.UserName.Equals(username, StringComparison.InvariantCultureIgnoreCase))
+                  .Where(x => x.Tenant.Name.Equals(tenant, StringComparison.InvariantCultureIgnoreCase))
+                  .SingleOrDefaultAsync();
+            }
+            else
+            {
+                user = await dbContext.Users
+                    .Include(x => x.Tenant)
+                    .Where(x => x.UserName.Equals(username, StringComparison.InvariantCultureIgnoreCase))
+                    .Where(x => !x.Tenant_Id.HasValue)
+                    .SingleOrDefaultAsync();
+            }
+
+            return user;
+        }
+
         public override async Task<IdentityResult> AddToRoleAsync(IzendaUser user, string role)
         {
             var roleDetail = await roleManager.FindByNameAsync(role);

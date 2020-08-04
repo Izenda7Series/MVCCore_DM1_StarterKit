@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -76,9 +78,21 @@ namespace MVCCoreStarterKit.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
-                // This doesn't count login failures towards account lockout
-                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(Input.Tenant, Input.Email, Input.Password, Input.RememberMe);
+                bool result;
+                IConfigurationRoot configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
+                bool.TryParse(configuration.GetValue<string>("AppSettings:Settings:useADlogin"), out bool useADlogin);
+
+                if (useADlogin && !string.IsNullOrEmpty(Input.Tenant)) // if tenant is null, then assume that it is system level login. Go to the ValidateLogin which is used for regular login process first
+                {
+                    result = await _signInManager.ADSigninAsync(Input.Tenant, Input.Password, Input.RememberMe);
+                }
+                else
+                {
+                    // This doesn't count login failures towards account lockout
+                    // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+                    result = await _signInManager.PasswordSignInAsync(Input.Tenant, Input.Email, Input.Password, Input.RememberMe);
+                }
+
                 if (result)
                 {
                     _logger.LogInformation("User logged in.");

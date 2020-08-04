@@ -115,15 +115,19 @@ namespace MVCCoreStarterKit.Areas.Identity.Pages.Account
                             Debug.WriteLine(e);
                         }
                     }
+                    else
+                    {
+                        result = await _userManager.AddToRoleAsync(user, assignedRole);
+                    }
 
                     if (result.Succeeded)
                     {
                         var izendaAdminAuthToken = IzendaTokenAuthorization.GetIzendaAdminToken();
                         user.Tenant = _tenantManager.GetTenantById(Input.SelectedTenantId); // set client DB application user's tenant
-                        var tenantName = user.Tenant.Name;
+                        var tenantName = user.Tenant?.Name ?? null;
 
                         // Create a new user at Izenda DB
-                        var success = await IzendaUtility.CreateIzendaUser(
+                        var success = await IzendaUtilities.CreateIzendaUser(
                             tenantName,
                             Input.UserID,
                             Input.LastName,
@@ -147,8 +151,8 @@ namespace MVCCoreStarterKit.Areas.Identity.Pages.Account
         {
             var adminToken = IzendaTokenAuthorization.GetIzendaAdminToken();
 
-            var izendaTenant = await IzendaUtility.GetIzendaTenantByName(selectedTenant, adminToken);
-            var roleDetailsByTenant = await IzendaUtility.GetAllIzendaRoleByTenant(izendaTenant?.Id ?? null, adminToken);
+            var izendaTenant = await IzendaUtilities.GetIzendaTenantByName(selectedTenant, adminToken);
+            var roleDetailsByTenant = await IzendaUtilities.GetAllIzendaRoleByTenant(izendaTenant?.Id ?? null, adminToken);
 
             var roles = roleDetailsByTenant.Select(r => new { r.Id, r.Name }).ToList();
             RoleSelectList = new SelectList(roles, "Id", "Name");

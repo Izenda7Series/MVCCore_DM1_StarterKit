@@ -29,14 +29,20 @@ namespace MVCCoreStarterKit.Services
 
         public Tenant GetTenantByName(string name)
         {
-            var tenant = dbContext.Tenants.Where(x => x.Name.Equals(name, StringComparison.InvariantCultureIgnoreCase)).SingleOrDefault();
-            return tenant;
+            using (var context = dbContext)
+            {
+                var tenant = context.Tenants.Where(x => x.Name.Equals(name, StringComparison.InvariantCultureIgnoreCase)).SingleOrDefault();
+                return tenant;
+            }
         }
 
         public Tenant GetTenantById(int? id)
         {
-            var tenant = dbContext.Tenants.Where(x => x.Id.Equals(id)).SingleOrDefault();
-            return tenant;
+            using (var context = dbContext)
+            {
+                var tenant = context.Tenants.Where(x => x.Id.Equals(id)).SingleOrDefault();
+                return tenant;
+            }
         }
 
         public List<Tenant> GetAllTenants() => dbContext.Tenants.ToList();
