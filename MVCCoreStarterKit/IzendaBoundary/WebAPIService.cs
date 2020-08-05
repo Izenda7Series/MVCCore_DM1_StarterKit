@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,6 +14,7 @@ namespace MVCCoreStarterKit.IzendaBoundary
     public class WebAPIService
     {
         readonly string _basedUri;
+
         private WebAPIService(string basedUri)
         {
             _basedUri = basedUri;
@@ -75,6 +77,33 @@ namespace MVCCoreStarterKit.IzendaBoundary
                 {
                     throw new WebApiException(url, httpResponse.StatusCode, ex);
                 }
+            }
+        }
+
+        /// <summary>
+        /// POST Tenant / User
+        /// Return result as boolean value
+        /// </summary>
+        public async Task<bool> PostReturnBooleanAsync<T>(string action, T data, string authToken = null)
+        {
+            using (var httpClient = GetHttpClient(authToken))
+            {
+                var url = BuildActionUri(action);
+                var httpResponse = await httpClient.PostAsJsonAsync(url, data);
+
+                try
+                {
+                    httpResponse.EnsureSuccessStatusCode();
+                }
+                catch (Exception ex)
+                {
+                    throw new WebApiException(url, httpResponse.StatusCode, ex);
+                }
+
+                var responseJson = await httpResponse.Content.ReadAsStringAsync();
+                var result = (bool)JObject.Parse(responseJson)["success"];
+
+                return result;
             }
         }
 
