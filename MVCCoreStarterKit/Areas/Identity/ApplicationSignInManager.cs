@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MVCCoreStarterKit.Areas.Identity.Model;
-using MVCCoreStarterKit.Services;
 using System;
 using System.Diagnostics;
 using System.DirectoryServices.AccountManagement;
@@ -14,16 +13,19 @@ namespace MVCCoreStarterKit.Areas.Identity
 {
     public class ApplicationSignInManager : SignInManager<IzendaUser>
     {
+        #region CTOR
         public ApplicationSignInManager(ApplicationUserManager userManager,
-            IHttpContextAccessor contextAccessor,
-            IUserClaimsPrincipalFactory<IzendaUser> claimsFactory,
-            IOptions<IdentityOptions> optionsAccessor,
-            ILogger<ApplicationSignInManager> logger,
-            IAuthenticationSchemeProvider schemes)
-            : base(userManager, contextAccessor, claimsFactory, optionsAccessor, logger, schemes)
+         IHttpContextAccessor contextAccessor,
+         IUserClaimsPrincipalFactory<IzendaUser> claimsFactory,
+         IOptions<IdentityOptions> optionsAccessor,
+         ILogger<ApplicationSignInManager> logger,
+         IAuthenticationSchemeProvider schemes)
+         : base(userManager, contextAccessor, claimsFactory, optionsAccessor, logger, schemes)
         {
         }
+        #endregion
 
+        #region Methods
         public async Task<bool> PasswordSignInAsync(string tenant, string username, string password, bool remember)
         {
             var user = await (UserManager as ApplicationUserManager).FindTenantUserAsync(tenant, username, password);
@@ -106,6 +108,7 @@ namespace MVCCoreStarterKit.Areas.Identity
             }
 
             return false;
-        }
+        } 
+        #endregion
     }
 }
