@@ -64,7 +64,6 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
   </ItemGroup>
 
-
   <ItemGroup>
     <None Include="wwwroot\js\izenda\assets\fontello.svg" />
     <None Include="wwwroot\js\izenda\assets\fontello.woff2" />
