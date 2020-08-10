@@ -1,5 +1,4 @@
 ﻿var DoIzendaConfig = function () {
-    //var hostApi = location.protocol + '//' + location.host + "/api/";
     var hostApi = "http://localhost:4001/api/";
     var configJson = {
         "WebApiUrl": hostApi,
@@ -132,15 +131,15 @@ var izendaInitReportPartDemo = function () {
         // Add the report part ID's in the <add your report part id here> area
         IzendaSynergy.setCurrentUserContext(currentUserContext);
         IzendaSynergy.renderReportPart(document.getElementById('izenda-report-part1'), {
-            "id": "96761AFF-159B-493A-B45C-2635556EFE78",
+            "id": "[ID here]",
         });
 
         IzendaSynergy.renderReportPart(document.getElementById('izenda-report-part2'), {
-            "id": "96761AFF-159B-493A-B45C-2635556EFE78",
+            "id": "[ID here]",
         });
  
         IzendaSynergy.renderReportPart(document.getElementById('izenda-report-part3'), {
-            "id": "515A5D07-922B-4A03-AA09-B445F4B69FE6"
+            "id": "[ID here]"
         });
     }
     this.DoRender(successFunc);
