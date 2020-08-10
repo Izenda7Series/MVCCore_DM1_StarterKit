@@ -47,7 +47,7 @@ appsettings.json
 
 - Update the connection string to point to your mcv5core database.
 
-Download the <a href="https://downloads.izenda.com/v3.10.0/EmbeddedUI.zip">Izenda Embedded UI</a>, and copy/paste the files into the js/izenda folder.
+Download the <a href="https://downloads.izenda.com/v3.10.0/EmbeddedUI.zip">Izenda Embedded UI</a>, and copy/paste the files into the js/izenda folder. Create izenda folder if required. 
 
 ### Update RSA Keys
 
