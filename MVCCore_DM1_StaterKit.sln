@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCCoreStarterKit", "MVCCoreStarterKit\MVCCoreStarterKit.csproj", "{96F1D9B8-EFBF-448D-A38C-4A42EC6183EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCCore_DM1_StaterKit", "MVCCore_DM1_StaterKit\MVCCore_DM1_StaterKit.csproj", "{D3F41E1C-A63E-4972-92D7-9A3903561108}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{96F1D9B8-EFBF-448D-A38C-4A42EC6183EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{96F1D9B8-EFBF-448D-A38C-4A42EC6183EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{96F1D9B8-EFBF-448D-A38C-4A42EC6183EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{96F1D9B8-EFBF-448D-A38C-4A42EC6183EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3F41E1C-A63E-4972-92D7-9A3903561108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3F41E1C-A63E-4972-92D7-9A3903561108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3F41E1C-A63E-4972-92D7-9A3903561108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F41E1C-A63E-4972-92D7-9A3903561108}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
