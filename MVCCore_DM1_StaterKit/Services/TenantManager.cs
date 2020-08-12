@@ -9,24 +9,33 @@ namespace MVCCoreStarterKit.Services
 {
     public interface ITenantManager
     {
+        #region Properties
         Tenant GetTenantByName(string name);
 
         Tenant GetTenantById(int? id);
+        #endregion
 
+        #region Methods
         Task<Tenant> SaveTenantAsync(Tenant tenant);
 
-        List<Tenant> GetAllTenants();
+        List<Tenant> GetAllTenants(); 
+        #endregion
     }
 
     public class TenantManager : ITenantManager
     {
+        #region Variables
         private readonly ApplicationDbContext dbContext;
+        #endregion
 
+        #region CTOR
         public TenantManager(ApplicationDbContext dbContext)
         {
             this.dbContext = dbContext;
-        }
+        } 
+        #endregion
 
+        #region Methods
         public Tenant GetTenantByName(string name)
         {
             using (var context = dbContext)
@@ -53,6 +62,7 @@ namespace MVCCoreStarterKit.Services
             await dbContext.SaveChangesAsync();
 
             return tenant;
-        }
+        } 
+        #endregion
     }
 }

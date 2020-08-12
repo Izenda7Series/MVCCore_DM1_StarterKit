@@ -6,6 +6,7 @@ namespace MVCCoreStarterKit.Areas.Identity
 {
     public class ApplicationRoleManager : RoleManager<IdentityRole>
     {
+        #region CTOR
         public ApplicationRoleManager(IRoleStore<IdentityRole> store,
             IEnumerable<IRoleValidator<IdentityRole>> roleValidators,
             ILookupNormalizer keyNormalizer,
@@ -13,6 +14,7 @@ namespace MVCCoreStarterKit.Areas.Identity
             ILogger<RoleManager<IdentityRole>> logger)
             : base(store, roleValidators, keyNormalizer, errors, logger)
         {
-        }
+        } 
+        #endregion
     }
 }

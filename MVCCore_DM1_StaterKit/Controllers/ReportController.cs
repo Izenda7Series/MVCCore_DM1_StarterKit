@@ -8,6 +8,7 @@ namespace MVCCoreStarterKit.Controllers
 {
     public class ReportController : Controller
     {
+        #region Methods
         public IActionResult Index()
         {
             return View();
@@ -32,6 +33,7 @@ namespace MVCCoreStarterKit.Controllers
         public ActionResult ReportParts()
         {
             return View();
-        }
+        } 
+        #endregion
     }
 }

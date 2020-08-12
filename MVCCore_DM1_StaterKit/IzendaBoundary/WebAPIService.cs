@@ -13,15 +13,20 @@ namespace MVCCoreStarterKit.IzendaBoundary
 {
     public class WebAPIService
     {
+        #region Variables
         readonly string _basedUri;
 
+        private static WebAPIService _instance;
+        #endregion
+
+        #region CTOR
         private WebAPIService(string basedUri)
         {
             _basedUri = basedUri;
         }
+        #endregion
 
-        private static WebAPIService _instance;
-
+        #region Properties
         public static WebAPIService Instance
         {
             get
@@ -33,8 +38,10 @@ namespace MVCCoreStarterKit.IzendaBoundary
 
                 return _instance = new WebAPIService(_basedUri);
             }
-        }
+        } 
+        #endregion
 
+        #region Methods
         public async Task<T> GetAsync<T>(string action, string authToken = null, Dictionary<string, object> parameters = null)
         {
             using (var httpClient = GetHttpClient(authToken))
@@ -207,19 +214,25 @@ namespace MVCCoreStarterKit.IzendaBoundary
             }
 
             return stringBuilder.ToString();
-        }
+        } 
+        #endregion
     }
 
     public class WebApiException : Exception
     {
+        #region Properties
         public string RequestedUrl { get; private set; }
-        public System.Net.HttpStatusCode StatusCode { get; private set; }
 
+        public System.Net.HttpStatusCode StatusCode { get; private set; } 
+        #endregion
+
+        #region CTOR
         public WebApiException(string requestedUrl, System.Net.HttpStatusCode statusCode, Exception innerException)
-            : base("Error occured when calling WebApi", innerException)
+           : base("Error occured when calling WebApi", innerException)
         {
             RequestedUrl = requestedUrl;
             StatusCode = statusCode;
-        }
+        } 
+        #endregion
     }
 }
