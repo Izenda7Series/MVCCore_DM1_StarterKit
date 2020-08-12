@@ -10,6 +10,7 @@ namespace MVCCoreStarterKit.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup
     {
+        #region Methods
         public void Configure(IWebHostBuilder builder)
         {
             builder.ConfigureServices((context, services) =>
@@ -23,6 +24,7 @@ namespace MVCCoreStarterKit.Areas.Identity
 
                 services.AddScoped<IUserClaimsPrincipalFactory<IzendaUser>, ApplicationUserClaimsPrincipalFactory>();
             });
-        }
+        } 
+        #endregion
     }
 }

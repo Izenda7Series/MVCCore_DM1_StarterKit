@@ -8,6 +8,7 @@ namespace MVCCoreStarterKit.Controllers
 {
     public class DashboardController : Controller
     {
+        #region Methods
         [Theme]
         public IActionResult DashboardViewer(string id)
         {
@@ -21,6 +22,7 @@ namespace MVCCoreStarterKit.Controllers
             ViewBag.Id = id;
             ViewBag.filters = JsonConvert.SerializeObject(filters);
             return View();
-        }
+        } 
+        #endregion
     }
 }

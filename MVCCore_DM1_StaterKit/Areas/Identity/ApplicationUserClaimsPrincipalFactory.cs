@@ -9,12 +9,15 @@ namespace MVCCoreStarterKit.Areas.Identity
 {
     public class ApplicationUserClaimsPrincipalFactory : UserClaimsPrincipalFactory<IzendaUser>
     {
+        #region CTOR
         public ApplicationUserClaimsPrincipalFactory(ApplicationUserManager userManager,
-            IOptions<IdentityOptions> options)
-            : base(userManager, options)
+          IOptions<IdentityOptions> options)
+          : base(userManager, options)
         {
         }
+        #endregion
 
+        #region Methods
         protected override async Task<ClaimsIdentity> GenerateClaimsAsync(IzendaUser user)
         {
             var identity = await base.GenerateClaimsAsync(user);
@@ -31,6 +34,7 @@ namespace MVCCoreStarterKit.Areas.Identity
             identity.AddClaim(new Claim(ClaimsIdentity.DefaultRoleClaimType, role.FirstOrDefault()));
 
             return identity;
-        }
+        } 
+        #endregion
     }
 }

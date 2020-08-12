@@ -6,6 +6,7 @@ namespace MVCCoreStarterKit.Controllers
 {
     public class UserController : Controller
     {
+        #region Methods
         [HttpGet]
         [Authorize]
         public JsonResult GenerateToken()
@@ -27,6 +28,7 @@ namespace MVCCoreStarterKit.Controllers
             var tenantId = identity.FindFirst("tenantId");
 
             return Json(new { tenantName = tenantName?.Value, tenantId = tenantId?.Value });
-        }
+        } 
+        #endregion
     }
 }
