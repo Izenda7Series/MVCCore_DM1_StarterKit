@@ -5,6 +5,9 @@ using System.Security.Claims;
 
 namespace MVCCoreStarterKit.Attributes
 {
+    /// <summary>
+    /// Change CSS based on selected tenant 
+    /// </summary>
     public class ThemeAttribute : ResultFilterAttribute
     {
         public override void OnResultExecuting(ResultExecutingContext context)

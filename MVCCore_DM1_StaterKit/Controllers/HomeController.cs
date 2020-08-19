@@ -82,12 +82,19 @@ namespace MVCCoreStarterKit.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Render Report part
+        /// </summary>
+        /// <param name="id">report part id</param>
+        /// <param name="token">token from url</param>
+        /// <returns></returns>
         public ActionResult ReportPart(Guid id, string token)
         {
-            _logger.Debug(token);
+            _logger.Debug($"ReportPart action token pulled from URL: {token}");
 
             ViewBag.Id = id;
-            ViewBag.Token = HttpUtility.UrlEncode(Request.Cookies["access_token"]);
+            ViewBag.Token = string.IsNullOrWhiteSpace(token) ? HttpUtility.UrlEncode(Request.Cookies["access_token"]) : token;
+
             return View();
         }
 

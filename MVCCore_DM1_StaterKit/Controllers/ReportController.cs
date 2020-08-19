@@ -14,6 +14,11 @@ namespace MVCCoreStarterKit.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Render report viewer
+        /// </summary>
+        /// <param name="id">report id used for rendering</param>
+        /// <returns></returns>
         [Theme]
         public ActionResult ReportViewer(string id)
         {
