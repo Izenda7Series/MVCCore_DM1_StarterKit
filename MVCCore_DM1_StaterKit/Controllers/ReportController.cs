@@ -15,10 +15,10 @@ namespace MVCCoreStarterKit.Controllers
         }
 
         /// <summary>
-        /// Render report viewer
+        /// Action for rendering report viewer.
         /// </summary>
-        /// <param name="id">report id used for rendering</param>
-        /// <returns></returns>
+        /// <param name="id">Report id used for rendering</param>
+        /// <returns>ReportViewer View</returns>
         [Theme]
         public ActionResult ReportViewer(string id)
         {
@@ -34,6 +34,10 @@ namespace MVCCoreStarterKit.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Action for rendering page with multiple report parts.
+        /// </summary>
+        /// <returns>ReportParts View</returns>
         [Theme]
         public ActionResult ReportParts()
         {

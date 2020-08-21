@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MVCCoreStarterKit.IzendaBoundary.Models
+namespace MVCCoreStarterKit.Models.Tenant
 {
     public class TenantDetail
     {

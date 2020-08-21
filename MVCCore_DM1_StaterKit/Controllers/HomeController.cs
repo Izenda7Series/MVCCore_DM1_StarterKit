@@ -28,6 +28,10 @@ namespace MVCCoreStarterKit.Controllers
         #endregion
 
         #region Methods
+        /// <summary>
+        /// Action for default landing page
+        /// </summary>
+        /// <returns>Index View for home page</returns>
         [Theme]
         public IActionResult Index()
         {
@@ -40,42 +44,70 @@ namespace MVCCoreStarterKit.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        /// <summary>
+        /// Action for rendering Izenda page for single page application
+        /// </summary>
+        /// <returns>Izenda View for SPA</returns>
         [Theme]
         public ActionResult Izenda()
         {
             return View();
         }
 
+        /// <summary>
+        /// Action for rendering Izenda Settings page
+        /// </summary>
+        /// <returns>Settings View</returns>
         [Theme]
         public ActionResult Settings()
         {
             return View();
         }
-        [Theme]
 
+        /// <summary>
+        /// Action for rendering Mixed Parts page
+        /// </summary>
+        /// <returns>MixedParts View</returns>
+        [Theme]
         public ActionResult MixedParts()
         {
             return View();
         }
 
+        /// <summary>
+        /// Action for rendering Izenda Report Designer page
+        /// </summary>
+        /// <returns>ReportDesigner View</returns>
         [Theme]
         public ActionResult ReportDesigner()
         {
             return View();
         }
 
+        /// <summary>
+        /// Action for rendering Izenda Report List page
+        /// </summary>
+        /// <returns>Reports View</returns>
         [Theme]
         public ActionResult Reports()
         {
             return View();
         }
 
+        /// <summary>
+        /// Action for rendering Izenda Dashboard Designer page
+        /// </summary>
+        /// <returns>DashboardDesigner View</returns>
         [Theme]
         public ActionResult DashboardDesigner()
         {
             return View();
         }
 
+        /// <summary>
+        /// Action for rendering Izenda Dashboard List page
+        /// </summary>
+        /// <returns>Dashboards View</returns>
         [Theme]
         public ActionResult Dashboards()
         {
@@ -83,11 +115,11 @@ namespace MVCCoreStarterKit.Controllers
         }
 
         /// <summary>
-        /// Render Report part
+        /// Action for rendering Izenda Report Part
         /// </summary>
         /// <param name="id">report part id</param>
         /// <param name="token">token from url</param>
-        /// <returns></returns>
+        /// <returns>ReportPart View</returns>
         public ActionResult ReportPart(Guid id, string token)
         {
             _logger.Debug($"ReportPart action token pulled from URL: {token}");
@@ -98,6 +130,11 @@ namespace MVCCoreStarterKit.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Action for rendering Izenda I-Frame from exported URL
+        /// </summary>
+        /// <param name="id">report id</param>
+        /// <returns>IframeViewer View</returns>
         public ActionResult IframeViewer(string id)
         {
             var query = Request.Query;

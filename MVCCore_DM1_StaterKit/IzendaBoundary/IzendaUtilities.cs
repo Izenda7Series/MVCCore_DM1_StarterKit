@@ -1,4 +1,6 @@
-﻿using MVCCoreStarterKit.IzendaBoundary.Models;
+﻿using MVCCoreStarterKit.Models.Role;
+using MVCCoreStarterKit.Models.Tenant;
+using MVCCoreStarterKit.Models.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;

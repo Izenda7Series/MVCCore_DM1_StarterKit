@@ -1,4 +1,4 @@
-﻿namespace MVCCoreStarterKit.Models
+﻿namespace MVCCoreStarterKit.Models.User
 {
     public class UserInfo
     {
