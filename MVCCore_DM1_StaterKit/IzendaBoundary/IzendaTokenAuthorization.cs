@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
-using MVCCoreStarterKit.Models;
+using MVCCoreStarterKit.Models.User;
 using System;
 using System.IO;
 

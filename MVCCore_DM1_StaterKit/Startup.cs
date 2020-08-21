@@ -36,7 +36,10 @@ namespace MVCCoreStarterKit
         #endregion
 
         #region Methods
-        // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to add services to the container.
+        /// </summary>
+        /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDataProtection()
@@ -79,7 +82,12 @@ namespace MVCCoreStarterKit
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="env"></param>
+        /// <param name="loggerFactory"></param>
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
@@ -103,6 +111,15 @@ namespace MVCCoreStarterKit
             app.UseAuthentication();
             app.UseCookiePolicy();
 
+            ConfigureRoutes(app);
+        }
+
+        /// <summary>
+        /// Route configures 
+        /// </summary>
+        /// <param name="app"></param>
+        private static void ConfigureRoutes(IApplicationBuilder app)
+        {
             app.UseMvc(routes =>
             {
                 routes.MapRoute("ReportPart", "izenda/viewer/reportpart/{id}", defaults: new { controller = "Home", action = "ReportPart" });
@@ -120,7 +137,7 @@ namespace MVCCoreStarterKit
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-        } 
+        }
         #endregion
     }
 }

@@ -8,21 +8,25 @@
 
   <ItemGroup>
     <Compile Remove="Data\Migrations\**" />
+    <Compile Remove="IzendaBoundary\Models\**" />
     <Compile Remove="IzendaReferences\**" />
     <Compile Remove="IzendaResources\**" />
     <Compile Remove="logs\**" />
     <Compile Remove="wwwroot\css\Content\**" />
     <Content Remove="Data\Migrations\**" />
+    <Content Remove="IzendaBoundary\Models\**" />
     <Content Remove="IzendaReferences\**" />
     <Content Remove="IzendaResources\**" />
     <Content Remove="logs\**" />
     <Content Remove="wwwroot\css\Content\**" />
     <EmbeddedResource Remove="Data\Migrations\**" />
+    <EmbeddedResource Remove="IzendaBoundary\Models\**" />
     <EmbeddedResource Remove="IzendaReferences\**" />
     <EmbeddedResource Remove="IzendaResources\**" />
     <EmbeddedResource Remove="logs\**" />
     <EmbeddedResource Remove="wwwroot\css\Content\**" />
     <None Remove="Data\Migrations\**" />
+    <None Remove="IzendaBoundary\Models\**" />
     <None Remove="IzendaReferences\**" />
     <None Remove="IzendaResources\**" />
     <None Remove="logs\**" />
@@ -34,13 +38,20 @@
   </ItemGroup>
   
   <ItemGroup>
+    <Compile Remove="Controllers\UserController.cs" />
     <Compile Remove="IzendaConfig.cs" />
+    <Compile Remove="Models\UserInfo.cs" />
   </ItemGroup>
   
   <ItemGroup>
     <Content Remove="appsettings.Development.json" />
     <Content Remove="izendadb.config" />
     <Content Remove="log4net.config" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="FodyWeavers.xml" />
+    <None Remove="FodyWeavers.xsd" />
   </ItemGroup>
 
   <ItemGroup>

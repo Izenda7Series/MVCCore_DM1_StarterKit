@@ -1,7 +1,8 @@
-﻿using System;
+﻿using MVCCoreStarterKit.Models.Role;
+using System;
 using System.Collections.Generic;
 
-namespace MVCCoreStarterKit.IzendaBoundary.Models
+namespace MVCCoreStarterKit.Models.User
 {
     public class UserDetail
     {
