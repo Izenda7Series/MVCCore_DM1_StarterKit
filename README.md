@@ -1,4 +1,3 @@
-
 # Izenda MVC Core Starterkit (Back-end Standalone)
 
  
@@ -25,9 +24,9 @@ This Starterkit showcases how to embed the front-end of Izenda into a MVC Core a
 
 - Download a copy of the <a href="https://downloads.izenda.com/Utilities/izendadb.config">izendadb.config</a> file, and copy it to the root of your API deployment. Then modify the file with a valid connection string to this new database. If the connection string contains a ‘/’, ensure that you escape it ‘//’
 
-- In the IzendaSystemSettings table, update AuthValidateAccessTokenUrl to be fully qualified with the Starterkit's base address. e.g. api/account/validateIzendaAuthToken --> http://localhost:9215/api/user/validateIzendaAuthToken
+- In the IzendaSystemSettings table, update AuthValidateAccessTokenUrl to be fully qualified with the Starterkit's base address. e.g. api/account/validateIzendaAuthToken --> http://localhost:9215/api/account/validateIzendaAuthToken
 
-- In the IzendaSystemSettings table, update AuthGetAccessTokenUrl to be fully qualified with the Starterkit's base address. e.g. api/getAccessToken --> http://localhost:9215/api/user/GetIzendaAccessToken
+- In the IzendaSystemSettings table, update AuthGetAccessTokenUrl to be fully qualified with the Starterkit's base address. e.g. api/getAccessToken --> http://localhost:9215/api/account/GetIzendaAccessToken
 
 ### Deploying the MVC Core Starter Kit Database
 
@@ -47,7 +46,7 @@ appsettings.json
 
 - Update the connection string to point to your mcv5core database.
 
-Download the <a href="https://downloads.izenda.com/v3.10.0/EmbeddedUI.zip">Izenda Embedded UI</a>, and copy/paste the files into the js/izenda folder. Create izenda folder if required. 
+Download the Izenda embedded UI from <a href="https://downloads.izenda.com">Izenda Download Site</a>, and copy/paste the files into the js/izenda folder.
 
 ### Update RSA Keys
 
