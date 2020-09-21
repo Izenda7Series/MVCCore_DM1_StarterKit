@@ -10,19 +10,21 @@ This Starterkit showcases how to embed the front-end of Izenda into a MVC Core a
 
  :warning: The MVC Core Kit is designed for demonstration purposes and should not be used as an “as-is” fully-integrated solution. You can use the kit for reference or a baseline but ensure that security and customization meet the standards of your company.
  
- :warning: Please make sure your IzendaDBVersion version to be matched with API version. If not, ensure that you run the appropriate schema migration scripts.
+ :warning: This kit is based on .NET Core 2.2 version.
 
 ### Deploying the standalone API and Izenda Configuration Database
 
-- Download and Install the <a href="https://dotnet.microsoft.com/download/dotnet-core/2.2">.Net core Windows hosting bundle</a>.
+- Download and Install the <a href="https://dotnet.microsoft.com/download/dotnet-core/2.2">.Net Core Windows hosting bundle</a>. 
 
-- Download and deploy the <a href="https://downloads.izenda.com/v3.10.0/API_AspNetCore.zip">Izenda Asp.Net Core API</a> to IIS.
+-   Visit <a href="https://downloads.izenda.com">Izenda resource site</a> and download / deploy the Izenda .Net Core API to IIS. You need to create an API folder in your IIS and paste all Izenda API contents into that folder.
 
-- Run the mvc5core_izenda.sql inside SQLScript/MSSQL folder to create a database named 'mvc5core_izenda' (This is the database for the Izenda configuration. It contains report definitions, dashboards,etc.). You may use any name of your choosing, just be sure to modify the script to USE the new database name.
+- Run the mvc5core_izenda.sql under the DBScript folder to create a database named 'mvc5core_izenda' (This is the database for the Izenda configuration. It contains report definitions, dashboards,etc.). You may use any name of your choosing, just be sure to modify the script to USE the new database name.
+
+- Create a izendadb.config with inserting following line : {"ServerTypeId":"572bd576-8c92-4901-ab2a-b16e38144813","ServerTypeName":"[MSSQL] SQLServer","ConnectionString":"[YOUR CONNECTION STRING]","ConnectionId":"00000000-0000-0000-0000-000000000000"} You need to update your ConnectionString. If the connection string contains a ‘/’, ensure that you escape it ‘//’ The ServerTypeId and ServerTypeName can be updated too based on your database type. For more information, please refer to <a href="https://www.izenda.com/docs/ref/api_systemdb_and_license.html#get-databasesetup-supporteddatabasetype">this</a>.
+
+- Insert izendadb.config file into the root of your API deployment.
 
 - Check mvc5core_izenda database version and update it if migration required <a href="https://tools.izenda.com/">Izenda Migration Assistant</a> 
-
-- Download a copy of the <a href="https://downloads.izenda.com/Utilities/izendadb.config">izendadb.config</a> file, and copy it to the root of your API deployment. Then modify the file with a valid connection string to this new database. If the connection string contains a ‘/’, ensure that you escape it ‘//’
 
 - In the IzendaSystemSettings table, update AuthValidateAccessTokenUrl to be fully qualified with the Starterkit's base address. e.g. api/account/validateIzendaAuthToken --> http://localhost:9215/api/account/validateIzendaAuthToken
 
@@ -30,23 +32,23 @@ This Starterkit showcases how to embed the front-end of Izenda into a MVC Core a
 
 ### Deploying the MVC Core Starter Kit Database
 
-- Run the mvc5core.sql inside SQLScript/MSSQL folder to create a database named 'mvc5core'. This is the database for the .NET application. It contains the users, tenants used to login. You may use any name of your choosing, just be sure to modify the script to USE the new database name.
+- Run the mvc5core.sql inside DBScript folder to create a database named 'mvc5core'. This is the database for the .NET application. It contains the users, tenants used to login. You may use any name of your choosing, just be sure to modify the script to USE the new database name.
 
 ### Deploying the Retail Database (optional)
 
-Create the Retail database with the retail.sql inside DBScripts folder.
+Create the Retail database with the retail.sql inside DBScript folder.
 
 ### Deploying the MVC Core Kit
 
 izenda.integrate.js
 
-- If required, modify the hostApi to point to the port of your Izenda API. Default port number is 4001.
+- Modify the hostApi to point to the port of your Izenda API. Default port number is 4001.
 
 appsettings.json
 
 - Update the connection string to point to your mcv5core database.
 
-Download the Izenda embedded UI from <a href="https://downloads.izenda.com">Izenda Download Site</a>, and copy/paste the files into the js/izenda folder.
+Create a izenda folder under the js folder. Download the Izenda embedded UI from <a href="https://downloads.izenda.com">Izenda resource site</a>, and copy/store the files into the js/izenda folder.
 
 ### Update RSA Keys
 
@@ -154,8 +156,8 @@ Examples:
 
 | Name                       | Value                                                     | 
 | -------------------------- |:----------------------------------------------------------|
-| AuthValidateAccessTokenUrl |http://localhost:9215/api/user/validateIzendaAuthToken |
-| AuthGetAccessTokenUrl      |http://localhost:9215/api/user/GetIzendaAccessToken            |
+| AuthValidateAccessTokenUrl |http://localhost:9215/api/account/validateIzendaAuthToken |
+| AuthGetAccessTokenUrl      |http://localhost:9215/api/account/GetIzendaAccessToken            |
 
 </br>
 

@@ -15,7 +15,6 @@ namespace MVCCoreStarterKit.IzendaBoundary
     {
         #region Variables
         readonly string _basedUri;
-
         private static WebAPIService _instance;
         #endregion
 
@@ -31,7 +30,8 @@ namespace MVCCoreStarterKit.IzendaBoundary
         {
             get
             {
-                if (_instance != null) return _instance;
+                if (_instance != null) 
+                    return _instance;
 
                 IConfigurationRoot configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
                 var _basedUri = configuration.GetValue<string>("AppSettings:Settings:IzendaApiUrl");
@@ -64,9 +64,8 @@ namespace MVCCoreStarterKit.IzendaBoundary
                     return JsonConvert.DeserializeObject<T>(responeJson);
 
                 }
-#pragma warning disable IDE0034 // Simplify 'default' expression
+              
                 return default(T);
-#pragma warning restore IDE0034 // Simplify 'default' expression
             }
         }
 
@@ -120,6 +119,7 @@ namespace MVCCoreStarterKit.IzendaBoundary
             {
                 var url = BuildActionUri(action);
                 var httpResponse = await httpClient.PostAsJsonAsync(url, data);
+
                 try
                 {
                     httpResponse.EnsureSuccessStatusCode();
@@ -129,14 +129,26 @@ namespace MVCCoreStarterKit.IzendaBoundary
                     throw new WebApiException(url, httpResponse.StatusCode, ex);
                 }
 
-                string responseJson = await httpResponse.Content.ReadAsStringAsync();
+                var responseJson = await httpResponse.Content.ReadAsStringAsync();
+
                 if (responseJson != "null")
                     return JsonConvert.DeserializeObject<TResult>(responseJson);
 
-#pragma warning disable IDE0034 // Simplify 'default' expression
                 return default(TResult);
-#pragma warning restore IDE0034 // Simplify 'default' expression
             }
+        }
+
+        private HttpClient GetHttpClient(string authToken = null)
+        {
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+            if (!string.IsNullOrWhiteSpace(authToken))
+            {
+                client.DefaultRequestHeaders.Add("access_token", authToken);
+            }
+
+            return client;
         }
 
         public async Task DeleteAsync(string action, string authToken = null)
@@ -172,23 +184,8 @@ namespace MVCCoreStarterKit.IzendaBoundary
                 }
 
                 var responseJson = await httpResponse.Content.ReadAsStringAsync();
-#pragma warning disable IDE0034 // Simplify 'default' expression
                 return responseJson != "null" ? JsonConvert.DeserializeObject<TResult>(responseJson) : default(TResult);
-#pragma warning restore IDE0034 // Simplify 'default' expression
             }
-        }
-
-        private HttpClient GetHttpClient(string authToken = null)
-        {
-            var client = new HttpClient();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-            if (!string.IsNullOrWhiteSpace(authToken))
-            {
-                client.DefaultRequestHeaders.Add("access_token", authToken);
-            }
-
-            return client;
         }
 
         private string BuildActionUri(string action, Dictionary<string, object> parameters = null)

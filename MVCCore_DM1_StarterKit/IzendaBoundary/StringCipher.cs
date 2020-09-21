@@ -6,13 +6,18 @@ namespace MVCCoreStarterKit.IzendaBoundary
 {
     public static class StringCipher
     {
-        const int RequiredKeyLength = 16;
+        #region Constants
+        private const int RequiredKeyLength = 16;
 
         //must be at least 16 characters long (128 bits)
-        const string InitializationVector = "ALDAOQJkdak10314";
+        private const string InitializationVector = "ALDAOQJkdak10314";
+        #endregion
 
+        #region Variables
         private static readonly AesCryptoServiceProvider Crypto = new AesCryptoServiceProvider();
+        #endregion
 
+        #region Methods
         public static string Encrypt(string raw, string key)
         {
             EnsureKeyLength(key);
@@ -46,6 +51,7 @@ namespace MVCCoreStarterKit.IzendaBoundary
             {
                 throw new Exception($"The encryption key must be {RequiredKeyLength} characters long.");
             }
-        }
+        } 
+        #endregion
     }
 }
