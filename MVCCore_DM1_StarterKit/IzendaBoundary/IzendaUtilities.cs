@@ -33,6 +33,28 @@ namespace MVCCoreStarterKit.IzendaBoundary
             return await WebAPIService.Instance.PostReturnBooleanAsync("tenant", tenantDetail, authToken);
         }
 
+        public static async Task<RoleDetail> CreateRole(string roleName, TenantDetail izendaTenant, string authToken)
+        {
+            var role = await GetIzendaRoleByTenantAndName(izendaTenant != null ? (Guid?)izendaTenant.Id : null, roleName, authToken);
+
+            if (role == null)
+            {
+                role = new RoleDetail
+                {
+                    Active = true,
+                    Deleted = false,
+                    NotAllowSharing = false,
+                    Name = roleName,
+                    TenantId = izendaTenant != null ? (Guid?)izendaTenant.Id : null
+                };
+
+                var response = await WebAPIService.Instance.PostReturnValueAsync<AddRoleResponeMessage, RoleDetail>("role", role, authToken);
+                role = response.Role;
+            }
+
+            return role;
+        }
+
         /// <summary>
         /// Create a user
         /// For more information, please refer to https://www.izenda.com/docs/ref/api_user.html#post-external-user
@@ -64,26 +86,13 @@ namespace MVCCoreStarterKit.IzendaBoundary
             return success;
         }
 
-        public static async Task<RoleDetail> CreateRole(string roleName, TenantDetail izendaTenant, string authToken)
+        public static async Task<TenantDetail> GetIzendaTenantByName(string tenantName, string authToken)
         {
-            var role = await GetIzendaRoleByTenantAndName(izendaTenant != null ? (Guid?)izendaTenant.Id : null, roleName, authToken);
+            var tenants = await WebAPIService.Instance.GetAsync<IList<TenantDetail>>("/tenant/allTenants", authToken);
+            if (tenants != null)
+                return tenants.FirstOrDefault(x => x.TenantId.Equals(tenantName, StringComparison.InvariantCultureIgnoreCase));
 
-            if (role == null)
-            {
-                role = new RoleDetail
-                {
-                    Active = true,
-                    Deleted = false,
-                    NotAllowSharing = false,
-                    Name = roleName,
-                    TenantId = izendaTenant != null ? (Guid?)izendaTenant.Id : null
-                };
-
-                var response = await WebAPIService.Instance.PostReturnValueAsync<AddRoleResponeMessage, RoleDetail>("role", role, authToken);
-                role = response.Role;
-            }
-
-            return role;
+            return null;
         }
 
         /// <summary>
@@ -95,15 +104,6 @@ namespace MVCCoreStarterKit.IzendaBoundary
 
             if (roles.Any())
                 return roles.FirstOrDefault(r => r.Name.Equals(roleName, StringComparison.InvariantCultureIgnoreCase));
-
-            return null;
-        }
-
-        public static async Task<TenantDetail> GetIzendaTenantByName(string tenantName, string authToken)
-        {
-            var tenants = await WebAPIService.Instance.GetAsync<IList<TenantDetail>>("/tenant/allTenants", authToken);
-            if (tenants != null)
-                return tenants.FirstOrDefault(x => x.TenantId.Equals(tenantName, StringComparison.InvariantCultureIgnoreCase));
 
             return null;
         }
