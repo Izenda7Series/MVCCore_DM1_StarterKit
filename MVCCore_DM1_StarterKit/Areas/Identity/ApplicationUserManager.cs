@@ -60,6 +60,9 @@ namespace MVCCoreStarterKit.Areas.Identity
                     .SingleOrDefaultAsync();
             }
 
+            if (user == null)
+                return user;
+
             var userById = await Users.FirstOrDefaultAsync(u => u.Id == user.Id);
 
             if (await CheckPasswordAsync(userById, password))
