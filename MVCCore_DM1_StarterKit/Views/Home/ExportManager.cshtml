@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Export Manager";
+}
+
+@section scripts
+    {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            izendaInitRenderExportManagerPage();
+        });
+    </script>
+}
+
+<div class="loader" id="progressLoader"> </div>
+<div class="izenda-container" id="izenda-root"></div>

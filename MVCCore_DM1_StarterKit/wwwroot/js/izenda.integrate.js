@@ -25,15 +25,19 @@ function errorFunc() {
     // confirm dialog
     alertify.confirm("Your token was not generated correctly, please login.", function () {
         // user clicked "ok"
-    }, function() {
+        window.location.href = "/Identity/Account/Login";
+    }, function () {
         // user clicked "cancel"
+        window.location.href = "/";
     });
 }
 
 //This function will be executed when a request receive an 401 response 
 var OnReceiveUnauthorizedResponse = function (message) {
     //Redirect users back to their home page
-    location = location.protocol + '//' + location.host;
+    //location = location.protocol + '//' + location.host;
+    //or custom page
+    window.location.href = "/Identity/Account/AccessDenied";
 };
 
 var DoRender = function (successFunc) {
@@ -247,4 +251,16 @@ var izendaInitReportPartExportViewer = function (reportPartId, token) {
         useQueryParam: true,
         useHash: false
     });
+};
+
+var izendaInitRenderExportManagerPage = function () {
+    function successFunc(data, status) {
+        var currentUserContext = {
+            token: data.token
+        };
+
+        IzendaSynergy.setCurrentUserContext(currentUserContext);
+        IzendaSynergy.renderExportManagerPage(document.getElementById('izenda-root'));
+    }
+    this.DoRender(successFunc);
 };
