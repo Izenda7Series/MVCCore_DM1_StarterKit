@@ -147,7 +147,17 @@ namespace MVCCoreStarterKit.Controllers
             ViewBag.overridingFilterQueries = JsonConvert.SerializeObject(filters);
             ViewBag.Id = id;
             return View();
-        } 
+        }
+
+        [Theme]
+        /// <summary>
+        /// Action for rendering Izenda export manager page
+        /// </summary>
+        /// <returns>ExportManager View</returns>
+        public ActionResult ExportManager()
+        {
+            return View();
+        }
         #endregion
     }
 }

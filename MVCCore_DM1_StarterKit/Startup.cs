@@ -133,6 +133,7 @@ namespace MVCCoreStarterKit
                 routes.MapRoute("izenda_report", "izenda/report", defaults: new { controller = "Home", action = "Izenda" });
                 routes.MapRoute("izenda_reportviewer", "izenda/reportviewer", defaults: new { controller = "Home", action = "Izenda" });
                 routes.MapRoute("izenda_reportviewerpopup", "izenda/reportviewerpopup", defaults: new { controller = "Home", action = "Izenda" });
+                routes.MapRoute("ExportManager", "izenda/myprofile", defaults: new { controller = "Home", action = "ExportManager" });
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
