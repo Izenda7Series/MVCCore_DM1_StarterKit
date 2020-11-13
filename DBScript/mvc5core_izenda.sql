@@ -1011,6 +1011,7 @@ CREATE TABLE [dbo].[IzendaRole](
 	[CreatedBy] [nvarchar](256) NULL,
 	[Modified] [datetime] NULL,
 	[ModifiedBy] [nvarchar](256) NULL,
+	[RoleType] [nvarchar](256) NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC
@@ -1727,9 +1728,6 @@ INSERT [dbo].[IzendaExportMarginDefaultValue] ([Id], [Type], [TopValue], [Bottom
 INSERT [dbo].[IzendaExportMarginDefaultValue] ([Id], [Type], [TopValue], [BottomValue], [LeftValue], [RightValue], [HeaderValue], [FooterValue], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'df2d2380-48c9-4249-aacb-8fd3a3465604', 3, 0.75, 0.75, 0.7, 0.7, 0.3, 0.3, 1, 0, NULL, NULL, NULL, NULL)
 INSERT [dbo].[IzendaExportMarginDefaultValue] ([Id], [Type], [TopValue], [BottomValue], [LeftValue], [RightValue], [HeaderValue], [FooterValue], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'df2d2380-48c9-4249-aacb-8fd3a3465605', 4, 0, 0, 0, 0, 0, 0, 1, 0, NULL, NULL, NULL, NULL)
 INSERT [dbo].[IzendaExportMarginDefaultValue] ([Id], [Type], [TopValue], [BottomValue], [LeftValue], [RightValue], [HeaderValue], [FooterValue], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'df2d2380-48c9-4249-aacb-8fd3a3465606', 5, 11.68, 11.68, 7.78, 7.78, 11.68, 11.68, 1, 0, NULL, NULL, NULL, NULL)
-INSERT [dbo].[IzendaFilterField] ([Id], [FilterId], [QuerySourceFieldId], [QuerySourceId], [QuerySourceType], [RelationshipId], [Position], [Alias], [ReportFieldAlias], [ReportPartTitle], [Visible], [Required], [Cascading], [OperatorId], [OperatorSetting], [Value], [DataFormatId], [FontFamily], [FontSize], [TextColor], [BackgroundColor], [FontBold], [FontItalic], [FontUnderline], [SortType], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'0ed6a4f7-9679-45ea-aa4f-2fea49384f87', N'3e929e0a-0f1f-483a-b9ba-aba8ee9ff753', N'77bc8de6-03f7-44f9-8756-e0227bc1172a', N'7827b006-21cf-4c41-97ae-39fa0dc07004', N'Table', NULL, 2, N'UnitPrice', NULL, NULL, 1, 0, 1, N'94c4fb2e-c5d3-4160-a2f7-173418ca4e66', NULL, N'20;#50', NULL, N'Roboto', 14, N'#000', N'#fff', 0, 0, 0, N'ASC', 0, 4, CAST(N'2017-01-18T10:36:57.973' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:39:48.850' AS DateTime), NULL)
-INSERT [dbo].[IzendaFilterField] ([Id], [FilterId], [QuerySourceFieldId], [QuerySourceId], [QuerySourceType], [RelationshipId], [Position], [Alias], [ReportFieldAlias], [ReportPartTitle], [Visible], [Required], [Cascading], [OperatorId], [OperatorSetting], [Value], [DataFormatId], [FontFamily], [FontSize], [TextColor], [BackgroundColor], [FontBold], [FontItalic], [FontUnderline], [SortType], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'39e48f42-0e2a-43f3-a483-7e51c9a2cfb0', N'3e929e0a-0f1f-483a-b9ba-aba8ee9ff753', N'dc50a915-a494-456b-9bf6-44cc52a080fe', N'7827b006-21cf-4c41-97ae-39fa0dc07004', N'Table', NULL, 1, N'Quantity', NULL, NULL, 1, 0, 1, N'53d73892-3a12-45cd-8b69-163ff6c41989', NULL, N'30', NULL, N'Roboto', 14, N'#000', N'#fff', 0, 0, 0, N'ASC', 0, 4, CAST(N'2017-01-18T10:36:57.973' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:39:48.850' AS DateTime), NULL)
-INSERT [dbo].[IzendaFilterField] ([Id], [FilterId], [QuerySourceFieldId], [QuerySourceId], [QuerySourceType], [RelationshipId], [Position], [Alias], [ReportFieldAlias], [ReportPartTitle], [Visible], [Required], [Cascading], [OperatorId], [OperatorSetting], [Value], [DataFormatId], [FontFamily], [FontSize], [TextColor], [BackgroundColor], [FontBold], [FontItalic], [FontUnderline], [SortType], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'07d83ca4-b92e-4d1d-a201-f72a2040f09d', N'520870ed-1055-4b57-bda0-d5fbf3ef951c', N'dc50a915-a494-456b-9bf6-44cc52a080fe', N'7827b006-21cf-4c41-97ae-39fa0dc07004', N'Table', NULL, 1, N'Quantity', NULL, NULL, 1, 0, 1, N'53d73892-3a12-45cd-8b69-163ff6c41989', NULL, N'30', NULL, N'Roboto', 14, N'#000', N'#fff', 0, 0, 0, N'ASC', 0, 2, CAST(N'2017-01-18T10:47:19.977' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:48:35.017' AS DateTime), NULL)
 INSERT [dbo].[IzendaFilterOperator] ([Id], [Name], [Label], [OperatorGroupId], [AllowParameter], [Position], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'5522a5d7-0456-432b-b1fb-02a4283baa3d', N'Not Between (Date & Time)', N'Not Between (Date & Time)', N'01076b28-8e77-4a54-95d8-060d142a77e6', 0, 38, NULL, 0, NULL, NULL, NULL, NULL)
 INSERT [dbo].[IzendaFilterOperator] ([Id], [Name], [Label], [OperatorGroupId], [AllowParameter], [Position], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'cb64b1fd-6dec-4b18-b348-02b5b984e6c6', N'Equals (Date & Time)', N'=', N'01076b28-8e77-4a54-95d8-060d142a77e6', 1, 41, NULL, 0, NULL, NULL, NULL, NULL)
 INSERT [dbo].[IzendaFilterOperator] ([Id], [Name], [Label], [OperatorGroupId], [AllowParameter], [Position], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'4d68d4a2-05ac-4f24-8496-02c1cfe75460', N'Not Equal (Date & Time)', N'<>', N'01076b28-8e77-4a54-95d8-060d142a77e6', 0, 44, NULL, 0, NULL, NULL, NULL, NULL)
@@ -2110,31 +2108,21 @@ INSERT [dbo].[IzendaRelationship] ([Id], [JoinQuerySourceId], [ForeignQuerySourc
 INSERT [dbo].[IzendaRelationship] ([Id], [JoinQuerySourceId], [ForeignQuerySourceId], [JoinFieldId], [ForeignFieldId], [Alias], [SystemRelationship], [JoinType], [ParentRelationshipId], [ReportId], [ForeignAlias], [RelationshipPosition], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [ComparisonOperator]) VALUES (N'12059119-5ee3-4c4e-a8a9-c3e50329cd16', N'f3645208-247d-44be-8fe5-7e39c64a61f0', N'e81b12b9-dbcf-436a-b64e-c2712ef0f843', N'fa18976d-8944-4bd6-b71e-ae3cc6c4b0a8', N'51504e6a-de8d-46af-9fe3-9521b6ea314b', NULL, 1, N'Inner', NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, CAST(N'2017-01-18T10:24:26.953' AS DateTime), NULL, N'= (Field)')
 INSERT [dbo].[IzendaRelationship] ([Id], [JoinQuerySourceId], [ForeignQuerySourceId], [JoinFieldId], [ForeignFieldId], [Alias], [SystemRelationship], [JoinType], [ParentRelationshipId], [ReportId], [ForeignAlias], [RelationshipPosition], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [ComparisonOperator]) VALUES (N'9e8abce1-3ebe-46ae-967d-c63f9a39a693', N'18483fe5-0914-46eb-8ee2-3e0afea84ce1', N'fc80b51c-167f-4d16-85ce-7c8171a6e530', N'd4d7f4f5-59d9-4fea-b2a8-a1d5eca14191', N'd0c5f481-b5ab-4fb3-8457-3cc40dcf683f', NULL, 1, N'Inner', NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, CAST(N'2017-05-04T18:58:56.497' AS DateTime), NULL, NULL)
 INSERT [dbo].[IzendaRelationship] ([Id], [JoinQuerySourceId], [ForeignQuerySourceId], [JoinFieldId], [ForeignFieldId], [Alias], [SystemRelationship], [JoinType], [ParentRelationshipId], [ReportId], [ForeignAlias], [RelationshipPosition], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [ComparisonOperator]) VALUES (N'65e63479-82bd-4ef0-9149-caaea0e47d51', N'9d031265-21a8-499b-b3df-7cd544db2da7', N'18483fe5-0914-46eb-8ee2-3e0afea84ce1', N'cdd968bc-3c16-49f5-9fb5-7c2bdb4f7ec9', N'930de933-c3c6-4c65-8ff8-ec32b8a183bc', NULL, 1, N'Inner', NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, CAST(N'2017-05-04T18:58:56.497' AS DateTime), NULL, NULL)
-INSERT [dbo].[IzendaReport] ([Id], [Name], [Type], [PreviewRecord], [AdvancedMode], [AllowNulls], [IsDistinct], [CategoryId], [SubCategoryId], [TenantId], [Description], [HeaderContent], [FooterContent], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [LastViewed], [Owner], [OwnerId], [Title], [TitleDescriptionContent], [ExcludedRelationships], [NumberOfView], [RenderingTime], [CreatedById], [ModifiedById], [ExportFormatSettingData], [SnapToGrid], [UsingFields], [SourceId]) VALUES (N'58ec4bec-bb01-4c7a-b0b6-819a8439ea4b', N'Report1 Demo', 0, 10, 1, 0, 0, N'063ae899-45ce-4cd2-a849-f4bbd2049516', NULL, N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', N'', N'{"visible":false,"items":[{"isDirty":false,"type":"image","label":"Image","id":"formatDetails_261","positionX":0,"positionY":0,"width":6,"height":6,"name":"Logo Image","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageUrl":"http://","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_262","positionX":20,"positionY":0,"width":12,"height":2,"name":"Report Name","value":"{reportName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"thinHorizontalRule","label":"Horizontal Rule","id":"formatDetails_263","positionX":20,"positionY":4,"width":12,"height":1,"name":"Upper Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_264","positionX":20,"positionY":5,"width":6,"height":2,"name":"Report Generated","value":"Report Generated:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_265","positionX":20,"positionY":7,"width":6,"height":2,"name":"User","value":"User:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_266","positionX":20,"positionY":9,"width":6,"height":2,"name":"Tenant","value":"Tenant:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"dateTime","label":"Date Time","id":"formatDetails_267","positionX":26,"positionY":5,"width":6,"height":2,"name":"Current Date Time","value":"{currentDateTime}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_268","positionX":26,"positionY":7,"width":6,"height":2,"name":"Current User Name","value":"{currentUserName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_269","positionX":26,"positionY":9,"width":6,"height":2,"name":"Tenant Name","value":"{tenantName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_270","positionX":0,"positionY":11,"width":32,"height":1,"name":"Lower Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":4}]}', N'{"visible":false,"items":[{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_271","positionX":0,"positionY":0,"width":32,"height":1,"name":"Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":4},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_272","positionX":0,"positionY":1,"width":10,"height":2,"name":"Footer Text","value":"Footer Text","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_273","positionX":20,"positionY":1,"width":4,"height":2,"name":"Page","value":"Page","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"pageNumber","label":"Page Number","id":"formatDetails_274","positionX":24,"positionY":1,"width":8,"height":2,"name":"Page Number","value":"{pageNumber}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1}]}', 4, 0, CAST(N'2017-01-18T10:36:57.900' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:39:48.823' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:58:47.080' AS DateTime), N'System Admin', N'9d2f1d51-0e3d-44db-bfc7-da94a7581bfe', N'', N'{"visible":false,"items":[{"isDirty":false,"type":"title","label":"Title","id":"formatDetails_275","name":"Title","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"description","label":"Description","id":"formatDetails_276","name":"Description","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1}]}', N'', 10, 4868.9, N'9d2f1d51-0e3d-44db-bfc7-da94a7581bfe', N'9d2f1d51-0e3d-44db-bfc7-da94a7581bfe', N'{"Orientation":0,"Margins":0,"CenterOnPage":{"Horizontally":false,"Vertically":false},"PageBreakAfterReportPart":false,"MarginSettings":[{"Type":3,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":0,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":1,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.25,"RightValue":0.25,"HeaderValue":0.3,"FooterValue":0.3},{"Type":2,"TopValue":1.0,"BottomValue":1.0,"LeftValue":1.0,"RightValue":1.0,"HeaderValue":0.5,"FooterValue":0.5}]}', 0, N'dc50a915-a494-456b-9bf6-44cc52a080fe,77bc8de6-03f7-44f9-8756-e0227bc1172a,d24b57ec-b622-4f22-aff5-76dc2f24ab7b', NULL)
-INSERT [dbo].[IzendaReport] ([Id], [Name], [Type], [PreviewRecord], [AdvancedMode], [AllowNulls], [IsDistinct], [CategoryId], [SubCategoryId], [TenantId], [Description], [HeaderContent], [FooterContent], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [LastViewed], [Owner], [OwnerId], [Title], [TitleDescriptionContent], [ExcludedRelationships], [NumberOfView], [RenderingTime], [CreatedById], [ModifiedById], [ExportFormatSettingData], [SnapToGrid], [UsingFields], [SourceId]) VALUES (N'f9e17bc6-42de-418d-af87-8516a5c351a0', N'Report2 demo', 0, 10, 1, 0, 0, N'063ae899-45ce-4cd2-a849-f4bbd2049516', NULL, N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', N'', N'{"visible":false,"items":[{"isDirty":false,"type":"image","label":"Image","id":"formatDetails_180","positionX":0,"positionY":0,"width":6,"height":6,"name":"Logo Image","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageUrl":"http://","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_181","positionX":20,"positionY":0,"width":12,"height":2,"name":"Report Name","value":"{reportName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"thinHorizontalRule","label":"Horizontal Rule","id":"formatDetails_182","positionX":20,"positionY":4,"width":12,"height":1,"name":"Upper Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_183","positionX":20,"positionY":5,"width":6,"height":2,"name":"Report Generated","value":"Report Generated:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_184","positionX":20,"positionY":7,"width":6,"height":2,"name":"User","value":"User:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_185","positionX":20,"positionY":9,"width":6,"height":2,"name":"Tenant","value":"Tenant:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"dateTime","label":"Date Time","id":"formatDetails_186","positionX":26,"positionY":5,"width":6,"height":2,"name":"Current Date Time","value":"{currentDateTime}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_187","positionX":26,"positionY":7,"width":6,"height":2,"name":"Current User Name","value":"{currentUserName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_188","positionX":26,"positionY":9,"width":6,"height":2,"name":"Tenant Name","value":"{tenantName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_189","positionX":0,"positionY":11,"width":32,"height":1,"name":"Lower Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":4}]}', N'{"visible":false,"items":[{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_190","positionX":0,"positionY":0,"width":32,"height":1,"name":"Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":4},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_191","positionX":0,"positionY":1,"width":10,"height":2,"name":"Footer Text","value":"Footer Text","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_192","positionX":20,"positionY":1,"width":4,"height":2,"name":"Page","value":"Page","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"pageNumber","label":"Page Number","id":"formatDetails_193","positionX":24,"positionY":1,"width":8,"height":2,"name":"Page Number","value":"{pageNumber}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1}]}', 2, 0, CAST(N'2017-01-18T10:47:19.953' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:48:34.930' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:48:44.797' AS DateTime), N'System Admin', N'9d2f1d51-0e3d-44db-bfc7-da94a7581bfe', N'', N'{"visible":false,"items":[{"isDirty":false,"type":"title","label":"Title","id":"formatDetails_194","name":"Title","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"description","label":"Description","id":"formatDetails_195","name":"Description","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1}]}', N'', 1, 6189, N'9d2f1d51-0e3d-44db-bfc7-da94a7581bfe', N'9d2f1d51-0e3d-44db-bfc7-da94a7581bfe', N'{"Orientation":0,"Margins":0,"CenterOnPage":{"Horizontally":false,"Vertically":false},"PageBreakAfterReportPart":false,"MarginSettings":[{"Type":3,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":0,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":1,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.25,"RightValue":0.25,"HeaderValue":0.3,"FooterValue":0.3},{"Type":2,"TopValue":1.0,"BottomValue":1.0,"LeftValue":1.0,"RightValue":1.0,"HeaderValue":0.5,"FooterValue":0.5}]}', 0, N'dc50a915-a494-456b-9bf6-44cc52a080fe,d24b57ec-b622-4f22-aff5-76dc2f24ab7b,77bc8de6-03f7-44f9-8756-e0227bc1172a', NULL)
 INSERT [dbo].[IzendaReportCategory] ([Id], [Name], [Type], [ParentId], [TenantId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'063ae899-45ce-4cd2-a849-f4bbd2049516', N'DemoReport', 0, NULL, N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', NULL, 0, NULL, NULL, NULL, NULL)
-INSERT [dbo].[IzendaReportDataSource] ([Id], [QuerySourceId], [ReportId], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'59477a1d-c397-462b-9dd3-20edc4401cf8', N'7827b006-21cf-4c41-97ae-39fa0dc07004', N'f9e17bc6-42de-418d-af87-8516a5c351a0', 0, 1, CAST(N'2017-01-18T10:48:35.000' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:48:35.000' AS DateTime), N'System Admin')
-INSERT [dbo].[IzendaReportDataSource] ([Id], [QuerySourceId], [ReportId], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'41910911-4890-446b-81db-bf0a3dd961fa', N'7827b006-21cf-4c41-97ae-39fa0dc07004', N'58ec4bec-bb01-4c7a-b0b6-819a8439ea4b', 0, 1, CAST(N'2017-01-18T10:38:49.293' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:38:49.293' AS DateTime), N'System Admin')
-INSERT [dbo].[IzendaReportFilter] ([Id], [Logic], [Visible], [ReportId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'3e929e0a-0f1f-483a-b9ba-aba8ee9ff753', N'1 AND 2', 1, N'58ec4bec-bb01-4c7a-b0b6-819a8439ea4b', 4, 0, CAST(N'2017-01-18T10:36:57.957' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:39:48.847' AS DateTime), NULL)
-INSERT [dbo].[IzendaReportFilter] ([Id], [Logic], [Visible], [ReportId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'520870ed-1055-4b57-bda0-d5fbf3ef951c', N'', 1, N'f9e17bc6-42de-418d-af87-8516a5c351a0', 2, 0, CAST(N'2017-01-18T10:47:19.973' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:48:35.007' AS DateTime), NULL)
 INSERT [dbo].[IzendaReportHistory] ([Id], [ReportId], [ReportName], [Description], [Definition], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'a88be0c0-6162-4ec2-b335-016c8c424fc3', N'58ec4bec-bb01-4c7a-b0b6-819a8439ea4b', N'Report1 Demo', N'', N'{"Inaccessible":false,"Category":{"Name":"DemoReport","Type":0,"ParentId":null,"TenantId":"9dd5ae29-bdb9-4520-ba35-643d4ccc1708","CanDelete":false,"Editable":false,"Savable":false,"SubCategories":[],"Checked":false,"Reports":null,"Dashboards":null,"Id":"063ae899-45ce-4cd2-a849-f4bbd2049516","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null},"SubCategory":null,"ReportRelationship":[],"ReportPart":[{"ReportPartContent":{"Labels":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"OrderID","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","name":"Group","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"d24b57ec-b622-4f22-aff5-76dc2f24ab7b","OriginalName":null,"FieldName":"OrderID","FieldNameAlias":"OrderID","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Group","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"Values":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"Sum (UnitPrice)","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"902a9168-fc01-4a35-92fb-ea67942d099d","functionInfo":{"id":"902a9168-fc01-4a35-92fb-ea67942d099d","name":"Sum","expression":null,"dataType":"Money","formatDataType":"Money","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"77bc8de6-03f7-44f9-8756-e0227bc1172a","OriginalName":null,"FieldName":"UnitPrice","FieldNameAlias":"Sum (UnitPrice)","DataFieldType":"Money","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"SUM([UnitPrice])","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Sum","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Money","IsCalculated":false,"HasAggregatedFunction":false}},{"Name":"Sum (Quantity)","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"902a9168-fc01-4a35-92fb-ea67942d099d","functionInfo":{"id":"902a9168-fc01-4a35-92fb-ea67942d099d","name":"Sum","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":2,"Field":{"FieldId":"dc50a915-a494-456b-9bf6-44cc52a080fe","OriginalName":null,"FieldName":"Quantity","FieldNameAlias":"Sum (Quantity)","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"SUM([Quantity])","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Sum","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"ValuesLabels":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"BubbleSize":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Separators":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Type":0,"Properties":{"staticProperties":{},"chartType":"Line","commonOptions":{"izHoverLabels":true,"izLegend.visibility":false,"izLegend.horizontalAlign":"izRight","izLegend.verticalAlign":"izBottom","izLegend.borderWidth":0,"izChartStyle":{},"izendaHiddenAllAxis":false},"optionByType":{"izTotalLabel":"","izUseSeparator":true,"izInverted":false,"izSpline":false,"izValueLabel":false,"legendSettings":true},"view":{"dataRefreshInterval":{"enable":false,"updateInterval":0,"isAll":true,"latestRecord":0}},"commonXYAxis":{},"printing":{"izPageBreakAfterSeparator":false}},"Settings":{},"Title":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":true,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"Description":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":false,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"ExpandedLevel":-1},"Title":"Chart","PositionX":0,"PositionY":0,"Width":12,"Height":4,"ReportId":"58ec4bec-bb01-4c7a-b0b6-819a8439ea4b","NumberOfRecord":null,"SourceId":null,"Id":"f43be711-342b-4e74-80cd-ebb6308c8dd4","State":0,"Deleted":false,"Inserted":true,"Version":1,"Created":"2017-01-18T10:36:58.013","CreatedBy":"System Admin","Modified":"2017-01-18T10:36:58.013","ModifiedBy":"System Admin"}],"ReportFilter":{"FilterFields":[{"ConnectionName":"retail","QuerySourceCategoryName":"dbo","SourceFieldName":"Quantity","SourceFieldVisible":true,"SourceFieldFilterable":true,"SourceDataObjectName":"Order Details","SourceDataObjectFullName":"retail.dbo.Order Details","DataType":"Numeric","IsParameter":false,"IsCalculated":false,"CalculatedTree":null,"CompareFieldCalculatedTree":null,"CompareField":null,"Selected":false,"DataFormat":null,"ReportId":null,"UseMappedFieldAlias":false,"UniqueId":null,"ComparisionValue":null,"FilterId":"3e929e0a-0f1f-483a-b9ba-aba8ee9ff753","ReportFieldAlias":null,"ReportPartTitle":null,"QuerySourceFieldId":"dc50a915-a494-456b-9bf6-44cc52a080fe","QuerySourceType":"Table","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","RelationshipId":null,"Alias":"Quantity","Position":1,"Visible":true,"Required":false,"Cascading":true,"OperatorId":"53d73892-3a12-45cd-8b69-163ff6c41989","OperatorSetting":null,"Value":"30","DataFormatId":null,"SortType":"ASC","FontFamily":"Roboto","FontSize":14,"TextColor":"#000","BackgroundColor":"#fff","FontBold":false,"FontItalic":false,"FontUnderline":false,"Id":"39e48f42-0e2a-43f3-a483-7e51c9a2cfb0","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null},{"ConnectionName":"retail","QuerySourceCategoryName":"dbo","SourceFieldName":"UnitPrice","SourceFieldVisible":true,"SourceFieldFilterable":true,"SourceDataObjectName":"Order Details","SourceDataObjectFullName":"retail.dbo.Order Details","DataType":"Money","IsParameter":false,"IsCalculated":false,"CalculatedTree":null,"CompareFieldCalculatedTree":null,"CompareField":null,"Selected":false,"DataFormat":null,"ReportId":null,"UseMappedFieldAlias":false,"UniqueId":null,"ComparisionValue":null,"FilterId":"3e929e0a-0f1f-483a-b9ba-aba8ee9ff753","ReportFieldAlias":null,"ReportPartTitle":null,"QuerySourceFieldId":"77bc8de6-03f7-44f9-8756-e0227bc1172a","QuerySourceType":"Table","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","RelationshipId":null,"Alias":"UnitPrice","Position":2,"Visible":true,"Required":false,"Cascading":true,"OperatorId":"94c4fb2e-c5d3-4160-a2f7-173418ca4e66","OperatorSetting":null,"Value":null,"DataFormatId":null,"SortType":"ASC","FontFamily":"Roboto","FontSize":14,"TextColor":"#000","BackgroundColor":"#fff","FontBold":false,"FontItalic":false,"FontUnderline":false,"Id":"0ed6a4f7-9679-45ea-aa4f-2fea49384f87","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null}],"Logic":"","Visible":true,"ReportId":"58ec4bec-bb01-4c7a-b0b6-819a8439ea4b","Id":"3e929e0a-0f1f-483a-b9ba-aba8ee9ff753","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null},"CalculatedFields":[],"Accesses":[],"Schedules":[],"DynamicQuerySourceFields":[],"Name":"Report1 Demo","ReportDataSource":[{"ReportId":"58ec4bec-bb01-4c7a-b0b6-819a8439ea4b","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceCategoryId":null,"ConnectionId":null,"Selected":false,"Id":"fa68180e-781b-4dd2-8c62-058481a07513","State":0,"Deleted":false,"Inserted":true,"Version":1,"Created":"2017-01-18T10:36:57.94","CreatedBy":"System Admin","Modified":"2017-01-18T10:36:57.94","ModifiedBy":"System Admin"}],"Type":0,"PreviewRecord":10,"AdvancedMode":true,"AllowNulls":false,"IsDistinct":false,"CategoryId":"063ae899-45ce-4cd2-a849-f4bbd2049516","CategoryName":"DemoReport","SubCategoryId":null,"SubCategoryName":null,"TenantId":"9dd5ae29-bdb9-4520-ba35-643d4ccc1708","TenantName":"DELDG","Description":"","Title":"","LastViewed":"2017-01-18T10:37:08.787","Owner":"System Admin","OwnerId":"9d2f1d51-0e3d-44db-bfc7-da94a7581bfe","ExcludedRelationships":"","NumberOfView":1,"RenderingTime":3771.0,"CreatedById":"9d2f1d51-0e3d-44db-bfc7-da94a7581bfe","ModifiedById":"9d2f1d51-0e3d-44db-bfc7-da94a7581bfe","SnapToGrid":false,"UsingFields":"dc50a915-a494-456b-9bf6-44cc52a080fe,77bc8de6-03f7-44f9-8756-e0227bc1172a,d24b57ec-b622-4f22-aff5-76dc2f24ab7b","HasDeletedObjects":false,"Header":{"visible":false,"items":[{"isDirty":false,"type":"image","label":"Image","id":"formatDetails_59","positionX":0,"positionY":0,"width":6,"height":6,"name":"Logo Image","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageUrl":"http://","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_60","positionX":20,"positionY":0,"width":12,"height":2,"name":"Report Name","value":"{reportName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"thinHorizontalRule","label":"Horizontal Rule","id":"formatDetails_61","positionX":20,"positionY":4,"width":12,"height":1,"name":"Upper Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_62","positionX":20,"positionY":5,"width":6,"height":2,"name":"Report Generated","value":"Report Generated:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_63","positionX":20,"positionY":7,"width":6,"height":2,"name":"User","value":"User:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_64","positionX":20,"positionY":9,"width":6,"height":2,"name":"Tenant","value":"Tenant:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"dateTime","label":"Date Time","id":"formatDetails_65","positionX":26,"positionY":5,"width":6,"height":2,"name":"Current Date Time","value":"{currentDateTime}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_66","positionX":26,"positionY":7,"width":6,"height":2,"name":"Current User Name","value":"{currentUserName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_67","positionX":26,"positionY":9,"width":6,"height":2,"name":"Tenant Name","value":"{tenantName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_68","positionX":0,"positionY":11,"width":32,"height":1,"name":"Lower Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":4}]},"Footer":{"visible":false,"items":[{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_69","positionX":0,"positionY":0,"width":32,"height":1,"name":"Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":4},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_70","positionX":0,"positionY":1,"width":10,"height":2,"name":"Footer Text","value":"Footer Text","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_71","positionX":20,"positionY":1,"width":4,"height":2,"name":"Page","value":"Page","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"pageNumber","label":"Page Number","id":"formatDetails_72","positionX":24,"positionY":1,"width":8,"height":2,"name":"Page Number","value":"{pageNumber}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1}]},"TitleDescription":{"visible":false,"items":[{"isDirty":false,"type":"title","label":"Title","id":"formatDetails_73","name":"Title","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"description","label":"Description","id":"formatDetails_74","name":"Description","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1}]},"SourceId":null,"Checked":false,"CopyDashboard":false,"ExportFormatSetting":{"Orientation":0,"Margins":0,"CenterOnPage":{"Horizontally":false,"Vertically":false},"PageBreakAfterReportPart":false,"MarginSettings":[{"Type":3,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":0,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":1,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.25,"RightValue":0.25,"HeaderValue":0.3,"FooterValue":0.3},{"Type":2,"TopValue":1.0,"BottomValue":1.0,"LeftValue":1.0,"RightValue":1.0,"HeaderValue":0.5,"FooterValue":0.5}]},"Deletable":false,"Editable":false,"Movable":false,"Copyable":false,"AccessPriority":0,"Active":false,"Id":"58ec4bec-bb01-4c7a-b0b6-819a8439ea4b","State":0,"Deleted":false,"Inserted":true,"Version":1,"Created":"2017-01-18T10:36:57.9","CreatedBy":"System Admin","Modified":"2017-01-18T10:36:57.9","ModifiedBy":"System Admin"}', 1, 0, CAST(N'2017-01-18T10:36:57.900' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:36:57.900' AS DateTime), N'System Admin')
 INSERT [dbo].[IzendaReportHistory] ([Id], [ReportId], [ReportName], [Description], [Definition], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'38490861-d817-49f7-8472-73710b498550', N'58ec4bec-bb01-4c7a-b0b6-819a8439ea4b', N'Report1 Demo', N'', N'{"Inaccessible":false,"Category":{"Name":"DemoReport","Type":0,"ParentId":null,"TenantId":"9dd5ae29-bdb9-4520-ba35-643d4ccc1708","CanDelete":false,"Editable":false,"Savable":false,"SubCategories":[],"Checked":false,"Reports":null,"Dashboards":null,"Id":"063ae899-45ce-4cd2-a849-f4bbd2049516","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null},"SubCategory":null,"ReportRelationship":[],"ReportPart":[{"ReportPartContent":{"Labels":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"OrderID","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","name":"Group","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"d24b57ec-b622-4f22-aff5-76dc2f24ab7b","OriginalName":null,"FieldName":"OrderID","FieldNameAlias":"OrderID","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Group","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"Values":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"Sum (UnitPrice)","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"902a9168-fc01-4a35-92fb-ea67942d099d","functionInfo":{"id":"902a9168-fc01-4a35-92fb-ea67942d099d","name":"Sum","expression":null,"dataType":"Money","formatDataType":"Money","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"77bc8de6-03f7-44f9-8756-e0227bc1172a","OriginalName":null,"FieldName":"UnitPrice","FieldNameAlias":"Sum (UnitPrice)","DataFieldType":"Money","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"SUM([UnitPrice])","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Sum","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Money","IsCalculated":false,"HasAggregatedFunction":false}},{"Name":"Sum (Quantity)","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"902a9168-fc01-4a35-92fb-ea67942d099d","functionInfo":{"id":"902a9168-fc01-4a35-92fb-ea67942d099d","name":"Sum","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":2,"Field":{"FieldId":"dc50a915-a494-456b-9bf6-44cc52a080fe","OriginalName":null,"FieldName":"Quantity","FieldNameAlias":"Sum (Quantity)","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"SUM([Quantity])","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Sum","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"ValuesLabels":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"BubbleSize":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Separators":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Type":0,"Properties":{"staticProperties":{},"chartType":"Line","commonOptions":{"izHoverLabels":true,"izLegend.visibility":false,"izLegend.horizontalAlign":"izRight","izLegend.verticalAlign":"izBottom","izLegend.borderWidth":0,"izChartStyle":{},"izendaHiddenAllAxis":false},"optionByType":{"izTotalLabel":"","izUseSeparator":true,"izInverted":false,"izSpline":false,"izValueLabel":false,"legendSettings":true},"view":{"dataRefreshInterval":{"enable":false,"updateInterval":0,"isAll":true,"latestRecord":0}},"commonXYAxis":{},"printing":{"izPageBreakAfterSeparator":false}},"Settings":{},"Title":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":true,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"Description":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":false,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"ExpandedLevel":-1},"Title":"Chart","PositionX":0,"PositionY":0,"Width":12,"Height":4,"ReportId":"58ec4bec-bb01-4c7a-b0b6-819a8439ea4b","NumberOfRecord":null,"SourceId":null,"Id":"f43be711-342b-4e74-80cd-ebb6308c8dd4","State":0,"Deleted":false,"Inserted":true,"Version":2,"Created":"2017-01-18T10:36:58.013","CreatedBy":"System Admin","Modified":"2017-01-18T10:37:21.533","ModifiedBy":null}],"ReportFilter":{"FilterFields":[{"ConnectionName":"retail","QuerySourceCategoryName":"dbo","SourceFieldName":"Quantity","SourceFieldVisible":true,"SourceFieldFilterable":true,"SourceDataObjectName":"Order Details","SourceDataObjectFullName":"retail.dbo.Order Details","DataType":"Numeric","IsParameter":false,"IsCalculated":false,"CalculatedTree":null,"CompareFieldCalculatedTree":null,"CompareField":null,"Selected":false,"DataFormat":null,"ReportId":null,"UseMappedFieldAlias":false,"UniqueId":null,"ComparisionValue":null,"FilterId":"3e929e0a-0f1f-483a-b9ba-aba8ee9ff753","ReportFieldAlias":null,"ReportPartTitle":null,"QuerySourceFieldId":"dc50a915-a494-456b-9bf6-44cc52a080fe","QuerySourceType":"Table","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","RelationshipId":null,"Alias":"Quantity","Position":1,"Visible":true,"Required":false,"Cascading":true,"OperatorId":"53d73892-3a12-45cd-8b69-163ff6c41989","OperatorSetting":null,"Value":"30","DataFormatId":null,"SortType":"ASC","FontFamily":"Roboto","FontSize":14,"TextColor":"#000","BackgroundColor":"#fff","FontBold":false,"FontItalic":false,"FontUnderline":false,"Id":"39e48f42-0e2a-43f3-a483-7e51c9a2cfb0","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null},{"ConnectionName":"retail","QuerySourceCategoryName":"dbo","SourceFieldName":"UnitPrice","SourceFieldVisible":true,"SourceFieldFilterable":true,"SourceDataObjectName":"Order Details","SourceDataObjectFullName":"retail.dbo.Order Details","DataType":"Money","IsParameter":false,"IsCalculated":false,"CalculatedTree":null,"CompareFieldCalculatedTree":null,"CompareField":null,"Selected":false,"DataFormat":null,"ReportId":null,"UseMappedFieldAlias":false,"UniqueId":null,"ComparisionValue":null,"FilterId":"3e929e0a-0f1f-483a-b9ba-aba8ee9ff753","ReportFieldAlias":null,"ReportPartTitle":null,"QuerySourceFieldId":"77bc8de6-03f7-44f9-8756-e0227bc1172a","QuerySourceType":"Table","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","RelationshipId":null,"Alias":"UnitPrice","Position":2,"Visible":true,"Required":false,"Cascading":true,"OperatorId":"94c4fb2e-c5d3-4160-a2f7-173418ca4e66","OperatorSetting":null,"Value":"20;#50","DataFormatId":null,"SortType":"ASC","FontFamily":"Roboto","FontSize":14,"TextColor":"#000","BackgroundColor":"#fff","FontBold":false,"FontItalic":false,"FontUnderline":false,"Id":"0ed6a4f7-9679-45ea-aa4f-2fea49384f87","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null}],"Logic":"1 AND 2","Visible":true,"ReportId":"58ec4bec-bb01-4c7a-b0b6-819a8439ea4b","Id":"3e929e0a-0f1f-483a-b9ba-aba8ee9ff753","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null},"CalculatedFields":[],"Accesses":[],"Schedules":[],"DynamicQuerySourceFields":[],"Name":"Report1 Demo","ReportDataSource":[{"ReportId":"58ec4bec-bb01-4c7a-b0b6-819a8439ea4b","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceCategoryId":null,"ConnectionId":null,"Selected":false,"Id":"fa68180e-781b-4dd2-8c62-058481a07513","State":0,"Deleted":false,"Inserted":true,"Version":1,"Created":"2017-01-18T10:36:57.94","CreatedBy":"System Admin","Modified":"2017-01-18T10:36:57.94","ModifiedBy":"System Admin"}],"Type":0,"PreviewRecord":10,"AdvancedMode":true,"AllowNulls":false,"IsDistinct":false,"CategoryId":"063ae899-45ce-4cd2-a849-f4bbd2049516","CategoryName":"DemoReport","SubCategoryId":null,"SubCategoryName":null,"TenantId":"9dd5ae29-bdb9-4520-ba35-643d4ccc1708","TenantName":"DELDG","Description":"","Title":"","LastViewed":"2017-01-18T10:37:08.787","Owner":"System Admin","OwnerId":"9d2f1d51-0e3d-44db-bfc7-da94a7581bfe","ExcludedRelationships":"","NumberOfView":1,"RenderingTime":3771.0,"CreatedById":"9d2f1d51-0e3d-44db-bfc7-da94a7581bfe","ModifiedById":"9d2f1d51-0e3d-44db-bfc7-da94a7581bfe","SnapToGrid":false,"UsingFields":"dc50a915-a494-456b-9bf6-44cc52a080fe,77bc8de6-03f7-44f9-8756-e0227bc1172a,d24b57ec-b622-4f22-aff5-76dc2f24ab7b","HasDeletedObjects":false,"Header":{"visible":false,"items":[{"isDirty":false,"type":"image","label":"Image","id":"formatDetails_112","positionX":0,"positionY":0,"width":6,"height":6,"name":"Logo Image","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageUrl":"http://","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_113","positionX":20,"positionY":0,"width":12,"height":2,"name":"Report Name","value":"{reportName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"thinHorizontalRule","label":"Horizontal Rule","id":"formatDetails_114","positionX":20,"positionY":4,"width":12,"height":1,"name":"Upper Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_115","positionX":20,"positionY":5,"width":6,"height":2,"name":"Report Generated","value":"Report Generated:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_116","positionX":20,"positionY":7,"width":6,"height":2,"name":"User","value":"User:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_117","positionX":20,"positionY":9,"width":6,"height":2,"name":"Tenant","value":"Tenant:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"dateTime","label":"Date Time","id":"formatDetails_118","positionX":26,"positionY":5,"width":6,"height":2,"name":"Current Date Time","value":"{currentDateTime}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_119","positionX":26,"positionY":7,"width":6,"height":2,"name":"Current User Name","value":"{currentUserName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_120","positionX":26,"positionY":9,"width":6,"height":2,"name":"Tenant Name","value":"{tenantName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_121","positionX":0,"positionY":11,"width":32,"height":1,"name":"Lower Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":4}]},"Footer":{"visible":false,"items":[{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_122","positionX":0,"positionY":0,"width":32,"height":1,"name":"Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":4},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_123","positionX":0,"positionY":1,"width":10,"height":2,"name":"Footer Text","value":"Footer Text","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_124","positionX":20,"positionY":1,"width":4,"height":2,"name":"Page","value":"Page","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"pageNumber","label":"Page Number","id":"formatDetails_125","positionX":24,"positionY":1,"width":8,"height":2,"name":"Page Number","value":"{pageNumber}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1}]},"TitleDescription":{"visible":false,"items":[{"isDirty":false,"type":"title","label":"Title","id":"formatDetails_126","name":"Title","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"description","label":"Description","id":"formatDetails_127","name":"Description","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1}]},"SourceId":null,"Checked":false,"CopyDashboard":false,"ExportFormatSetting":{"Orientation":0,"Margins":0,"CenterOnPage":{"Horizontally":false,"Vertically":false},"PageBreakAfterReportPart":false,"MarginSettings":[{"Type":3,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":0,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":1,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.25,"RightValue":0.25,"HeaderValue":0.3,"FooterValue":0.3},{"Type":2,"TopValue":1.0,"BottomValue":1.0,"LeftValue":1.0,"RightValue":1.0,"HeaderValue":0.5,"FooterValue":0.5}]},"Deletable":false,"Editable":false,"Movable":false,"Copyable":false,"AccessPriority":0,"Active":false,"Id":"58ec4bec-bb01-4c7a-b0b6-819a8439ea4b","State":0,"Deleted":false,"Inserted":true,"Version":2,"Created":"2017-01-18T10:36:57.9","CreatedBy":"System Admin","Modified":"2017-01-18T10:37:21.213","ModifiedBy":"System Admin"}', 2, 0, CAST(N'2017-01-18T10:36:57.900' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:37:21.213' AS DateTime), N'System Admin')
 INSERT [dbo].[IzendaReportHistory] ([Id], [ReportId], [ReportName], [Description], [Definition], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'008e0a08-4fb6-4c28-ab24-acb547d82915', N'58ec4bec-bb01-4c7a-b0b6-819a8439ea4b', N'Report1 Demo', N'', N'{"Inaccessible":false,"Category":{"Name":"DemoReport","Type":0,"ParentId":null,"TenantId":"9dd5ae29-bdb9-4520-ba35-643d4ccc1708","CanDelete":false,"Editable":false,"Savable":false,"SubCategories":[],"Checked":false,"Reports":null,"Dashboards":null,"Id":"063ae899-45ce-4cd2-a849-f4bbd2049516","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null},"SubCategory":null,"ReportRelationship":[],"ReportPart":[{"ReportPartContent":{"Labels":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"OrderID","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","name":"Group","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"d24b57ec-b622-4f22-aff5-76dc2f24ab7b","OriginalName":null,"FieldName":"OrderID","FieldNameAlias":"OrderID","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Group","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"Values":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"Sum (Quantity)","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"902a9168-fc01-4a35-92fb-ea67942d099d","functionInfo":{"id":"902a9168-fc01-4a35-92fb-ea67942d099d","name":"Sum","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"dc50a915-a494-456b-9bf6-44cc52a080fe","OriginalName":null,"FieldName":"Quantity","FieldNameAlias":"Sum (Quantity)","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"SUM([Quantity])","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Sum","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"ValuesLabels":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"BubbleSize":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Separators":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Type":0,"Properties":{"staticProperties":{},"chartType":"Column","commonOptions":{"izHoverLabels":true,"izLegend.visibility":false,"izLegend.horizontalAlign":"izRight","izLegend.verticalAlign":"izBottom","izLegend.borderWidth":0,"izChartStyle":{},"izendaHiddenAllAxis":false},"optionByType":{"izTotalLabel":"","izUseSeparator":true,"izInverted":false,"izSpline":false,"izValueLabel":false,"legendSettings":true},"view":{"dataRefreshInterval":{"enable":false,"updateInterval":0,"isAll":true,"latestRecord":0}},"commonXYAxis":{},"printing":{"izPageBreakAfterSeparator":false}},"Settings":{},"Title":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":true,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"Description":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":false,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"ExpandedLevel":-1},"Title":"Chart 2","PositionX":0,"PositionY":4,"Width":12,"Height":4,"ReportId":"58ec4bec-bb01-4c7a-b0b6-819a8439ea4b","NumberOfRecord":null,"SourceId":null,"Id":"4101ffdd-0618-4797-b373-e7ad824fb1a2","State":0,"Deleted":false,"Inserted":true,"Version":1,"Created":"2017-01-18T10:38:49.313","CreatedBy":"System Admin","Modified":"2017-01-18T10:38:49.313","ModifiedBy":"System Admin"},{"ReportPartContent":{"Labels":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"OrderID","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","name":"Group","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"d24b57ec-b622-4f22-aff5-76dc2f24ab7b","OriginalName":null,"FieldName":"OrderID","FieldNameAlias":"OrderID","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Group","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"Values":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"Sum (UnitPrice)","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"902a9168-fc01-4a35-92fb-ea67942d099d","functionInfo":{"id":"902a9168-fc01-4a35-92fb-ea67942d099d","name":"Sum","expression":null,"dataType":"Money","formatDataType":"Money","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"77bc8de6-03f7-44f9-8756-e0227bc1172a","OriginalName":null,"FieldName":"UnitPrice","FieldNameAlias":"Sum (UnitPrice)","DataFieldType":"Money","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"SUM([UnitPrice])","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Sum","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Money","IsCalculated":false,"HasAggregatedFunction":false}},{"Name":"Sum (Quantity)","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"902a9168-fc01-4a35-92fb-ea67942d099d","functionInfo":{"id":"902a9168-fc01-4a35-92fb-ea67942d099d","name":"Sum","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":2,"Field":{"FieldId":"dc50a915-a494-456b-9bf6-44cc52a080fe","OriginalName":null,"FieldName":"Quantity","FieldNameAlias":"Sum (Quantity)","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"SUM([Quantity])","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Sum","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"ValuesLabels":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"BubbleSize":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Separators":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Type":0,"Properties":{"staticProperties":{},"chartType":"Line","commonOptions":{"izHoverLabels":true,"izLegend.visibility":false,"izLegend.horizontalAlign":"izRight","izLegend.verticalAlign":"izBottom","izLegend.borderWidth":0,"izChartStyle":{},"izendaHiddenAllAxis":false},"optionByType":{"izTotalLabel":"","izUseSeparator":true,"izInverted":false,"izSpline":false,"izValueLabel":false,"legendSettings":true},"view":{"dataRefreshInterval":{"enable":false,"updateInterval":0,"isAll":true,"latestRecord":0}},"commonXYAxis":{},"printing":{"izPageBreakAfterSeparator":false}},"Settings":{},"Title":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":true,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"Description":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":false,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"ExpandedLevel":-1},"Title":"Chart","PositionX":0,"PositionY":0,"Width":12,"Height":4,"ReportId":"58ec4bec-bb01-4c7a-b0b6-819a8439ea4b","NumberOfRecord":null,"SourceId":null,"Id":"f43be711-342b-4e74-80cd-ebb6308c8dd4","State":0,"Deleted":false,"Inserted":true,"Version":3,"Created":"2017-01-18T10:36:58.013","CreatedBy":"System Admin","Modified":"2017-01-18T10:38:49.323","ModifiedBy":null}],"ReportFilter":{"FilterFields":[{"ConnectionName":"retail","QuerySourceCategoryName":"dbo","SourceFieldName":"Quantity","SourceFieldVisible":true,"SourceFieldFilterable":true,"SourceDataObjectName":"Order Details","SourceDataObjectFullName":"retail.dbo.Order Details","DataType":"Numeric","IsParameter":false,"IsCalculated":false,"CalculatedTree":null,"CompareFieldCalculatedTree":null,"CompareField":null,"Selected":false,"DataFormat":null,"ReportId":null,"UseMappedFieldAlias":false,"UniqueId":null,"ComparisionValue":null,"FilterId":"3e929e0a-0f1f-483a-b9ba-aba8ee9ff753","ReportFieldAlias":null,"ReportPartTitle":null,"QuerySourceFieldId":"dc50a915-a494-456b-9bf6-44cc52a080fe","QuerySourceType":"Table","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","RelationshipId":null,"Alias":"Quantity","Position":1,"Visible":true,"Required":false,"Cascading":true,"OperatorId":"53d73892-3a12-45cd-8b69-163ff6c41989","OperatorSetting":null,"Value":"30","DataFormatId":null,"SortType":"ASC","FontFamily":"Roboto","FontSize":14,"TextColor":"#000","BackgroundColor":"#fff","FontBold":false,"FontItalic":false,"FontUnderline":false,"Id":"39e48f42-0e2a-43f3-a483-7e51c9a2cfb0","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null},{"ConnectionName":"retail","QuerySourceCategoryName":"dbo","SourceFieldName":"UnitPrice","SourceFieldVisible":true,"SourceFieldFilterable":true,"SourceDataObjectName":"Order Details","SourceDataObjectFullName":"retail.dbo.Order Details","DataType":"Money","IsParameter":false,"IsCalculated":false,"CalculatedTree":null,"CompareFieldCalculatedTree":null,"CompareField":null,"Selected":false,"DataFormat":null,"ReportId":null,"UseMappedFieldAlias":false,"UniqueId":null,"ComparisionValue":null,"FilterId":"3e929e0a-0f1f-483a-b9ba-aba8ee9ff753","ReportFieldAlias":null,"ReportPartTitle":null,"QuerySourceFieldId":"77bc8de6-03f7-44f9-8756-e0227bc1172a","QuerySourceType":"Table","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","RelationshipId":null,"Alias":"UnitPrice","Position":2,"Visible":true,"Required":false,"Cascading":true,"OperatorId":"94c4fb2e-c5d3-4160-a2f7-173418ca4e66","OperatorSetting":null,"Value":"20;#50","DataFormatId":null,"SortType":"ASC","FontFamily":"Roboto","FontSize":14,"TextColor":"#000","BackgroundColor":"#fff","FontBold":false,"FontItalic":false,"FontUnderline":false,"Id":"0ed6a4f7-9679-45ea-aa4f-2fea49384f87","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null}],"Logic":"1 AND 2","Visible":true,"ReportId":"58ec4bec-bb01-4c7a-b0b6-819a8439ea4b","Id":"3e929e0a-0f1f-483a-b9ba-aba8ee9ff753","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null},"CalculatedFields":[],"Accesses":[],"Schedules":[],"DynamicQuerySourceFields":[],"Name":"Report1 Demo","ReportDataSource":[{"ReportId":"58ec4bec-bb01-4c7a-b0b6-819a8439ea4b","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceCategoryId":null,"ConnectionId":null,"Selected":false,"Id":"41910911-4890-446b-81db-bf0a3dd961fa","State":0,"Deleted":false,"Inserted":true,"Version":1,"Created":"2017-01-18T10:38:49.293","CreatedBy":"System Admin","Modified":"2017-01-18T10:38:49.293","ModifiedBy":"System Admin"}],"Type":0,"PreviewRecord":10,"AdvancedMode":true,"AllowNulls":false,"IsDistinct":false,"CategoryId":"063ae899-45ce-4cd2-a849-f4bbd2049516","CategoryName":"DemoReport","SubCategoryId":null,"SubCategoryName":null,"TenantId":"9dd5ae29-bdb9-4520-ba35-643d4ccc1708","TenantName":"DELDG","Description":"","Title":"","LastViewed":"2017-01-18T10:38:58.51","Owner":"System Admin","OwnerId":"9d2f1d51-0e3d-44db-bfc7-da94a7581bfe","ExcludedRelationships":"","NumberOfView":2,"RenderingTime":4830.0,"CreatedById":"9d2f1d51-0e3d-44db-bfc7-da94a7581bfe","ModifiedById":"9d2f1d51-0e3d-44db-bfc7-da94a7581bfe","SnapToGrid":false,"UsingFields":"dc50a915-a494-456b-9bf6-44cc52a080fe,77bc8de6-03f7-44f9-8756-e0227bc1172a,d24b57ec-b622-4f22-aff5-76dc2f24ab7b","HasDeletedObjects":false,"Header":{"visible":false,"items":[{"isDirty":false,"type":"image","label":"Image","id":"formatDetails_208","positionX":0,"positionY":0,"width":6,"height":6,"name":"Logo Image","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageUrl":"http://","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_209","positionX":20,"positionY":0,"width":12,"height":2,"name":"Report Name","value":"{reportName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"thinHorizontalRule","label":"Horizontal Rule","id":"formatDetails_210","positionX":20,"positionY":4,"width":12,"height":1,"name":"Upper Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_211","positionX":20,"positionY":5,"width":6,"height":2,"name":"Report Generated","value":"Report Generated:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_212","positionX":20,"positionY":7,"width":6,"height":2,"name":"User","value":"User:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_213","positionX":20,"positionY":9,"width":6,"height":2,"name":"Tenant","value":"Tenant:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"dateTime","label":"Date Time","id":"formatDetails_214","positionX":26,"positionY":5,"width":6,"height":2,"name":"Current Date Time","value":"{currentDateTime}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_215","positionX":26,"positionY":7,"width":6,"height":2,"name":"Current User Name","value":"{currentUserName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_216","positionX":26,"positionY":9,"width":6,"height":2,"name":"Tenant Name","value":"{tenantName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_217","positionX":0,"positionY":11,"width":32,"height":1,"name":"Lower Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":4}]},"Footer":{"visible":false,"items":[{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_218","positionX":0,"positionY":0,"width":32,"height":1,"name":"Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":4},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_219","positionX":0,"positionY":1,"width":10,"height":2,"name":"Footer Text","value":"Footer Text","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_220","positionX":20,"positionY":1,"width":4,"height":2,"name":"Page","value":"Page","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"pageNumber","label":"Page Number","id":"formatDetails_221","positionX":24,"positionY":1,"width":8,"height":2,"name":"Page Number","value":"{pageNumber}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1}]},"TitleDescription":{"visible":false,"items":[{"isDirty":false,"type":"title","label":"Title","id":"formatDetails_222","name":"Title","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"description","label":"Description","id":"formatDetails_223","name":"Description","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1}]},"SourceId":null,"Checked":false,"CopyDashboard":false,"ExportFormatSetting":{"Orientation":0,"Margins":0,"CenterOnPage":{"Horizontally":false,"Vertically":false},"PageBreakAfterReportPart":false,"MarginSettings":[{"Type":3,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":0,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":1,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.25,"RightValue":0.25,"HeaderValue":0.3,"FooterValue":0.3},{"Type":2,"TopValue":1.0,"BottomValue":1.0,"LeftValue":1.0,"RightValue":1.0,"HeaderValue":0.5,"FooterValue":0.5}]},"Deletable":false,"Editable":false,"Movable":false,"Copyable":false,"AccessPriority":0,"Active":false,"Id":"58ec4bec-bb01-4c7a-b0b6-819a8439ea4b","State":0,"Deleted":false,"Inserted":true,"Version":3,"Created":"2017-01-18T10:36:57.9","CreatedBy":"System Admin","Modified":"2017-01-18T10:38:49.277","ModifiedBy":"System Admin"}', 3, 0, CAST(N'2017-01-18T10:36:57.900' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:38:49.277' AS DateTime), N'System Admin')
 INSERT [dbo].[IzendaReportHistory] ([Id], [ReportId], [ReportName], [Description], [Definition], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'ff526cc5-4e80-4d25-86e8-be79ee182205', N'f9e17bc6-42de-418d-af87-8516a5c351a0', N'Report2 demo', N'', N'{"Inaccessible":false,"Category":{"Name":"DemoReport","Type":0,"ParentId":null,"TenantId":"9dd5ae29-bdb9-4520-ba35-643d4ccc1708","CanDelete":false,"Editable":false,"Savable":false,"SubCategories":[],"Checked":false,"Reports":null,"Dashboards":null,"Id":"063ae899-45ce-4cd2-a849-f4bbd2049516","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null},"SubCategory":null,"ReportRelationship":[],"ReportPart":[{"ReportPartContent":{"Labels":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"OrderID","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","name":"Group","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"d24b57ec-b622-4f22-aff5-76dc2f24ab7b","OriginalName":null,"FieldName":"OrderID","FieldNameAlias":"OrderID","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Group","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"Values":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"Sum (Quantity)","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"902a9168-fc01-4a35-92fb-ea67942d099d","functionInfo":{"id":"902a9168-fc01-4a35-92fb-ea67942d099d","name":"Sum","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"dc50a915-a494-456b-9bf6-44cc52a080fe","OriginalName":null,"FieldName":"Quantity","FieldNameAlias":"Sum (Quantity)","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"SUM([Quantity])","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Sum","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"ValuesLabels":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"BubbleSize":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Separators":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Type":0,"Properties":{"staticProperties":{},"chartType":"Pie","commonOptions":{"izHoverLabels":true,"izLegend.visibility":false,"izLegend.horizontalAlign":"izRight","izLegend.verticalAlign":"izBottom","izLegend.borderWidth":0,"izChartStyle":{},"izendaHiddenAllAxis":false},"optionByType":{"izTotalLabel":"","izUseSeparator":true,"izInverted":false,"izSpline":false,"izValueLabel":false,"legendSettings":true},"view":{"dataRefreshInterval":{"enable":false,"updateInterval":0,"isAll":true,"latestRecord":0}},"commonXYAxis":{},"printing":{"izPageBreakAfterSeparator":false}},"Settings":{},"Title":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":true,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"Description":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":false,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"ExpandedLevel":-1},"Title":"Chart","PositionX":0,"PositionY":0,"Width":12,"Height":4,"ReportId":"f9e17bc6-42de-418d-af87-8516a5c351a0","NumberOfRecord":null,"SourceId":null,"Id":"b5a9c762-b32e-4cd0-9caf-8c93ae580255","State":0,"Deleted":false,"Inserted":true,"Version":1,"Created":"2017-01-18T10:47:19.983","CreatedBy":"System Admin","Modified":"2017-01-18T10:47:19.983","ModifiedBy":"System Admin"}],"ReportFilter":{"FilterFields":[{"ConnectionName":"retail","QuerySourceCategoryName":"dbo","SourceFieldName":"Quantity","SourceFieldVisible":true,"SourceFieldFilterable":true,"SourceDataObjectName":"Order Details","SourceDataObjectFullName":"retail.dbo.Order Details","DataType":"Numeric","IsParameter":false,"IsCalculated":false,"CalculatedTree":null,"CompareFieldCalculatedTree":null,"CompareField":null,"Selected":false,"DataFormat":null,"ReportId":null,"UseMappedFieldAlias":false,"UniqueId":null,"ComparisionValue":null,"FilterId":"520870ed-1055-4b57-bda0-d5fbf3ef951c","ReportFieldAlias":null,"ReportPartTitle":null,"QuerySourceFieldId":"dc50a915-a494-456b-9bf6-44cc52a080fe","QuerySourceType":"Table","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","RelationshipId":null,"Alias":"Quantity","Position":1,"Visible":true,"Required":false,"Cascading":true,"OperatorId":"53d73892-3a12-45cd-8b69-163ff6c41989","OperatorSetting":null,"Value":"30","DataFormatId":null,"SortType":"ASC","FontFamily":"Roboto","FontSize":14,"TextColor":"#000","BackgroundColor":"#fff","FontBold":false,"FontItalic":false,"FontUnderline":false,"Id":"07d83ca4-b92e-4d1d-a201-f72a2040f09d","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null}],"Logic":"","Visible":true,"ReportId":"f9e17bc6-42de-418d-af87-8516a5c351a0","Id":"520870ed-1055-4b57-bda0-d5fbf3ef951c","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null},"CalculatedFields":[],"Accesses":[],"Schedules":[],"DynamicQuerySourceFields":[],"Name":"Report2 demo","ReportDataSource":[{"ReportId":"f9e17bc6-42de-418d-af87-8516a5c351a0","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceCategoryId":null,"ConnectionId":null,"Selected":false,"Id":"e2bafe1f-c885-43ba-8f31-957a4b325492","State":0,"Deleted":false,"Inserted":true,"Version":1,"Created":"2017-01-18T10:47:19.967","CreatedBy":"System Admin","Modified":"2017-01-18T10:47:19.967","ModifiedBy":"System Admin"}],"Type":0,"PreviewRecord":10,"AdvancedMode":true,"AllowNulls":false,"IsDistinct":false,"CategoryId":"063ae899-45ce-4cd2-a849-f4bbd2049516","CategoryName":"DemoReport","SubCategoryId":null,"SubCategoryName":null,"TenantId":"9dd5ae29-bdb9-4520-ba35-643d4ccc1708","TenantName":"DELDG","Description":"","Title":"","LastViewed":null,"Owner":"System Admin","OwnerId":"9d2f1d51-0e3d-44db-bfc7-da94a7581bfe","ExcludedRelationships":"","NumberOfView":0,"RenderingTime":0.0,"CreatedById":"9d2f1d51-0e3d-44db-bfc7-da94a7581bfe","ModifiedById":"9d2f1d51-0e3d-44db-bfc7-da94a7581bfe","SnapToGrid":false,"UsingFields":"dc50a915-a494-456b-9bf6-44cc52a080fe,d24b57ec-b622-4f22-aff5-76dc2f24ab7b","HasDeletedObjects":false,"Header":{"visible":false,"items":[{"isDirty":false,"type":"image","label":"Image","id":"formatDetails_78","positionX":0,"positionY":0,"width":6,"height":6,"name":"Logo Image","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageUrl":"http://","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_79","positionX":20,"positionY":0,"width":12,"height":2,"name":"Report Name","value":"{reportName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"thinHorizontalRule","label":"Horizontal Rule","id":"formatDetails_80","positionX":20,"positionY":4,"width":12,"height":1,"name":"Upper Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_81","positionX":20,"positionY":5,"width":6,"height":2,"name":"Report Generated","value":"Report Generated:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_82","positionX":20,"positionY":7,"width":6,"height":2,"name":"User","value":"User:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_83","positionX":20,"positionY":9,"width":6,"height":2,"name":"Tenant","value":"Tenant:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"dateTime","label":"Date Time","id":"formatDetails_84","positionX":26,"positionY":5,"width":6,"height":2,"name":"Current Date Time","value":"{currentDateTime}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_85","positionX":26,"positionY":7,"width":6,"height":2,"name":"Current User Name","value":"{currentUserName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_86","positionX":26,"positionY":9,"width":6,"height":2,"name":"Tenant Name","value":"{tenantName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_87","positionX":0,"positionY":11,"width":32,"height":1,"name":"Lower Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":4}]},"Footer":{"visible":false,"items":[{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_88","positionX":0,"positionY":0,"width":32,"height":1,"name":"Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":4},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_89","positionX":0,"positionY":1,"width":10,"height":2,"name":"Footer Text","value":"Footer Text","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_90","positionX":20,"positionY":1,"width":4,"height":2,"name":"Page","value":"Page","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"pageNumber","label":"Page Number","id":"formatDetails_91","positionX":24,"positionY":1,"width":8,"height":2,"name":"Page Number","value":"{pageNumber}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1}]},"TitleDescription":{"visible":false,"items":[{"isDirty":false,"type":"title","label":"Title","id":"formatDetails_92","name":"Title","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"description","label":"Description","id":"formatDetails_93","name":"Description","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1}]},"SourceId":null,"Checked":false,"CopyDashboard":false,"ExportFormatSetting":{"Orientation":0,"Margins":0,"CenterOnPage":{"Horizontally":false,"Vertically":false},"PageBreakAfterReportPart":false,"MarginSettings":[{"Type":3,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":0,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":1,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.25,"RightValue":0.25,"HeaderValue":0.3,"FooterValue":0.3},{"Type":2,"TopValue":1.0,"BottomValue":1.0,"LeftValue":1.0,"RightValue":1.0,"HeaderValue":0.5,"FooterValue":0.5}]},"Deletable":false,"Editable":false,"Movable":false,"Copyable":false,"AccessPriority":0,"Active":false,"Id":"f9e17bc6-42de-418d-af87-8516a5c351a0","State":0,"Deleted":false,"Inserted":true,"Version":1,"Created":"2017-01-18T10:47:19.953","CreatedBy":"System Admin","Modified":"2017-01-18T10:47:19.953","ModifiedBy":"System Admin"}', 1, 0, CAST(N'2017-01-18T10:47:19.953' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:47:19.953' AS DateTime), N'System Admin')
-INSERT [dbo].[IzendaReportPart] ([Id], [Title], [PositionX], [PositionY], [Width], [Height], [Content], [NumberOfRecord], [ReportId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [SourceId]) VALUES (N'b5a9c762-b32e-4cd0-9caf-8c93ae580255', N'Chart', 0, 0, 12, 4, N'{"Labels":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"OrderID","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","name":"Group","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"d24b57ec-b622-4f22-aff5-76dc2f24ab7b","OriginalName":null,"FieldName":"OrderID","FieldNameAlias":"OrderID","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Group","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"Values":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"Sum (Quantity)","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"902a9168-fc01-4a35-92fb-ea67942d099d","functionInfo":{"id":"902a9168-fc01-4a35-92fb-ea67942d099d","name":"Sum","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"dc50a915-a494-456b-9bf6-44cc52a080fe","OriginalName":null,"FieldName":"Quantity","FieldNameAlias":"Sum (Quantity)","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"SUM([Quantity])","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Sum","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"ValuesLabels":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"BubbleSize":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Separators":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Type":0,"Properties":{"staticProperties":{},"chartType":"Pie","commonOptions":{"izHoverLabels":true,"izLegend.visibility":false,"izLegend.horizontalAlign":"izRight","izLegend.verticalAlign":"izBottom","izLegend.borderWidth":0,"izChartStyle":{},"izendaHiddenAllAxis":false},"optionByType":{"izTotalLabel":"","izUseSeparator":true,"izInverted":false,"izSpline":false,"izValueLabel":false,"legendSettings":true},"view":{"dataRefreshInterval":{"enable":false,"updateInterval":0,"isAll":true,"latestRecord":0}},"commonXYAxis":{},"printing":{"izPageBreakAfterSeparator":false}},"Settings":{},"Title":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":true,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"Description":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":false,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"ExpandedLevel":-1}', NULL, N'f9e17bc6-42de-418d-af87-8516a5c351a0', 2, 0, CAST(N'2017-01-18T10:47:19.983' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:48:35.067' AS DateTime), NULL, NULL)
-INSERT [dbo].[IzendaReportPart] ([Id], [Title], [PositionX], [PositionY], [Width], [Height], [Content], [NumberOfRecord], [ReportId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [SourceId]) VALUES (N'f2111034-b19b-477e-a037-90e12d7cb1e0', N'Gauge', 0, 4, 12, 4, N'{"Labels":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"OrderID","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","name":"Group","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"d24b57ec-b622-4f22-aff5-76dc2f24ab7b","OriginalName":null,"FieldName":"OrderID","FieldNameAlias":"OrderID","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Group","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"Values":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"Sum (Quantity)","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"902a9168-fc01-4a35-92fb-ea67942d099d","functionInfo":{"id":"902a9168-fc01-4a35-92fb-ea67942d099d","name":"Sum","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{},"metric":{"isDirty":false,"scale":{"from":null,"to":null},"unitLabel":"","thresholds":{"setting":"static","levels":[{"name":"low","color":"#55BF3B","operator":"less than","value":null,"valueUpper":30,"element":null,"elementUpper":null},{"name":"target","color":"#DDDF0D","operator":"less than","value":30,"valueUpper":null,"element":null,"elementUpper":null},{"name":"high","color":"#DF5353","operator":"greater than","value":null,"valueUpper":null,"element":null,"elementUpper":null}]},"supplementaryKPI":{"valueType":"","unitLabel":"","value":null,"element":null}}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"dc50a915-a494-456b-9bf6-44cc52a080fe","OriginalName":null,"FieldName":"Quantity","FieldNameAlias":"Sum (Quantity)","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"SUM([Quantity])","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Sum","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}},{"Name":"Sum (UnitPrice)","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"902a9168-fc01-4a35-92fb-ea67942d099d","functionInfo":{"id":"902a9168-fc01-4a35-92fb-ea67942d099d","name":"Sum","expression":null,"dataType":"Money","formatDataType":"Money","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{},"metric":{"isDirty":false,"scale":{"from":null,"to":null},"unitLabel":"","thresholds":{"setting":"","levels":[]},"supplementaryKPI":{"valueType":"","unitLabel":"","value":null,"element":null}}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"77bc8de6-03f7-44f9-8756-e0227bc1172a","OriginalName":null,"FieldName":"UnitPrice","FieldNameAlias":"Sum (UnitPrice)","DataFieldType":"Money","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"SUM([UnitPrice])","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Sum","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Money","IsCalculated":false,"HasAggregatedFunction":false}}]},"Separators":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Type":2,"Properties":{"staticProperties":{},"chartType":"SolidGauge","optionByType":{"izUseSeparator":true,"izUsePagination":true,"izItemPerRow":2},"view":{"showLabels":false,"dataRefreshInterval":{"enable":false,"updateInterval":0,"isAll":true,"latestRecord":0}},"printing":{"izPageBreakAfterSeparator":false}},"Settings":null,"Title":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":true,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"Description":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":false,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"ExpandedLevel":-1}', NULL, N'f9e17bc6-42de-418d-af87-8516a5c351a0', 1, 0, CAST(N'2017-01-18T10:48:35.043' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:48:35.043' AS DateTime), N'System Admin', NULL)
-INSERT [dbo].[IzendaReportPart] ([Id], [Title], [PositionX], [PositionY], [Width], [Height], [Content], [NumberOfRecord], [ReportId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [SourceId]) VALUES (N'4101ffdd-0618-4797-b373-e7ad824fb1a2', N'Chart 2', 0, 4, 12, 4, N'{"Labels":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"OrderID","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","name":"Group","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"d24b57ec-b622-4f22-aff5-76dc2f24ab7b","OriginalName":null,"FieldName":"OrderID","FieldNameAlias":"OrderID","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Group","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"Values":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"Sum (Quantity)","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"902a9168-fc01-4a35-92fb-ea67942d099d","functionInfo":{"id":"902a9168-fc01-4a35-92fb-ea67942d099d","name":"Sum","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"dc50a915-a494-456b-9bf6-44cc52a080fe","OriginalName":null,"FieldName":"Quantity","FieldNameAlias":"Sum (Quantity)","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"SUM([Quantity])","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Sum","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"ValuesLabels":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"BubbleSize":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Separators":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Type":0,"Properties":{"staticProperties":{},"chartType":"Column","commonOptions":{"izHoverLabels":true,"izLegend.visibility":false,"izLegend.horizontalAlign":"izRight","izLegend.verticalAlign":"izBottom","izLegend.borderWidth":0,"izChartStyle":{},"izendaHiddenAllAxis":false},"optionByType":{"izTotalLabel":"","izUseSeparator":true,"izInverted":false,"izSpline":false,"izValueLabel":false,"legendSettings":true},"view":{"dataRefreshInterval":{"enable":false,"updateInterval":0,"isAll":true,"latestRecord":0}},"commonXYAxis":{},"printing":{"izPageBreakAfterSeparator":false}},"Settings":{},"Title":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":true,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"Description":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":false,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"ExpandedLevel":-1}', NULL, N'58ec4bec-bb01-4c7a-b0b6-819a8439ea4b', 2, 0, CAST(N'2017-01-18T10:38:49.313' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:39:48.860' AS DateTime), NULL, NULL)
-INSERT [dbo].[IzendaReportPart] ([Id], [Title], [PositionX], [PositionY], [Width], [Height], [Content], [NumberOfRecord], [ReportId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [SourceId]) VALUES (N'f43be711-342b-4e74-80cd-ebb6308c8dd4', N'Chart', 0, 0, 12, 4, N'{"Labels":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"OrderID","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","name":"Group","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"d24b57ec-b622-4f22-aff5-76dc2f24ab7b","OriginalName":null,"FieldName":"OrderID","FieldNameAlias":"OrderID","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Group","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"Values":{"Text":null,"Properties":{},"Settings":{},"Elements":[{"Name":"Sum (UnitPrice)","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"902a9168-fc01-4a35-92fb-ea67942d099d","functionInfo":{"id":"902a9168-fc01-4a35-92fb-ea67942d099d","name":"Sum","expression":null,"dataType":"Money","formatDataType":"Money","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":1,"Field":{"FieldId":"77bc8de6-03f7-44f9-8756-e0227bc1172a","OriginalName":null,"FieldName":"UnitPrice","FieldNameAlias":"Sum (UnitPrice)","DataFieldType":"Money","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"SUM([UnitPrice])","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Sum","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Money","IsCalculated":false,"HasAggregatedFunction":false}},{"Name":"Sum (Quantity)","Properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"902a9168-fc01-4a35-92fb-ea67942d099d","functionInfo":{"id":"902a9168-fc01-4a35-92fb-ea67942d099d","name":"Sum","expression":null,"dataType":"Numeric","formatDataType":"Numeric","syntax":null,"expressionSyntax":null,"isOperator":false,"userDefined":false,"extendedProperties":{}},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":"alignLeft","sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"wordWrap":null,"columnGroup":""},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"Settings":{},"ChartType":null,"ShowTotal":false,"Position":2,"Field":{"FieldId":"dc50a915-a494-456b-9bf6-44cc52a080fe","OriginalName":null,"FieldName":"Quantity","FieldNameAlias":"Sum (Quantity)","DataFieldType":"Numeric","QuerySourceId":"7827b006-21cf-4c41-97ae-39fa0dc07004","QuerySourceType":"Table","SourceAlias":"Order Details","QuerySourceAlias":null,"RelationshipId":"00000000-0000-0000-0000-000000000000","Visible":true,"Filterable":false,"ReportId":null,"FieldFunctionExpression":"SUM([Quantity])","Expression":null,"GrandTotalExpression":"","SubTotalExpression":"","Sort":"ASC","AutoSort":false,"Function":"Sum","Formating":{"Format":null,"CreateNewHiddenPercenOfGroupField":false},"FunctionDataType":"Numeric","IsCalculated":false,"HasAggregatedFunction":false}}]},"ValuesLabels":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"BubbleSize":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Separators":{"Text":null,"Properties":{},"Settings":{},"Elements":[]},"Type":0,"Properties":{"staticProperties":{},"chartType":"Line","commonOptions":{"izHoverLabels":true,"izLegend.visibility":false,"izLegend.horizontalAlign":"izRight","izLegend.verticalAlign":"izBottom","izLegend.borderWidth":0,"izChartStyle":{},"izendaHiddenAllAxis":false},"optionByType":{"izTotalLabel":"","izUseSeparator":true,"izInverted":false,"izSpline":false,"izValueLabel":false,"legendSettings":true},"view":{"dataRefreshInterval":{"enable":false,"updateInterval":0,"isAll":true,"latestRecord":0}},"commonXYAxis":{},"printing":{"izPageBreakAfterSeparator":false}},"Settings":{},"Title":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":true,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"Description":{"Text":"","Properties":{},"Settings":{"font":{"family":"","size":14,"bold":false,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"Elements":[]},"ExpandedLevel":-1}', NULL, N'58ec4bec-bb01-4c7a-b0b6-819a8439ea4b', 4, 0, CAST(N'2017-01-18T10:36:58.013' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:39:48.860' AS DateTime), NULL, NULL)
-INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'30029181-34bb-4179-870e-0c4f21d1d937', N'Employee', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataModel":{"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":false,"advancedDataSources":false,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"tenantAccess":0},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0}}', N'', N'314bf0e1-1e69-4e2d-870e-4829bb4aa46c', 1, 0, 1, CAST(N'2017-01-18T10:19:34.623' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:19:34.623' AS DateTime), N'System Admin')
-INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'ae3b0326-9dde-42a3-919b-417faf8a5313', N'Manager', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataModel":{"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":false,"advancedDataSources":false,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"tenantAccess":0},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0}}', N'', N'314bf0e1-1e69-4e2d-870e-4829bb4aa46c', 1, 0, 1, CAST(N'2017-01-18T10:11:53.227' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:11:53.227' AS DateTime), N'System Admin')
-INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'8bca651c-892a-418b-a654-5e2602983eb9', N'Employee', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataModel":{"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":false,"advancedDataSources":false,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"tenantAccess":0},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0}}', N'', N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', 1, 0, 1, CAST(N'2017-01-18T10:19:01.773' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:19:01.773' AS DateTime), N'System Admin')
-INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'ee8fb4ee-7349-47d6-9e7c-7c0e79dd9d85', N'Employee', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataModel":{"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":false,"advancedDataSources":false,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"tenantAccess":0},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0}}', N'', N'f273613f-dc00-4550-a91f-041eb6546e1b', 1, 0, 1, CAST(N'2017-01-18T10:09:03.763' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:09:03.763' AS DateTime), N'System Admin')
-INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'a1ee5831-8d4b-41b6-82b3-875cc130a6b7', N'VP', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataModel":{"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":false,"advancedDataSources":false,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"tenantAccess":0},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0}}', N'', N'314bf0e1-1e69-4e2d-870e-4829bb4aa46c', 1, 0, 1, CAST(N'2017-01-18T10:13:18.557' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:13:18.557' AS DateTime), N'System Admin')
-INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'38cc1643-9144-4582-ab1f-9b8957217fea', N'Manager', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataModel":{"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":false,"advancedDataSources":false,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"tenantAccess":0},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0}}', N'', N'1fd07dcd-509d-403c-a8c5-9f82e06c7994', 1, 0, 1, CAST(N'2017-01-18T10:14:14.990' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:14:14.990' AS DateTime), N'System Admin')
-INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'801639d2-5c72-4131-a46d-ab9229cfb071', N'Employee', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataModel":{"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":false,"advancedDataSources":false,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"tenantAccess":0},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0}}', N'', N'1fd07dcd-509d-403c-a8c5-9f82e06c7994', 1, 0, 1, CAST(N'2017-01-18T09:58:05.403' AS DateTime), N'System Admin', CAST(N'2017-01-18T09:58:05.403' AS DateTime), N'System Admin')
-INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'40c2ecc3-2023-4a18-8977-ad2e94f589f1', N'Manager', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataModel":{"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":false,"advancedDataSources":false,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"tenantAccess":0},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0}}', N'', N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', 1, 0, 1, CAST(N'2017-01-18T10:10:17.130' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:10:17.130' AS DateTime), N'System Admin')
-INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'98610244-a53a-42e8-ad8c-c6441b1d8cf7', N'VP', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataModel":{"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":false,"advancedDataSources":false,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"tenantAccess":0},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0}}', N'', N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', 1, 0, 1, CAST(N'2017-01-18T10:10:53.300' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:10:53.300' AS DateTime), N'System Admin')
-INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'58970b43-aa4e-4b9d-8231-f0b0beecf6a8', N'VP', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataModel":{"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":false,"advancedDataSources":false,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"tenantAccess":0},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0}}', N'', N'1fd07dcd-509d-403c-a8c5-9f82e06c7994', 1, 0, 1, CAST(N'2017-01-18T10:15:08.577' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:15:08.577' AS DateTime), N'System Admin')
+INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [RoleType]) VALUES (N'30029181-34bb-4179-870e-0c4f21d1d937', N'Employee', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"limitedAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataConnectors":{"value":false,"tenantAccess":0},"dataModel":{"customView":{"create":false,"edit":false,"delete":false,"tenantAccess":0},"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"import":{"value":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":true,"advancedDataSources":false,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0,"isFullReportPartTypesPermission":false,"isEnableGoogleAddress":false},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"crossFiltering":false,"tenantAccess":0,"isFullFilterPropertiesPermission":false},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0,"isFullFieldPropertiesPermission":false},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0,"isFullPermission":false},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"displayDashboardTileHeader":{"value":true,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"exporting":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0,"isFullActionsPermission":false},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"definition":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"iframe":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"definition":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0},"accessLimitsTree":null,"schedulingLimitsTree":null}', N'', N'314bf0e1-1e69-4e2d-870e-4829bb4aa46c', 1, 0, 1, CAST(N'2017-01-18T10:19:34.623' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:19:34.623' AS DateTime), N'System Admin', N'BasicReportCreator')
+INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [RoleType]) VALUES (N'ae3b0326-9dde-42a3-919b-417faf8a5313', N'Manager', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"limitedAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataConnectors":{"value":false,"tenantAccess":0},"dataModel":{"customView":{"create":false,"edit":false,"delete":false,"tenantAccess":0},"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"import":{"value":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":false,"advancedDataSources":true,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0,"isFullReportPartTypesPermission":false,"isEnableGoogleAddress":false},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"crossFiltering":false,"tenantAccess":0,"isFullFilterPropertiesPermission":false},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0,"isFullFieldPropertiesPermission":false},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0,"isFullPermission":false},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"displayDashboardTileHeader":{"value":true,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"exporting":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0,"isFullActionsPermission":false},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"definition":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"iframe":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"definition":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0},"accessLimitsTree":null,"schedulingLimitsTree":null}', N'', N'314bf0e1-1e69-4e2d-870e-4829bb4aa46c', 1, 0, 1, CAST(N'2017-01-18T10:11:53.227' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:11:53.227' AS DateTime), N'System Admin', N'AdvReportCreator')
+INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [RoleType]) VALUES (N'8bca651c-892a-418b-a654-5e2602983eb9', N'Employee', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"limitedAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataConnectors":{"value":false,"tenantAccess":0},"dataModel":{"customView":{"create":false,"edit":false,"delete":false,"tenantAccess":0},"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"import":{"value":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":true,"advancedDataSources":false,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0,"isFullReportPartTypesPermission":false,"isEnableGoogleAddress":false},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"crossFiltering":false,"tenantAccess":0,"isFullFilterPropertiesPermission":false},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0,"isFullFieldPropertiesPermission":false},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0,"isFullPermission":false},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"displayDashboardTileHeader":{"value":true,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"exporting":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0,"isFullActionsPermission":false},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"definition":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"iframe":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"definition":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0},"accessLimitsTree":null,"schedulingLimitsTree":null}', N'', N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', 1, 0, 1, CAST(N'2017-01-18T10:19:01.773' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:19:01.773' AS DateTime), N'System Admin', N'BasicReportCreator')
+INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [RoleType]) VALUES (N'ee8fb4ee-7349-47d6-9e7c-7c0e79dd9d85', N'Employee', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"limitedAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataConnectors":{"value":false,"tenantAccess":0},"dataModel":{"customView":{"create":false,"edit":false,"delete":false,"tenantAccess":0},"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"import":{"value":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":true,"advancedDataSources":false,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0,"isFullReportPartTypesPermission":false,"isEnableGoogleAddress":false},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"crossFiltering":false,"tenantAccess":0,"isFullFilterPropertiesPermission":false},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0,"isFullFieldPropertiesPermission":false},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0,"isFullPermission":false},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"displayDashboardTileHeader":{"value":true,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"exporting":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0,"isFullActionsPermission":false},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"definition":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"iframe":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"definition":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0},"accessLimitsTree":null,"schedulingLimitsTree":null}', N'', N'f273613f-dc00-4550-a91f-041eb6546e1b', 1, 0, 1, CAST(N'2017-01-18T10:09:03.763' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:09:03.763' AS DateTime), N'System Admin', N'BasicReportCreator')
+INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [RoleType]) VALUES (N'a1ee5831-8d4b-41b6-82b3-875cc130a6b7', N'VP', N'{"systemAdmin":true,"fullReportAndDashboardAccess":true,"limitedAccess":false,"systemConfiguration":{"scheduledInstances":{"value":true,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataConnectors":{"value":true,"tenantAccess":0},"dataModel":{"customView":{"create":true,"edit":true,"delete":true,"tenantAccess":0},"value":true,"tenantAccess":0},"advancedSettings":{"category":true,"others":true,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":true,"tenantAccess":0},"actions":{"create":true,"edit":true,"del":true,"configureSecurityOptions":true,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":true,"edit":true,"del":true,"tenantAccess":0},"dataModelAccess":{"value":true,"tenantAccess":0},"permissions":{"value":true,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":true,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":true,"tenantAccess":0},"dataSources":{"simpleDataSources":true,"advancedDataSources":true,"tenantAccess":0},"reportPartTypes":{"chart":true,"form":true,"gauge":true,"map":true,"tenantAccess":0,"isFullReportPartTypesPermission":true,"isEnableGoogleAddress":true},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":true,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":true,"crossFiltering":true,"tenantAccess":0,"isFullFilterPropertiesPermission":true},"fieldProperties":{"customURL":true,"embeddedJavaScript":true,"subreport":true,"tenantAccess":0,"isFullFieldPropertiesPermission":true},"actions":{"schedule":true,"email":true,"viewReportHistory":true,"del":true,"registerForAlerts":true,"print":true,"unarchiveReportVersions":true,"overwriteExistingReport":true,"subscribe":true,"exporting":true,"configureAccessRights":true,"tenantAccess":0,"isFullPermission":true},"tenantAccess":0},"tenantSetup":{"actions":{"create":true,"edit":true,"del":true,"tenantAccess":0},"permissions":{"value":true,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":true,"tenantAccess":0},"displayDashboardTileHeader":{"value":true,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":true,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":true,"email":true,"del":true,"subscribe":true,"print":true,"exporting":true,"overwriteExistingDashboard":true,"configureAccessRights":true,"tenantAccess":0,"isFullActionsPermission":true},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":true,"externalUsers":true,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":true,"embeddedHTML":true,"attachment":true,"tenantAccess":0},"attachmentType":{"word":true,"excel":true,"pdf":true,"csv":true,"xml":true,"json":true,"definition":true,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":true,"excel":true,"pdf":true,"iframe":true,"csv":true,"xml":true,"json":true,"queryExecution":true,"definition":true,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":true,"tenantAccess":0},"tenantAccess":0},"accessLimitsTree":null,"schedulingLimitsTree":null}', N'', N'314bf0e1-1e69-4e2d-870e-4829bb4aa46c', 1, 0, 1, CAST(N'2017-01-18T10:13:18.557' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:13:18.557' AS DateTime), N'System Admin', N'Administrator')
+INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [RoleType]) VALUES (N'38cc1643-9144-4582-ab1f-9b8957217fea', N'Manager', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"limitedAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataConnectors":{"value":false,"tenantAccess":0},"dataModel":{"customView":{"create":false,"edit":false,"delete":false,"tenantAccess":0},"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"import":{"value":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":false,"advancedDataSources":true,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0,"isFullReportPartTypesPermission":false,"isEnableGoogleAddress":false},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"crossFiltering":false,"tenantAccess":0,"isFullFilterPropertiesPermission":false},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0,"isFullFieldPropertiesPermission":false},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0,"isFullPermission":false},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"displayDashboardTileHeader":{"value":true,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"exporting":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0,"isFullActionsPermission":false},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"definition":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"iframe":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"definition":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0},"accessLimitsTree":null,"schedulingLimitsTree":null}', N'', N'1fd07dcd-509d-403c-a8c5-9f82e06c7994', 1, 0, 1, CAST(N'2017-01-18T10:14:14.990' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:14:14.990' AS DateTime), N'System Admin', N'AdvReportCreator')
+INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [RoleType]) VALUES (N'801639d2-5c72-4131-a46d-ab9229cfb071', N'Employee', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"limitedAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataConnectors":{"value":false,"tenantAccess":0},"dataModel":{"customView":{"create":false,"edit":false,"delete":false,"tenantAccess":0},"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"import":{"value":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":true,"advancedDataSources":false,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0,"isFullReportPartTypesPermission":false,"isEnableGoogleAddress":false},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"crossFiltering":false,"tenantAccess":0,"isFullFilterPropertiesPermission":false},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0,"isFullFieldPropertiesPermission":false},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0,"isFullPermission":false},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"displayDashboardTileHeader":{"value":true,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"exporting":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0,"isFullActionsPermission":false},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"definition":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"iframe":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"definition":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0},"accessLimitsTree":null,"schedulingLimitsTree":null}', N'', N'1fd07dcd-509d-403c-a8c5-9f82e06c7994', 1, 0, 1, CAST(N'2017-01-18T09:58:05.403' AS DateTime), N'System Admin', CAST(N'2017-01-18T09:58:05.403' AS DateTime), N'System Admin', N'BasicReportCreator')
+INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [RoleType]) VALUES (N'40c2ecc3-2023-4a18-8977-ad2e94f589f1', N'Manager', N'{"systemAdmin":false,"fullReportAndDashboardAccess":false,"limitedAccess":false,"systemConfiguration":{"scheduledInstances":{"value":false,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataConnectors":{"value":false,"tenantAccess":0},"dataModel":{"customView":{"create":false,"edit":false,"delete":false,"tenantAccess":0},"value":false,"tenantAccess":0},"advancedSettings":{"category":false,"others":false,"tenantAccess":0},"import":{"value":false,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":false,"tenantAccess":0},"actions":{"create":false,"edit":false,"del":false,"configureSecurityOptions":false,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"dataModelAccess":{"value":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":false,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":false,"tenantAccess":0},"dataSources":{"simpleDataSources":false,"advancedDataSources":true,"tenantAccess":0},"reportPartTypes":{"chart":false,"form":false,"gauge":false,"map":false,"tenantAccess":0,"isFullReportPartTypesPermission":false,"isEnableGoogleAddress":false},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":false,"crossFiltering":false,"tenantAccess":0,"isFullFilterPropertiesPermission":false},"fieldProperties":{"customURL":false,"embeddedJavaScript":false,"subreport":false,"tenantAccess":0,"isFullFieldPropertiesPermission":false},"actions":{"schedule":false,"email":false,"viewReportHistory":false,"del":false,"registerForAlerts":false,"print":false,"unarchiveReportVersions":false,"overwriteExistingReport":false,"subscribe":false,"exporting":false,"configureAccessRights":false,"tenantAccess":0,"isFullPermission":false},"tenantAccess":0},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":0},"permissions":{"value":false,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":false,"tenantAccess":0},"displayDashboardTileHeader":{"value":true,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":false,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":false,"email":false,"del":false,"subscribe":false,"print":false,"exporting":false,"overwriteExistingDashboard":false,"configureAccessRights":false,"tenantAccess":0,"isFullActionsPermission":false},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":false,"externalUsers":false,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":false,"embeddedHTML":false,"attachment":false,"tenantAccess":0},"attachmentType":{"word":false,"excel":false,"pdf":false,"csv":false,"xml":false,"json":false,"definition":false,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":false,"excel":false,"pdf":false,"iframe":false,"csv":false,"xml":false,"json":false,"queryExecution":false,"definition":false,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":false,"tenantAccess":0},"tenantAccess":0},"accessLimitsTree":null,"schedulingLimitsTree":null}', N'', N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', 1, 0, 1, CAST(N'2017-01-18T10:10:17.130' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:10:17.130' AS DateTime), N'System Admin', N'AdvReportCreator')
+INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [RoleType]) VALUES (N'98610244-a53a-42e8-ad8c-c6441b1d8cf7', N'VP', N'{"systemAdmin":true,"fullReportAndDashboardAccess":true,"limitedAccess":false,"systemConfiguration":{"scheduledInstances":{"value":true,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataConnectors":{"value":true,"tenantAccess":0},"dataModel":{"customView":{"create":true,"edit":true,"delete":true,"tenantAccess":0},"value":true,"tenantAccess":0},"advancedSettings":{"category":true,"others":true,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":true,"tenantAccess":0},"actions":{"create":true,"edit":true,"del":true,"configureSecurityOptions":true,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":true,"edit":true,"del":true,"tenantAccess":0},"dataModelAccess":{"value":true,"tenantAccess":0},"permissions":{"value":true,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":true,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":true,"tenantAccess":0},"dataSources":{"simpleDataSources":true,"advancedDataSources":true,"tenantAccess":0},"reportPartTypes":{"chart":true,"form":true,"gauge":true,"map":true,"tenantAccess":0,"isFullReportPartTypesPermission":true,"isEnableGoogleAddress":true},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":true,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":true,"crossFiltering":true,"tenantAccess":0,"isFullFilterPropertiesPermission":true},"fieldProperties":{"customURL":true,"embeddedJavaScript":true,"subreport":true,"tenantAccess":0,"isFullFieldPropertiesPermission":true},"actions":{"schedule":true,"email":true,"viewReportHistory":true,"del":true,"registerForAlerts":true,"print":true,"unarchiveReportVersions":true,"overwriteExistingReport":true,"subscribe":true,"exporting":true,"configureAccessRights":true,"tenantAccess":0,"isFullPermission":true},"tenantAccess":0},"tenantSetup":{"actions":{"create":true,"edit":true,"del":true,"tenantAccess":0},"permissions":{"value":true,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":true,"tenantAccess":0},"displayDashboardTileHeader":{"value":true,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":true,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":true,"email":true,"del":true,"subscribe":true,"print":true,"exporting":true,"overwriteExistingDashboard":true,"configureAccessRights":true,"tenantAccess":0,"isFullActionsPermission":true},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":true,"externalUsers":true,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":true,"embeddedHTML":true,"attachment":true,"tenantAccess":0},"attachmentType":{"word":true,"excel":true,"pdf":true,"csv":true,"xml":true,"json":true,"definition":true,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":true,"excel":true,"pdf":true,"iframe":true,"csv":true,"xml":true,"json":true,"queryExecution":true,"definition":true,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":true,"tenantAccess":0},"tenantAccess":0},"accessLimitsTree":null,"schedulingLimitsTree":null}', N'', N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', 1, 0, 1, CAST(N'2017-01-18T10:10:53.300' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:10:53.300' AS DateTime), N'System Admin', N'Administrator')
+INSERT [dbo].[IzendaRole] ([Id], [Name], [PermissionData], [QuerySources], [TenantId], [Active], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [RoleType]) VALUES (N'58970b43-aa4e-4b9d-8231-f0b0beecf6a8', N'VP', N'{"systemAdmin":true,"fullReportAndDashboardAccess":true,"limitedAccess":false,"systemConfiguration":{"scheduledInstances":{"value":true,"tenantAccess":0},"tenantAccess":0},"dataSetup":{"dataConnectors":{"value":true,"tenantAccess":0},"dataModel":{"customView":{"create":true,"edit":true,"delete":true,"tenantAccess":0},"value":true,"tenantAccess":0},"advancedSettings":{"category":true,"others":true,"tenantAccess":0},"tenantAccess":0},"userSetup":{"userRoleAssociation":{"value":true,"tenantAccess":0},"actions":{"create":true,"edit":true,"del":true,"configureSecurityOptions":true,"tenantAccess":0},"tenantAccess":0},"roleSetup":{"actions":{"create":true,"edit":true,"del":true,"tenantAccess":0},"dataModelAccess":{"value":true,"tenantAccess":0},"permissions":{"value":true,"tenantAccess":0},"grantRoleWithFullReportAndDashboardAccess":{"value":true,"tenantAccess":0},"tenantAccess":0},"reports":{"canCreateNewReport":{"value":true,"tenantAccess":0},"dataSources":{"simpleDataSources":true,"advancedDataSources":true,"tenantAccess":0},"reportPartTypes":{"chart":true,"form":true,"gauge":true,"map":true,"tenantAccess":0,"isFullReportPartTypesPermission":true,"isEnableGoogleAddress":true},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":true,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"filterProperties":{"filterLogic":true,"crossFiltering":true,"tenantAccess":0,"isFullFilterPropertiesPermission":true},"fieldProperties":{"customURL":true,"embeddedJavaScript":true,"subreport":true,"tenantAccess":0,"isFullFieldPropertiesPermission":true},"actions":{"schedule":true,"email":true,"viewReportHistory":true,"del":true,"registerForAlerts":true,"print":true,"unarchiveReportVersions":true,"overwriteExistingReport":true,"subscribe":true,"exporting":true,"configureAccessRights":true,"tenantAccess":0,"isFullPermission":true},"tenantAccess":0},"tenantSetup":{"actions":{"create":true,"edit":true,"del":true,"tenantAccess":0},"permissions":{"value":true,"tenantAccess":0},"tenantAccess":0},"dashboards":{"canCreateNewDashboard":{"value":true,"tenantAccess":0},"displayDashboardTileHeader":{"value":true,"tenantAccess":0},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":true,"tenantAccess":0},"categoryAccessibility":{"categories":[],"tenantAccess":0}},"actions":{"schedule":true,"email":true,"del":true,"subscribe":true,"print":true,"exporting":true,"overwriteExistingDashboard":true,"configureAccessRights":true,"tenantAccess":0,"isFullActionsPermission":true},"tenantAccess":0},"access":{"accessLimits":{"value":[],"tenantAccess":0},"accessDefaults":{"value":[],"tenantAccess":0},"tenantAccess":0},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":0},"schedulingScope":{"systemUsers":true,"externalUsers":true,"tenantAccess":0},"tenantAccess":0},"emailing":{"deliveryMethod":{"link":true,"embeddedHTML":true,"attachment":true,"tenantAccess":0},"attachmentType":{"word":true,"excel":true,"pdf":true,"csv":true,"xml":true,"json":true,"definition":true,"tenantAccess":0},"tenantAccess":0},"exporting":{"exportingFormat":{"word":true,"excel":true,"pdf":true,"iframe":true,"csv":true,"xml":true,"json":true,"queryExecution":true,"definition":true,"tenantAccess":0},"tenantAccess":0},"systemwide":{"canSeeSystemMessages":{"value":true,"tenantAccess":0},"tenantAccess":0},"accessLimitsTree":null,"schedulingLimitsTree":null}', N'', N'1fd07dcd-509d-403c-a8c5-9f82e06c7994', 1, 0, 1, CAST(N'2017-01-18T10:15:08.577' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:15:08.577' AS DateTime), N'System Admin', N'Administrator')
 INSERT [dbo].[IzendaSecurityPolicy] ([Id], [MinNumberOfPasswordLenght], [MaxNumberOfPasswordLenght], [MinNumberOfSpecialCharacter], [MaxNumberOfSpecialCharacter], [MinNumberOfUppercaseCharacter], [MaxNumberOfUppercaseCharacter], [MinNumberOfLowercaseCharacter], [MaxNumberOfLowercaseCharacter], [MinNumberOfNumericCharacter], [MaxNumberOfNumericCharacter], [MaxNumberOfRepeatSequential], [MinNumberOfPasswordAge], [MaxNumberOfPasswordAge], [NotifyUseDuring], [NumberOfPasswordToKeep], [PasswordLinkValidity], [NumberOfQuestionProfile], [NumberOfQuestionResetPassword], [NumberOfFailedLogonAllowed], [NumberOfFailedAnswerAllowed], [LockoutPeriod], [TenantId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'fa528971-a8af-45ab-a0b3-d539104e1b0d', 1, 10, 1, 10, 1, 10, 1, 10, 1, 10, 10, 1, 10, 4, 3, 10, 3, 2, 3, 1, 15, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
 INSERT [dbo].[IzendaSecurityQuestion] ([Id], [Question], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [TenantId], [OrderNumber]) VALUES (N'5784ece5-d2e7-42b1-89bb-859737b7b2a9', N'Question_Number_1', 1, 0, NULL, NULL, NULL, NULL, NULL, 1)
 INSERT [dbo].[IzendaSecurityQuestion] ([Id], [Question], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [TenantId], [OrderNumber]) VALUES (N'3771bdc2-1add-481a-9649-18a7e494860b', N'Question_Number_2', 1, 0, NULL, NULL, NULL, NULL, NULL, 2)
@@ -2199,9 +2187,9 @@ INSERT [dbo].[IzendaSystemVariable] ([Id], [Name], [DataType], [Description], [S
 INSERT [dbo].[IzendaSystemVariable] ([Id], [Name], [DataType], [Description], [Scope]) VALUES (N'4809565f-b163-46f6-9f3a-069b6a21d2d7', N'{horizontalRule}', N'', N'', 4)
 INSERT [dbo].[IzendaSystemVariable] ([Id], [Name], [DataType], [Description], [Scope]) VALUES (N'feed98d6-5860-473d-a6d3-06f87ad7d549', N'{verticalRule}', N'', N'', 4)
 INSERT [dbo].[IzendaTemporaryData] ([Id], [ObjectId], [ObjectData], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'38b55984-624a-4f0b-8bf9-bcf2b61f0ac8', N'38b55984-624a-4f0b-8bf9-bcf2b61f0ac8', N'{"Inaccessible":false,"Category":{"Name":"","Type":1,"ParentId":null,"TenantId":null,"CanDelete":false,"Editable":false,"Savable":false,"SubCategories":[],"Checked":false,"Reports":null,"Dashboards":null,"Id":null,"State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null},"SubCategory":{"Name":"","Type":1,"ParentId":null,"TenantId":null,"CanDelete":false,"Editable":false,"Savable":false,"SubCategories":[],"Checked":false,"Reports":null,"Dashboards":null,"Id":null,"State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null},"ReportRelationship":[],"ReportPart":[],"ReportFilter":{"FilterFields":[],"Logic":"","Visible":false,"ReportId":"38b55984-624a-4f0b-8bf9-bcf2b61f0ac8","Id":"f5dfef80-1fa1-427a-bd13-dc2f4b7df89e","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null},"CalculatedFields":[],"Accesses":[],"Schedules":[],"DynamicQuerySourceFields":[],"Name":"Example Report Name","ReportDataSource":[{"ReportId":"38b55984-624a-4f0b-8bf9-bcf2b61f0ac8","QuerySourceId":"599094e5-3b5c-454a-8510-7a087bb721e8","QuerySourceCategoryId":null,"ConnectionId":null,"Selected":true,"Id":"a8ddb2d8-d1c4-483e-9286-1305f4750525","State":1,"Deleted":false,"Inserted":false,"Version":null,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":null}],"Type":1,"PreviewRecord":10,"AdvancedMode":true,"AllowNulls":false,"IsDistinct":false,"CategoryId":null,"CategoryName":null,"SubCategoryId":null,"SubCategoryName":null,"TenantId":null,"TenantName":null,"Description":"","Title":"","LastViewed":null,"Owner":"System Admin","OwnerId":"9d2f1d51-0e3d-44db-bfc7-da94a7581bfe","ExcludedRelationships":"","NumberOfView":0,"RenderingTime":0.0,"CreatedById":"9d2f1d51-0e3d-44db-bfc7-da94a7581bfe","ModifiedById":"9d2f1d51-0e3d-44db-bfc7-da94a7581bfe","SnapToGrid":false,"UsingFields":null,"HasDeletedObjects":false,"Header":{"visible":false,"items":[{"isDirty":false,"type":"image","label":"Image","id":"formatDetails_41","positionX":0,"positionY":0,"width":6,"height":6,"name":"Logo Image","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageUrl":"http://","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_42","positionX":20,"positionY":0,"width":12,"height":2,"name":"Report Name","value":"{reportName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"thinHorizontalRule","label":"Horizontal Rule","id":"formatDetails_43","positionX":20,"positionY":4,"width":12,"height":1,"name":"Upper Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_44","positionX":20,"positionY":5,"width":6,"height":2,"name":"Report Generated","value":"Report Generated:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_45","positionX":20,"positionY":7,"width":6,"height":2,"name":"User","value":"User:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_46","positionX":20,"positionY":9,"width":6,"height":2,"name":"Tenant","value":"Tenant:","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"dateTime","label":"Date Time","id":"formatDetails_47","positionX":26,"positionY":5,"width":6,"height":2,"name":"Current Date Time","value":"{currentDateTime}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_48","positionX":26,"positionY":7,"width":6,"height":2,"name":"Current User Name","value":"{currentUserName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_49","positionX":26,"positionY":9,"width":6,"height":2,"name":"Tenant Name","value":"{tenantName}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_50","positionX":0,"positionY":11,"width":32,"height":1,"name":"Lower Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":4}]},"Footer":{"visible":false,"items":[{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_51","positionX":0,"positionY":0,"width":32,"height":1,"name":"Separator Line","value":"{horizontalRule}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":4},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_52","positionX":0,"positionY":1,"width":10,"height":2,"name":"Footer Text","value":"Footer Text","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_53","positionX":20,"positionY":1,"width":4,"height":2,"name":"Page","value":"Page","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"pageNumber","label":"Page Number","id":"formatDetails_54","positionX":24,"positionY":1,"width":8,"height":2,"name":"Page Number","value":"{pageNumber}","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1}]},"TitleDescription":{"visible":false,"items":[{"isDirty":false,"type":"title","label":"Title","id":"formatDetails_55","name":"Title","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1},{"isDirty":false,"type":"description","label":"Description","id":"formatDetails_56","name":"Description","value":"","font":{"family":"Roboto","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","dashStyle":"solid","thickness":1}]},"SourceId":null,"Checked":false,"CopyDashboard":false,"ExportFormatSetting":{"Orientation":0,"Margins":0,"CenterOnPage":{"Horizontally":false,"Vertically":false},"PageBreakAfterReportPart":false,"MarginSettings":[{"Type":3,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":0,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":1,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.25,"RightValue":0.25,"HeaderValue":0.3,"FooterValue":0.3},{"Type":2,"TopValue":1.0,"BottomValue":1.0,"LeftValue":1.0,"RightValue":1.0,"HeaderValue":0.5,"FooterValue":0.5}]},"Deletable":false,"Editable":false,"Movable":false,"Copyable":false,"AccessPriority":0,"Active":false,"Id":"38b55984-624a-4f0b-8bf9-bcf2b61f0ac8","State":1,"Deleted":false,"Inserted":false,"Version":0,"Created":null,"CreatedBy":"System Admin","Modified":null,"ModifiedBy":"System Admin"}', 2, 0, CAST(N'2017-05-04T18:59:16.607' AS DateTime), N'System Admin', CAST(N'2017-05-04T18:59:16.850' AS DateTime), NULL)
-INSERT [dbo].[IzendaTenant] ([Id], [TenantID], [Name], [Description], [Active], [Deleted], [Modules], [PermissionData], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'314bf0e1-1e69-4e2d-870e-4829bb4aa46c', N'NATWR', N'NATWR', NULL, 1, 0, N'', NULL, 1, CAST(N'2017-01-18T09:52:32.040' AS DateTime), N'System Admin', CAST(N'2017-01-18T09:52:32.040' AS DateTime), N'System Admin')
-INSERT [dbo].[IzendaTenant] ([Id], [TenantID], [Name], [Description], [Active], [Deleted], [Modules], [PermissionData], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', N'DELDG', N'DELDG', NULL, 1, 0, N'', NULL, 1, CAST(N'2017-01-18T09:43:57.917' AS DateTime), N'System Admin', CAST(N'2017-01-18T09:43:57.917' AS DateTime), N'System Admin')
-INSERT [dbo].[IzendaTenant] ([Id], [TenantID], [Name], [Description], [Active], [Deleted], [Modules], [PermissionData], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'1fd07dcd-509d-403c-a8c5-9f82e06c7994', N'RETCL', N'RETCL', NULL, 1, 0, N'', NULL, 1, CAST(N'2017-01-18T09:57:33.943' AS DateTime), N'System Admin', CAST(N'2017-01-18T09:57:33.943' AS DateTime), N'System Admin')
+INSERT [dbo].[IzendaTenant] ([Id], [TenantID], [Name], [Description], [Active], [Deleted], [Modules], [PermissionData], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'314bf0e1-1e69-4e2d-870e-4829bb4aa46c', N'NATWR', N'NATWR', NULL, 1, 0, N'BmZhwZ3vKEtTmgObjTle1H1APHMVXW+vb4fZ91rzIWhuYuh4QkvOJq/fuN0suj431MyuPtnX2p8HtLKDMxfdYIVrSjoQfg1V45TC/R1Afk8/vftc+kLSx0ZTrJGMXOgVARYkzU2alGteCdp2V8AilNrs/50V9yxtuStcZfLMPB5VytfV1b0CgAgVQ2wE/Cdv', '{"systemAdmin":false,"fullReportAndDashboardAccess":false,"limitedAccess":false,"systemConfiguration":{"scheduledInstances":{"value":true,"tenantAccess":1},"tenantAccess":1},"dataSetup":{"dataConnectors":{"value":true,"tenantAccess":1},"dataModel":{"customView":{"create":true,"edit":true,"delete":true,"tenantAccess":1},"value":true,"tenantAccess":1},"advancedSettings":{"category":true,"others":true,"tenantAccess":1},"import":{"value":true,"tenantAccess":1},"tenantAccess":1},"userSetup":{"userRoleAssociation":{"value":true,"tenantAccess":1},"actions":{"create":true,"edit":true,"del":true,"configureSecurityOptions":true,"tenantAccess":1},"tenantAccess":1},"roleSetup":{"actions":{"create":true,"edit":true,"del":true,"tenantAccess":1},"dataModelAccess":{"value":true,"tenantAccess":1},"permissions":{"value":true,"tenantAccess":1},"grantRoleWithFullReportAndDashboardAccess":{"value":true,"tenantAccess":1},"tenantAccess":1},"reports":{"canCreateNewReport":{"value":true,"tenantAccess":1},"dataSources":{"simpleDataSources":false,"advancedDataSources":true,"tenantAccess":1},"reportPartTypes":{"chart":true,"form":true,"gauge":true,"map":true,"tenantAccess":1,"isFullReportPartTypesPermission":true,"isEnableGoogleAddress":true},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":true,"tenantAccess":1},"categoryAccessibility":{"categories":[],"tenantAccess":1}},"filterProperties":{"filterLogic":true,"crossFiltering":true,"tenantAccess":1,"isFullFilterPropertiesPermission":true},"fieldProperties":{"customURL":true,"embeddedJavaScript":true,"subreport":true,"tenantAccess":1,"isFullFieldPropertiesPermission":true},"actions":{"schedule":true,"email":true,"viewReportHistory":true,"del":true,"registerForAlerts":true,"print":true,"unarchiveReportVersions":true,"overwriteExistingReport":true,"subscribe":true,"exporting":true,"configureAccessRights":true,"tenantAccess":1,"isFullPermission":true},"tenantAccess":1},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":1},"permissions":{"value":false,"tenantAccess":1},"tenantAccess":1},"dashboards":{"canCreateNewDashboard":{"value":true,"tenantAccess":1},"displayDashboardTileHeader":{"value":true,"tenantAccess":1},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":true,"tenantAccess":1},"categoryAccessibility":{"categories":[],"tenantAccess":1}},"actions":{"schedule":true,"email":true,"del":true,"subscribe":true,"print":true,"exporting":true,"overwriteExistingDashboard":true,"configureAccessRights":true,"tenantAccess":1,"isFullActionsPermission":true},"tenantAccess":1},"access":{"accessLimits":{"value":[],"tenantAccess":1},"accessDefaults":{"value":[],"tenantAccess":1},"tenantAccess":1},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":1},"schedulingScope":{"systemUsers":true,"externalUsers":true,"tenantAccess":1},"tenantAccess":1},"emailing":{"deliveryMethod":{"link":true,"embeddedHTML":true,"attachment":true,"tenantAccess":1},"attachmentType":{"word":true,"excel":true,"pdf":true,"csv":true,"xml":true,"json":true,"definition":true,"tenantAccess":1},"tenantAccess":1},"exporting":{"exportingFormat":{"word":true,"excel":true,"pdf":true,"iframe":true,"csv":true,"xml":true,"json":true,"queryExecution":true,"definition":true,"tenantAccess":1},"tenantAccess":1},"systemwide":{"canSeeSystemMessages":{"value":true,"tenantAccess":1},"tenantAccess":1},"accessLimitsTree":[],"schedulingLimitsTree":[]}', 1, CAST(N'2017-01-18T09:52:32.040' AS DateTime), N'System Admin', CAST(N'2017-01-18T09:52:32.040' AS DateTime), N'System Admin')
+INSERT [dbo].[IzendaTenant] ([Id], [TenantID], [Name], [Description], [Active], [Deleted], [Modules], [PermissionData], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', N'DELDG', N'DELDG', NULL, 1, 0, N'BmZhwZ3vKEtTmgObjTle1H1APHMVXW+vb4fZ91rzIWhuYuh4QkvOJq/fuN0suj431MyuPtnX2p8HtLKDMxfdYIVrSjoQfg1V45TC/R1Afk8/vftc+kLSx0ZTrJGMXOgVARYkzU2alGteCdp2V8AilNrs/50V9yxtuStcZfLMPB5VytfV1b0CgAgVQ2wE/Cdv', '{"systemAdmin":false,"fullReportAndDashboardAccess":false,"limitedAccess":false,"systemConfiguration":{"scheduledInstances":{"value":true,"tenantAccess":1},"tenantAccess":1},"dataSetup":{"dataConnectors":{"value":true,"tenantAccess":1},"dataModel":{"customView":{"create":true,"edit":true,"delete":true,"tenantAccess":1},"value":true,"tenantAccess":1},"advancedSettings":{"category":true,"others":true,"tenantAccess":1},"import":{"value":true,"tenantAccess":1},"tenantAccess":1},"userSetup":{"userRoleAssociation":{"value":true,"tenantAccess":1},"actions":{"create":true,"edit":true,"del":true,"configureSecurityOptions":true,"tenantAccess":1},"tenantAccess":1},"roleSetup":{"actions":{"create":true,"edit":true,"del":true,"tenantAccess":1},"dataModelAccess":{"value":true,"tenantAccess":1},"permissions":{"value":true,"tenantAccess":1},"grantRoleWithFullReportAndDashboardAccess":{"value":true,"tenantAccess":1},"tenantAccess":1},"reports":{"canCreateNewReport":{"value":true,"tenantAccess":1},"dataSources":{"simpleDataSources":false,"advancedDataSources":true,"tenantAccess":1},"reportPartTypes":{"chart":true,"form":true,"gauge":true,"map":true,"tenantAccess":1,"isFullReportPartTypesPermission":true,"isEnableGoogleAddress":true},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":true,"tenantAccess":1},"categoryAccessibility":{"categories":[],"tenantAccess":1}},"filterProperties":{"filterLogic":true,"crossFiltering":true,"tenantAccess":1,"isFullFilterPropertiesPermission":true},"fieldProperties":{"customURL":true,"embeddedJavaScript":true,"subreport":true,"tenantAccess":1,"isFullFieldPropertiesPermission":true},"actions":{"schedule":true,"email":true,"viewReportHistory":true,"del":true,"registerForAlerts":true,"print":true,"unarchiveReportVersions":true,"overwriteExistingReport":true,"subscribe":true,"exporting":true,"configureAccessRights":true,"tenantAccess":1,"isFullPermission":true},"tenantAccess":1},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":1},"permissions":{"value":false,"tenantAccess":1},"tenantAccess":1},"dashboards":{"canCreateNewDashboard":{"value":true,"tenantAccess":1},"displayDashboardTileHeader":{"value":true,"tenantAccess":1},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":true,"tenantAccess":1},"categoryAccessibility":{"categories":[],"tenantAccess":1}},"actions":{"schedule":true,"email":true,"del":true,"subscribe":true,"print":true,"exporting":true,"overwriteExistingDashboard":true,"configureAccessRights":true,"tenantAccess":1,"isFullActionsPermission":true},"tenantAccess":1},"access":{"accessLimits":{"value":[],"tenantAccess":1},"accessDefaults":{"value":[],"tenantAccess":1},"tenantAccess":1},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":1},"schedulingScope":{"systemUsers":true,"externalUsers":true,"tenantAccess":1},"tenantAccess":1},"emailing":{"deliveryMethod":{"link":true,"embeddedHTML":true,"attachment":true,"tenantAccess":1},"attachmentType":{"word":true,"excel":true,"pdf":true,"csv":true,"xml":true,"json":true,"definition":true,"tenantAccess":1},"tenantAccess":1},"exporting":{"exportingFormat":{"word":true,"excel":true,"pdf":true,"iframe":true,"csv":true,"xml":true,"json":true,"queryExecution":true,"definition":true,"tenantAccess":1},"tenantAccess":1},"systemwide":{"canSeeSystemMessages":{"value":true,"tenantAccess":1},"tenantAccess":1},"accessLimitsTree":[],"schedulingLimitsTree":[]}', 1, CAST(N'2017-01-18T09:43:57.917' AS DateTime), N'System Admin', CAST(N'2017-01-18T09:43:57.917' AS DateTime), N'System Admin')
+INSERT [dbo].[IzendaTenant] ([Id], [TenantID], [Name], [Description], [Active], [Deleted], [Modules], [PermissionData], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'1fd07dcd-509d-403c-a8c5-9f82e06c7994', N'RETCL', N'RETCL', NULL, 1, 0, N'BmZhwZ3vKEtTmgObjTle1H1APHMVXW+vb4fZ91rzIWhuYuh4QkvOJq/fuN0suj431MyuPtnX2p8HtLKDMxfdYIVrSjoQfg1V45TC/R1Afk8/vftc+kLSx0ZTrJGMXOgVARYkzU2alGteCdp2V8AilNrs/50V9yxtuStcZfLMPB5VytfV1b0CgAgVQ2wE/Cdv', '{"systemAdmin":false,"fullReportAndDashboardAccess":false,"limitedAccess":false,"systemConfiguration":{"scheduledInstances":{"value":true,"tenantAccess":1},"tenantAccess":1},"dataSetup":{"dataConnectors":{"value":true,"tenantAccess":1},"dataModel":{"customView":{"create":true,"edit":true,"delete":true,"tenantAccess":1},"value":true,"tenantAccess":1},"advancedSettings":{"category":true,"others":true,"tenantAccess":1},"import":{"value":true,"tenantAccess":1},"tenantAccess":1},"userSetup":{"userRoleAssociation":{"value":true,"tenantAccess":1},"actions":{"create":true,"edit":true,"del":true,"configureSecurityOptions":true,"tenantAccess":1},"tenantAccess":1},"roleSetup":{"actions":{"create":true,"edit":true,"del":true,"tenantAccess":1},"dataModelAccess":{"value":true,"tenantAccess":1},"permissions":{"value":true,"tenantAccess":1},"grantRoleWithFullReportAndDashboardAccess":{"value":true,"tenantAccess":1},"tenantAccess":1},"reports":{"canCreateNewReport":{"value":true,"tenantAccess":1},"dataSources":{"simpleDataSources":false,"advancedDataSources":true,"tenantAccess":1},"reportPartTypes":{"chart":true,"form":true,"gauge":true,"map":true,"tenantAccess":1,"isFullReportPartTypesPermission":true,"isEnableGoogleAddress":true},"reportCategoriesSubcategories":{"canCreateNewCategory":{"value":true,"tenantAccess":1},"categoryAccessibility":{"categories":[],"tenantAccess":1}},"filterProperties":{"filterLogic":true,"crossFiltering":true,"tenantAccess":1,"isFullFilterPropertiesPermission":true},"fieldProperties":{"customURL":true,"embeddedJavaScript":true,"subreport":true,"tenantAccess":1,"isFullFieldPropertiesPermission":true},"actions":{"schedule":true,"email":true,"viewReportHistory":true,"del":true,"registerForAlerts":true,"print":true,"unarchiveReportVersions":true,"overwriteExistingReport":true,"subscribe":true,"exporting":true,"configureAccessRights":true,"tenantAccess":1,"isFullPermission":true},"tenantAccess":1},"tenantSetup":{"actions":{"create":false,"edit":false,"del":false,"tenantAccess":1},"permissions":{"value":false,"tenantAccess":1},"tenantAccess":1},"dashboards":{"canCreateNewDashboard":{"value":true,"tenantAccess":1},"displayDashboardTileHeader":{"value":true,"tenantAccess":1},"dashboardCategoriesSubcategories":{"canCreateNewCategory":{"value":true,"tenantAccess":1},"categoryAccessibility":{"categories":[],"tenantAccess":1}},"actions":{"schedule":true,"email":true,"del":true,"subscribe":true,"print":true,"exporting":true,"overwriteExistingDashboard":true,"configureAccessRights":true,"tenantAccess":1,"isFullActionsPermission":true},"tenantAccess":1},"access":{"accessLimits":{"value":[],"tenantAccess":1},"accessDefaults":{"value":[],"tenantAccess":1},"tenantAccess":1},"scheduling":{"schedulingLimits":{"value":[],"tenantAccess":1},"schedulingScope":{"systemUsers":true,"externalUsers":true,"tenantAccess":1},"tenantAccess":1},"emailing":{"deliveryMethod":{"link":true,"embeddedHTML":true,"attachment":true,"tenantAccess":1},"attachmentType":{"word":true,"excel":true,"pdf":true,"csv":true,"xml":true,"json":true,"definition":true,"tenantAccess":1},"tenantAccess":1},"exporting":{"exportingFormat":{"word":true,"excel":true,"pdf":true,"iframe":true,"csv":true,"xml":true,"json":true,"queryExecution":true,"definition":true,"tenantAccess":1},"tenantAccess":1},"systemwide":{"canSeeSystemMessages":{"value":true,"tenantAccess":1},"tenantAccess":1},"accessLimitsTree":[],"schedulingLimitsTree":[]}', 1, CAST(N'2017-01-18T09:57:33.943' AS DateTime), N'System Admin', CAST(N'2017-01-18T09:57:33.943' AS DateTime), N'System Admin')
 INSERT [dbo].[IzendaTimePeriod] ([Id], [Name], [Type], [Value], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [IsCustomFilter]) VALUES (N'b8ef8ad0-7a90-4f70-b3f3-52cbaf518335', N'In the Future', N'Long-term Period', N'', NULL, 0, NULL, NULL, NULL, NULL, NULL)
 INSERT [dbo].[IzendaTimePeriod] ([Id], [Name], [Type], [Value], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [IsCustomFilter]) VALUES (N'dae256be-21d4-45c1-8d34-52cf05ba7cf5', N'In the Past', N'Long-term Period', N'', NULL, 0, NULL, NULL, NULL, NULL, NULL)
 INSERT [dbo].[IzendaTimePeriod] ([Id], [Name], [Type], [Value], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [IsCustomFilter]) VALUES (N'1559a72d-22a1-4c8e-b3b4-53414e5b7ff5', N'Current Fiscal Year', N'Fiscal Year', N'0', NULL, 0, NULL, NULL, NULL, NULL, NULL)
@@ -2245,16 +2233,16 @@ INSERT [dbo].[IzendaTimePeriod] ([Id], [Name], [Type], [Value], [Version], [Dele
 INSERT [dbo].[IzendaTimePeriod] ([Id], [Name], [Type], [Value], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [IsCustomFilter]) VALUES (N'2cb2bd5b-5228-470c-8ef7-68e8cc030f61', N'Next 90 Days', N'Day', N'90', NULL, 0, NULL, NULL, NULL, NULL, NULL)
 INSERT [dbo].[IzendaTimePeriod] ([Id], [Name], [Type], [Value], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [IsCustomFilter]) VALUES (N'5a0b0b87-e153-4047-97d7-6934bd0742e2', N'Next 120 Days', N'Day', N'120', NULL, 0, NULL, NULL, NULL, NULL, NULL)
 INSERT [dbo].[IzendaTimePeriod] ([Id], [Name], [Type], [Value], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [IsCustomFilter]) VALUES (N'923fc0dd-6d08-483b-a9f9-6a2997698f1b', N'Next and Last 30 Days', N'Day', N'-30&30', NULL, 0, NULL, NULL, NULL, NULL, NULL)
-INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'e0222644-a1d3-4be2-b198-371a10b4405e', N'manager@retcl.com', N'RETCL', N'manager', NULL, NULL, N'1fd07dcd-509d-403c-a8c5-9f82e06c7994', 1, CAST(N'2017-01-18T10:14:15.063' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:14:15.063' AS DateTime), N'System Admin', NULL, NULL, 0, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
-INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'75d7fad0-bc12-4bf2-9da3-845defb20c4c', N'manager@deldg.com', N'DELDG', N'manager', NULL, NULL, N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', 1, CAST(N'2017-01-18T10:10:17.183' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:10:17.183' AS DateTime), N'System Admin', NULL, NULL, 0, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
-INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'964380f8-c160-420b-8014-9e7a30c4133c', N'employee@deldg.com', N'DELDG', N'employee', NULL, NULL, N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', 1, CAST(N'2017-01-18T10:19:01.830' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:19:01.830' AS DateTime), N'System Admin', NULL, NULL, 0, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
-INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'f5cdcb20-acf3-4885-9523-bdcd5a241532', N'employee@natwr.com', N'NATWR', N'employee', NULL, NULL, N'314bf0e1-1e69-4e2d-870e-4829bb4aa46c', 1, CAST(N'2017-01-18T10:19:34.693' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:19:34.693' AS DateTime), N'System Admin', NULL, NULL, 0, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
-INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'43f3ef07-6e8f-4063-945e-cd95a24f16f6', N'VP@natwr.com', N'NATWR', N'VP', NULL, NULL, N'314bf0e1-1e69-4e2d-870e-4829bb4aa46c', 1, CAST(N'2017-01-18T10:13:18.610' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:13:18.610' AS DateTime), N'System Admin', NULL, NULL, 0, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
+INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'e0222644-a1d3-4be2-b198-371a10b4405e', N'manager@retcl.com', N'RETCL', N'manager', NULL, NULL, N'1fd07dcd-509d-403c-a8c5-9f82e06c7994', 1, CAST(N'2017-01-18T10:14:15.063' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:14:15.063' AS DateTime), N'System Admin', NULL, NULL, 1, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
+INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'75d7fad0-bc12-4bf2-9da3-845defb20c4c', N'manager@deldg.com', N'DELDG', N'manager', NULL, NULL, N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', 1, CAST(N'2017-01-18T10:10:17.183' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:10:17.183' AS DateTime), N'System Admin', NULL, NULL, 1, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
+INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'964380f8-c160-420b-8014-9e7a30c4133c', N'employee@deldg.com', N'DELDG', N'employee', NULL, NULL, N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', 1, CAST(N'2017-01-18T10:19:01.830' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:19:01.830' AS DateTime), N'System Admin', NULL, NULL, 1, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
+INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'f5cdcb20-acf3-4885-9523-bdcd5a241532', N'employee@natwr.com', N'NATWR', N'employee', NULL, NULL, N'314bf0e1-1e69-4e2d-870e-4829bb4aa46c', 1, CAST(N'2017-01-18T10:19:34.693' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:19:34.693' AS DateTime), N'System Admin', NULL, NULL, 1, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
+INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'43f3ef07-6e8f-4063-945e-cd95a24f16f6', N'VP@natwr.com', N'NATWR', N'VP', NULL, NULL, N'314bf0e1-1e69-4e2d-870e-4829bb4aa46c', 1, CAST(N'2017-01-18T10:13:18.610' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:13:18.610' AS DateTime), N'System Admin', NULL, NULL, 1, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
 INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'9d2f1d51-0e3d-44db-bfc7-da94a7581bfe', N'IzendaAdmin@system.com', N'System', N'Admin', N'Ni44BUzGHfooivlGlIa6KSvWgH8V17dTCzled+nfTo2WNns6JJRa8dDT+KTWawe5veauvEB/NAiwnZA6KfdfJQ==', N'shKEvBNweSW0VLSX6Q==', NULL, 1, NULL, NULL, CAST(N'2017-05-04T17:25:56.410' AS DateTime), NULL, NULL, N'q6B65LsmzjOdVIqzGsxLDixLWI8G6HLJxoNqTRKBASiLPw/EWD82OtyYUyc9VCEY/PkT5a7z1pGa6hJP16EHMA==', 1, 0, 0, 0, 1, 0, CAST(N'2017-05-04T17:25:56.410' AS DateTime), NULL, NULL, NULL, NULL, N'MM/DD/YYYY', 1, NULL, 0)
-INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'6df0a31a-edfb-4946-a68c-e09bef0b9986', N'vp@retcl.com', N'RETCL', N'vp', NULL, NULL, N'1fd07dcd-509d-403c-a8c5-9f82e06c7994', 1, CAST(N'2017-01-18T10:15:08.637' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:15:08.637' AS DateTime), N'System Admin', NULL, NULL, 0, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
-INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'1c9c159d-6b9a-4573-a359-fc442f0479e2', N'employee@retcl.com', N'RETCL', N'employee', NULL, NULL, N'1fd07dcd-509d-403c-a8c5-9f82e06c7994', 1, CAST(N'2017-01-18T09:58:05.473' AS DateTime), N'System Admin', CAST(N'2017-01-18T09:58:05.473' AS DateTime), N'System Admin', NULL, NULL, 0, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
-INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'238c21c4-9d58-44b2-9b80-fe0b43985ca3', N'vp@deldg.com', N'DELDG', N'vp', NULL, NULL, N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', 1, CAST(N'2017-01-18T10:10:53.373' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:10:53.373' AS DateTime), N'System Admin', NULL, NULL, 0, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
-INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'e6a26135-c2c4-4f1d-b73a-fe3f60d528e6', N'manager@natwr.com', N'NATWR', N'manager', NULL, NULL, N'314bf0e1-1e69-4e2d-870e-4829bb4aa46c', 1, CAST(N'2017-01-18T10:11:53.280' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:11:53.280' AS DateTime), N'System Admin', NULL, NULL, 0, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
+INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'6df0a31a-edfb-4946-a68c-e09bef0b9986', N'vp@retcl.com', N'RETCL', N'vp', NULL, NULL, N'1fd07dcd-509d-403c-a8c5-9f82e06c7994', 1, CAST(N'2017-01-18T10:15:08.637' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:15:08.637' AS DateTime), N'System Admin', NULL, NULL, 1, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
+INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'1c9c159d-6b9a-4573-a359-fc442f0479e2', N'employee@retcl.com', N'RETCL', N'employee', NULL, NULL, N'1fd07dcd-509d-403c-a8c5-9f82e06c7994', 1, CAST(N'2017-01-18T09:58:05.473' AS DateTime), N'System Admin', CAST(N'2017-01-18T09:58:05.473' AS DateTime), N'System Admin', NULL, NULL, 1, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
+INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'238c21c4-9d58-44b2-9b80-fe0b43985ca3', N'vp@deldg.com', N'DELDG', N'vp', NULL, NULL, N'9dd5ae29-bdb9-4520-ba35-643d4ccc1708', 1, CAST(N'2017-01-18T10:10:53.373' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:10:53.373' AS DateTime), N'System Admin', NULL, NULL, 1, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
+INSERT [dbo].[IzendaUser] ([Id], [UserName], [FirstName], [LastName], [PasswordHash], [PasswordSalt], [TenantId], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [EmailAddress], [CurrentTokenHash], [Active], [Deleted], [DataOffset], [TimestampOffset], [InitPassword], [RetryLoginTime], [LastTimeAccessed], [PasswordLastChanged], [Locked], [LockedDate], [CultureName], [DateFormat], [SystemAdmin], [SecurityQuestionLastChanged], [NumberOfFailedSecurityQuestion]) VALUES (N'e6a26135-c2c4-4f1d-b73a-fe3f60d528e6', N'manager@natwr.com', N'NATWR', N'manager', NULL, NULL, N'314bf0e1-1e69-4e2d-870e-4829bb4aa46c', 1, CAST(N'2017-01-18T10:11:53.280' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:11:53.280' AS DateTime), N'System Admin', NULL, NULL, 1, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL)
 INSERT [dbo].[IzendaUserRole] ([Id], [UserId], [RoleId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'295b333e-1c17-4b9f-8552-01a47724bd7c', N'43f3ef07-6e8f-4063-945e-cd95a24f16f6', N'a1ee5831-8d4b-41b6-82b3-875cc130a6b7', 1, 0, CAST(N'2017-01-18T10:13:18.620' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:13:18.620' AS DateTime), N'System Admin')
 INSERT [dbo].[IzendaUserRole] ([Id], [UserId], [RoleId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'3ee1bb81-0fbb-4899-bd64-1ef1717700b6', N'238c21c4-9d58-44b2-9b80-fe0b43985ca3', N'98610244-a53a-42e8-ad8c-c6441b1d8cf7', 1, 0, CAST(N'2017-01-18T10:10:53.393' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:10:53.393' AS DateTime), N'System Admin')
 INSERT [dbo].[IzendaUserRole] ([Id], [UserId], [RoleId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'04a1e738-1e69-47dd-bd1e-32099c10f59e', N'6df0a31a-edfb-4946-a68c-e09bef0b9986', N'58970b43-aa4e-4b9d-8231-f0b0beecf6a8', 1, 0, CAST(N'2017-01-18T10:15:08.643' AS DateTime), N'System Admin', CAST(N'2017-01-18T10:15:08.643' AS DateTime), N'System Admin')
@@ -2322,18 +2310,11 @@ REFERENCES [dbo].[IzendaWorkspace] ([Id])
 GO
 ALTER TABLE [dbo].[IzendaWorkspaceTenant] CHECK CONSTRAINT [FK_IzendaWorkspaceTenant_IzendaWorkspace]
 GO
-USE [master]
-GO
-ALTER DATABASE [MVC5Core_Izenda] SET  READ_WRITE 
-GO
 
 -- ##################################
 -- Izenda Schema Migration Script From v1.25.0 To v2.4.4
 -- Database Type: [MSSQL] SQLServer
 -- ##################################
-
-USE [MVC5Core_Izenda]
-GO
 
 -- ========================================================
 -- v1.25.1
@@ -7397,3 +7378,3078 @@ ELSE
 ;
  
 UPDATE IzendaDBVersion SET Version= '2.6.20';
+
+-- ========================================================
+-- v2.6.21
+-- ========================================================
+DECLARE @newId uniqueidentifier = '9b85320e-00a5-44a3-8c5f-685b8e6e6e59';
+  DECLARE @items int = 0;
+  SELECT @items = count(*) FROM IzendaSecurityPolicy;  
+  IF(@items = 1)
+  BEGIN 
+	DELETE IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D' AND Modified IS NULL;
+	UPDATE IzendaSecurityPolicy SET Id = @newId WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+  END
+  ELSE IF(@items = 2)
+  BEGIN
+	DECLARE @defaultItem datetime = NULL;
+	DECLARE @customItem datetime = NULL;
+
+	SELECT @defaultItem = Modified FROM IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+	SELECT @customItem = Modified FROM IzendaSecurityPolicy WHERE Id != 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+
+	IF(@defaultItem > @customItem)
+	BEGIN 	
+		DECLARE @MinNumberOfPasswordLenght int
+				  ,@MaxNumberOfPasswordLenght int
+				  ,@MinNumberOfSpecialCharacter int
+				  ,@MaxNumberOfSpecialCharacter int
+				  ,@MinNumberOfUppercaseCharacter int
+				  ,@MaxNumberOfUppercaseCharacter int
+				  ,@MinNumberOfLowercaseCharacter int
+				  ,@MaxNumberOfLowercaseCharacter int
+				  ,@MinNumberOfNumericCharacter int
+				  ,@MaxNumberOfNumericCharacter int
+				  ,@MaxNumberOfRepeatSequential int
+				  ,@MinNumberOfPasswordAge int
+				  ,@MaxNumberOfPasswordAge int
+				  ,@NotifyUseDuring int
+				  ,@NumberOfPasswordToKeep int
+				  ,@PasswordLinkValidity int
+				  ,@NumberOfQuestionProfile int
+				  ,@NumberOfQuestionResetPassword int
+				  ,@NumberOfFailedLogonAllowed int
+				  ,@NumberOfFailedAnswerAllowed int
+				  ,@LockoutPeriod int;
+
+	    SELECT @MinNumberOfPasswordLenght = MinNumberOfPasswordLenght
+			  ,@MaxNumberOfPasswordLenght = MaxNumberOfPasswordLenght
+			  ,@MinNumberOfSpecialCharacter = MinNumberOfSpecialCharacter
+			  ,@MaxNumberOfSpecialCharacter = MaxNumberOfSpecialCharacter
+			  ,@MinNumberOfUppercaseCharacter = MinNumberOfUppercaseCharacter
+			  ,@MaxNumberOfUppercaseCharacter = MaxNumberOfUppercaseCharacter
+			  ,@MinNumberOfLowercaseCharacter = MinNumberOfLowercaseCharacter
+			  ,@MaxNumberOfLowercaseCharacter = MaxNumberOfLowercaseCharacter
+			  ,@MinNumberOfNumericCharacter = MinNumberOfNumericCharacter
+			  ,@MaxNumberOfNumericCharacter = MaxNumberOfNumericCharacter
+			  ,@MaxNumberOfRepeatSequential = MaxNumberOfRepeatSequential
+			  ,@MinNumberOfPasswordAge = MinNumberOfPasswordAge
+			  ,@MaxNumberOfPasswordAge = MaxNumberOfPasswordAge
+			  ,@NotifyUseDuring = NotifyUseDuring
+			  ,@NumberOfPasswordToKeep = NumberOfPasswordToKeep
+			  ,@PasswordLinkValidity = PasswordLinkValidity
+			  ,@NumberOfQuestionProfile = NumberOfQuestionProfile
+			  ,@NumberOfQuestionResetPassword = NumberOfQuestionResetPassword
+			  ,@NumberOfFailedLogonAllowed = NumberOfFailedLogonAllowed
+			  ,@NumberOfFailedAnswerAllowed = NumberOfFailedAnswerAllowed
+			  ,@LockoutPeriod = LockoutPeriod
+	    FROM IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+	
+		UPDATE IzendaSecurityPolicy SET
+		MinNumberOfPasswordLenght = @MinNumberOfPasswordLenght,
+		MaxNumberOfPasswordLenght = @MaxNumberOfPasswordLenght,
+		MinNumberOfSpecialCharacter = @MinNumberOfSpecialCharacter,
+		MaxNumberOfSpecialCharacter = @MaxNumberOfSpecialCharacter,
+		MinNumberOfUppercaseCharacter = @MinNumberOfUppercaseCharacter,
+		MaxNumberOfUppercaseCharacter = @MaxNumberOfUppercaseCharacter,
+		MinNumberOfLowercaseCharacter = @MinNumberOfLowercaseCharacter,
+		MaxNumberOfLowercaseCharacter = @MaxNumberOfLowercaseCharacter,
+		MinNumberOfNumericCharacter = @MinNumberOfNumericCharacter,
+		MaxNumberOfNumericCharacter = @MaxNumberOfNumericCharacter,
+		MaxNumberOfRepeatSequential = @MaxNumberOfRepeatSequential,
+		MinNumberOfPasswordAge = @MinNumberOfPasswordAge,
+		MaxNumberOfPasswordAge = @MaxNumberOfPasswordAge,
+		NotifyUseDuring = @NotifyUseDuring,
+		NumberOfPasswordToKeep = @NumberOfPasswordToKeep,
+		PasswordLinkValidity = @PasswordLinkValidity,
+		NumberOfQuestionProfile = @NumberOfQuestionProfile,
+		NumberOfQuestionResetPassword = @NumberOfQuestionResetPassword,
+		NumberOfFailedLogonAllowed = @NumberOfFailedLogonAllowed,
+		NumberOfFailedAnswerAllowed = @NumberOfFailedAnswerAllowed,
+		LockoutPeriod = @LockoutPeriod
+		WHERE Id != 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+
+	END
+
+	DELETE IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+	UPDATE IzendaSecurityPolicy SET Id = @newId WHERE Id != 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+ END
+
+GO
+ 
+UPDATE IzendaTemporaryData SET TenantId = '00000000-0000-0000-0000-000000000000' 
+WHERE TenantId IS NULL;
+GO
+
+ALTER TABLE IzendaTemporaryData
+ALTER COLUMN TenantId uniqueidentifier NOT NULL;
+
+GO
+
+IF NOT EXISTS ( SELECT * FROM sys.key_constraints
+    WHERE Type = 'PK' AND Name = 'PK_IzendaTemporaryData')
+BEGIN
+	ALTER TABLE IzendaTemporaryData ADD CONSTRAINT PK_IzendaTemporaryData 
+		PRIMARY KEY (Id, TenantId);
+END
+
+GO 
+ 
+-- fix 18584 - begin
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaCity' AND COLUMN_NAME='WoeName')
+BEGIN
+	ALTER TABLE IzendaCity ADD WoeName nvarchar(255) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaCity' AND COLUMN_NAME='HcA2')
+BEGIN
+	ALTER TABLE IzendaCity ADD HcA2 nvarchar(10) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaPostalCode' AND COLUMN_NAME='CountryCode')
+BEGIN
+	ALTER TABLE IzendaPostalCode ADD CountryCode nvarchar(255) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaPostalCode' AND COLUMN_NAME='CountryName')
+BEGIN
+	ALTER TABLE IzendaPostalCode ADD CountryName nvarchar(255) NULL
+END
+-- fix 18584 - end
+
+
+CREATE TABLE #UserPermTemp (Id uniqueidentifier, AssignedTo nvarchar(4000), AssignedToNames nvarchar(4000));
+
+GO
+
+WITH UserPerm AS
+(
+	SELECT Id, AssignedTo, AssignedToNames FROM IzendaUserPermission WHERE AssignedToNames IS NULL AND AssignedType = 2
+)
+INSERT INTO #UserPermTemp
+SELECT t1.Id, t1.AssignedTo , '[' + LEFT(IdTable.Names, LEN(IdTable.Names)-1) + ']' AS AssignedToNames
+FROM UserPerm t1
+INNER JOIN
+(
+	SELECT up.Id, A.Names
+	FROM (
+	SELECT Id, CAST(('<i>' + REPLACE(REPLACE(REPLACE(REPLACE(AssignedTo, '[',''),']',''),'"',''), ',', '</i><i>') + '</i>') AS XML) IdXml
+	FROM UserPerm
+	) up
+	CROSS APPLY (
+		SELECT '"' + r.Name + '",' AS 'data()'
+		FROM (
+			SELECT SUBSTRING(Value, 1, LEN(Value)) as IDValues
+			FROM (
+				SELECT t.i.value('.', 'VARCHAR(MAX)') AS Value
+				FROM up.IdXml.nodes('i') AS t(i)
+				WHERE t.i.value('.', 'VARCHAR(MAX)') <> ''
+			) l
+			WHERE LEN(l.Value) > 0
+		) o JOIN IzendaRole r ON CAST(o.IDValues AS uniqueidentifier) = r.Id
+		FOR XML PATH('')
+	) AS A(Names)
+) AS IdTable ON t1.Id = IdTable.Id;
+
+GO
+
+UPDATE up
+SET AssignedToNames = t.AssignedToNames
+FROM IzendaUserPermission up INNER JOIN #UserPermTemp t ON up.Id = t.Id
+WHERE up.AssignedToNames IS NULL;
+
+UPDATE IzendaUserPermission SET AssignedToNames = '[]' WHERE AssignedToNames IS NULL AND AssignedType = 2;
+
+GO
+
+DROP TABLE #UserPermTemp;
+
+GO
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = '9EEEECCD-140A-4694-BA7A-CA845F87ED7B')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('9EEEECCD-140A-4694-BA7A-CA845F87ED7B','UseADOJobStore','0','0')
+END
+
+
+-- fix 16885 - begin
+ALTER TABLE IzendaQuerySource ALTER COLUMN ExtendedProperties NVARCHAR(MAX);
+-- fix 16885 - end
+
+IF EXISTS (
+    SELECT 1
+    FROM sys.indexes AS si
+    JOIN sys.objects AS so on si.object_id=so.object_id
+    JOIN sys.schemas AS sc on so.schema_id=sc.schema_id
+    WHERE 
+        so.name ='IzendaReportDataSource' /* Table */
+        AND si.name='IX_IzendaReportDataSource_ID_Version' /* Index */
+	)
+	PRINT 'IX_IzendaReportDataSource_ID_Version exists!'
+ELSE
+	CREATE NONCLUSTERED INDEX [IX_IzendaReportDataSource_ID_Version] ON [dbo].[IzendaReportDataSource]
+	(
+		Id ASC,
+		[Version] ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING= OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+
+--fix 19055 - begin
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaTemporaryData' AND COLUMN_NAME='UserId')
+BEGIN
+	BEGIN
+		DELETE FROM IzendaTemporaryData
+	END
+	BEGIN
+		ALTER TABLE IzendaTemporaryData ADD UserId uniqueidentifier NOT NULL
+	END
+END
+
+GO
+
+ALTER TABLE IzendaTemporaryData
+DROP CONSTRAINT PK_IzendaTemporaryData
+
+IF NOT EXISTS ( SELECT * FROM sys.key_constraints
+    WHERE Type = 'PK' AND Name = 'PK_IzendaTemporaryData')
+BEGIN
+	ALTER TABLE IzendaTemporaryData ADD CONSTRAINT PK_IzendaTemporaryData 
+		PRIMARY KEY (Id, TenantId, UserId);
+END
+--fix 19055 - end
+UPDATE IzendaDBVersion SET Version= '2.6.21';
+
+
+
+-- ========================================================
+-- v2.6.22
+-- ========================================================
+DECLARE @newId uniqueidentifier = '9b85320e-00a5-44a3-8c5f-685b8e6e6e59';
+  DECLARE @items int = 0;
+  SELECT @items = count(*) FROM IzendaSecurityPolicy;  
+  IF(@items = 1)
+  BEGIN 
+	DELETE IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D' AND Modified IS NULL;
+	UPDATE IzendaSecurityPolicy SET Id = @newId WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+  END
+  ELSE IF(@items = 2)
+  BEGIN
+	DECLARE @defaultItem datetime = NULL;
+	DECLARE @customItem datetime = NULL;
+
+	SELECT @defaultItem = Modified FROM IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+	SELECT @customItem = Modified FROM IzendaSecurityPolicy WHERE Id != 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+
+	IF(@defaultItem > @customItem)
+	BEGIN 	
+		DECLARE @MinNumberOfPasswordLenght int
+				  ,@MaxNumberOfPasswordLenght int
+				  ,@MinNumberOfSpecialCharacter int
+				  ,@MaxNumberOfSpecialCharacter int
+				  ,@MinNumberOfUppercaseCharacter int
+				  ,@MaxNumberOfUppercaseCharacter int
+				  ,@MinNumberOfLowercaseCharacter int
+				  ,@MaxNumberOfLowercaseCharacter int
+				  ,@MinNumberOfNumericCharacter int
+				  ,@MaxNumberOfNumericCharacter int
+				  ,@MaxNumberOfRepeatSequential int
+				  ,@MinNumberOfPasswordAge int
+				  ,@MaxNumberOfPasswordAge int
+				  ,@NotifyUseDuring int
+				  ,@NumberOfPasswordToKeep int
+				  ,@PasswordLinkValidity int
+				  ,@NumberOfQuestionProfile int
+				  ,@NumberOfQuestionResetPassword int
+				  ,@NumberOfFailedLogonAllowed int
+				  ,@NumberOfFailedAnswerAllowed int
+				  ,@LockoutPeriod int;
+
+	    SELECT @MinNumberOfPasswordLenght = MinNumberOfPasswordLenght
+			  ,@MaxNumberOfPasswordLenght = MaxNumberOfPasswordLenght
+			  ,@MinNumberOfSpecialCharacter = MinNumberOfSpecialCharacter
+			  ,@MaxNumberOfSpecialCharacter = MaxNumberOfSpecialCharacter
+			  ,@MinNumberOfUppercaseCharacter = MinNumberOfUppercaseCharacter
+			  ,@MaxNumberOfUppercaseCharacter = MaxNumberOfUppercaseCharacter
+			  ,@MinNumberOfLowercaseCharacter = MinNumberOfLowercaseCharacter
+			  ,@MaxNumberOfLowercaseCharacter = MaxNumberOfLowercaseCharacter
+			  ,@MinNumberOfNumericCharacter = MinNumberOfNumericCharacter
+			  ,@MaxNumberOfNumericCharacter = MaxNumberOfNumericCharacter
+			  ,@MaxNumberOfRepeatSequential = MaxNumberOfRepeatSequential
+			  ,@MinNumberOfPasswordAge = MinNumberOfPasswordAge
+			  ,@MaxNumberOfPasswordAge = MaxNumberOfPasswordAge
+			  ,@NotifyUseDuring = NotifyUseDuring
+			  ,@NumberOfPasswordToKeep = NumberOfPasswordToKeep
+			  ,@PasswordLinkValidity = PasswordLinkValidity
+			  ,@NumberOfQuestionProfile = NumberOfQuestionProfile
+			  ,@NumberOfQuestionResetPassword = NumberOfQuestionResetPassword
+			  ,@NumberOfFailedLogonAllowed = NumberOfFailedLogonAllowed
+			  ,@NumberOfFailedAnswerAllowed = NumberOfFailedAnswerAllowed
+			  ,@LockoutPeriod = LockoutPeriod
+	    FROM IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+	
+		UPDATE IzendaSecurityPolicy SET
+		MinNumberOfPasswordLenght = @MinNumberOfPasswordLenght,
+		MaxNumberOfPasswordLenght = @MaxNumberOfPasswordLenght,
+		MinNumberOfSpecialCharacter = @MinNumberOfSpecialCharacter,
+		MaxNumberOfSpecialCharacter = @MaxNumberOfSpecialCharacter,
+		MinNumberOfUppercaseCharacter = @MinNumberOfUppercaseCharacter,
+		MaxNumberOfUppercaseCharacter = @MaxNumberOfUppercaseCharacter,
+		MinNumberOfLowercaseCharacter = @MinNumberOfLowercaseCharacter,
+		MaxNumberOfLowercaseCharacter = @MaxNumberOfLowercaseCharacter,
+		MinNumberOfNumericCharacter = @MinNumberOfNumericCharacter,
+		MaxNumberOfNumericCharacter = @MaxNumberOfNumericCharacter,
+		MaxNumberOfRepeatSequential = @MaxNumberOfRepeatSequential,
+		MinNumberOfPasswordAge = @MinNumberOfPasswordAge,
+		MaxNumberOfPasswordAge = @MaxNumberOfPasswordAge,
+		NotifyUseDuring = @NotifyUseDuring,
+		NumberOfPasswordToKeep = @NumberOfPasswordToKeep,
+		PasswordLinkValidity = @PasswordLinkValidity,
+		NumberOfQuestionProfile = @NumberOfQuestionProfile,
+		NumberOfQuestionResetPassword = @NumberOfQuestionResetPassword,
+		NumberOfFailedLogonAllowed = @NumberOfFailedLogonAllowed,
+		NumberOfFailedAnswerAllowed = @NumberOfFailedAnswerAllowed,
+		LockoutPeriod = @LockoutPeriod
+		WHERE Id != 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+
+	END
+
+	DELETE IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+	UPDATE IzendaSecurityPolicy SET Id = @newId WHERE Id != 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+ END
+
+GO
+ 
+UPDATE IzendaTemporaryData SET TenantId = '00000000-0000-0000-0000-000000000000' 
+WHERE TenantId IS NULL;
+GO
+
+ALTER TABLE IzendaTemporaryData
+ALTER COLUMN TenantId uniqueidentifier NOT NULL;
+
+GO
+
+IF NOT EXISTS ( SELECT * FROM sys.key_constraints
+    WHERE Type = 'PK' AND Name = 'PK_IzendaTemporaryData')
+BEGIN
+	ALTER TABLE IzendaTemporaryData ADD CONSTRAINT PK_IzendaTemporaryData 
+		PRIMARY KEY (Id, TenantId);
+END
+
+GO 
+ 
+-- fix 18584 - begin
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaCity' AND COLUMN_NAME='WoeName')
+BEGIN
+	ALTER TABLE IzendaCity ADD WoeName nvarchar(255) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaCity' AND COLUMN_NAME='HcA2')
+BEGIN
+	ALTER TABLE IzendaCity ADD HcA2 nvarchar(10) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaPostalCode' AND COLUMN_NAME='CountryCode')
+BEGIN
+	ALTER TABLE IzendaPostalCode ADD CountryCode nvarchar(255) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaPostalCode' AND COLUMN_NAME='CountryName')
+BEGIN
+	ALTER TABLE IzendaPostalCode ADD CountryName nvarchar(255) NULL
+END
+-- fix 18584 - end
+
+
+CREATE TABLE #UserPermTemp (Id uniqueidentifier, AssignedTo nvarchar(4000), AssignedToNames nvarchar(4000));
+
+GO
+
+WITH UserPerm AS
+(
+	SELECT Id, AssignedTo, AssignedToNames FROM IzendaUserPermission WHERE AssignedToNames IS NULL AND AssignedType = 2
+)
+INSERT INTO #UserPermTemp
+SELECT t1.Id, t1.AssignedTo , '[' + LEFT(IdTable.Names, LEN(IdTable.Names)-1) + ']' AS AssignedToNames
+FROM UserPerm t1
+INNER JOIN
+(
+	SELECT up.Id, A.Names
+	FROM (
+	SELECT Id, CAST(('<i>' + REPLACE(REPLACE(REPLACE(REPLACE(AssignedTo, '[',''),']',''),'"',''), ',', '</i><i>') + '</i>') AS XML) IdXml
+	FROM UserPerm
+	) up
+	CROSS APPLY (
+		SELECT '"' + r.Name + '",' AS 'data()'
+		FROM (
+			SELECT SUBSTRING(Value, 1, LEN(Value)) as IDValues
+			FROM (
+				SELECT t.i.value('.', 'VARCHAR(MAX)') AS Value
+				FROM up.IdXml.nodes('i') AS t(i)
+				WHERE t.i.value('.', 'VARCHAR(MAX)') <> ''
+			) l
+			WHERE LEN(l.Value) > 0
+		) o JOIN IzendaRole r ON CAST(o.IDValues AS uniqueidentifier) = r.Id
+		FOR XML PATH('')
+	) AS A(Names)
+) AS IdTable ON t1.Id = IdTable.Id;
+
+GO
+
+UPDATE up
+SET AssignedToNames = t.AssignedToNames
+FROM IzendaUserPermission up INNER JOIN #UserPermTemp t ON up.Id = t.Id
+WHERE up.AssignedToNames IS NULL;
+
+UPDATE IzendaUserPermission SET AssignedToNames = '[]' WHERE AssignedToNames IS NULL AND AssignedType = 2;
+
+GO
+
+DROP TABLE #UserPermTemp;
+
+GO
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = '9EEEECCD-140A-4694-BA7A-CA845F87ED7B')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('9EEEECCD-140A-4694-BA7A-CA845F87ED7B','UseADOJobStore','0','0')
+END
+
+
+-- fix 16885 - begin
+ALTER TABLE IzendaQuerySource ALTER COLUMN ExtendedProperties NVARCHAR(MAX);
+-- fix 16885 - end
+
+IF EXISTS (
+    SELECT 1
+    FROM sys.indexes AS si
+    JOIN sys.objects AS so on si.object_id=so.object_id
+    JOIN sys.schemas AS sc on so.schema_id=sc.schema_id
+    WHERE 
+        so.name ='IzendaReportDataSource' /* Table */
+        AND si.name='IX_IzendaReportDataSource_ID_Version' /* Index */
+	)
+	PRINT 'IX_IzendaReportDataSource_ID_Version exists!'
+ELSE
+	CREATE NONCLUSTERED INDEX [IX_IzendaReportDataSource_ID_Version] ON [dbo].[IzendaReportDataSource]
+	(
+		Id ASC,
+		[Version] ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING= OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+
+--fix 19055 - begin
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaTemporaryData' AND COLUMN_NAME='UserId')
+BEGIN
+	BEGIN
+		DELETE FROM IzendaTemporaryData
+	END
+	BEGIN
+		ALTER TABLE IzendaTemporaryData ADD UserId uniqueidentifier NOT NULL
+	END
+END
+
+GO
+
+ALTER TABLE IzendaTemporaryData
+DROP CONSTRAINT PK_IzendaTemporaryData
+
+IF NOT EXISTS ( SELECT * FROM sys.key_constraints
+    WHERE Type = 'PK' AND Name = 'PK_IzendaTemporaryData')
+BEGIN
+	ALTER TABLE IzendaTemporaryData ADD CONSTRAINT PK_IzendaTemporaryData 
+		PRIMARY KEY (Id, TenantId, UserId);
+END
+--fix 19055 - end
+UPDATE IzendaDBVersion SET Version= '2.6.22';
+
+
+
+-- ========================================================
+-- v2.6.23
+-- ========================================================
+DECLARE @newId uniqueidentifier = '9b85320e-00a5-44a3-8c5f-685b8e6e6e59';
+  DECLARE @items int = 0;
+  SELECT @items = count(*) FROM IzendaSecurityPolicy;  
+  IF(@items = 1)
+  BEGIN 
+	DELETE IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D' AND Modified IS NULL;
+	UPDATE IzendaSecurityPolicy SET Id = @newId WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+  END
+  ELSE IF(@items = 2)
+  BEGIN
+	DECLARE @defaultItem datetime = NULL;
+	DECLARE @customItem datetime = NULL;
+
+	SELECT @defaultItem = Modified FROM IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+	SELECT @customItem = Modified FROM IzendaSecurityPolicy WHERE Id != 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+
+	IF(@defaultItem > @customItem)
+	BEGIN 	
+		DECLARE @MinNumberOfPasswordLenght int
+				  ,@MaxNumberOfPasswordLenght int
+				  ,@MinNumberOfSpecialCharacter int
+				  ,@MaxNumberOfSpecialCharacter int
+				  ,@MinNumberOfUppercaseCharacter int
+				  ,@MaxNumberOfUppercaseCharacter int
+				  ,@MinNumberOfLowercaseCharacter int
+				  ,@MaxNumberOfLowercaseCharacter int
+				  ,@MinNumberOfNumericCharacter int
+				  ,@MaxNumberOfNumericCharacter int
+				  ,@MaxNumberOfRepeatSequential int
+				  ,@MinNumberOfPasswordAge int
+				  ,@MaxNumberOfPasswordAge int
+				  ,@NotifyUseDuring int
+				  ,@NumberOfPasswordToKeep int
+				  ,@PasswordLinkValidity int
+				  ,@NumberOfQuestionProfile int
+				  ,@NumberOfQuestionResetPassword int
+				  ,@NumberOfFailedLogonAllowed int
+				  ,@NumberOfFailedAnswerAllowed int
+				  ,@LockoutPeriod int;
+
+	    SELECT @MinNumberOfPasswordLenght = MinNumberOfPasswordLenght
+			  ,@MaxNumberOfPasswordLenght = MaxNumberOfPasswordLenght
+			  ,@MinNumberOfSpecialCharacter = MinNumberOfSpecialCharacter
+			  ,@MaxNumberOfSpecialCharacter = MaxNumberOfSpecialCharacter
+			  ,@MinNumberOfUppercaseCharacter = MinNumberOfUppercaseCharacter
+			  ,@MaxNumberOfUppercaseCharacter = MaxNumberOfUppercaseCharacter
+			  ,@MinNumberOfLowercaseCharacter = MinNumberOfLowercaseCharacter
+			  ,@MaxNumberOfLowercaseCharacter = MaxNumberOfLowercaseCharacter
+			  ,@MinNumberOfNumericCharacter = MinNumberOfNumericCharacter
+			  ,@MaxNumberOfNumericCharacter = MaxNumberOfNumericCharacter
+			  ,@MaxNumberOfRepeatSequential = MaxNumberOfRepeatSequential
+			  ,@MinNumberOfPasswordAge = MinNumberOfPasswordAge
+			  ,@MaxNumberOfPasswordAge = MaxNumberOfPasswordAge
+			  ,@NotifyUseDuring = NotifyUseDuring
+			  ,@NumberOfPasswordToKeep = NumberOfPasswordToKeep
+			  ,@PasswordLinkValidity = PasswordLinkValidity
+			  ,@NumberOfQuestionProfile = NumberOfQuestionProfile
+			  ,@NumberOfQuestionResetPassword = NumberOfQuestionResetPassword
+			  ,@NumberOfFailedLogonAllowed = NumberOfFailedLogonAllowed
+			  ,@NumberOfFailedAnswerAllowed = NumberOfFailedAnswerAllowed
+			  ,@LockoutPeriod = LockoutPeriod
+	    FROM IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+	
+		UPDATE IzendaSecurityPolicy SET
+		MinNumberOfPasswordLenght = @MinNumberOfPasswordLenght,
+		MaxNumberOfPasswordLenght = @MaxNumberOfPasswordLenght,
+		MinNumberOfSpecialCharacter = @MinNumberOfSpecialCharacter,
+		MaxNumberOfSpecialCharacter = @MaxNumberOfSpecialCharacter,
+		MinNumberOfUppercaseCharacter = @MinNumberOfUppercaseCharacter,
+		MaxNumberOfUppercaseCharacter = @MaxNumberOfUppercaseCharacter,
+		MinNumberOfLowercaseCharacter = @MinNumberOfLowercaseCharacter,
+		MaxNumberOfLowercaseCharacter = @MaxNumberOfLowercaseCharacter,
+		MinNumberOfNumericCharacter = @MinNumberOfNumericCharacter,
+		MaxNumberOfNumericCharacter = @MaxNumberOfNumericCharacter,
+		MaxNumberOfRepeatSequential = @MaxNumberOfRepeatSequential,
+		MinNumberOfPasswordAge = @MinNumberOfPasswordAge,
+		MaxNumberOfPasswordAge = @MaxNumberOfPasswordAge,
+		NotifyUseDuring = @NotifyUseDuring,
+		NumberOfPasswordToKeep = @NumberOfPasswordToKeep,
+		PasswordLinkValidity = @PasswordLinkValidity,
+		NumberOfQuestionProfile = @NumberOfQuestionProfile,
+		NumberOfQuestionResetPassword = @NumberOfQuestionResetPassword,
+		NumberOfFailedLogonAllowed = @NumberOfFailedLogonAllowed,
+		NumberOfFailedAnswerAllowed = @NumberOfFailedAnswerAllowed,
+		LockoutPeriod = @LockoutPeriod
+		WHERE Id != 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+
+	END
+
+	DELETE IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+	UPDATE IzendaSecurityPolicy SET Id = @newId WHERE Id != 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+ END
+
+GO
+ 
+UPDATE IzendaTemporaryData SET TenantId = '00000000-0000-0000-0000-000000000000' 
+WHERE TenantId IS NULL;
+GO
+
+ALTER TABLE IzendaTemporaryData
+ALTER COLUMN TenantId uniqueidentifier NOT NULL;
+
+GO
+
+IF NOT EXISTS ( SELECT * FROM sys.key_constraints
+    WHERE Type = 'PK' AND Name = 'PK_IzendaTemporaryData')
+BEGIN
+	ALTER TABLE IzendaTemporaryData ADD CONSTRAINT PK_IzendaTemporaryData 
+		PRIMARY KEY (Id, TenantId);
+END
+
+GO 
+ 
+-- fix 18584 - begin
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaCity' AND COLUMN_NAME='WoeName')
+BEGIN
+	ALTER TABLE IzendaCity ADD WoeName nvarchar(255) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaCity' AND COLUMN_NAME='HcA2')
+BEGIN
+	ALTER TABLE IzendaCity ADD HcA2 nvarchar(10) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaPostalCode' AND COLUMN_NAME='CountryCode')
+BEGIN
+	ALTER TABLE IzendaPostalCode ADD CountryCode nvarchar(255) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaPostalCode' AND COLUMN_NAME='CountryName')
+BEGIN
+	ALTER TABLE IzendaPostalCode ADD CountryName nvarchar(255) NULL
+END
+-- fix 18584 - end
+
+
+CREATE TABLE #UserPermTemp (Id uniqueidentifier, AssignedTo nvarchar(4000), AssignedToNames nvarchar(4000));
+
+GO
+
+WITH UserPerm AS
+(
+	SELECT Id, AssignedTo, AssignedToNames FROM IzendaUserPermission WHERE AssignedToNames IS NULL AND AssignedType = 2
+)
+INSERT INTO #UserPermTemp
+SELECT t1.Id, t1.AssignedTo , '[' + LEFT(IdTable.Names, LEN(IdTable.Names)-1) + ']' AS AssignedToNames
+FROM UserPerm t1
+INNER JOIN
+(
+	SELECT up.Id, A.Names
+	FROM (
+	SELECT Id, CAST(('<i>' + REPLACE(REPLACE(REPLACE(REPLACE(AssignedTo, '[',''),']',''),'"',''), ',', '</i><i>') + '</i>') AS XML) IdXml
+	FROM UserPerm
+	) up
+	CROSS APPLY (
+		SELECT '"' + r.Name + '",' AS 'data()'
+		FROM (
+			SELECT SUBSTRING(Value, 1, LEN(Value)) as IDValues
+			FROM (
+				SELECT t.i.value('.', 'VARCHAR(MAX)') AS Value
+				FROM up.IdXml.nodes('i') AS t(i)
+				WHERE t.i.value('.', 'VARCHAR(MAX)') <> ''
+			) l
+			WHERE LEN(l.Value) > 0
+		) o JOIN IzendaRole r ON CAST(o.IDValues AS uniqueidentifier) = r.Id
+		FOR XML PATH('')
+	) AS A(Names)
+) AS IdTable ON t1.Id = IdTable.Id;
+
+GO
+
+UPDATE up
+SET AssignedToNames = t.AssignedToNames
+FROM IzendaUserPermission up INNER JOIN #UserPermTemp t ON up.Id = t.Id
+WHERE up.AssignedToNames IS NULL;
+
+UPDATE IzendaUserPermission SET AssignedToNames = '[]' WHERE AssignedToNames IS NULL AND AssignedType = 2;
+
+GO
+
+DROP TABLE #UserPermTemp;
+
+GO
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = '9EEEECCD-140A-4694-BA7A-CA845F87ED7B')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('9EEEECCD-140A-4694-BA7A-CA845F87ED7B','UseADOJobStore','0','0')
+END
+
+
+-- fix 16885 - begin
+ALTER TABLE IzendaQuerySource ALTER COLUMN ExtendedProperties NVARCHAR(MAX);
+-- fix 16885 - end
+
+IF EXISTS (
+    SELECT 1
+    FROM sys.indexes AS si
+    JOIN sys.objects AS so on si.object_id=so.object_id
+    JOIN sys.schemas AS sc on so.schema_id=sc.schema_id
+    WHERE 
+        so.name ='IzendaReportDataSource' /* Table */
+        AND si.name='IX_IzendaReportDataSource_ID_Version' /* Index */
+	)
+	PRINT 'IX_IzendaReportDataSource_ID_Version exists!'
+ELSE
+	CREATE NONCLUSTERED INDEX [IX_IzendaReportDataSource_ID_Version] ON [dbo].[IzendaReportDataSource]
+	(
+		Id ASC,
+		[Version] ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING= OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+
+--fix 19055 - begin
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaTemporaryData' AND COLUMN_NAME='UserId')
+BEGIN
+	BEGIN
+		DELETE FROM IzendaTemporaryData
+	END
+	BEGIN
+		ALTER TABLE IzendaTemporaryData ADD UserId uniqueidentifier NOT NULL
+	END
+END
+
+GO
+
+ALTER TABLE IzendaTemporaryData
+DROP CONSTRAINT PK_IzendaTemporaryData
+
+IF NOT EXISTS ( SELECT * FROM sys.key_constraints
+    WHERE Type = 'PK' AND Name = 'PK_IzendaTemporaryData')
+BEGIN
+	ALTER TABLE IzendaTemporaryData ADD CONSTRAINT PK_IzendaTemporaryData 
+		PRIMARY KEY (Id, TenantId, UserId);
+END
+--fix 19055 - end
+UPDATE IzendaDBVersion SET Version= '2.6.23';
+
+
+
+-- ========================================================
+-- v2.6.24
+-- ========================================================
+DECLARE @newId uniqueidentifier = '9b85320e-00a5-44a3-8c5f-685b8e6e6e59';
+  DECLARE @items int = 0;
+  SELECT @items = count(*) FROM IzendaSecurityPolicy;  
+  IF(@items = 1)
+  BEGIN 
+	DELETE IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D' AND Modified IS NULL;
+	UPDATE IzendaSecurityPolicy SET Id = @newId WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+  END
+  ELSE IF(@items = 2)
+  BEGIN
+	DECLARE @defaultItem datetime = NULL;
+	DECLARE @customItem datetime = NULL;
+
+	SELECT @defaultItem = Modified FROM IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+	SELECT @customItem = Modified FROM IzendaSecurityPolicy WHERE Id != 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+
+	IF(@defaultItem > @customItem)
+	BEGIN 	
+		DECLARE @MinNumberOfPasswordLenght int
+				  ,@MaxNumberOfPasswordLenght int
+				  ,@MinNumberOfSpecialCharacter int
+				  ,@MaxNumberOfSpecialCharacter int
+				  ,@MinNumberOfUppercaseCharacter int
+				  ,@MaxNumberOfUppercaseCharacter int
+				  ,@MinNumberOfLowercaseCharacter int
+				  ,@MaxNumberOfLowercaseCharacter int
+				  ,@MinNumberOfNumericCharacter int
+				  ,@MaxNumberOfNumericCharacter int
+				  ,@MaxNumberOfRepeatSequential int
+				  ,@MinNumberOfPasswordAge int
+				  ,@MaxNumberOfPasswordAge int
+				  ,@NotifyUseDuring int
+				  ,@NumberOfPasswordToKeep int
+				  ,@PasswordLinkValidity int
+				  ,@NumberOfQuestionProfile int
+				  ,@NumberOfQuestionResetPassword int
+				  ,@NumberOfFailedLogonAllowed int
+				  ,@NumberOfFailedAnswerAllowed int
+				  ,@LockoutPeriod int;
+
+	    SELECT @MinNumberOfPasswordLenght = MinNumberOfPasswordLenght
+			  ,@MaxNumberOfPasswordLenght = MaxNumberOfPasswordLenght
+			  ,@MinNumberOfSpecialCharacter = MinNumberOfSpecialCharacter
+			  ,@MaxNumberOfSpecialCharacter = MaxNumberOfSpecialCharacter
+			  ,@MinNumberOfUppercaseCharacter = MinNumberOfUppercaseCharacter
+			  ,@MaxNumberOfUppercaseCharacter = MaxNumberOfUppercaseCharacter
+			  ,@MinNumberOfLowercaseCharacter = MinNumberOfLowercaseCharacter
+			  ,@MaxNumberOfLowercaseCharacter = MaxNumberOfLowercaseCharacter
+			  ,@MinNumberOfNumericCharacter = MinNumberOfNumericCharacter
+			  ,@MaxNumberOfNumericCharacter = MaxNumberOfNumericCharacter
+			  ,@MaxNumberOfRepeatSequential = MaxNumberOfRepeatSequential
+			  ,@MinNumberOfPasswordAge = MinNumberOfPasswordAge
+			  ,@MaxNumberOfPasswordAge = MaxNumberOfPasswordAge
+			  ,@NotifyUseDuring = NotifyUseDuring
+			  ,@NumberOfPasswordToKeep = NumberOfPasswordToKeep
+			  ,@PasswordLinkValidity = PasswordLinkValidity
+			  ,@NumberOfQuestionProfile = NumberOfQuestionProfile
+			  ,@NumberOfQuestionResetPassword = NumberOfQuestionResetPassword
+			  ,@NumberOfFailedLogonAllowed = NumberOfFailedLogonAllowed
+			  ,@NumberOfFailedAnswerAllowed = NumberOfFailedAnswerAllowed
+			  ,@LockoutPeriod = LockoutPeriod
+	    FROM IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+	
+		UPDATE IzendaSecurityPolicy SET
+		MinNumberOfPasswordLenght = @MinNumberOfPasswordLenght,
+		MaxNumberOfPasswordLenght = @MaxNumberOfPasswordLenght,
+		MinNumberOfSpecialCharacter = @MinNumberOfSpecialCharacter,
+		MaxNumberOfSpecialCharacter = @MaxNumberOfSpecialCharacter,
+		MinNumberOfUppercaseCharacter = @MinNumberOfUppercaseCharacter,
+		MaxNumberOfUppercaseCharacter = @MaxNumberOfUppercaseCharacter,
+		MinNumberOfLowercaseCharacter = @MinNumberOfLowercaseCharacter,
+		MaxNumberOfLowercaseCharacter = @MaxNumberOfLowercaseCharacter,
+		MinNumberOfNumericCharacter = @MinNumberOfNumericCharacter,
+		MaxNumberOfNumericCharacter = @MaxNumberOfNumericCharacter,
+		MaxNumberOfRepeatSequential = @MaxNumberOfRepeatSequential,
+		MinNumberOfPasswordAge = @MinNumberOfPasswordAge,
+		MaxNumberOfPasswordAge = @MaxNumberOfPasswordAge,
+		NotifyUseDuring = @NotifyUseDuring,
+		NumberOfPasswordToKeep = @NumberOfPasswordToKeep,
+		PasswordLinkValidity = @PasswordLinkValidity,
+		NumberOfQuestionProfile = @NumberOfQuestionProfile,
+		NumberOfQuestionResetPassword = @NumberOfQuestionResetPassword,
+		NumberOfFailedLogonAllowed = @NumberOfFailedLogonAllowed,
+		NumberOfFailedAnswerAllowed = @NumberOfFailedAnswerAllowed,
+		LockoutPeriod = @LockoutPeriod
+		WHERE Id != 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+
+	END
+
+	DELETE IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+	UPDATE IzendaSecurityPolicy SET Id = @newId WHERE Id != 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+ END
+
+GO
+ 
+UPDATE IzendaTemporaryData SET TenantId = '00000000-0000-0000-0000-000000000000' 
+WHERE TenantId IS NULL;
+GO
+
+ALTER TABLE IzendaTemporaryData
+ALTER COLUMN TenantId uniqueidentifier NOT NULL;
+
+GO
+
+IF NOT EXISTS ( SELECT * FROM sys.key_constraints
+    WHERE Type = 'PK' AND Name = 'PK_IzendaTemporaryData')
+BEGIN
+	ALTER TABLE IzendaTemporaryData ADD CONSTRAINT PK_IzendaTemporaryData 
+		PRIMARY KEY (Id, TenantId);
+END
+
+GO 
+ 
+-- fix 18584 - begin
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaCity' AND COLUMN_NAME='WoeName')
+BEGIN
+	ALTER TABLE IzendaCity ADD WoeName nvarchar(255) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaCity' AND COLUMN_NAME='HcA2')
+BEGIN
+	ALTER TABLE IzendaCity ADD HcA2 nvarchar(10) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaPostalCode' AND COLUMN_NAME='CountryCode')
+BEGIN
+	ALTER TABLE IzendaPostalCode ADD CountryCode nvarchar(255) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaPostalCode' AND COLUMN_NAME='CountryName')
+BEGIN
+	ALTER TABLE IzendaPostalCode ADD CountryName nvarchar(255) NULL
+END
+-- fix 18584 - end
+
+
+CREATE TABLE #UserPermTemp (Id uniqueidentifier, AssignedTo nvarchar(4000), AssignedToNames nvarchar(4000));
+
+GO
+
+WITH UserPerm AS
+(
+	SELECT Id, AssignedTo, AssignedToNames FROM IzendaUserPermission WHERE AssignedToNames IS NULL AND AssignedType = 2
+)
+INSERT INTO #UserPermTemp
+SELECT t1.Id, t1.AssignedTo , '[' + LEFT(IdTable.Names, LEN(IdTable.Names)-1) + ']' AS AssignedToNames
+FROM UserPerm t1
+INNER JOIN
+(
+	SELECT up.Id, A.Names
+	FROM (
+	SELECT Id, CAST(('<i>' + REPLACE(REPLACE(REPLACE(REPLACE(AssignedTo, '[',''),']',''),'"',''), ',', '</i><i>') + '</i>') AS XML) IdXml
+	FROM UserPerm
+	) up
+	CROSS APPLY (
+		SELECT '"' + r.Name + '",' AS 'data()'
+		FROM (
+			SELECT SUBSTRING(Value, 1, LEN(Value)) as IDValues
+			FROM (
+				SELECT t.i.value('.', 'VARCHAR(MAX)') AS Value
+				FROM up.IdXml.nodes('i') AS t(i)
+				WHERE t.i.value('.', 'VARCHAR(MAX)') <> ''
+			) l
+			WHERE LEN(l.Value) > 0
+		) o JOIN IzendaRole r ON CAST(o.IDValues AS uniqueidentifier) = r.Id
+		FOR XML PATH('')
+	) AS A(Names)
+) AS IdTable ON t1.Id = IdTable.Id;
+
+GO
+
+UPDATE up
+SET AssignedToNames = t.AssignedToNames
+FROM IzendaUserPermission up INNER JOIN #UserPermTemp t ON up.Id = t.Id
+WHERE up.AssignedToNames IS NULL;
+
+UPDATE IzendaUserPermission SET AssignedToNames = '[]' WHERE AssignedToNames IS NULL AND AssignedType = 2;
+
+GO
+
+DROP TABLE #UserPermTemp;
+
+GO
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = '9EEEECCD-140A-4694-BA7A-CA845F87ED7B')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('9EEEECCD-140A-4694-BA7A-CA845F87ED7B','UseADOJobStore','0','0')
+END
+
+
+-- fix 16885 - begin
+ALTER TABLE IzendaQuerySource ALTER COLUMN ExtendedProperties NVARCHAR(MAX);
+-- fix 16885 - end
+
+IF EXISTS (
+    SELECT 1
+    FROM sys.indexes AS si
+    JOIN sys.objects AS so on si.object_id=so.object_id
+    JOIN sys.schemas AS sc on so.schema_id=sc.schema_id
+    WHERE 
+        so.name ='IzendaReportDataSource' /* Table */
+        AND si.name='IX_IzendaReportDataSource_ID_Version' /* Index */
+	)
+	PRINT 'IX_IzendaReportDataSource_ID_Version exists!'
+ELSE
+	CREATE NONCLUSTERED INDEX [IX_IzendaReportDataSource_ID_Version] ON [dbo].[IzendaReportDataSource]
+	(
+		Id ASC,
+		[Version] ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING= OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+
+--fix 19055 - begin
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaTemporaryData' AND COLUMN_NAME='UserId')
+BEGIN
+	BEGIN
+		DELETE FROM IzendaTemporaryData
+	END
+	BEGIN
+		ALTER TABLE IzendaTemporaryData ADD UserId uniqueidentifier NOT NULL
+	END
+END
+
+GO
+
+ALTER TABLE IzendaTemporaryData
+DROP CONSTRAINT PK_IzendaTemporaryData
+
+IF NOT EXISTS ( SELECT * FROM sys.key_constraints
+    WHERE Type = 'PK' AND Name = 'PK_IzendaTemporaryData')
+BEGIN
+	ALTER TABLE IzendaTemporaryData ADD CONSTRAINT PK_IzendaTemporaryData 
+		PRIMARY KEY (Id, TenantId, UserId);
+END
+--fix 19055 - end
+UPDATE IzendaDBVersion SET Version= '2.6.24';
+
+
+
+-- ========================================================
+-- v2.7.0
+-- ========================================================
+DECLARE @newId uniqueidentifier = '9b85320e-00a5-44a3-8c5f-685b8e6e6e59';
+  DECLARE @items int = 0;
+  SELECT @items = count(*) FROM IzendaSecurityPolicy;  
+  IF(@items = 1)
+  BEGIN 
+	DELETE IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D' AND Modified IS NULL;
+	UPDATE IzendaSecurityPolicy SET Id = @newId WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+  END
+  ELSE IF(@items = 2)
+  BEGIN
+	DECLARE @defaultItem datetime = NULL;
+	DECLARE @customItem datetime = NULL;
+
+	SELECT @defaultItem = Modified FROM IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+	SELECT @customItem = Modified FROM IzendaSecurityPolicy WHERE Id != 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+
+	IF(@defaultItem > @customItem)
+	BEGIN 	
+		DECLARE @MinNumberOfPasswordLenght int
+				  ,@MaxNumberOfPasswordLenght int
+				  ,@MinNumberOfSpecialCharacter int
+				  ,@MaxNumberOfSpecialCharacter int
+				  ,@MinNumberOfUppercaseCharacter int
+				  ,@MaxNumberOfUppercaseCharacter int
+				  ,@MinNumberOfLowercaseCharacter int
+				  ,@MaxNumberOfLowercaseCharacter int
+				  ,@MinNumberOfNumericCharacter int
+				  ,@MaxNumberOfNumericCharacter int
+				  ,@MaxNumberOfRepeatSequential int
+				  ,@MinNumberOfPasswordAge int
+				  ,@MaxNumberOfPasswordAge int
+				  ,@NotifyUseDuring int
+				  ,@NumberOfPasswordToKeep int
+				  ,@PasswordLinkValidity int
+				  ,@NumberOfQuestionProfile int
+				  ,@NumberOfQuestionResetPassword int
+				  ,@NumberOfFailedLogonAllowed int
+				  ,@NumberOfFailedAnswerAllowed int
+				  ,@LockoutPeriod int;
+
+	    SELECT @MinNumberOfPasswordLenght = MinNumberOfPasswordLenght
+			  ,@MaxNumberOfPasswordLenght = MaxNumberOfPasswordLenght
+			  ,@MinNumberOfSpecialCharacter = MinNumberOfSpecialCharacter
+			  ,@MaxNumberOfSpecialCharacter = MaxNumberOfSpecialCharacter
+			  ,@MinNumberOfUppercaseCharacter = MinNumberOfUppercaseCharacter
+			  ,@MaxNumberOfUppercaseCharacter = MaxNumberOfUppercaseCharacter
+			  ,@MinNumberOfLowercaseCharacter = MinNumberOfLowercaseCharacter
+			  ,@MaxNumberOfLowercaseCharacter = MaxNumberOfLowercaseCharacter
+			  ,@MinNumberOfNumericCharacter = MinNumberOfNumericCharacter
+			  ,@MaxNumberOfNumericCharacter = MaxNumberOfNumericCharacter
+			  ,@MaxNumberOfRepeatSequential = MaxNumberOfRepeatSequential
+			  ,@MinNumberOfPasswordAge = MinNumberOfPasswordAge
+			  ,@MaxNumberOfPasswordAge = MaxNumberOfPasswordAge
+			  ,@NotifyUseDuring = NotifyUseDuring
+			  ,@NumberOfPasswordToKeep = NumberOfPasswordToKeep
+			  ,@PasswordLinkValidity = PasswordLinkValidity
+			  ,@NumberOfQuestionProfile = NumberOfQuestionProfile
+			  ,@NumberOfQuestionResetPassword = NumberOfQuestionResetPassword
+			  ,@NumberOfFailedLogonAllowed = NumberOfFailedLogonAllowed
+			  ,@NumberOfFailedAnswerAllowed = NumberOfFailedAnswerAllowed
+			  ,@LockoutPeriod = LockoutPeriod
+	    FROM IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+	
+		UPDATE IzendaSecurityPolicy SET
+		MinNumberOfPasswordLenght = @MinNumberOfPasswordLenght,
+		MaxNumberOfPasswordLenght = @MaxNumberOfPasswordLenght,
+		MinNumberOfSpecialCharacter = @MinNumberOfSpecialCharacter,
+		MaxNumberOfSpecialCharacter = @MaxNumberOfSpecialCharacter,
+		MinNumberOfUppercaseCharacter = @MinNumberOfUppercaseCharacter,
+		MaxNumberOfUppercaseCharacter = @MaxNumberOfUppercaseCharacter,
+		MinNumberOfLowercaseCharacter = @MinNumberOfLowercaseCharacter,
+		MaxNumberOfLowercaseCharacter = @MaxNumberOfLowercaseCharacter,
+		MinNumberOfNumericCharacter = @MinNumberOfNumericCharacter,
+		MaxNumberOfNumericCharacter = @MaxNumberOfNumericCharacter,
+		MaxNumberOfRepeatSequential = @MaxNumberOfRepeatSequential,
+		MinNumberOfPasswordAge = @MinNumberOfPasswordAge,
+		MaxNumberOfPasswordAge = @MaxNumberOfPasswordAge,
+		NotifyUseDuring = @NotifyUseDuring,
+		NumberOfPasswordToKeep = @NumberOfPasswordToKeep,
+		PasswordLinkValidity = @PasswordLinkValidity,
+		NumberOfQuestionProfile = @NumberOfQuestionProfile,
+		NumberOfQuestionResetPassword = @NumberOfQuestionResetPassword,
+		NumberOfFailedLogonAllowed = @NumberOfFailedLogonAllowed,
+		NumberOfFailedAnswerAllowed = @NumberOfFailedAnswerAllowed,
+		LockoutPeriod = @LockoutPeriod
+		WHERE Id != 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+
+	END
+
+	DELETE IzendaSecurityPolicy WHERE Id = 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+	UPDATE IzendaSecurityPolicy SET Id = @newId WHERE Id != 'FA528971-A8AF-45AB-A0B3-D539104E1B0D';
+ END
+
+GO
+ 
+UPDATE IzendaTemporaryData SET TenantId = '00000000-0000-0000-0000-000000000000' 
+WHERE TenantId IS NULL;
+GO
+
+ALTER TABLE IzendaTemporaryData
+ALTER COLUMN TenantId uniqueidentifier NOT NULL;
+
+GO
+
+IF NOT EXISTS ( SELECT * FROM sys.key_constraints
+    WHERE Type = 'PK' AND Name = 'PK_IzendaTemporaryData')
+BEGIN
+	ALTER TABLE IzendaTemporaryData ADD CONSTRAINT PK_IzendaTemporaryData 
+		PRIMARY KEY (Id, TenantId);
+END
+
+GO 
+ 
+-- fix 18584 - begin
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaCity' AND COLUMN_NAME='WoeName')
+BEGIN
+	ALTER TABLE IzendaCity ADD WoeName nvarchar(255) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaCity' AND COLUMN_NAME='HcA2')
+BEGIN
+	ALTER TABLE IzendaCity ADD HcA2 nvarchar(10) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaPostalCode' AND COLUMN_NAME='CountryCode')
+BEGIN
+	ALTER TABLE IzendaPostalCode ADD CountryCode nvarchar(255) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaPostalCode' AND COLUMN_NAME='CountryName')
+BEGIN
+	ALTER TABLE IzendaPostalCode ADD CountryName nvarchar(255) NULL
+END
+-- fix 18584 - end
+
+
+CREATE TABLE #UserPermTemp (Id uniqueidentifier, AssignedTo nvarchar(4000), AssignedToNames nvarchar(4000));
+
+GO
+
+WITH UserPerm AS
+(
+	SELECT Id, AssignedTo, AssignedToNames FROM IzendaUserPermission WHERE AssignedToNames IS NULL AND AssignedType = 2
+)
+INSERT INTO #UserPermTemp
+SELECT t1.Id, t1.AssignedTo , '[' + LEFT(IdTable.Names, LEN(IdTable.Names)-1) + ']' AS AssignedToNames
+FROM UserPerm t1
+INNER JOIN
+(
+	SELECT up.Id, A.Names
+	FROM (
+	SELECT Id, CAST(('<i>' + REPLACE(REPLACE(REPLACE(REPLACE(AssignedTo, '[',''),']',''),'"',''), ',', '</i><i>') + '</i>') AS XML) IdXml
+	FROM UserPerm
+	) up
+	CROSS APPLY (
+		SELECT '"' + r.Name + '",' AS 'data()'
+		FROM (
+			SELECT SUBSTRING(Value, 1, LEN(Value)) as IDValues
+			FROM (
+				SELECT t.i.value('.', 'VARCHAR(MAX)') AS Value
+				FROM up.IdXml.nodes('i') AS t(i)
+				WHERE t.i.value('.', 'VARCHAR(MAX)') <> ''
+			) l
+			WHERE LEN(l.Value) > 0
+		) o JOIN IzendaRole r ON CAST(o.IDValues AS uniqueidentifier) = r.Id
+		FOR XML PATH('')
+	) AS A(Names)
+) AS IdTable ON t1.Id = IdTable.Id;
+
+GO
+
+UPDATE up
+SET AssignedToNames = t.AssignedToNames
+FROM IzendaUserPermission up INNER JOIN #UserPermTemp t ON up.Id = t.Id
+WHERE up.AssignedToNames IS NULL;
+
+UPDATE IzendaUserPermission SET AssignedToNames = '[]' WHERE AssignedToNames IS NULL AND AssignedType = 2;
+
+GO
+
+DROP TABLE #UserPermTemp;
+
+GO
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = '9EEEECCD-140A-4694-BA7A-CA845F87ED7B')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('9EEEECCD-140A-4694-BA7A-CA845F87ED7B','UseADOJobStore','0','0')
+END
+
+
+-- fix 16885 - begin
+ALTER TABLE IzendaQuerySource ALTER COLUMN ExtendedProperties NVARCHAR(MAX);
+-- fix 16885 - end
+
+IF EXISTS (
+    SELECT 1
+    FROM sys.indexes AS si
+    JOIN sys.objects AS so on si.object_id=so.object_id
+    JOIN sys.schemas AS sc on so.schema_id=sc.schema_id
+    WHERE 
+        so.name ='IzendaReportDataSource' /* Table */
+        AND si.name='IX_IzendaReportDataSource_ID_Version' /* Index */
+	)
+	PRINT 'IX_IzendaReportDataSource_ID_Version exists!'
+ELSE
+	CREATE NONCLUSTERED INDEX [IX_IzendaReportDataSource_ID_Version] ON [dbo].[IzendaReportDataSource]
+	(
+		Id ASC,
+		[Version] ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING= OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+
+--fix 19055 - begin
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaTemporaryData' AND COLUMN_NAME='UserId')
+BEGIN
+	BEGIN
+		DELETE FROM IzendaTemporaryData
+	END
+	BEGIN
+		ALTER TABLE IzendaTemporaryData ADD UserId uniqueidentifier NOT NULL
+	END
+END
+
+GO
+
+ALTER TABLE IzendaTemporaryData
+DROP CONSTRAINT PK_IzendaTemporaryData
+
+IF NOT EXISTS ( SELECT * FROM sys.key_constraints
+    WHERE Type = 'PK' AND Name = 'PK_IzendaTemporaryData')
+BEGIN
+	ALTER TABLE IzendaTemporaryData ADD CONSTRAINT PK_IzendaTemporaryData 
+		PRIMARY KEY (Id, TenantId, UserId);
+END
+--fix 19055 - end
+UPDATE IzendaDBVersion SET Version= '2.7.0';
+
+
+
+-- ========================================================
+-- v2.7.1
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version = '2.7.1';
+
+
+-- ========================================================
+-- v2.7.2
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version = '2.7.2';
+
+
+-- ========================================================
+-- v2.7.4
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version = '2.7.4';
+
+
+-- ========================================================
+-- v2.7.5
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version = '2.7.5';
+
+
+-- ========================================================
+-- v2.8.0
+-- ========================================================
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaImport]') AND type in (N'U'))
+BEGIN
+	CREATE TABLE [dbo].[IzendaImport](
+		[Id] [uniqueidentifier] PRIMARY KEY,
+		[ObjectName] [nvarchar](256) NULL,
+		[FileKey] [nvarchar](256) NULL,
+		[Status] [int] NULL,
+		[StatusName] [nvarchar](256) NULL,
+		[ErrorCode] [int] NULL,
+		[ErrorMessage] [nvarchar](4000) NULL,
+		[Type] [int] NULL,
+		[TypeName] [nvarchar](256) NULL,
+		[CategoryId] [uniqueidentifier] NULL,
+		[CategoryName] [nvarchar](256) NULL,
+		[SubCategoryId] [uniqueidentifier] NULL,
+		[SubCategoryName] [nvarchar](256) NULL,
+		[IsGlobal] [bit] NULL,
+		[SaveInto] [nvarchar](256) NULL,
+		[SourceId] [uniqueidentifier] NULL,
+		[FileName] [nvarchar](256) NULL,
+		[ObjectId] [uniqueidentifier] NULL,
+		[TenantId] [uniqueidentifier] NULL,
+		[DestinationObjectId] [uniqueidentifier] NULL,
+		[Deleted] [bit] NULL,
+		[Version] [int] NULL,
+		[Created] [datetime] NULL,
+		[CreatedBy] [nvarchar](256) NULL,
+		[Modified] [datetime] NULL,
+		[ModifiedBy] [nvarchar](256) NULL
+	)
+END
+
+GO
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = '525FE3EA-A4DF-49BB-A35D-B3A65EA16A93')
+BEGIN
+    INSERT INTO IzendaSystemSetting(Id,Name,Value,Deleted) VALUES ('525FE3EA-A4DF-49BB-A35D-B3A65EA16A93','ImportFileSystemPath','IzendaImport','0')
+END
+
+UPDATE IzendaDBVersion SET Version= '2.8.0';
+
+
+
+-- ========================================================
+-- v2.8.1
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.8.1';
+
+
+
+-- ========================================================
+-- v2.8.2
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.8.2';
+
+
+
+-- ========================================================
+-- v2.8.3
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.8.3';
+
+
+
+-- ========================================================
+-- v2.8.4
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.8.4';
+
+
+
+-- ========================================================
+-- v2.8.5
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.8.5';
+
+
+
+-- ========================================================
+-- v2.9.0
+-- ========================================================
+IF NOT EXISTS (SELECT * FROM IzendaAdvancedSetting WHERE Id = '04D46221-24E0-4363-B2F6-99370D85EBE6')
+BEGIN
+    INSERT INTO IzendaAdvancedSetting(Id,Name,Value,[Type],Deleted) VALUES ('04D46221-24E0-4363-B2F6-99370D85EBE6','DefaultTheme',NULL,'Others',0)
+END
+
+GO
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaRole' AND COLUMN_NAME='ShowCheckedQuerySource')
+BEGIN
+	ALTER TABLE IzendaRole ADD ShowCheckedQuerySource bit NULL
+END
+
+GO
+
+UPDATE IzendaDBVersion SET Version= '2.9.0';
+
+
+
+-- ========================================================
+-- v2.9.1
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.9.1';
+
+
+
+-- ========================================================
+-- v2.9.2
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.9.2';
+
+
+
+-- ========================================================
+-- v2.9.3
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.9.3';
+
+
+
+-- ========================================================
+-- v2.9.4
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.9.4';
+
+
+
+-- ========================================================
+-- v2.9.5
+-- ========================================================
+ALTER TABLE IzendaUser ALTER COLUMN DataOffset NUMERIC(10, 2);
+ALTER TABLE IzendaUser ALTER COLUMN TimestampOffset NUMERIC(10, 2);
+
+GO
+
+UPDATE IzendaCity
+SET CountryName = 'United States of America'
+WHERE CountryCode = 'US'
+
+GO
+
+Update IzendaCountryCode
+SET Name = 'United States of America'
+WHERE Code2 = 'US'
+
+UPDATE IzendaDBVersion SET Version= '2.9.5';
+
+
+
+-- ========================================================
+-- v2.10.0
+-- ========================================================
+ALTER TABLE IzendaUser ALTER COLUMN DataOffset NUMERIC(10, 2);
+ALTER TABLE IzendaUser ALTER COLUMN TimestampOffset NUMERIC(10, 2);
+
+GO
+
+UPDATE IzendaCity
+SET CountryName = 'United States of America'
+WHERE CountryCode = 'US'
+
+GO
+
+Update IzendaCountryCode
+SET Name = 'United States of America'
+WHERE Code2 = 'US'
+
+UPDATE IzendaDBVersion SET Version= '2.10.0';
+
+
+
+-- ========================================================
+-- v2.10.1
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.10.1';
+
+
+
+-- ========================================================
+-- v2.10.2
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.10.2';
+
+
+
+-- ========================================================
+-- v2.10.3
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.10.3';
+
+
+
+-- ========================================================
+-- v2.10.4
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.10.4';
+
+
+
+-- ========================================================
+-- v2.10.5
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.10.5';
+
+
+
+-- ========================================================
+-- v2.11.0
+-- ========================================================
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaRelationship' AND COLUMN_NAME='HasBeenModified')
+BEGIN
+	ALTER TABLE IzendaRelationship ADD HasBeenModified bit NULL
+END
+
+GO
+
+UPDATE IzendaDBVersion SET Version= '2.11.0';
+
+
+
+-- ========================================================
+-- v2.11.1
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.11.1';
+
+
+
+-- ========================================================
+-- v2.11.2
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.11.2';
+
+
+
+-- ========================================================
+-- v2.11.3
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.11.3';
+
+
+
+-- ========================================================
+-- v2.11.4
+-- ========================================================
+UPDATE IzendaDataFormat
+SET GroupBy = 'hourandminute'
+WHERE Category = 'Short Hour' AND DataType = 'Time' 
+  
+GO
+  
+UPDATE IzendaDataFormat
+SET GroupBy = 'hourminuteandsecond'
+WHERE Category = 'Long Hour' AND DataType = 'Time'
+
+UPDATE IzendaDBVersion SET Version= '2.11.4';
+
+
+
+-- ========================================================
+-- v2.12.0
+-- ========================================================
+UPDATE IzendaDataFormat
+SET GroupBy = 'hourandminute'
+WHERE Category = 'Short Hour' AND DataType = 'Time' 
+  
+GO
+  
+UPDATE IzendaDataFormat
+SET GroupBy = 'hourminuteandsecond'
+WHERE Category = 'Long Hour' AND DataType = 'Time'
+
+UPDATE IzendaDBVersion SET Version= '2.12.0';
+
+
+
+-- ========================================================
+-- v2.12.1
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.12.1';
+
+
+
+-- ========================================================
+-- v2.12.2
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.12.2';
+
+
+
+-- ========================================================
+-- v2.12.3
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.12.3';
+
+
+
+-- ========================================================
+-- v2.12.4
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.12.4';
+
+
+
+-- ========================================================
+-- v2.12.5
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.12.5';
+
+
+
+-- ========================================================
+-- v2.13.0
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.13.0';
+
+
+
+-- ========================================================
+-- v2.13.1
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.13.1';
+
+
+
+-- ========================================================
+-- v2.13.2
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.13.2';
+
+
+
+-- ========================================================
+-- v2.13.3
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.13.3';
+
+
+
+-- ========================================================
+-- v2.13.4
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.13.4';
+
+
+
+-- ========================================================
+-- v2.14.0
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.14.0';
+
+
+
+-- ========================================================
+-- v2.14.1
+-- ========================================================
+
+UPDATE IzendaDBVersion SET Version= '2.14.1';
+
+
+
+-- ========================================================
+-- v2.14.2
+-- ========================================================
+IF EXISTS (
+    SELECT 1
+    FROM sys.indexes AS si
+    JOIN sys.objects AS so on si.object_id=so.object_id
+    JOIN sys.schemas AS sc on so.schema_id=sc.schema_id
+    WHERE 
+        so.name ='IzendaQuerySourceField' /* Table */
+        AND si.name='IX_QSF_QuerySourceId' /* Index */
+	)
+	PRINT 'IX_QSF_QuerySourceId exists!'
+ELSE
+	CREATE NONCLUSTERED INDEX [IX_QSF_QuerySourceId] ON [dbo].[IzendaQuerySourceField]
+	(
+		QuerySourceId ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+
+UPDATE IzendaDBVersion SET Version= '2.14.2';
+
+
+
+-- ========================================================
+-- v2.14.3
+-- ========================================================
+IF EXISTS (
+    SELECT 1
+    FROM sys.indexes AS si
+    JOIN sys.objects AS so on si.object_id=so.object_id
+    JOIN sys.schemas AS sc on so.schema_id=sc.schema_id
+    WHERE 
+        so.name ='IzendaQuerySourceField' /* Table */
+        AND si.name='IX_QSF_QuerySourceId' /* Index */
+	)
+	PRINT 'IX_QSF_QuerySourceId exists!'
+ELSE
+	CREATE NONCLUSTERED INDEX [IX_QSF_QuerySourceId] ON [dbo].[IzendaQuerySourceField]
+	(
+		QuerySourceId ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+
+UPDATE IzendaDBVersion SET Version= '2.14.3';
+
+
+
+-- ========================================================
+-- v2.15.0
+-- ========================================================
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaFilterField' AND COLUMN_NAME='UseLookup')
+BEGIN
+	ALTER TABLE IzendaFilterField ADD UseLookup bit NULL 
+	CONSTRAINT Default_IzendaFilterField_UseLookup
+			DEFAULT (1)
+	WITH VALUES
+END
+
+GO
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaFilterOperator' AND COLUMN_NAME='AllowLookup')
+BEGIN
+	ALTER TABLE IzendaFilterOperator ADD AllowLookup bit NULL
+END
+
+GO
+
+UPDATE IzendaFilterOperator SET AllowLookup = 1 WHERE Id IN ('737307d1-1e5f-407f-889f-1b3c9a66dd6f', '042a04a3-dfe1-4ef9-bd27-1b657886f02e', 'bb2f8e2d-753e-4fc9-9646-1b977a043b9a', '003c0e13-cc3c-412f-8fee-1cf21aa51e31', '5ce630bc-6615-42c4-b11e-1d09c651eaae', '78ba4663-e8a4-407f-bab2-1dc014a4df56', '75fcf433-81f2-4767-94b7-1e4257b826c4', '5cdacf39-8eed-4ed3-8684-1e4461e85e1b', 'de9ab97b-4e57-4c8c-8415-1e5030415b50', '6bc89182-aa4c-4fa5-b151-208af7e8cd59');
+UPDATE IzendaFilterOperator SET AllowLookup = 0 WHERE Id NOT IN ('737307d1-1e5f-407f-889f-1b3c9a66dd6f', '042a04a3-dfe1-4ef9-bd27-1b657886f02e', 'bb2f8e2d-753e-4fc9-9646-1b977a043b9a', '003c0e13-cc3c-412f-8fee-1cf21aa51e31', '5ce630bc-6615-42c4-b11e-1d09c651eaae', '78ba4663-e8a4-407f-bab2-1dc014a4df56', '75fcf433-81f2-4767-94b7-1e4257b826c4', '5cdacf39-8eed-4ed3-8684-1e4461e85e1b', 'de9ab97b-4e57-4c8c-8415-1e5030415b50', '6bc89182-aa4c-4fa5-b151-208af7e8cd59');
+
+IF EXISTS (
+    SELECT 1
+    FROM sys.indexes AS si
+    JOIN sys.objects AS so on si.object_id=so.object_id
+    JOIN sys.schemas AS sc on so.schema_id=sc.schema_id
+    WHERE 
+        so.name ='IzendaQuerySourceField' /* Table */
+        AND si.name='IX_QSF_QuerySourceId' /* Index */
+	)
+	PRINT 'IX_QSF_QuerySourceId exists!'
+ELSE
+	CREATE NONCLUSTERED INDEX [IX_QSF_QuerySourceId] ON [dbo].[IzendaQuerySourceField]
+	(
+		QuerySourceId ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+
+UPDATE IzendaDBVersion SET Version= '2.15.0';
+
+
+
+-- ========================================================
+-- v2.15.1
+-- ========================================================
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaCommonFilterField' AND COLUMN_NAME='Required')
+BEGIN
+	ALTER TABLE IzendaCommonFilterField ADD [Required] bit NULL
+END
+
+GO
+
+UPDATE IzendaDBVersion SET Version= '2.15.1';
+
+
+
+-- ========================================================
+-- v2.16.0
+-- ========================================================
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaCommonFilterField' AND COLUMN_NAME='Required')
+BEGIN
+	ALTER TABLE IzendaCommonFilterField ADD [Required] bit NULL
+END
+
+GO
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaRelationship' AND COLUMN_NAME='PositionId')
+BEGIN
+	ALTER TABLE IzendaRelationship ADD PositionId int NULL
+END
+
+GO
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyPositionId')
+BEGIN
+	ALTER TABLE IzendaWorkspace ADD CopyPositionId bit NULL 
+	DEFAULT (0)
+	WITH VALUES
+END
+
+GO
+
+IF EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS
+                WHERE  TABLE_NAME='IzendaRelationship' AND COLUMN_NAME='HasBeenModified')
+BEGIN
+    ALTER TABLE IzendaRelationship DROP COLUMN HasBeenModified
+END
+
+GO
+
+UPDATE IzendaWorkspace SET CopyPositionId = 0 WHERE CopyPositionId = NULL;
+
+UPDATE IzendaDBVersion SET Version= '2.16.0';
+
+
+
+-- ========================================================
+-- v2.17.0
+-- ========================================================
+UPDATE IzendaDBVersion SET Version = '2.17.0';
+
+
+-- ========================================================
+-- v2.17.1
+-- ========================================================
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperator WHERE Id = '1201F8C3-51AD-4B2C-84A4-9E76E844FB5B')
+BEGIN
+    INSERT INTO IzendaFilterOperator(Id, Name, Label, OperatorGroupId, Position, AllowParameter, AllowLookup, Deleted) VALUES ('1201F8C3-51AD-4B2C-84A4-9E76E844FB5B','Is Less Than (Date)',          '<','01076B28-8E77-4A54-95D8-060D142A77E6',461,0,0,'0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperator WHERE Id = '80913480-5C91-46D0-B7BE-66A39726EB63')
+BEGIN
+    INSERT INTO IzendaFilterOperator(Id, Name, Label, OperatorGroupId, Position, AllowParameter, AllowLookup, Deleted) VALUES ('80913480-5C91-46D0-B7BE-66A39726EB63','Is Less Than (Date & Time)',   '<','01076B28-8E77-4A54-95D8-060D142A77E6',462,0,0,'0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperator WHERE Id = '4041D0B0-593D-42D7-9650-C74DCA9DCA90')
+BEGIN
+    INSERT INTO IzendaFilterOperator(Id, Name, Label, OperatorGroupId, Position, AllowParameter, AllowLookup, Deleted) VALUES ('4041D0B0-593D-42D7-9650-C74DCA9DCA90','Is Less Than (Time)',          '<','01076B28-8E77-4A54-95D8-060D142A77E6',463,0,0,'0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperator WHERE Id = 'D7297AB0-935B-4EB5-B60A-172CFE9FD468')
+BEGIN
+    INSERT INTO IzendaFilterOperator(Id, Name, Label, OperatorGroupId, Position, AllowParameter, AllowLookup, Deleted) VALUES ('D7297AB0-935B-4EB5-B60A-172CFE9FD468','Is Greater Than (Date)',       '>','01076B28-8E77-4A54-95D8-060D142A77E6',471,0,0,'0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperator WHERE Id = '89B448E7-418C-4FA3-A69A-08B58D87F144')
+BEGIN
+    INSERT INTO IzendaFilterOperator(Id, Name, Label, OperatorGroupId, Position, AllowParameter, AllowLookup, Deleted) VALUES ('89B448E7-418C-4FA3-A69A-08B58D87F144','Is Greater Than (Date & Time)','>','01076B28-8E77-4A54-95D8-060D142A77E6',472,0,0,'0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperator WHERE Id = 'A1F4A8C7-FBB5-4E65-931C-45E7B55B49C5')
+BEGIN
+    INSERT INTO IzendaFilterOperator(Id, Name, Label, OperatorGroupId, Position, AllowParameter, AllowLookup, Deleted) VALUES ('A1F4A8C7-FBB5-4E65-931C-45E7B55B49C5','Is Greater Than (Time)',       '>','01076B28-8E77-4A54-95D8-060D142A77E6',473,0,0,'0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperatorRule WHERE Id = '1201F8C3-51AD-4B2C-84A4-9E76E844FB5B')
+BEGIN
+    INSERT INTO IzendaFilterOperatorRule(Id, OperatorId, AllowNull, IsPairedValues, Deleted) VALUES ('1201F8C3-51AD-4B2C-84A4-9E76E844FB5B', '1201F8C3-51AD-4B2C-84A4-9E76E844FB5B', 1, 0, '0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperatorRule WHERE Id = '80913480-5C91-46D0-B7BE-66A39726EB63')
+BEGIN
+    INSERT INTO IzendaFilterOperatorRule(Id, OperatorId, AllowNull, IsPairedValues, Deleted) VALUES ('80913480-5C91-46D0-B7BE-66A39726EB63', '80913480-5C91-46D0-B7BE-66A39726EB63', 1, 0, '0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperatorRule WHERE Id = '4041D0B0-593D-42D7-9650-C74DCA9DCA90')
+BEGIN
+    INSERT INTO IzendaFilterOperatorRule(Id, OperatorId, AllowNull, IsPairedValues, Deleted) VALUES ('4041D0B0-593D-42D7-9650-C74DCA9DCA90', '4041D0B0-593D-42D7-9650-C74DCA9DCA90', 1, 0, '0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperatorRule WHERE Id = 'D7297AB0-935B-4EB5-B60A-172CFE9FD468')
+BEGIN
+    INSERT INTO IzendaFilterOperatorRule(Id, OperatorId, AllowNull, IsPairedValues, Deleted) VALUES ('D7297AB0-935B-4EB5-B60A-172CFE9FD468', 'D7297AB0-935B-4EB5-B60A-172CFE9FD468', 1, 0, '0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperatorRule WHERE Id = '89B448E7-418C-4FA3-A69A-08B58D87F144')
+BEGIN
+    INSERT INTO IzendaFilterOperatorRule(Id, OperatorId, AllowNull, IsPairedValues, Deleted) VALUES ('89B448E7-418C-4FA3-A69A-08B58D87F144', '89B448E7-418C-4FA3-A69A-08B58D87F144', 1, 0, '0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperatorRule WHERE Id = 'A1F4A8C7-FBB5-4E65-931C-45E7B55B49C5')
+BEGIN
+    INSERT INTO IzendaFilterOperatorRule(Id, OperatorId, AllowNull, IsPairedValues, Deleted) VALUES ('A1F4A8C7-FBB5-4E65-931C-45E7B55B49C5', 'A1F4A8C7-FBB5-4E65-931C-45E7B55B49C5', 1, 0, '0')
+END
+
+UPDATE IzendaDBVersion SET Version = '2.17.1';
+
+
+
+-- ========================================================
+-- v2.18.0
+-- ========================================================
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperator WHERE Id = '1201F8C3-51AD-4B2C-84A4-9E76E844FB5B')
+BEGIN
+    INSERT INTO IzendaFilterOperator(Id, Name, Label, OperatorGroupId, Position, AllowParameter, AllowLookup, Deleted) VALUES ('1201F8C3-51AD-4B2C-84A4-9E76E844FB5B','Is Less Than (Date)',          '<','01076B28-8E77-4A54-95D8-060D142A77E6',461,0,0,'0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperator WHERE Id = '80913480-5C91-46D0-B7BE-66A39726EB63')
+BEGIN
+    INSERT INTO IzendaFilterOperator(Id, Name, Label, OperatorGroupId, Position, AllowParameter, AllowLookup, Deleted) VALUES ('80913480-5C91-46D0-B7BE-66A39726EB63','Is Less Than (Date & Time)',   '<','01076B28-8E77-4A54-95D8-060D142A77E6',462,0,0,'0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperator WHERE Id = '4041D0B0-593D-42D7-9650-C74DCA9DCA90')
+BEGIN
+    INSERT INTO IzendaFilterOperator(Id, Name, Label, OperatorGroupId, Position, AllowParameter, AllowLookup, Deleted) VALUES ('4041D0B0-593D-42D7-9650-C74DCA9DCA90','Is Less Than (Time)',          '<','01076B28-8E77-4A54-95D8-060D142A77E6',463,0,0,'0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperator WHERE Id = 'D7297AB0-935B-4EB5-B60A-172CFE9FD468')
+BEGIN
+    INSERT INTO IzendaFilterOperator(Id, Name, Label, OperatorGroupId, Position, AllowParameter, AllowLookup, Deleted) VALUES ('D7297AB0-935B-4EB5-B60A-172CFE9FD468','Is Greater Than (Date)',       '>','01076B28-8E77-4A54-95D8-060D142A77E6',471,0,0,'0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperator WHERE Id = '89B448E7-418C-4FA3-A69A-08B58D87F144')
+BEGIN
+    INSERT INTO IzendaFilterOperator(Id, Name, Label, OperatorGroupId, Position, AllowParameter, AllowLookup, Deleted) VALUES ('89B448E7-418C-4FA3-A69A-08B58D87F144','Is Greater Than (Date & Time)','>','01076B28-8E77-4A54-95D8-060D142A77E6',472,0,0,'0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperator WHERE Id = 'A1F4A8C7-FBB5-4E65-931C-45E7B55B49C5')
+BEGIN
+    INSERT INTO IzendaFilterOperator(Id, Name, Label, OperatorGroupId, Position, AllowParameter, AllowLookup, Deleted) VALUES ('A1F4A8C7-FBB5-4E65-931C-45E7B55B49C5','Is Greater Than (Time)',       '>','01076B28-8E77-4A54-95D8-060D142A77E6',473,0,0,'0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperatorRule WHERE Id = '1201F8C3-51AD-4B2C-84A4-9E76E844FB5B')
+BEGIN
+    INSERT INTO IzendaFilterOperatorRule(Id, OperatorId, AllowNull, IsPairedValues, Deleted) VALUES ('1201F8C3-51AD-4B2C-84A4-9E76E844FB5B', '1201F8C3-51AD-4B2C-84A4-9E76E844FB5B', 1, 0, '0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperatorRule WHERE Id = '80913480-5C91-46D0-B7BE-66A39726EB63')
+BEGIN
+    INSERT INTO IzendaFilterOperatorRule(Id, OperatorId, AllowNull, IsPairedValues, Deleted) VALUES ('80913480-5C91-46D0-B7BE-66A39726EB63', '80913480-5C91-46D0-B7BE-66A39726EB63', 1, 0, '0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperatorRule WHERE Id = '4041D0B0-593D-42D7-9650-C74DCA9DCA90')
+BEGIN
+    INSERT INTO IzendaFilterOperatorRule(Id, OperatorId, AllowNull, IsPairedValues, Deleted) VALUES ('4041D0B0-593D-42D7-9650-C74DCA9DCA90', '4041D0B0-593D-42D7-9650-C74DCA9DCA90', 1, 0, '0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperatorRule WHERE Id = 'D7297AB0-935B-4EB5-B60A-172CFE9FD468')
+BEGIN
+    INSERT INTO IzendaFilterOperatorRule(Id, OperatorId, AllowNull, IsPairedValues, Deleted) VALUES ('D7297AB0-935B-4EB5-B60A-172CFE9FD468', 'D7297AB0-935B-4EB5-B60A-172CFE9FD468', 1, 0, '0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperatorRule WHERE Id = '89B448E7-418C-4FA3-A69A-08B58D87F144')
+BEGIN
+    INSERT INTO IzendaFilterOperatorRule(Id, OperatorId, AllowNull, IsPairedValues, Deleted) VALUES ('89B448E7-418C-4FA3-A69A-08B58D87F144', '89B448E7-418C-4FA3-A69A-08B58D87F144', 1, 0, '0')
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaFilterOperatorRule WHERE Id = 'A1F4A8C7-FBB5-4E65-931C-45E7B55B49C5')
+BEGIN
+    INSERT INTO IzendaFilterOperatorRule(Id, OperatorId, AllowNull, IsPairedValues, Deleted) VALUES ('A1F4A8C7-FBB5-4E65-931C-45E7B55B49C5', 'A1F4A8C7-FBB5-4E65-931C-45E7B55B49C5', 1, 0, '0')
+END
+
+UPDATE IzendaDBVersion SET Version = '2.18.0';
+
+
+
+-- ========================================================
+-- v2.18.1
+-- ========================================================
+UPDATE IzendaDBVersion SET Version = '2.18.1';
+
+
+-- ========================================================
+-- v3.0.0
+-- ========================================================
+UPDATE IzendaDBVersion SET Version = '3.0.0';
+
+
+-- ========================================================
+-- v3.1.0
+-- ========================================================
+UPDATE IzendaDBVersion SET Version = '3.1.0';
+
+
+-- ========================================================
+-- v3.1.1
+-- ========================================================
+UPDATE IzendaDBVersion SET Version = '3.1.1';
+
+
+-- ========================================================
+-- v3.2.0
+-- ========================================================
+UPDATE IzendaDBVersion SET Version = '3.2.0';
+
+
+-- ========================================================
+-- v3.2.1
+-- ========================================================
+UPDATE IzendaDBVersion SET Version = '3.2.1';
+
+
+-- ========================================================
+-- v3.3.0
+-- ========================================================
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaCacheMetadata]') AND type in (N'U'))
+BEGIN
+	CREATE TABLE [dbo].[IzendaCacheMetadata]
+	(		
+		[CacheKey] [nvarchar](256) PRIMARY KEY,
+		[CacheMetadata] [nvarchar](max) NULL,
+		[CacheType] [int] NULL,
+		[CreatedDate] [datetime] NULL		
+	)
+END
+GO
+
+IF EXISTS (
+    SELECT 1
+    FROM sys.indexes AS si
+    JOIN sys.objects AS so on si.object_id=so.object_id
+    JOIN sys.schemas AS sc on so.schema_id=sc.schema_id
+    WHERE 
+        so.name ='IzendaCacheMetadata' /* Table */
+        AND si.name='IX_CacheMetadata_Type_CreatedDate' /* Index */
+	)
+	PRINT 'IX_CacheMetadata_Type_CreatedDate exists!'
+ELSE
+	CREATE NONCLUSTERED INDEX [IX_CacheMetadata_Type_CreatedDate] ON [dbo].[IzendaCacheMetadata]
+	(
+		[CacheType] ASC,
+		[CreatedDate] ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+GO
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'A3904C1A-78F0-473F-934C-72770F68FB04')
+BEGIN
+	INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('A3904C1A-78F0-473F-934C-72770F68FB04', 'SystemCacheTTL', '60',0);
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'F810BB22-FB58-4D6A-A971-AA7E2BB0B083')
+BEGIN
+	INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('F810BB22-FB58-4D6A-A971-AA7E2BB0B083', 'DataCacheTTL', '600',0);
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = '6C34DD6A-EDC3-41D5-AC6E-6B6229DBD28E')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('6C34DD6A-EDC3-41D5-AC6E-6B6229DBD28E', 'IsEnableDataCache', '0',0);
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'E757F703-B4D8-40BA-81B7-E8018DADB8CA')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('E757F703-B4D8-40BA-81B7-E8018DADB8CA', 'DataCacheEvictionInterval', '600',0);
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = '8C62A1F2-E607-40F6-B6E9-06F314A536D1')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('8C62A1F2-E607-40F6-B6E9-06F314A536D1', 'DataCacheRefreshInterval', '200',0);
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'DE8C7B55-F6DD-41F6-B3EF-22BBA68DFC15')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('DE8C7B55-F6DD-41F6-B3EF-22BBA68DFC15', 'DataCacheRefreshDuration', '100',0);
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'F810BB22-FB58-4D6A-A971-AA7E2BB0B084')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('F810BB22-FB58-4D6A-A971-AA7E2BB0B084', 'SystemCacheEvictionInterval', '3600','0');
+END
+
+
+UPDATE IzendaDBVersion SET Version = '3.3.0';
+
+
+
+-- ========================================================
+-- v3.3.1
+-- ========================================================
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS
+
+WHERE TABLE_NAME='IzendaSubscription' AND COLUMN_NAME='IsSubscriptionTimeZoneUsed')
+
+BEGIN
+    ALTER TABLE IzendaSubscription ADD IsSubscriptionTimeZoneUsed BIT NOT NULL DEFAULT(0)
+END
+
+GO
+
+UPDATE IzendaDBVersion SET Version = '3.3.1';
+
+
+
+-- ========================================================
+-- v3.4.0
+-- ========================================================
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS
+
+WHERE TABLE_NAME='IzendaSubscription' AND COLUMN_NAME='IsSubscriptionTimeZoneUsed')
+
+BEGIN
+    ALTER TABLE IzendaSubscription ADD IsSubscriptionTimeZoneUsed BIT NOT NULL DEFAULT(0)
+END
+
+GO
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = '4D0FCC3D-2617-430E-B95D-9E0C8C6FDCDC')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('4D0FCC3D-2617-430E-B95D-9E0C8C6FDCDC','PredictionServerIP','ExamplePSHostName:8000','0')
+END
+GO
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaQuerySourceField' AND COLUMN_NAME='IsPredicated')
+BEGIN
+	Alter table IzendaQuerySourceField Add IsPredicated bit NUll
+END
+GO
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaQuerySourceField' AND COLUMN_NAME='ModelName')
+BEGIN
+	Alter table IzendaQuerySourceField Add ModelName varchar(250) NUll
+END
+GO
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaQuerySourceField' AND COLUMN_NAME='TargetValue')
+BEGIN
+	Alter table IzendaQuerySourceField Add TargetValue varchar(250) NUll
+END
+GO
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaQuerySourceField' AND COLUMN_NAME='RelationColumn')
+BEGIN
+	Alter table IzendaQuerySourceField Add RelationColumn nvarchar(250) NUll
+END
+GO
+
+UPDATE IzendaDBVersion SET Version = '3.4.0';
+
+
+
+
+-- ========================================================
+-- v3.4.1
+-- ========================================================
+UPDATE IzendaDBVersion SET Version = '3.4.1';
+
+
+
+
+-- ========================================================
+-- v3.4.2
+-- ========================================================
+UPDATE IzendaDBVersion SET Version = '3.4.2';
+
+
+
+
+-- ========================================================
+-- v3.5.0
+-- ========================================================
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaCountryCode' AND COLUMN_NAME='Coordinates')
+BEGIN
+	ALTER TABLE IzendaCountryCode ADD Coordinates nvarchar(max) NULL
+END
+
+GO
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaCountryCode' AND COLUMN_NAME='Longitude')
+BEGIN
+	ALTER TABLE IzendaCountryCode ADD Longitude varchar(15) NULL
+END
+
+GO
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaCountryCode' AND COLUMN_NAME='Latitude')
+BEGIN
+	ALTER TABLE IzendaCountryCode ADD Latitude varchar(15) NULL
+END
+
+GO
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaCountryCode' AND COLUMN_NAME='AlternateNames')
+BEGIN
+	ALTER TABLE IzendaCountryCode ADD AlternateNames nvarchar(255) NULL
+END
+
+GO
+
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaStateCode]') AND type in (N'U'))
+BEGIN
+
+	CREATE TABLE [dbo].[IzendaStateCode](
+		[CountryCode] [varchar](255) NULL,	
+		[CountryCode3] [varchar](255) NULL,
+		[CountryName] [varchar](255) NULL,
+		[Code] [varchar](255) NULL,
+		[Name] [nvarchar](255) NULL,	
+		[Latitude] [varchar](15) NULL,
+		[Longitude] [varchar](15) NULL,
+		[Coordinates] [nvarchar](max) NULL
+	) ON [PRIMARY]
+
+END
+
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaCountyCode]') AND type in (N'U'))
+BEGIN
+
+	CREATE TABLE [dbo].[IzendaCountyCode](
+		[CountryCode] [varchar](255) NULL,	
+		[CountryCode3] [varchar](255) NULL,
+		[CountryName] [varchar](255) NULL,
+		[StateCode] [varchar](255) NULL,
+		[StateName] [varchar](255) NULL,
+		[Code] [varchar](255) NULL,
+		[Name] [nvarchar](255) NULL,
+		[Latitude] [varchar](15) NULL,
+		[Longitude] [varchar](15) NULL,
+		[Coordinates] [nvarchar](max) NULL
+	) ON [PRIMARY]
+
+END
+
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaGoogleAPIKeySetting]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[IzendaGoogleAPIKeySetting](
+	[Id] [uniqueidentifier] NOT NULL PRIMARY KEY,	
+	[UseSystemConfiguration] [bit] NULL,
+	[GoogleAPIKey] [nvarchar](500) NULL,
+	[UseGEOCodingService] [bit] NULL,
+	[TenantId] [uniqueidentifier] NULL,
+	[Version] [int] NULL,
+	[Deleted] [bit] NULL,
+	[Created] [datetime] NULL,
+	[CreatedBy] [nvarchar](256) NULL,
+	[Modified] [datetime] NULL,
+	[ModifiedBy] [nvarchar](256) NULL
+)
+END
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaAddressCode]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[IzendaAddressCode](
+	[HashedValue] [nvarchar](100) NOT NULL PRIMARY KEY,	
+	[Latitude] [varchar](250) NULL,
+	[Longitude] [varchar](250) NULL,	
+	[CreatedDate] [datetime] NULL
+)
+END
+
+UPDATE IzendaDBVersion SET Version = '3.5.0';
+
+
+
+
+-- ========================================================
+-- v3.6.0
+-- ========================================================
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaSecurityPolicy' AND COLUMN_NAME='HideUserId')
+BEGIN
+	ALTER TABLE IzendaSecurityPolicy ADD [HideUserId] bit NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaSecurityPolicy' AND COLUMN_NAME='HideUserProfile')
+BEGIN
+	ALTER TABLE IzendaSecurityPolicy ADD [HideUserProfile] bit NULL
+END
+
+UPDATE IzendaDBVersion SET Version = '3.6.0';
+
+
+-- ========================================================
+-- v3.7.0
+-- ========================================================
+UPDATE IzendaDBVersion SET Version = '3.7.0';
+
+
+-- ========================================================
+-- v3.7.1
+-- ========================================================
+UPDATE IzendaDBVersion SET Version = '3.7.1';
+
+
+
+
+-- ========================================================
+-- v3.7.2
+-- ========================================================
+
+
+
+IF NOT EXISTS (SELECT * FROM IzendaAdvancedSetting WHERE Id = '76005A0D-6D32-4813-8866-649D2705300D')
+BEGIN
+    INSERT INTO [IzendaAdvancedSetting]([Id],[Name],[Value], [DefaultValue], [Type], [TenantId], [Deleted]) 
+VALUES('76005A0D-6D32-4813-8866-649D2705300D','SetRenderhtmlexportValue', '0', '0', 'Security', NULL, '0') 
+
+END
+GO
+
+UPDATE IzendaDBVersion SET Version = '3.7.2';
+
+
+-- ========================================================
+-- v3.8.0
+-- ========================================================
+IF NOT EXISTS (SELECT * FROM IzendaAdvancedSetting WHERE Id = '76005A0D-6D32-4813-8866-649D2705300D')
+BEGIN
+    INSERT INTO [IzendaAdvancedSetting]([Id],[Name],[Value], [DefaultValue], [Type], [TenantId], [Deleted]) 
+VALUES('76005A0D-6D32-4813-8866-649D2705300D','SetRenderhtmlexportValue', '0', '0', 'Security', NULL, '0') 
+
+END
+GO
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaRole' AND COLUMN_NAME='RoleType')
+BEGIN
+	ALTER TABLE IzendaRole ADD RoleType nvarchar(256) NULL
+END
+
+UPDATE IzendaDBVersion SET Version = '3.8.0';
+
+
+-- ========================================================
+-- v3.8.1
+-- ========================================================
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'AA0B402B-3E34-4A3C-BE61-5744F1E0C594')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('AA0B402B-3E34-4A3C-BE61-5744F1E0C594','CookieSameSite','Lax',0);
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'FBBC8DAD-834F-407F-8900-526743DE2DF6')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('FBBC8DAD-834F-407F-8900-526743DE2DF6','CookieSecure','0',0);
+END
+GO
+
+UPDATE IzendaDBVersion SET Version = '3.8.1';
+
+
+-- ========================================================
+-- v3.8.2
+-- ========================================================
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'AA0B402B-3E34-4A3C-BE61-5744F1E0C594')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('AA0B402B-3E34-4A3C-BE61-5744F1E0C594','CookieSameSite','Lax',0);
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'FBBC8DAD-834F-407F-8900-526743DE2DF6')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('FBBC8DAD-834F-407F-8900-526743DE2DF6','CookieSecure','0',0);
+END
+GO
+
+UPDATE IzendaDBVersion SET Version = '3.8.2';
+
+
+-- ========================================================
+-- v3.8.3
+-- ========================================================
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'AA0B402B-3E34-4A3C-BE61-5744F1E0C594')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('AA0B402B-3E34-4A3C-BE61-5744F1E0C594','CookieSameSite','Lax',0);
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'FBBC8DAD-834F-407F-8900-526743DE2DF6')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('FBBC8DAD-834F-407F-8900-526743DE2DF6','CookieSecure','0',0);
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'BCD8E05E-60ED-4440-96A8-EF3EA91D6F86')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('BCD8E05E-60ED-4440-96A8-EF3EA91D6F86','IsEnableSystemCache','1','0')
+END
+GO
+
+
+UPDATE IzendaDBVersion SET Version = '3.8.3';
+
+
+-- ========================================================
+-- v3.8.4
+-- ========================================================
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'AA0B402B-3E34-4A3C-BE61-5744F1E0C594')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('AA0B402B-3E34-4A3C-BE61-5744F1E0C594','CookieSameSite','Lax',0);
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'FBBC8DAD-834F-407F-8900-526743DE2DF6')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('FBBC8DAD-834F-407F-8900-526743DE2DF6','CookieSecure','0',0);
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'BCD8E05E-60ED-4440-96A8-EF3EA91D6F86')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('BCD8E05E-60ED-4440-96A8-EF3EA91D6F86','IsEnableSystemCache','1','0')
+END
+GO
+
+
+UPDATE IzendaDBVersion SET Version = '3.8.4';
+
+
+-- ========================================================
+-- v3.9.0
+-- ========================================================
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'BCD8E05E-60ED-4440-96A8-EF3EA91D6F86')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('BCD8E05E-60ED-4440-96A8-EF3EA91D6F86','IsEnableSystemCache','1',0)
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'AA0B402B-3E34-4A3C-BE61-5744F1E0C594')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('AA0B402B-3E34-4A3C-BE61-5744F1E0C594','CookieSameSite','Lax',0);
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = 'FBBC8DAD-834F-407F-8900-526743DE2DF6')
+BEGIN
+    INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('FBBC8DAD-834F-407F-8900-526743DE2DF6','CookieSecure','0',0);
+END
+GO
+
+ALTER TABLE [dbo].[IzendaUserPermission] ALTER COLUMN [AssignedTo] [nvarchar](MAX) NULL;
+GO
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaReport' AND COLUMN_NAME='ReportMode')
+BEGIN
+ALTER TABLE [dbo].[IzendaReport] ADD [ReportMode] INT DEFAULT 0 WITH VALUES
+END
+GO
+
+UPDATE IzendaDBVersion SET Version = '3.9.0';
+
+
+-- ========================================================
+-- v3.9.1
+-- ========================================================
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaNLQSchema]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[IzendaNLQSchema](
+	[DBName] [nvarchar](256) NOT NULL,
+	[ConnectionId] [uniqueidentifier] NULL,
+	[ISActive] [bit] NULL,
+	[ISConfigured] [bit] NULL,
+	[ISDeleted] [bit] NULL,
+	[IzendaNLQSchemaStatus] [nvarchar](256) NULL
+)
+END
+
+UPDATE IzendaDBVersion SET Version = '3.9.1';
+
+
+-- ========================================================
+-- v3.9.2
+-- ========================================================
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaNLQSchema]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[IzendaNLQSchema](
+	[DBName] [nvarchar](256) NOT NULL,
+	[ConnectionId] [uniqueidentifier] NULL,
+	[ISActive] [bit] NULL,
+	[ISConfigured] [bit] NULL,
+	[ISDeleted] [bit] NULL,
+	[IzendaNLQSchemaStatus] [nvarchar](256) NULL
+)
+END
+
+UPDATE IzendaDBVersion SET Version = '3.9.2';
+
+
+-- ========================================================
+-- v3.9.3
+-- ========================================================
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaNLQSchema]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[IzendaNLQSchema](
+    [DBName] [nvarchar](256) NOT NULL,
+    [ConnectionId] [uniqueidentifier] NULL,
+    [ISActive] [bit] NULL,
+    [ISConfigured] [bit] NULL,
+    [ISDeleted] [bit] NULL,
+    [IzendaNLQSchemaStatus] [nvarchar](256) NULL,
+    [TenantID] [nvarchar](256) NULL
+)
+END
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyDataConnector')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyDataConnector [bit] NULL
+END
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopySystemConfiguration')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopySystemConfiguration [bit] NULL
+END
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyEmailConfiguration')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyEmailConfiguration [bit] NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyGoogleMapConfiguration')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyGoogleMapConfiguration [bit] NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyReportConfiguration')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyReportConfiguration [bit] NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyOnlySettings')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyOnlySettings [bit] NULL
+END
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaWorkspaceSchedule]') AND type in (N'U'))
+BEGIN
+    CREATE TABLE [dbo].[IzendaWorkspaceSchedule]
+    (
+        [Id] [uniqueidentifier] PRIMARY KEY,
+        [WorkspaceId] [uniqueidentifier] NOT NULL,
+        [Deleted] [bit] NULL,
+        [Version] [int] NULL,
+        [Created] [datetime] NULL,
+        [CreatedBy] [nvarchar](256) NULL,
+        [CreatedById] [uniqueidentifier] NULL,
+        [Modified] [datetime] NULL,
+        [ModifiedBy] [nvarchar](256) NULL,
+        [Schedule] [nvarchar](max) NULL,
+        [TimeZoneName] [nvarchar](256) NULL,
+        [TimeZoneValue] [nvarchar](256) NULL,
+        [StartDate] [datetime] NULL,
+        [StartDateUtc] [datetime] NULL,
+        [StartTime] [datetime] NULL,
+        [RecurrenceType] [int] NULL,
+        [RecurrencePattern] [int] NULL,
+        [RecurrencePatternValue] [nvarchar](max) NULL,
+        [IsEndless] [bit] NULL,
+        [IsScheduled] [bit] NULL,
+        [Occurrence] [int] NULL,
+        [EndDate] [datetime] NULL,
+        [EndDateUtc] [datetime] NULL,
+        [LastSuccessfulRun] [nvarchar](500) NULL,
+        [LastSuccessfulRunDate] [datetime] NULL,
+        [NextScheduledRun] [nvarchar](500) NULL,
+        [NextScheduledRunDate] [datetime] NULL
+    )
+END
+
+UPDATE IzendaDBVersion SET Version = '3.9.3';
+
+
+-- ========================================================
+-- v3.9.4
+-- ========================================================
+ALTER TABLE [dbo].[IzendaConnection] ALTER COLUMN [ConnectionString] [nvarchar](MAX) NULL;
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaNLQSchema]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[IzendaNLQSchema](
+    [DBName] [nvarchar](256) NOT NULL,
+    [ConnectionId] [uniqueidentifier] NULL,
+    [ISActive] [bit] NULL,
+    [ISConfigured] [bit] NULL,
+    [ISDeleted] [bit] NULL,
+    [IzendaNLQSchemaStatus] [nvarchar](256) NULL,
+    [TenantID] [nvarchar](256) NULL
+)
+END
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyDataConnector')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyDataConnector [bit] NULL
+END
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopySystemConfiguration')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopySystemConfiguration [bit] NULL
+END
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyEmailConfiguration')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyEmailConfiguration [bit] NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyGoogleMapConfiguration')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyGoogleMapConfiguration [bit] NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyReportConfiguration')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyReportConfiguration [bit] NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyOnlySettings')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyOnlySettings [bit] NULL
+END
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaWorkspaceSchedule]') AND type in (N'U'))
+BEGIN
+    CREATE TABLE [dbo].[IzendaWorkspaceSchedule]
+    (
+        [Id] [uniqueidentifier] PRIMARY KEY,
+        [WorkspaceId] [uniqueidentifier] NOT NULL,
+        [Deleted] [bit] NULL,
+        [Version] [int] NULL,
+        [Created] [datetime] NULL,
+        [CreatedBy] [nvarchar](256) NULL,
+        [CreatedById] [uniqueidentifier] NULL,
+        [Modified] [datetime] NULL,
+        [ModifiedBy] [nvarchar](256) NULL,
+        [Schedule] [nvarchar](max) NULL,
+        [TimeZoneName] [nvarchar](256) NULL,
+        [TimeZoneValue] [nvarchar](256) NULL,
+        [StartDate] [datetime] NULL,
+        [StartDateUtc] [datetime] NULL,
+        [StartTime] [datetime] NULL,
+        [RecurrenceType] [int] NULL,
+        [RecurrencePattern] [int] NULL,
+        [RecurrencePatternValue] [nvarchar](max) NULL,
+        [IsEndless] [bit] NULL,
+        [IsScheduled] [bit] NULL,
+        [Occurrence] [int] NULL,
+        [EndDate] [datetime] NULL,
+        [EndDateUtc] [datetime] NULL,
+        [LastSuccessfulRun] [nvarchar](500) NULL,
+        [LastSuccessfulRunDate] [datetime] NULL,
+        [NextScheduledRun] [nvarchar](500) NULL,
+        [NextScheduledRunDate] [datetime] NULL
+    )
+END
+
+UPDATE IzendaDBVersion SET Version = '3.9.4';
+
+
+-- ========================================================
+-- v3.9.5
+-- ========================================================
+ALTER TABLE [dbo].[IzendaConnection] ALTER COLUMN [ConnectionString] [nvarchar](MAX) NULL;
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaNLQSchema]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[IzendaNLQSchema](
+    [DBName] [nvarchar](256) NOT NULL,
+    [ConnectionId] [uniqueidentifier] NULL,
+    [ISActive] [bit] NULL,
+    [ISConfigured] [bit] NULL,
+    [ISDeleted] [bit] NULL,
+    [IzendaNLQSchemaStatus] [nvarchar](256) NULL,
+    [TenantID] [nvarchar](256) NULL
+)
+END
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyDataConnector')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyDataConnector [bit] NULL
+END
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopySystemConfiguration')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopySystemConfiguration [bit] NULL
+END
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyEmailConfiguration')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyEmailConfiguration [bit] NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyGoogleMapConfiguration')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyGoogleMapConfiguration [bit] NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyReportConfiguration')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyReportConfiguration [bit] NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyOnlySettings')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyOnlySettings [bit] NULL
+END
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaWorkspaceSchedule]') AND type in (N'U'))
+BEGIN
+    CREATE TABLE [dbo].[IzendaWorkspaceSchedule]
+    (
+        [Id] [uniqueidentifier] PRIMARY KEY,
+        [WorkspaceId] [uniqueidentifier] NOT NULL,
+        [Deleted] [bit] NULL,
+        [Version] [int] NULL,
+        [Created] [datetime] NULL,
+        [CreatedBy] [nvarchar](256) NULL,
+        [CreatedById] [uniqueidentifier] NULL,
+        [Modified] [datetime] NULL,
+        [ModifiedBy] [nvarchar](256) NULL,
+        [Schedule] [nvarchar](max) NULL,
+        [TimeZoneName] [nvarchar](256) NULL,
+        [TimeZoneValue] [nvarchar](256) NULL,
+        [StartDate] [datetime] NULL,
+        [StartDateUtc] [datetime] NULL,
+        [StartTime] [datetime] NULL,
+        [RecurrenceType] [int] NULL,
+        [RecurrencePattern] [int] NULL,
+        [RecurrencePatternValue] [nvarchar](max) NULL,
+        [IsEndless] [bit] NULL,
+        [IsScheduled] [bit] NULL,
+        [Occurrence] [int] NULL,
+        [EndDate] [datetime] NULL,
+        [EndDateUtc] [datetime] NULL,
+        [LastSuccessfulRun] [nvarchar](500) NULL,
+        [LastSuccessfulRunDate] [datetime] NULL,
+        [NextScheduledRun] [nvarchar](500) NULL,
+        [NextScheduledRunDate] [datetime] NULL
+    )
+END
+
+UPDATE IzendaDBVersion SET Version = '3.9.5';
+
+
+-- ========================================================
+-- v3.10.0
+-- ========================================================
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaConnection' AND COLUMN_NAME='DatabaseUser')
+BEGIN
+    ALTER TABLE [IzendaConnection] ADD [DatabaseUser] [nvarchar](256) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaGlobalDatabaseMapping' AND COLUMN_NAME='FromDatabaseUser')
+BEGIN
+    ALTER TABLE [IzendaGlobalDatabaseMapping] ADD [FromDatabaseUser] [nvarchar](256) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaGlobalDatabaseMapping' AND COLUMN_NAME='ToDatabaseUser')
+BEGIN
+    ALTER TABLE [IzendaGlobalDatabaseMapping] ADD [ToDatabaseUser] [nvarchar](256) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspaceMapping' AND COLUMN_NAME='FromDatabaseUser')
+BEGIN
+    ALTER TABLE [IzendaWorkspaceMapping] ADD [FromDatabaseUser] [nvarchar](256) NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspaceMapping' AND COLUMN_NAME='ToDatabaseUser')
+BEGIN
+    ALTER TABLE [IzendaWorkspaceMapping] ADD [ToDatabaseUser] [nvarchar](256) NULL
+END
+GO
+
+ALTER TABLE [dbo].[IzendaConnection] ALTER COLUMN [ConnectionString] [nvarchar](MAX) NULL;
+GO
+
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaNLQSchema]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[IzendaNLQSchema](
+    [DBName] [nvarchar](256) NOT NULL,
+    [ConnectionId] [uniqueidentifier] NULL,
+    [ISActive] [bit] NULL,
+    [ISConfigured] [bit] NULL,
+    [ISDeleted] [bit] NULL,
+    [IzendaNLQSchemaStatus] [nvarchar](256) NULL,
+    [TenantID] [nvarchar](256) NULL
+)
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaNLQSchema' AND COLUMN_NAME='TenantID')
+BEGIN
+   ALTER TABLE [IzendaNLQSchema] ADD [TenantID] [nvarchar](256) NULL
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyDataConnector')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyDataConnector [bit] NULL
+END
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopySystemConfiguration')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopySystemConfiguration [bit] NULL
+END
+
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyEmailConfiguration')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyEmailConfiguration [bit] NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyGoogleMapConfiguration')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyGoogleMapConfiguration [bit] NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyReportConfiguration')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyReportConfiguration [bit] NULL
+END
+
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaWorkspace' AND COLUMN_NAME='CopyOnlySettings')
+BEGIN
+    ALTER TABLE IzendaWorkspace ADD CopyOnlySettings [bit] NULL
+END
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaWorkspaceSchedule]') AND type in (N'U'))
+BEGIN
+    CREATE TABLE [dbo].[IzendaWorkspaceSchedule]
+    (
+        [Id] [uniqueidentifier] PRIMARY KEY,
+        [WorkspaceId] [uniqueidentifier] NOT NULL,
+        [Deleted] [bit] NULL,
+        [Version] [int] NULL,
+        [Created] [datetime] NULL,
+        [CreatedBy] [nvarchar](256) NULL,
+        [CreatedById] [uniqueidentifier] NULL,
+        [Modified] [datetime] NULL,
+        [ModifiedBy] [nvarchar](256) NULL,
+        [Schedule] [nvarchar](max) NULL,
+        [TimeZoneName] [nvarchar](256) NULL,
+        [TimeZoneValue] [nvarchar](256) NULL,
+        [StartDate] [datetime] NULL,
+        [StartDateUtc] [datetime] NULL,
+        [StartTime] [datetime] NULL,
+        [RecurrenceType] [int] NULL,
+        [RecurrencePattern] [int] NULL,
+        [RecurrencePatternValue] [nvarchar](max) NULL,
+        [IsEndless] [bit] NULL,
+        [IsScheduled] [bit] NULL,
+        [Occurrence] [int] NULL,
+        [EndDate] [datetime] NULL,
+        [EndDateUtc] [datetime] NULL,
+        [LastSuccessfulRun] [nvarchar](500) NULL,
+        [LastSuccessfulRunDate] [datetime] NULL,
+        [NextScheduledRun] [nvarchar](500) NULL,
+        [NextScheduledRunDate] [datetime] NULL
+    )
+END
+IF NOT EXISTS ( SELECT * FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='IzendaRelationship' AND COLUMN_NAME='Disabled')
+BEGIN
+    ALTER TABLE [IzendaRelationship] ADD [Disabled] bit NULL
+END;
+GO
+
+UPDATE IzendaRelationship SET [Disabled] = 0
+WHERE [Disabled] IS NULL;
+
+UPDATE IzendaDBVersion SET Version = '3.10.0';
+
+
+-- ========================================================
+-- v3.10.1
+-- ========================================================
+UPDATE IzendaDBVersion SET Version = '3.10.1';
+
+
+-- ========================================================
+-- v3.10.2
+-- ========================================================
+UPDATE IzendaDBVersion SET Version = '3.10.2';
+
+
+-- ========================================================
+-- v3.10.3
+-- ========================================================
+UPDATE IzendaDBVersion SET Version = '3.10.3';
+
+
+-- ========================================================
+-- v3.10.4
+-- ========================================================
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaExportQueue]') AND type in (N'U'))
+BEGIN
+	CREATE TABLE [dbo].[IzendaExportQueue]
+	(
+		[Id] [uniqueidentifier] PRIMARY KEY,
+		[ReportID] [uniqueidentifier] NULL,
+		[DashboardID] [uniqueidentifier] NULL,
+		[TenantID] [uniqueidentifier] NULL,
+		[Status] [smallint] NOT NULL,
+		[FilterValueSelection][nvarchar](MAX) NULL,
+		[ExportFileType] [nvarchar](50) NOT NULL, 
+	    	[CreatedByUserId] [uniqueidentifier] NOT NULL,
+		[Name] [nvarchar](512) NOT NULL,
+		[FileName] [nvarchar](512) NULL,
+		[Reapeat] [bit] NOT NULL,
+		[Refreshed] [datetime] NULL,
+		[Deleted] [bit] NULL,
+		[Version] [int] NULL,
+		[Created] [datetime] NULL,
+		[CreatedBy] [nvarchar](256) NULL,
+		[Modified] [datetime] NULL,
+		[ModifiedBy] [nvarchar](256) NULL
+	) ON [PRIMARY]
+END
+
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaExportQueueFilterField]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[IzendaExportQueueFilterField](
+	[Id] [uniqueidentifier] NOT NULL,
+	[FilterFieldId] [uniqueidentifier] NULL,
+	[CommonFilterFieldId] [uniqueidentifier] NULL,
+	[Value] [nvarchar](max) NULL,
+	[OperatorId] [uniqueidentifier] NULL,
+	[OperatorSetting] [nvarchar](100) NULL,
+	[ExportQueueId] [uniqueidentifier] NOT NULL,
+	[Deleted] [bit] NULL,
+	[Version] [int] NULL,
+	[Created] [datetime] NULL,
+	[CreatedBy] [nvarchar](256) NULL,
+	[Modified] [datetime] NULL,
+	[ModifiedBy] [nvarchar](256) NULL
+ CONSTRAINT [PK_IzendaExportQueueFilterField] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+END
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaExportQueueSetting]') AND type in (N'U'))
+BEGIN
+	CREATE TABLE [dbo].[IzendaExportQueueSetting](
+		[Id] [uniqueidentifier] NOT NULL PRIMARY KEY,	
+		[IsEnableAsyncExporting] [bit] NULL,
+		[IsEnableSmartExporting] [bit] NULL,
+		[AsyncExportingInterval] [int] NULL,
+		[AsyncRefreshExportingInterval] [int] NULL,
+		[AsyncArchiveExportingInterval] [int] NULL,
+		[AsyncExportingPath] [nvarchar](256) NULL,
+		[IsEnableAsyncExportingEncryption] [bit] NULL,
+		[ExportQueueFileStorage] [int] NOT NULL,
+		[AzureFileServiceConnectionString] [nvarchar](256) NULL,
+		[AWSS3BucketName] [nvarchar](256) NULL,
+		[AWSAccessKey] [nvarchar](256) NULL,
+		[AWSSecretKey] [nvarchar](256) NULL,
+		[Region] [nvarchar](256) NULL,
+		[Deleted] [bit] NULL,
+		[Version] [int] NULL,
+		[Created] [datetime] NULL,
+		[CreatedBy] [nvarchar](256) NULL,
+		[Modified] [datetime] NULL,
+		[ModifiedBy] [nvarchar](256) NULL
+	)
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaExportQueueSetting WHERE Id = '0E9936B5-6837-4265-96E7-0EB2354D94DC')
+BEGIN
+	INSERT INTO [dbo].[IzendaExportQueueSetting]([Id], [IsEnableAsyncExporting], [IsEnableSmartExporting], [AsyncExportingInterval],[AsyncRefreshExportingInterval],[AsyncArchiveExportingInterval],[AsyncExportingPath],[IsEnableAsyncExportingEncryption],[Version],[Deleted],[ExportQueueFileStorage]) VALUES('0E9936B5-6837-4265-96E7-0EB2354D94DC',0,0,0,0,0,'',0,1,0,0);
+END
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaSmartExportSetting]') AND type in (N'U'))
+BEGIN
+	CREATE TABLE [dbo].[IzendaSmartExportSetting](
+		[Id] [uniqueidentifier] NOT NULL PRIMARY KEY,
+		[ReportDashBoard] [nvarchar](256) NOT NULL,
+		[AverageRenderTime] [float] NOT NULL,
+		[ReportPartCount] [smallint] NOT NULL,
+		[Deleted] [bit] NULL,
+		[Version] [int] NULL,
+		[Created] [datetime] NULL,
+		[CreatedBy] [nvarchar](256) NULL,
+		[Modified] [datetime] NULL,
+		[ModifiedBy] [nvarchar](256) NULL
+	)
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaSmartExportSetting WHERE Id = '91010F2E-3C22-46D6-9B4A-1B933D0341EF')
+BEGIN
+	INSERT INTO [dbo].[IzendaSmartExportSetting]([Id],[ReportDashBoard],[AverageRenderTime],[ReportPartCount],[Deleted]) VALUES('91010F2E-3C22-46D6-9B4A-1B933D0341EF','ALL',10, 3,0);
+END
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaSmartExportOptions]') AND type in (N'U'))
+BEGIN
+	CREATE TABLE [dbo].[IzendaSmartExportOptions](
+		[Id] [uniqueidentifier] NOT NULL PRIMARY KEY,
+		[ReportPartType] [nvarchar](50) NOT NULL,
+		[GridReportPartType] [nvarchar](50) NULL,
+		[ChartReportPartType] [nvarchar](50) NULL,
+		[IsEmabaedSubReport] [bit] NULL,
+		[IsSeperator] [bit] NULL,
+		[IsCalculatedField] [bit] NULL,
+		[ExportFileType] [nvarchar](50) NULL, 
+		[Deleted] [bit] NULL,
+		[Version] [int] NULL,
+		[Created] [datetime] NULL,
+		[CreatedBy] [nvarchar](256) NULL,
+		[Modified] [datetime] NULL,
+		[ModifiedBy] [nvarchar](256) NULL
+	);
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaSmartExportOptions WHERE Id = '7DED2613-D8A8-4182-AA86-0302E49E7043')
+BEGIN
+	INSERT INTO [dbo].[IzendaSmartExportOptions]( [Id],[ReportPartType],[Deleted],[IsEmabaedSubReport],[IsCalculatedField]) Values ('7DED2613-D8A8-4182-AA86-0302E49E7043','ALL',0,1,1);
+END
+
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaNotification]') AND type in (N'U'))
+BEGIN
+	CREATE TABLE [dbo].[IzendaNotification]
+	(
+		[Id] [uniqueidentifier] PRIMARY KEY,
+		[NotificationMessageID] [smallint] NOT NULL,
+		[UserID] [uniqueidentifier] NOT NULL,
+		[ReplaceValues] [nvarchar](max) NULL,
+		[AssoicatedID] [uniqueidentifier] NULL,
+		[Status] [smallint] NOT NULL,
+		[Deleted] [bit] NULL,
+		[Version] [int] NULL,
+		[Created] [datetime] NULL,
+		[CreatedBy] [nvarchar](256) NULL,
+		[Modified] [datetime] NULL,
+		[ModifiedBy] [nvarchar](256) NULL
+	) ON [PRIMARY]
+END
+
+IF NOT EXISTS (SELECT * FROM IzendaSystemSetting WHERE Id = '9127F51B-502A-4725-8766-8BE2CC78A6BE')
+BEGIN
+	INSERT INTO [IzendaSystemSetting]([Id],[Name],[Value],[Deleted]) VALUES ('9127F51B-502A-4725-8766-8BE2CC78A6BE','NotificationInterval','60',0);
+END
+
+UPDATE IzendaDBVersion SET Version = '3.10.4';
+
+
+-- ========================================================
+-- v3.10.5
+-- ========================================================
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaTenantTenantGroup]') AND type in (N'U'))
+BEGIN
+    CREATE TABLE [dbo].[IzendaTenantTenantGroup](
+        [TenantId] [uniqueidentifier] NOT NULL,
+        [TenantGroupId] [uniqueidentifier] NOT NULL
+    ) ON [PRIMARY]
+END
+
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[IzendaTenantGroup]') AND type in (N'U'))
+BEGIN
+    CREATE TABLE [dbo].[IzendaTenantGroup](
+        [Id] [uniqueidentifier] PRIMARY KEY,
+        [Name] [nvarchar](256) NOT NULL,
+        [Version] [int] NULL,
+        [Created] [datetime] NULL,
+        [CreatedBy] [nvarchar](256) NULL,
+        [Modified] [datetime] NULL,
+        [ModifiedBy] [nvarchar](256) NULL,
+        [Deleted] [bit] NULL
+    ) ON [PRIMARY]
+END
+
+IF EXISTS (
+    SELECT 1
+    FROM sys.indexes AS si
+    JOIN sys.objects AS so on si.object_id=so.object_id
+    JOIN sys.schemas AS sc on so.schema_id=sc.schema_id
+    WHERE 
+        so.name ='IzendaTenantTenantGroup' /* Table */
+        AND si.name='IX_TenantTenantGroup_TenantId' /* Index */
+)
+    PRINT 'IX_TenantTenantGroup_TenantId exists!'
+ELSE
+    CREATE NONCLUSTERED INDEX [IX_TenantTenantGroup_TenantId] ON [dbo].[IzendaTenantTenantGroup]
+    (
+        [TenantId] ASC
+    ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+
+IF EXISTS (
+    SELECT 1
+    FROM sys.indexes AS si
+    JOIN sys.objects AS so on si.object_id=so.object_id
+    JOIN sys.schemas AS sc on so.schema_id=sc.schema_id
+    WHERE 
+        so.name ='IzendaTenantTenantGroup' /* Table */
+        AND si.name='IX_TenantTenantGroup_TenantGroupId' /* Index */
+)
+    PRINT 'IX_TenantTenantGroup_TenantGroupId exists!'
+ELSE
+    CREATE NONCLUSTERED INDEX [IX_TenantTenantGroup_TenantGroupId] ON [dbo].[IzendaTenantTenantGroup]
+    (
+        [TenantGroupId] ASC
+    ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+;
+
+-- inserting the report data at the end, to accomodate all the cumulative ALTERs done to the schema.
+INSERT [dbo].[IzendaReport] ([Id], [Name], [Type], [PreviewRecord], [AdvancedMode], [AllowNulls], [IsDistinct], [CategoryId], [SubCategoryId], [TenantId], [Description], [HeaderContent], [FooterContent], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [LastViewed], [Owner], [OwnerId], [Title], [TitleDescriptionContent], [ExcludedRelationships], [NumberOfView], [RenderingTime], [CreatedById], [ModifiedById], [ExportFormatSettingData], [SnapToGrid], [UsingFields], [SourceId], [Params], [Relationships], [UsingFieldNames], [IsGlobal], [ReportMode]) VALUES (N'2c309bc6-f9c7-424b-a51e-55cfc46a8e25', N'Orders by Customer by Country', 0, 100, 1, 0, 0, N'063ae899-45ce-4cd2-a849-f4bbd2049516', NULL, NULL, N'', N'{"visible":false,"items":[{"isDirty":false,"type":"image","label":"Image","id":"formatDetails_613","positionX":0,"positionY":0,"width":6,"height":6,"name":"Logo Image","value":"","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageUrl":"http://","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_614","positionX":20,"positionY":0,"width":12,"height":2,"name":"Report Name","value":"{reportName}","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"thinHorizontalRule","label":"Horizontal Rule","id":"formatDetails_615","positionX":20,"positionY":4,"width":12,"height":1,"name":"Upper Separator Line","value":"{horizontalRule}","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":2,"isSelected":false},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_616","positionX":20,"positionY":5,"width":6,"height":2,"name":"Report Generated","value":"Report Generated:","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_617","positionX":20,"positionY":7,"width":6,"height":2,"name":"User","value":"User:","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_618","positionX":20,"positionY":9,"width":6,"height":2,"name":"Tenant","value":"Tenant:","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"dateTime","label":"Date Time","id":"formatDetails_619","positionX":26,"positionY":5,"width":6,"height":2,"name":"Current Date Time","value":"{currentDateTime}","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_620","positionX":26,"positionY":7,"width":6,"height":2,"name":"Current User Name","value":"{currentUserName}","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_621","positionX":26,"positionY":9,"width":6,"height":2,"name":"Tenant Name","value":"{tenantName}","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_622","positionX":0,"positionY":11,"width":32,"height":1,"name":"Lower Separator Line","value":"{horizontalRule}","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":4,"isSelected":false}]}', N'{"visible":false,"items":[{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_623","positionX":0,"positionY":0,"width":32,"height":1,"name":"Separator Line","value":"{horizontalRule}","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":4,"isSelected":false},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_624","positionX":0,"positionY":1,"width":10,"height":2,"name":"Footer Text","value":"Footer Text","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_625","positionX":20,"positionY":1,"width":4,"height":2,"name":"Page","value":"Page","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"pageNumber","label":"Page Number","id":"formatDetails_626","positionX":24,"positionY":1,"width":8,"height":2,"name":"Page Number","value":"{pageNumber}","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2}]}', 1, 0, CAST(N'2020-11-13T03:37:54.817' AS DateTime), N'System Admin', CAST(N'2020-11-13T03:37:54.817' AS DateTime), N'System Admin', CAST(N'2020-11-13T03:38:42.873' AS DateTime), N'System Admin', N'9d2f1d51-0e3d-44db-bfc7-da94a7581bfe', N'', N'{"visible":false,"items":[{"isDirty":false,"type":"title","label":"Title","id":"formatDetails_627","name":"Title","value":"","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false},{"isDirty":false,"type":"description","label":"Description","id":"formatDetails_628","name":"Description","value":"","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false}]}', N'', 1, 7557, N'9d2f1d51-0e3d-44db-bfc7-da94a7581bfe', N'9d2f1d51-0e3d-44db-bfc7-da94a7581bfe', N'{"Orientation":0,"Margins":0,"CenterOnPage":{"Horizontally":false,"Vertically":false},"PageBreakAfterReportPart":false,"MarginSettings":[{"Type":3,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":0,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":1,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.25,"RightValue":0.25,"HeaderValue":0.3,"FooterValue":0.3},{"Type":2,"TopValue":1.0,"BottomValue":1.0,"LeftValue":1.0,"RightValue":1.0,"HeaderValue":0.5,"FooterValue":0.5}]}', 0, NULL, N'415d986b-99f3-4e42-b57f-072d54d11d24', N'[{"Categories":[{"QuerySourceNames":["Customers","Orders"],"Id":"ef86ecc7-b553-4750-9d27-b83aa2b27dea","Name":"dbo"}],"Id":"76fb9a34-b160-4d59-b16b-608c7a1d0217","Name":"retail"}]', N'[{"JoinConnectionId":"0302b1cb-7488-4a3a-b43f-4cf4ea69caed","ForeignConnectionId":"0302b1cb-7488-4a3a-b43f-4cf4ea69caed","JoinQuerySourceAlias":null,"ForeignQuerySourceAlias":null,"JoinFieldAlias":null,"SpecifictJoinFieldAlias":null,"ForeignFieldAlias":null,"SpecifictForeignFieldAlias":null,"Alias":"","SystemRelationship":false,"Disabled":false,"JoinType":"Inner","ParentRelationshipId":"544d82b9-7eff-4f1e-8d16-a71522f98fa1","Position":null,"RelationshipPosition":0,"HasBeenModified":true,"IsPredictionRelation":false,"PredictionRelationId":null,"PredictionId":null,"HasBeenOrdered":false,"HasBeenTried":false,"RelationshipKeyJoins":[],"ReportId":"415d986b-99f3-4e42-b57f-072d54d11d24","ForeignAlias":"","JoinQuerySourceUniqueName":"[con;#0].[cat;#0].[Orders]","JoinFieldUniqueName":"[con;#0].[cat;#0].[Orders].[CustomerID]","ForgeinQuerySourceUniqueName":"[con;#0].[cat;#0].[Customers]","ForgeinFieldUniqueName":"[con;#0].[cat;#0].[Customers].[CustomerID]","TempId":"ea912cef-884a-4d1c-af26-f079b9057b4a","AliasTempId":"alias_225","OriginalId":"00000000-0000-0000-0000-000000000000","IsForeignDataObjectAlias":false,"PositionId":null,"SelectedJoinAlias":"921cd423-c1b7-48a3-86fb-08694cc1b8c4_Orders","SelectedForeignAlias":"206ca737-a7a1-4d91-96fc-d258540ba582_Customers","JoinQuerySourceName":"Orders","JoinQuerySourceId":"921cd423-c1b7-48a3-86fb-08694cc1b8c4","JoinFieldId":"8cedafbf-8aea-4ad9-ba2b-1868e674ec14","JoinFieldType":null,"ForeignQuerySourceName":"Customers","ForeignQuerySourceId":"206ca737-a7a1-4d91-96fc-d258540ba582","ForeignFieldId":"39d0c443-2441-4861-bf44-3e3381c6c987","ForeignFieldType":null,"JoinFieldName":"CustomerID","ForeignFieldName":"CustomerID","JoinDataSourceCategoryId":"00000000-0000-0000-0000-000000000000","JoinDataSourceCategoryName":"","ForeignDataSourceCategoryId":"00000000-0000-0000-0000-000000000000","ForeignDataSourceCategoryName":"","ComparisonOperator":"= (Field)","CombinationKey":".= (Field).206ca737-a7a1-4d91-96fc-d258540ba582.39d0c443-2441-4861-bf44-3e3381c6c987.8cedafbf-8aea-4ad9-ba2b-1868e674ec14.921cd423-c1b7-48a3-86fb-08694cc1b8c4.Customers.Orders","Id":"ea912cef-884a-4d1c-af26-f079b9057b4a","State":0,"Deleted":false,"Inserted":true,"Version":null,"Created":null,"Modified":null}]', N'["[con;#0].[cat;#0].[Orders].[ShipCountry]","[con;#0].[cat;#0].[Customers].[CompanyName]","[con;#0].[cat;#0].[Orders].[OrderID]"]', 0, 0)
+INSERT [dbo].[IzendaReport] ([Id], [Name], [Type], [PreviewRecord], [AdvancedMode], [AllowNulls], [IsDistinct], [CategoryId], [SubCategoryId], [TenantId], [Description], [HeaderContent], [FooterContent], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [LastViewed], [Owner], [OwnerId], [Title], [TitleDescriptionContent], [ExcludedRelationships], [NumberOfView], [RenderingTime], [CreatedById], [ModifiedById], [ExportFormatSettingData], [SnapToGrid], [UsingFields], [SourceId], [Params], [Relationships], [UsingFieldNames], [IsGlobal], [ReportMode]) VALUES (N'b649c6e2-22b7-4f78-92b4-923fa88796ea', N'Orders by Country per Year', 0, 10000, 1, 0, 0, N'063ae899-45ce-4cd2-a849-f4bbd2049516', NULL, NULL, N'', N'{"visible":false,"items":[{"isDirty":false,"type":"image","label":"Image","id":"formatDetails_740","positionX":0,"positionY":0,"width":6,"height":6,"name":"Logo Image","value":"","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageUrl":"http://","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_741","positionX":20,"positionY":0,"width":12,"height":2,"name":"Report Name","value":"{reportName}","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"thinHorizontalRule","label":"Horizontal Rule","id":"formatDetails_742","positionX":20,"positionY":4,"width":12,"height":1,"name":"Upper Separator Line","value":"{horizontalRule}","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":2,"isSelected":false},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_743","positionX":20,"positionY":5,"width":6,"height":2,"name":"Report Generated","value":"Report Generated:","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_744","positionX":20,"positionY":7,"width":6,"height":2,"name":"User","value":"User:","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_745","positionX":20,"positionY":9,"width":6,"height":2,"name":"Tenant","value":"Tenant:","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"dateTime","label":"Date Time","id":"formatDetails_746","positionX":26,"positionY":5,"width":6,"height":2,"name":"Current Date Time","value":"{currentDateTime}","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_747","positionX":26,"positionY":7,"width":6,"height":2,"name":"Current User Name","value":"{currentUserName}","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_748","positionX":26,"positionY":9,"width":6,"height":2,"name":"Tenant Name","value":"{tenantName}","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_749","positionX":0,"positionY":11,"width":32,"height":1,"name":"Lower Separator Line","value":"{horizontalRule}","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":4,"isSelected":false}]}', N'{"visible":false,"items":[{"isDirty":false,"type":"horizontalRule","label":"Horizontal Rule","id":"formatDetails_750","positionX":0,"positionY":0,"width":32,"height":1,"name":"Separator Line","value":"{horizontalRule}","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":4,"isSelected":false},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_751","positionX":0,"positionY":1,"width":10,"height":2,"name":"Footer Text","value":"Footer Text","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"text","label":"Text","id":"formatDetails_752","positionX":20,"positionY":1,"width":4,"height":2,"name":"Page","value":"Page","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2},{"isDirty":false,"type":"pageNumber","label":"Page Number","id":"formatDetails_753","positionX":24,"positionY":1,"width":8,"height":2,"name":"Page Number","value":"{pageNumber}","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false,"minHeight":2}]}', 1, 0, CAST(N'2020-11-13T03:37:54.707' AS DateTime), N'System Admin', CAST(N'2020-11-13T03:37:54.707' AS DateTime), N'System Admin', CAST(N'2020-11-13T03:37:54.707' AS DateTime), N'System Admin', N'9d2f1d51-0e3d-44db-bfc7-da94a7581bfe', N'', N'{"visible":false,"items":[{"isDirty":false,"type":"title","label":"Title","id":"formatDetails_754","name":"Title","value":"","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false},{"isDirty":false,"type":"description","label":"Description","id":"formatDetails_755","name":"Description","value":"","font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"#000","backgroundColor":"#fff"},"color":"#000","imageDimensions":{"imageWidth":1,"imageHeight":1,"isConstrainProportions":true},"dashStyle":"solid","thickness":1,"isSelected":false}]}', N'', 0, 0, N'9d2f1d51-0e3d-44db-bfc7-da94a7581bfe', N'9d2f1d51-0e3d-44db-bfc7-da94a7581bfe', N'{"Orientation":0,"Margins":0,"CenterOnPage":{"Horizontally":false,"Vertically":false},"PageBreakAfterReportPart":false,"MarginSettings":[{"Type":3,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":0,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.7,"RightValue":0.7,"HeaderValue":0.3,"FooterValue":0.3},{"Type":1,"TopValue":0.75,"BottomValue":0.75,"LeftValue":0.25,"RightValue":0.25,"HeaderValue":0.3,"FooterValue":0.3},{"Type":2,"TopValue":1.0,"BottomValue":1.0,"LeftValue":1.0,"RightValue":1.0,"HeaderValue":0.5,"FooterValue":0.5}]}', 0, NULL, N'21908bef-0c40-4887-892e-5bb6a564cba3', N'[{"Categories":[{"QuerySourceNames":["Orders"],"Id":"ef86ecc7-b553-4750-9d27-b83aa2b27dea","Name":"dbo"}],"Id":"76fb9a34-b160-4d59-b16b-608c7a1d0217","Name":"retail"}]', N'[]', N'["[con;#0].[cat;#0].[Orders].[ShipCountry]","[con;#0].[cat;#0].[Orders].[OrderDate]","[con;#0].[cat;#0].[Orders].[ShipCity]","[con;#0].[cat;#0].[Orders].[OrderID]"]', 0, 0)
+INSERT [dbo].[IzendaReportFilter] ([Id], [Logic], [Visible], [ReportId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'c20e2831-42c3-4011-87e7-61c6bb6ae976', N'', 0, N'b649c6e2-22b7-4f78-92b4-923fa88796ea', 5, 0, CAST(N'2020-10-19T21:02:52.420' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:27:04.243' AS DateTime), N'System Admin')
+INSERT [dbo].[IzendaReportFilter] ([Id], [Logic], [Visible], [ReportId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'e3122e4a-c24e-49a2-977f-996b3cee1cae', N'', 0, N'2c309bc6-f9c7-424b-a51e-55cfc46a8e25', 3, 0, CAST(N'2020-10-19T21:15:31.013' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:21:10.920' AS DateTime), N'System Admin')
+INSERT [dbo].[IzendaFilterField] ([Id], [FilterId], [QuerySourceFieldId], [QuerySourceId], [QuerySourceType], [RelationshipId], [Position], [Alias], [ReportFieldAlias], [ReportPartTitle], [Visible], [Required], [Cascading], [OperatorId], [OperatorSetting], [Value], [DataFormatId], [FontFamily], [FontSize], [TextColor], [BackgroundColor], [FontBold], [FontItalic], [FontUnderline], [SortType], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [QuerySourceUniqueName], [QuerySourceFieldName], [ComparisonFieldUniqueName], [IsNegative], [UseLookup]) VALUES (N'31f3312b-daf9-4670-94b2-22efefb34e2a', N'e3122e4a-c24e-49a2-977f-996b3cee1cae', N'679592f8-b9fc-4d1d-9db4-ed36e848627e', NULL, N'Table', NULL, 1, N'Country', NULL, NULL, 1, 0, 1, N'5ce630bc-6615-42c4-b11e-1d09c651eaae', NULL, N'', NULL, N'Proxima Nova', 14, N'#000', N'#fff', 0, 0, 0, N'ASC', 0, 3, CAST(N'2020-10-19T21:15:31.017' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:21:10.923' AS DateTime), N'System Admin', N'[con;#0].[cat;#0].[Orders]', N'ShipCountry', N'', 0, 1)
+INSERT [dbo].[IzendaFilterField] ([Id], [FilterId], [QuerySourceFieldId], [QuerySourceId], [QuerySourceType], [RelationshipId], [Position], [Alias], [ReportFieldAlias], [ReportPartTitle], [Visible], [Required], [Cascading], [OperatorId], [OperatorSetting], [Value], [DataFormatId], [FontFamily], [FontSize], [TextColor], [BackgroundColor], [FontBold], [FontItalic], [FontUnderline], [SortType], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [QuerySourceUniqueName], [QuerySourceFieldName], [ComparisonFieldUniqueName], [IsNegative], [UseLookup]) VALUES (N'0deee27c-0287-4219-9937-ba965de4aaf6', N'c20e2831-42c3-4011-87e7-61c6bb6ae976', N'679592f8-b9fc-4d1d-9db4-ed36e848627e', NULL, N'Table', NULL, 1, N'Country', NULL, NULL, 1, 0, 1, N'5ce630bc-6615-42c4-b11e-1d09c651eaae', NULL, N'', NULL, N'Proxima Nova', 14, N'#000', N'#fff', 0, 0, 0, N'ASC', 0, 2, CAST(N'2020-10-19T21:20:17.547' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:27:04.247' AS DateTime), N'System Admin', N'[con;#0].[cat;#0].[Orders]', N'ShipCountry', N'', 0, 1)
+INSERT [dbo].[IzendaFilterField] ([Id], [FilterId], [QuerySourceFieldId], [QuerySourceId], [QuerySourceType], [RelationshipId], [Position], [Alias], [ReportFieldAlias], [ReportPartTitle], [Visible], [Required], [Cascading], [OperatorId], [OperatorSetting], [Value], [DataFormatId], [FontFamily], [FontSize], [TextColor], [BackgroundColor], [FontBold], [FontItalic], [FontUnderline], [SortType], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [QuerySourceUniqueName], [QuerySourceFieldName], [ComparisonFieldUniqueName], [IsNegative], [UseLookup]) VALUES (N'1833027a-2577-4c02-8a0a-d3ebec6a4b25', N'e3122e4a-c24e-49a2-977f-996b3cee1cae', N'0ec0ba45-72fb-4954-82cc-21ad7d445ca5', NULL, N'Table', NULL, 2, N'Company', NULL, NULL, 1, 0, 1, N'5ce630bc-6615-42c4-b11e-1d09c651eaae', NULL, N'', NULL, N'Proxima Nova', 14, N'#000', N'#fff', 0, 0, 0, N'ASC', 0, 2, CAST(N'2020-10-19T21:17:12.073' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:21:10.923' AS DateTime), N'System Admin', N'[con;#0].[cat;#0].[Customers]', N'CompanyName', N'', 0, 1)
+INSERT [dbo].[IzendaReportDataSource] ([Id], [QuerySourceId], [ReportId], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [QuerySourceUniqueName]) VALUES (N'2a8ecea3-7761-43e9-9861-620136cc0a64', NULL, N'b649c6e2-22b7-4f78-92b4-923fa88796ea', 0, 1, CAST(N'2020-10-19T21:27:04.240' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:27:04.240' AS DateTime), N'System Admin', N'[con;#0].[cat;#0].[Orders]')
+INSERT [dbo].[IzendaReportDataSource] ([Id], [QuerySourceId], [ReportId], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [QuerySourceUniqueName]) VALUES (N'e91aaafc-3ac4-4949-b59e-cff37c72964a', NULL, N'2c309bc6-f9c7-424b-a51e-55cfc46a8e25', 0, 1, CAST(N'2020-10-19T21:21:10.917' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:21:10.917' AS DateTime), N'System Admin', N'[con;#0].[cat;#0].[Customers]')
+INSERT [dbo].[IzendaReportDataSource] ([Id], [QuerySourceId], [ReportId], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [QuerySourceUniqueName]) VALUES (N'd2fe2506-71fe-44dd-9302-f736c5654d70', NULL, N'2c309bc6-f9c7-424b-a51e-55cfc46a8e25', 0, 1, CAST(N'2020-10-19T21:21:10.917' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:21:10.917' AS DateTime), N'System Admin', N'[con;#0].[cat;#0].[Orders]')
+INSERT [dbo].[IzendaReportDataSource] ([Id], [QuerySourceId], [ReportId], [Deleted], [Version], [Created], [CreatedBy], [Modified], [ModifiedBy], [QuerySourceUniqueName]) VALUES (N'4457484f-73a9-4ce9-ac3c-e30c23938729', NULL, N'b649c6e2-22b7-4f78-92b4-923fa88796ea', 0, 1, CAST(N'2020-10-19T21:27:04.240' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:27:04.240' AS DateTime), N'System Admin', N'[con;#0].[cat;#0].[Orders]')
+INSERT [dbo].[IzendaReportPart] ([Id], [Title], [PositionX], [PositionY], [Width], [Height], [Content], [NumberOfRecord], [ReportId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [SourceId]) VALUES (N'fb9703eb-3fc2-4fd5-b95b-9509b08e5990', N'Grid', 0, 5, 9, 7, N'{"customContainers":[],"columns":{"text":null,"properties":{"addSideTotal":false,"useExpanders":false},"settings":{},"collapsableList":[],"elements":[{"name":"Year","properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"dataType":"Datetime","expression":null,"expressionSyntax":null,"extendedProperties":{},"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","isOperator":false,"name":"Group","syntax":null,"userDefined":false,"formatDataType":"Datetime"},"format":{"formatId":"76875180-32c1-4180-b92f-03bdb14c4f6a","format":"Year","groupBy":"year","formatDataType":null,"createNewHiddenPercenOfGroupField":false},"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":"","levels":[]},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"columnGroup":"","verticalHeader":false,"verticalHeaderHeight":{"value":null}},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"settings":{},"chartType":null,"showTotal":false,"position":1,"field":{"fieldId":"eaae2f81-414a-42e5-ace4-6fc794276d96","fieldUniqueName":"[con;#0].[cat;#0].[Orders].[OrderDate]","originalName":null,"fieldName":"OrderDate","fieldNameAlias":"Year","dataFieldType":"Datetime","querySourceId":"921cd423-c1b7-48a3-86fb-08694cc1b8c4","querySourceUniqueName":"[con;#0].[cat;#0].[Orders]","querySourceType":"Table","sourceAlias":"Orders","relationData":{"fieldId":"00000000-0000-0000-0000-000000000000","fieldUniqueName":null,"originalName":null,"fieldName":null,"fieldNameAlias":null,"dataFieldType":null,"querySourceId":null,"querySourceUniqueName":null,"querySourceType":null,"sourceAlias":null,"relationData":null,"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":false,"filterable":false,"reportId":null,"fieldFunctionExpression":null,"expression":null,"grandTotalExpression":null,"grandTotalFormat":null,"subTotalExpression":null,"subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":null,"formating":null,"functionDataType":null,"isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null},"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":true,"filterable":false,"reportId":null,"fieldFunctionExpression":"DATEFORMAT(year ,[OrderDate])","expression":null,"grandTotalExpression":"","grandTotalFormat":null,"subTotalExpression":"","subtotalFormat":null,"sort":"ASC","autoSort":false,"function":"Group","formating":{"format":"76875180-32c1-4180-b92f-03bdb14c4f6a","createNewHiddenPercenOfGroupField":false},"functionDataType":"Datetime","isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null}}]},"rows":{"text":null,"properties":{"useExpanders":true},"settings":{},"collapsableList":[],"elements":[{"name":"Country","properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"dataType":"Text","expression":null,"expressionSyntax":null,"extendedProperties":{},"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","isOperator":false,"name":"Group","syntax":null,"userDefined":false,"formatDataType":"Text"},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"sort":"Unsorted","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":"","levels":[]},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"columnGroup":"","verticalHeader":false,"verticalHeaderHeight":{"value":null}},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"settings":{},"chartType":null,"showTotal":false,"position":1,"field":{"fieldId":"679592f8-b9fc-4d1d-9db4-ed36e848627e","fieldUniqueName":"[con;#0].[cat;#0].[Orders].[ShipCountry]","originalName":null,"fieldName":"ShipCountry","fieldNameAlias":"Country","dataFieldType":"Text","querySourceId":"921cd423-c1b7-48a3-86fb-08694cc1b8c4","querySourceUniqueName":"[con;#0].[cat;#0].[Orders]","querySourceType":"Table","sourceAlias":"Orders","relationData":{"fieldId":"00000000-0000-0000-0000-000000000000","fieldUniqueName":null,"originalName":null,"fieldName":null,"fieldNameAlias":null,"dataFieldType":null,"querySourceId":null,"querySourceUniqueName":null,"querySourceType":null,"sourceAlias":null,"relationData":null,"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":false,"filterable":false,"reportId":null,"fieldFunctionExpression":null,"expression":null,"grandTotalExpression":null,"grandTotalFormat":null,"subTotalExpression":null,"subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":null,"formating":null,"functionDataType":null,"isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null},"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":true,"filterable":false,"reportId":null,"fieldFunctionExpression":"","expression":null,"grandTotalExpression":"","grandTotalFormat":null,"subTotalExpression":"","subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":"Group","formating":{"format":null,"createNewHiddenPercenOfGroupField":false},"functionDataType":"Text","isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null}},{"name":"City","properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"dataType":"Text","expression":null,"expressionSyntax":null,"extendedProperties":{},"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","isOperator":false,"name":"Group","syntax":null,"userDefined":false,"formatDataType":"Text"},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"sort":"Unsorted","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":"","levels":[]},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"columnGroup":"","verticalHeader":false,"verticalHeaderHeight":{"value":null}},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"settings":{},"chartType":null,"showTotal":false,"position":2,"field":{"fieldId":"b2f240f8-8eeb-4189-86fb-344a9063b51b","fieldUniqueName":"[con;#0].[cat;#0].[Orders].[ShipCity]","originalName":null,"fieldName":"ShipCity","fieldNameAlias":"City","dataFieldType":"Text","querySourceId":"921cd423-c1b7-48a3-86fb-08694cc1b8c4","querySourceUniqueName":"[con;#0].[cat;#0].[Orders]","querySourceType":"Table","sourceAlias":"Orders","relationData":{"fieldId":"00000000-0000-0000-0000-000000000000","fieldUniqueName":null,"originalName":null,"fieldName":null,"fieldNameAlias":null,"dataFieldType":null,"querySourceId":null,"querySourceUniqueName":null,"querySourceType":null,"sourceAlias":null,"relationData":null,"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":false,"filterable":false,"reportId":null,"fieldFunctionExpression":null,"expression":null,"grandTotalExpression":null,"grandTotalFormat":null,"subTotalExpression":null,"subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":null,"formating":null,"functionDataType":null,"isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null},"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":true,"filterable":false,"reportId":null,"fieldFunctionExpression":"","expression":null,"grandTotalExpression":"","grandTotalFormat":null,"subTotalExpression":"","subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":"Group","formating":{"format":null,"createNewHiddenPercenOfGroupField":false},"functionDataType":"Text","isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null}}]},"values":{"text":null,"properties":{},"settings":{},"collapsableList":[],"elements":[{"name":"Orders","properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"e3e16575-9739-4ff3-950a-7d149f96b4f0","functionInfo":{"dataType":"Numeric","expression":null,"expressionSyntax":null,"extendedProperties":{},"id":"e3e16575-9739-4ff3-950a-7d149f96b4f0","isOperator":false,"name":"Count Distinct","syntax":null,"userDefined":false,"formatDataType":"Numeric"},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"sort":"","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null}},"alternativeText":{"rangePercent":null,"rangeValue":[{"name":"","from":0,"to":0.001,"text":"-","canDelete":true,"id":"setting_142"}],"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":"","levels":[]},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"columnGroup":"","verticalHeader":false,"verticalHeaderHeight":{"value":null}},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"settings":{},"chartType":null,"showTotal":false,"position":1,"field":{"fieldId":"6fab9186-872d-425c-b3ce-023923001a60","fieldUniqueName":"[con;#0].[cat;#0].[Orders].[OrderID]","originalName":null,"fieldName":"OrderID","fieldNameAlias":"Orders","dataFieldType":"Numeric","querySourceId":"921cd423-c1b7-48a3-86fb-08694cc1b8c4","querySourceUniqueName":"[con;#0].[cat;#0].[Orders]","querySourceType":"Table","sourceAlias":"Orders","relationData":{"fieldId":"00000000-0000-0000-0000-000000000000","fieldUniqueName":null,"originalName":null,"fieldName":null,"fieldNameAlias":null,"dataFieldType":null,"querySourceId":null,"querySourceUniqueName":null,"querySourceType":null,"sourceAlias":null,"relationData":null,"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":false,"filterable":false,"reportId":null,"fieldFunctionExpression":null,"expression":null,"grandTotalExpression":null,"grandTotalFormat":null,"subTotalExpression":null,"subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":null,"formating":null,"functionDataType":null,"isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null},"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":true,"filterable":false,"reportId":null,"fieldFunctionExpression":"COUNT( DISTINCT [OrderID])","expression":null,"grandTotalExpression":"","grandTotalFormat":null,"subTotalExpression":"","subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":"Count Distinct","formating":{"format":null,"createNewHiddenPercenOfGroupField":false},"functionDataType":"Numeric","isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null}}]},"separators":{"text":null,"properties":{},"settings":{},"collapsableList":[],"elements":[]},"paginable":true,"type":"3","drilldownType":0,"properties":{"generalInfo":{"gridStyle":"Pivot","separatorStyle":"Comma"},"table":{"border":{"top":{"color":"#dbdcdd","dashStyle":"solid","thinkness":1},"right":{"color":"#dbdcdd","dashStyle":"solid","thinkness":1},"bottom":{"color":"#dbdcdd","dashStyle":"solid","thinkness":1},"midVer":{"color":"#dbdcdd","dashStyle":"solid","thinkness":1},"left":{"color":"#dbdcdd","dashStyle":"solid","thinkness":1},"midHor":{"color":"#dbdcdd","dashStyle":"solid","thinkness":1}},"backgroundColor":"#fff","alternativeBackgroundColor":"#EFEFEF"},"columns":{"width":{"value":150},"alterBackgroundColor":false,"wordWrap":false,"alignment":"left","verticalAlignment":"middle"},"rows":{"alterBackgroundColor":false},"headers":{"font":{"family":"Proxima Nova","size":14,"bold":true,"italic":false,"underline":false,"color":"#45525c","backgroundColor":"#f6f8fa"},"alignment":"left","verticalAlignment":"middle","wordWrap":false,"removeHeaderForExport":false,"removeHeaderForViewer":false,"freezeHeaders":null},"grouping":{"useSeparator":true},"view":{"dataRefreshInterval":{"enable":false,"updateInterval":0,"isAll":true,"latestRecord":0},"conditionalFormatting":{"rules":[]},"usePagination":false,"expanderRowsSpacing":false,"collapseDrilldownByDefault":true,"pageSize":10,"pivotColumnsPerExportedPage":""},"printing":{"usePageBreakAfterSeparator":false},"isDirty":true},"selectedMetric":null,"settings":{},"title":{"text":"","properties":{},"settings":{"font":{"family":"Proxima Nova","size":14,"bold":true,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"collapsableList":[],"elements":[]},"description":{"text":"","properties":{},"settings":{"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"collapsableList":[],"elements":[]},"expandedLevel":-1,"selectedExpandedLevel":0,"isCrossFiltering":true,"isFormatted":false,"hasTheme":false}', NULL, N'b649c6e2-22b7-4f78-92b4-923fa88796ea', 4, 0, CAST(N'2020-10-19T21:06:57.877' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:27:04.257' AS DateTime), N'System Admin', N'c4a5b7a5-66dc-44c6-8565-7d3ee2a01b04')
+INSERT [dbo].[IzendaReportPart] ([Id], [Title], [PositionX], [PositionY], [Width], [Height], [Content], [NumberOfRecord], [ReportId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [SourceId]) VALUES (N'7d763799-062f-42db-a2a7-02370010147c', N'Chart', 0, 0, 12, 5, N'{"customContainers":[{"name":"dynamicThresholds","text":null,"properties":{},"settings":{},"collapsableList":[],"elements":[]}],"labels":{"text":null,"properties":{},"settings":{},"collapsableList":[],"elements":[{"name":"Country","properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"dataType":"Text","expression":null,"expressionSyntax":null,"extendedProperties":{},"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","isOperator":false,"name":"Group","syntax":null,"userDefined":false,"formatDataType":"Text"},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"sort":"Unsorted","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":"","levels":[]},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"columnGroup":"","verticalHeader":false,"verticalHeaderHeight":{"value":null}},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"settings":{},"chartType":null,"showTotal":false,"position":1,"field":{"fieldId":"679592f8-b9fc-4d1d-9db4-ed36e848627e","fieldUniqueName":"[con;#0].[cat;#0].[Orders].[ShipCountry]","originalName":null,"fieldName":"ShipCountry","fieldNameAlias":"Country","dataFieldType":"Text","querySourceId":"921cd423-c1b7-48a3-86fb-08694cc1b8c4","querySourceUniqueName":"[con;#0].[cat;#0].[Orders]","querySourceType":"Table","sourceAlias":"Orders","relationData":{"fieldId":"00000000-0000-0000-0000-000000000000","fieldUniqueName":null,"originalName":null,"fieldName":null,"fieldNameAlias":null,"dataFieldType":null,"querySourceId":null,"querySourceUniqueName":null,"querySourceType":null,"sourceAlias":null,"relationData":null,"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":false,"filterable":false,"reportId":null,"fieldFunctionExpression":null,"expression":null,"grandTotalExpression":null,"grandTotalFormat":null,"subTotalExpression":null,"subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":null,"formating":null,"functionDataType":null,"isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null},"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":true,"filterable":false,"reportId":null,"fieldFunctionExpression":"","expression":null,"grandTotalExpression":"","grandTotalFormat":null,"subTotalExpression":"","subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":"Group","formating":{"format":null,"createNewHiddenPercenOfGroupField":false},"functionDataType":"Text","isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null}},{"name":"City","properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"dataType":"Text","expression":null,"expressionSyntax":null,"extendedProperties":{},"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","isOperator":false,"name":"Group","syntax":null,"userDefined":false,"formatDataType":"Text"},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"sort":"Unsorted","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":"","levels":[]},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"columnGroup":"","verticalHeader":false,"verticalHeaderHeight":{"value":null}},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"settings":{},"chartType":null,"showTotal":false,"position":2,"field":{"fieldId":"b2f240f8-8eeb-4189-86fb-344a9063b51b","fieldUniqueName":"[con;#0].[cat;#0].[Orders].[ShipCity]","originalName":null,"fieldName":"ShipCity","fieldNameAlias":"City","dataFieldType":"Text","querySourceId":"921cd423-c1b7-48a3-86fb-08694cc1b8c4","querySourceUniqueName":"[con;#0].[cat;#0].[Orders]","querySourceType":"Table","sourceAlias":"Orders","relationData":{"fieldId":"00000000-0000-0000-0000-000000000000","fieldUniqueName":null,"originalName":null,"fieldName":null,"fieldNameAlias":null,"dataFieldType":null,"querySourceId":null,"querySourceUniqueName":null,"querySourceType":null,"sourceAlias":null,"relationData":null,"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":false,"filterable":false,"reportId":null,"fieldFunctionExpression":null,"expression":null,"grandTotalExpression":null,"grandTotalFormat":null,"subTotalExpression":null,"subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":null,"formating":null,"functionDataType":null,"isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null},"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":true,"filterable":false,"reportId":null,"fieldFunctionExpression":"","expression":null,"grandTotalExpression":"","grandTotalFormat":null,"subTotalExpression":"","subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":"Group","formating":{"format":null,"createNewHiddenPercenOfGroupField":false},"functionDataType":"Text","isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null}}]},"values":{"text":null,"properties":{},"settings":{},"collapsableList":[],"elements":[{"name":"Orders","properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"e3e16575-9739-4ff3-950a-7d149f96b4f0","functionInfo":{"dataType":"Numeric","expression":null,"expressionSyntax":null,"extendedProperties":{},"id":"e3e16575-9739-4ff3-950a-7d149f96b4f0","isOperator":false,"name":"Count Distinct","syntax":null,"userDefined":false,"formatDataType":"Numeric"},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"sort":"Unsorted","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":"","levels":[]},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"columnGroup":"","verticalHeader":false,"verticalHeaderHeight":{"value":null}},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"settings":{},"chartType":null,"showTotal":false,"position":1,"field":{"fieldId":"6fab9186-872d-425c-b3ce-023923001a60","fieldUniqueName":"[con;#0].[cat;#0].[Orders].[OrderID]","originalName":null,"fieldName":"OrderID","fieldNameAlias":"Orders","dataFieldType":"Numeric","querySourceId":"921cd423-c1b7-48a3-86fb-08694cc1b8c4","querySourceUniqueName":"[con;#0].[cat;#0].[Orders]","querySourceType":"Table","sourceAlias":"Orders","relationData":{"fieldId":"00000000-0000-0000-0000-000000000000","fieldUniqueName":null,"originalName":null,"fieldName":null,"fieldNameAlias":null,"dataFieldType":null,"querySourceId":null,"querySourceUniqueName":null,"querySourceType":null,"sourceAlias":null,"relationData":null,"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":false,"filterable":false,"reportId":null,"fieldFunctionExpression":null,"expression":null,"grandTotalExpression":null,"grandTotalFormat":null,"subTotalExpression":null,"subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":null,"formating":null,"functionDataType":null,"isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null},"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":true,"filterable":false,"reportId":null,"fieldFunctionExpression":"COUNT( DISTINCT [OrderID])","expression":null,"grandTotalExpression":"","grandTotalFormat":null,"subTotalExpression":"","subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":"Count Distinct","formating":{"format":null,"createNewHiddenPercenOfGroupField":false},"functionDataType":"Numeric","isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null}}]},"valuesLabels":{"text":null,"properties":{},"settings":{},"collapsableList":[],"elements":[]},"bubbleSize":{"text":null,"properties":{},"settings":{},"collapsableList":[],"elements":[]},"separators":{"text":null,"properties":{},"settings":{},"collapsableList":[],"elements":[{"name":"Year","properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"dataType":"Datetime","expression":null,"expressionSyntax":null,"extendedProperties":{},"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","isOperator":false,"name":"Group","syntax":null,"userDefined":false,"formatDataType":"Datetime"},"format":{"formatId":"76875180-32c1-4180-b92f-03bdb14c4f6a","format":"Year","groupBy":"year","formatDataType":null,"createNewHiddenPercenOfGroupField":false},"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":"","levels":[]},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"columnGroup":"","verticalHeader":false,"verticalHeaderHeight":{"value":null}},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"settings":{},"chartType":null,"showTotal":false,"position":1,"field":{"fieldId":"eaae2f81-414a-42e5-ace4-6fc794276d96","fieldUniqueName":"[con;#0].[cat;#0].[Orders].[OrderDate]","originalName":null,"fieldName":"OrderDate","fieldNameAlias":"Year","dataFieldType":"Datetime","querySourceId":"921cd423-c1b7-48a3-86fb-08694cc1b8c4","querySourceUniqueName":"[con;#0].[cat;#0].[Orders]","querySourceType":"Table","sourceAlias":"Orders","relationData":{"fieldId":"00000000-0000-0000-0000-000000000000","fieldUniqueName":null,"originalName":null,"fieldName":null,"fieldNameAlias":null,"dataFieldType":null,"querySourceId":null,"querySourceUniqueName":null,"querySourceType":null,"sourceAlias":null,"relationData":null,"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":false,"filterable":false,"reportId":null,"fieldFunctionExpression":null,"expression":null,"grandTotalExpression":null,"grandTotalFormat":null,"subTotalExpression":null,"subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":null,"formating":null,"functionDataType":null,"isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null},"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":true,"filterable":false,"reportId":null,"fieldFunctionExpression":"DATEFORMAT(year ,[OrderDate])","expression":null,"grandTotalExpression":"","grandTotalFormat":null,"subTotalExpression":"","subtotalFormat":null,"sort":"ASC","autoSort":false,"function":"Group","formating":{"format":"76875180-32c1-4180-b92f-03bdb14c4f6a","createNewHiddenPercenOfGroupField":false},"functionDataType":"Datetime","isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null}}]},"type":"0","properties":{"staticProperties":{},"chartType":"Column","vizEngine":"Highcharts","colorTheme":null,"isDefaultTheme":true,"commonOptions":{"izDisableMultiColor":false,"izendaHiddenAllAxis":false,"izChartStyle":{},"izLegend.borderWidth":1,"izLegend.borderVisible":true,"izLegend.verticalAlign":"izBottom","izLegend.horizontalAlign":"izCenter","izLegend.visibility":true,"izHoverLabels":true,"izLegend.borderColor":"#000","izLegend.fontStyling":{"fontWeight":"","fontStyle":"","textDecoration":"","fontSize":"14px","fontFamily":"Proxima Nova","color":"#000","backgroundColor":"#fff"},"izLegend.backgroundColor":"#fff"},"optionByType":{"izTotalLabel":"","izMultiColor":false,"izMultiLevel":false,"legendSettings":true,"izValueLabel":false,"izSpline":false,"izInverted":false,"izUseSeparator":true,"izBottomXpercent":0},"view":{"dataRefreshInterval":{"enable":false,"updateInterval":0,"isAll":true,"latestRecord":0}},"commonXYAxis":{"izGridLine":{"xAxis":{},"yAxis":{}},"izLabelOrientationY":"izNormal","izLabelOrientationX":"izClockwise"},"printing":{"izPageBreakAfterSeparator":false}},"selectedMetric":"Orders","settings":{},"title":{"text":"","properties":{},"settings":{"font":{"family":"Proxima Nova","size":14,"bold":true,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"collapsableList":[],"elements":[]},"description":{"text":"","properties":{},"settings":{"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"collapsableList":[],"elements":[]},"expandedLevel":-1,"selectedExpandedLevel":0,"isCrossFiltering":true,"isFormatted":false,"hasTheme":true,"paginable":false,"drilldownType":1}', NULL, N'b649c6e2-22b7-4f78-92b4-923fa88796ea', 5, 0, CAST(N'2020-10-19T21:02:52.427' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:27:04.257' AS DateTime), N'System Admin', N'6d60513e-7273-48dd-9329-81e7121ff1d7')
+INSERT [dbo].[IzendaReportPart] ([Id], [Title], [PositionX], [PositionY], [Width], [Height], [Content], [NumberOfRecord], [ReportId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [SourceId]) VALUES (N'8bd60556-dbfc-41e3-b87b-205b4851fe84', N'Chart', 0, 0, 9, 7, N'{"customContainers":[{"name":"dynamicThresholds","text":null,"properties":{},"settings":{},"collapsableList":[],"elements":[]}],"labels":{"text":null,"properties":{},"settings":{},"collapsableList":[],"elements":[{"name":"Country","properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"dataType":"Text","expression":null,"expressionSyntax":null,"extendedProperties":{},"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","isOperator":false,"name":"Group","syntax":null,"userDefined":false,"formatDataType":"Text"},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":"","levels":[]},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"columnGroup":"","verticalHeader":false,"verticalHeaderHeight":{"value":null}},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"settings":{},"chartType":null,"showTotal":false,"position":1,"field":{"fieldId":"679592f8-b9fc-4d1d-9db4-ed36e848627e","fieldUniqueName":"[con;#0].[cat;#0].[Orders].[ShipCountry]","originalName":null,"fieldName":"ShipCountry","fieldNameAlias":"Country","dataFieldType":"Text","querySourceId":"921cd423-c1b7-48a3-86fb-08694cc1b8c4","querySourceUniqueName":"[con;#0].[cat;#0].[Orders]","querySourceType":"Table","sourceAlias":"Orders","relationData":{"fieldId":"00000000-0000-0000-0000-000000000000","fieldUniqueName":null,"originalName":null,"fieldName":null,"fieldNameAlias":null,"dataFieldType":null,"querySourceId":null,"querySourceUniqueName":null,"querySourceType":null,"sourceAlias":null,"relationData":null,"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":false,"filterable":false,"reportId":null,"fieldFunctionExpression":null,"expression":null,"grandTotalExpression":null,"grandTotalFormat":null,"subTotalExpression":null,"subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":null,"formating":null,"functionDataType":null,"isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null},"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":true,"filterable":false,"reportId":null,"fieldFunctionExpression":"","expression":null,"grandTotalExpression":"","grandTotalFormat":null,"subTotalExpression":"","subtotalFormat":null,"sort":"ASC","autoSort":false,"function":"Group","formating":{"format":null,"createNewHiddenPercenOfGroupField":false},"functionDataType":"Text","isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null}},{"name":"Company","properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"dataType":"Text","expression":null,"expressionSyntax":null,"extendedProperties":{},"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","isOperator":false,"name":"Group","syntax":null,"userDefined":false,"formatDataType":"Text"},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"sort":"Unsorted","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":"","levels":[]},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"columnGroup":"","verticalHeader":false,"verticalHeaderHeight":{"value":null}},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"settings":{},"chartType":null,"showTotal":false,"position":2,"field":{"fieldId":"0ec0ba45-72fb-4954-82cc-21ad7d445ca5","fieldUniqueName":"[con;#0].[cat;#0].[Customers].[CompanyName]","originalName":null,"fieldName":"CompanyName","fieldNameAlias":"Company","dataFieldType":"Text","querySourceId":"206ca737-a7a1-4d91-96fc-d258540ba582","querySourceUniqueName":"[con;#0].[cat;#0].[Customers]","querySourceType":"Table","sourceAlias":"Customers","relationData":{"fieldId":"00000000-0000-0000-0000-000000000000","fieldUniqueName":null,"originalName":null,"fieldName":null,"fieldNameAlias":null,"dataFieldType":null,"querySourceId":null,"querySourceUniqueName":null,"querySourceType":null,"sourceAlias":null,"relationData":null,"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":false,"filterable":false,"reportId":null,"fieldFunctionExpression":null,"expression":null,"grandTotalExpression":null,"grandTotalFormat":null,"subTotalExpression":null,"subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":null,"formating":null,"functionDataType":null,"isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null},"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":true,"filterable":false,"reportId":null,"fieldFunctionExpression":"","expression":null,"grandTotalExpression":"","grandTotalFormat":null,"subTotalExpression":"","subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":"Group","formating":{"format":null,"createNewHiddenPercenOfGroupField":false},"functionDataType":"Text","isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null}}]},"values":{"text":null,"properties":{},"settings":{},"collapsableList":[],"elements":[{"name":"Orders","properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"e3e16575-9739-4ff3-950a-7d149f96b4f0","functionInfo":{"dataType":"Numeric","expression":null,"expressionSyntax":null,"extendedProperties":{},"id":"e3e16575-9739-4ff3-950a-7d149f96b4f0","isOperator":false,"name":"Count Distinct","syntax":null,"userDefined":false,"formatDataType":"Numeric"},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"sort":"Unsorted","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":"","levels":[]},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"columnGroup":"","verticalHeader":false,"verticalHeaderHeight":{"value":null}},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"settings":{},"chartType":null,"showTotal":false,"position":1,"field":{"fieldId":"6fab9186-872d-425c-b3ce-023923001a60","fieldUniqueName":"[con;#0].[cat;#0].[Orders].[OrderID]","originalName":null,"fieldName":"OrderID","fieldNameAlias":"Orders","dataFieldType":"Numeric","querySourceId":"921cd423-c1b7-48a3-86fb-08694cc1b8c4","querySourceUniqueName":"[con;#0].[cat;#0].[Orders]","querySourceType":"Table","sourceAlias":"Orders","relationData":{"fieldId":"00000000-0000-0000-0000-000000000000","fieldUniqueName":null,"originalName":null,"fieldName":null,"fieldNameAlias":null,"dataFieldType":null,"querySourceId":null,"querySourceUniqueName":null,"querySourceType":null,"sourceAlias":null,"relationData":null,"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":false,"filterable":false,"reportId":null,"fieldFunctionExpression":null,"expression":null,"grandTotalExpression":null,"grandTotalFormat":null,"subTotalExpression":null,"subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":null,"formating":null,"functionDataType":null,"isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null},"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":true,"filterable":false,"reportId":null,"fieldFunctionExpression":"COUNT( DISTINCT [OrderID])","expression":null,"grandTotalExpression":"","grandTotalFormat":null,"subTotalExpression":"","subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":"Count Distinct","formating":{"format":null,"createNewHiddenPercenOfGroupField":false},"functionDataType":"Numeric","isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null}}]},"valuesLabels":{"text":null,"properties":{},"settings":{},"collapsableList":[],"elements":[]},"bubbleSize":{"text":null,"properties":{},"settings":{},"collapsableList":[],"elements":[]},"separators":{"text":null,"properties":{},"settings":{},"collapsableList":[],"elements":[]},"type":"0","properties":{"staticProperties":{"pageSize":50},"chartType":"Donut","vizEngine":"Highcharts","colorTheme":null,"isDefaultTheme":true,"commonOptions":{"izDisableMultiColor":false,"izendaHiddenAllAxis":false,"izChartStyle":{},"izLegend.borderWidth":0,"izLegend.borderVisible":false,"izLegend.verticalAlign":"izBottom","izLegend.horizontalAlign":"izRight","izLegend.visibility":false,"izHoverLabels":true},"optionByType":{"izTotalLabel":"","izMultiColor":true,"izMultiLevel":false,"legendSettings":true,"izValueLabel":false,"izSpline":false,"izInverted":false,"izUseSeparator":true,"izSliceLabel":false,"izShowPercentage":false,"izPieChartStyle":"ring","izBottomXpercent":0,"izUsePagination":false,"izItemPerRow":2},"view":{"dataRefreshInterval":{"enable":false,"updateInterval":0,"isAll":true,"latestRecord":0}},"commonXYAxis":{"izGridLine":{"xAxis":{},"yAxis":{}},"izLabelOrientationY":"izNormal","izLabelOrientationX":"izNormal","allDynamicThresholdLine":[],"metricAllPlotLinesOption":[]},"printing":{"izPageBreakAfterSeparator":false}},"selectedMetric":"Orders","settings":{},"title":{"text":"","properties":{},"settings":{"font":{"family":"Proxima Nova","size":14,"bold":true,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"collapsableList":[],"elements":[]},"description":{"text":"","properties":{},"settings":{"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"collapsableList":[],"elements":[]},"expandedLevel":-1,"selectedExpandedLevel":0,"isCrossFiltering":false,"isFormatted":false,"hasTheme":true,"paginable":false,"drilldownType":1}', NULL, N'2c309bc6-f9c7-424b-a51e-55cfc46a8e25', 3, 0, CAST(N'2020-10-19T21:15:31.030' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:21:10.933' AS DateTime), N'System Admin', N'd3a21c04-b236-48b5-80fe-b2d2d4c310ee')
+INSERT [dbo].[IzendaReportPart] ([Id], [Title], [PositionX], [PositionY], [Width], [Height], [Content], [NumberOfRecord], [ReportId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [SourceId]) VALUES (N'17857257-6517-4463-a087-4df38cb6a7fc', N'Grid', 0, 5, 9, 7, N'{"customContainers":[],"columns":{"text":null,"properties":{"addSideTotal":false,"useExpanders":false},"settings":{},"collapsableList":[],"elements":[{"name":"Year","properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"dataType":"Datetime","expression":null,"expressionSyntax":null,"extendedProperties":{},"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","isOperator":false,"name":"Group","syntax":null,"userDefined":false,"formatDataType":"Datetime"},"format":{"formatId":"76875180-32c1-4180-b92f-03bdb14c4f6a","format":"Year","groupBy":"year","formatDataType":null,"createNewHiddenPercenOfGroupField":false},"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"sort":"ASC","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":"","levels":[]},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"columnGroup":"","verticalHeader":false,"verticalHeaderHeight":{"value":null}},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"settings":{},"chartType":null,"showTotal":false,"position":1,"field":{"fieldId":"eaae2f81-414a-42e5-ace4-6fc794276d96","fieldUniqueName":"[con;#0].[cat;#0].[Orders].[OrderDate]","originalName":null,"fieldName":"OrderDate","fieldNameAlias":"Year","dataFieldType":"Datetime","querySourceId":"921cd423-c1b7-48a3-86fb-08694cc1b8c4","querySourceUniqueName":"[con;#0].[cat;#0].[Orders]","querySourceType":"Table","sourceAlias":"Orders","relationData":{"fieldId":"00000000-0000-0000-0000-000000000000","fieldUniqueName":null,"originalName":null,"fieldName":null,"fieldNameAlias":null,"dataFieldType":null,"querySourceId":null,"querySourceUniqueName":null,"querySourceType":null,"sourceAlias":null,"relationData":null,"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":false,"filterable":false,"reportId":null,"fieldFunctionExpression":null,"expression":null,"grandTotalExpression":null,"grandTotalFormat":null,"subTotalExpression":null,"subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":null,"formating":null,"functionDataType":null,"isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null},"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":true,"filterable":false,"reportId":null,"fieldFunctionExpression":"DATEFORMAT(year ,[OrderDate])","expression":null,"grandTotalExpression":"","grandTotalFormat":null,"subTotalExpression":"","subtotalFormat":null,"sort":"ASC","autoSort":false,"function":"Group","formating":{"format":"76875180-32c1-4180-b92f-03bdb14c4f6a","createNewHiddenPercenOfGroupField":false},"functionDataType":"Datetime","isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null}}]},"rows":{"text":null,"properties":{"useExpanders":true},"settings":{},"collapsableList":[],"elements":[{"name":"Country","properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"dataType":"Text","expression":null,"expressionSyntax":null,"extendedProperties":{},"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","isOperator":false,"name":"Group","syntax":null,"userDefined":false,"formatDataType":"Text"},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"sort":"Unsorted","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":"","levels":[]},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"columnGroup":"","verticalHeader":false,"verticalHeaderHeight":{"value":null}},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"settings":{},"chartType":null,"showTotal":false,"position":1,"field":{"fieldId":"679592f8-b9fc-4d1d-9db4-ed36e848627e","fieldUniqueName":"[con;#0].[cat;#0].[Orders].[ShipCountry]","originalName":null,"fieldName":"ShipCountry","fieldNameAlias":"Country","dataFieldType":"Text","querySourceId":"921cd423-c1b7-48a3-86fb-08694cc1b8c4","querySourceUniqueName":"[con;#0].[cat;#0].[Orders]","querySourceType":"Table","sourceAlias":"Orders","relationData":{"fieldId":"00000000-0000-0000-0000-000000000000","fieldUniqueName":null,"originalName":null,"fieldName":null,"fieldNameAlias":null,"dataFieldType":null,"querySourceId":null,"querySourceUniqueName":null,"querySourceType":null,"sourceAlias":null,"relationData":null,"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":false,"filterable":false,"reportId":null,"fieldFunctionExpression":null,"expression":null,"grandTotalExpression":null,"grandTotalFormat":null,"subTotalExpression":null,"subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":null,"formating":null,"functionDataType":null,"isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null},"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":true,"filterable":false,"reportId":null,"fieldFunctionExpression":"","expression":null,"grandTotalExpression":"","grandTotalFormat":null,"subTotalExpression":"","subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":"Group","formating":{"format":null,"createNewHiddenPercenOfGroupField":false},"functionDataType":"Text","isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null}},{"name":"City","properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"7f942ac7-08d8-41fa-9e89-bad96f07f102","functionInfo":{"dataType":"Text","expression":null,"expressionSyntax":null,"extendedProperties":{},"id":"7f942ac7-08d8-41fa-9e89-bad96f07f102","isOperator":false,"name":"Group","syntax":null,"userDefined":false,"formatDataType":"Text"},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"sort":"Unsorted","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null}},"alternativeText":{"rangePercent":null,"rangeValue":null,"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":"","levels":[]},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"columnGroup":"","verticalHeader":false,"verticalHeaderHeight":{"value":null}},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"settings":{},"chartType":null,"showTotal":false,"position":2,"field":{"fieldId":"b2f240f8-8eeb-4189-86fb-344a9063b51b","fieldUniqueName":"[con;#0].[cat;#0].[Orders].[ShipCity]","originalName":null,"fieldName":"ShipCity","fieldNameAlias":"City","dataFieldType":"Text","querySourceId":"921cd423-c1b7-48a3-86fb-08694cc1b8c4","querySourceUniqueName":"[con;#0].[cat;#0].[Orders]","querySourceType":"Table","sourceAlias":"Orders","relationData":{"fieldId":"00000000-0000-0000-0000-000000000000","fieldUniqueName":null,"originalName":null,"fieldName":null,"fieldNameAlias":null,"dataFieldType":null,"querySourceId":null,"querySourceUniqueName":null,"querySourceType":null,"sourceAlias":null,"relationData":null,"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":false,"filterable":false,"reportId":null,"fieldFunctionExpression":null,"expression":null,"grandTotalExpression":null,"grandTotalFormat":null,"subTotalExpression":null,"subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":null,"formating":null,"functionDataType":null,"isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null},"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":true,"filterable":false,"reportId":null,"fieldFunctionExpression":"","expression":null,"grandTotalExpression":"","grandTotalFormat":null,"subTotalExpression":"","subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":"Group","formating":{"format":null,"createNewHiddenPercenOfGroupField":false},"functionDataType":"Text","isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null}}]},"values":{"text":null,"properties":{},"settings":{},"collapsableList":[],"elements":[{"name":"Orders","properties":{"isDirty":false,"fieldItemVisible":true,"dataFormattings":{"function":"e3e16575-9739-4ff3-950a-7d149f96b4f0","functionInfo":{"dataType":"Numeric","expression":null,"expressionSyntax":null,"extendedProperties":{},"id":"e3e16575-9739-4ff3-950a-7d149f96b4f0","isOperator":false,"name":"Count Distinct","syntax":null,"userDefined":false,"formatDataType":"Numeric"},"format":{"createNewHiddenPercenOfGroupField":false},"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","backgroundColor":""},"width":{"value":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"sort":"","color":{"textColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null},"cellColor":{"rangePercent":null,"rangeValue":null,"value":null,"allValues":null}},"alternativeText":{"rangePercent":null,"rangeValue":[{"name":"","from":0,"to":0.001,"text":"-","canDelete":true,"id":"setting_142"}],"value":null},"customURL":{"url":"","option":"LINK_NEW_WINDOW"},"embeddedJavascript":{"script":""},"subTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":"","levels":[]},"grandTotal":{"label":"","function":"","expression":"","dataType":"","format":{},"previewResult":""}},"headerFormating":{"font":{"family":null,"size":null,"bold":null,"italic":null,"underline":null,"color":null,"backgroundColor":null},"alignment":null,"verticalAlignment":null,"wordWrap":null,"columnGroup":"","verticalHeader":false,"verticalHeaderHeight":{"value":null}},"drillDown":{"subReport":{"selectedReport":null,"style":null,"reportPartUsed":null,"reportFilter":true,"mappingFields":[],"selectedIconValue":{"icon":null,"value":null},"viewSettingByLink":null}},"otherProps":{}},"settings":{},"chartType":null,"showTotal":false,"position":1,"field":{"fieldId":"6fab9186-872d-425c-b3ce-023923001a60","fieldUniqueName":"[con;#0].[cat;#0].[Orders].[OrderID]","originalName":null,"fieldName":"OrderID","fieldNameAlias":"Orders","dataFieldType":"Numeric","querySourceId":"921cd423-c1b7-48a3-86fb-08694cc1b8c4","querySourceUniqueName":"[con;#0].[cat;#0].[Orders]","querySourceType":"Table","sourceAlias":"Orders","relationData":{"fieldId":"00000000-0000-0000-0000-000000000000","fieldUniqueName":null,"originalName":null,"fieldName":null,"fieldNameAlias":null,"dataFieldType":null,"querySourceId":null,"querySourceUniqueName":null,"querySourceType":null,"sourceAlias":null,"relationData":null,"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":false,"filterable":false,"reportId":null,"fieldFunctionExpression":null,"expression":null,"grandTotalExpression":null,"grandTotalFormat":null,"subTotalExpression":null,"subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":null,"formating":null,"functionDataType":null,"isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null},"querySourceAlias":null,"runningDeep":-1,"isRunningField":false,"isCompositeField":false,"builtRunningField":false,"relationshipId":"00000000-0000-0000-0000-000000000000","visible":true,"filterable":false,"reportId":null,"fieldFunctionExpression":"COUNT( DISTINCT [OrderID])","expression":null,"grandTotalExpression":"","grandTotalFormat":null,"subTotalExpression":"","subtotalFormat":null,"sort":"Unsorted","autoSort":false,"function":"Count Distinct","formating":{"format":null,"createNewHiddenPercenOfGroupField":false},"functionDataType":"Numeric","isCalculated":false,"hasAggregatedFunction":false,"invalidField":0,"isCrossFilter":false,"isFilterField":false,"isPredicated":false,"modelName":null,"relationColumn":null}}]},"separators":{"text":null,"properties":{},"settings":{},"collapsableList":[],"elements":[]},"paginable":true,"type":"3","drilldownType":0,"properties":{"generalInfo":{"gridStyle":"Pivot","separatorStyle":"Comma"},"table":{"border":{"top":{"color":"#dbdcdd","dashStyle":"solid","thinkness":1},"right":{"color":"#dbdcdd","dashStyle":"solid","thinkness":1},"bottom":{"color":"#dbdcdd","dashStyle":"solid","thinkness":1},"midVer":{"color":"#dbdcdd","dashStyle":"solid","thinkness":1},"left":{"color":"#dbdcdd","dashStyle":"solid","thinkness":1},"midHor":{"color":"#dbdcdd","dashStyle":"solid","thinkness":1}},"backgroundColor":"#fff","alternativeBackgroundColor":"#EFEFEF"},"columns":{"width":{"value":150},"alterBackgroundColor":false,"wordWrap":false,"alignment":"left","verticalAlignment":"middle"},"rows":{"alterBackgroundColor":false},"headers":{"font":{"family":"Proxima Nova","size":14,"bold":true,"italic":false,"underline":false,"color":"#45525c","backgroundColor":"#f6f8fa"},"alignment":"left","verticalAlignment":"middle","wordWrap":false,"removeHeaderForExport":false,"removeHeaderForViewer":false,"freezeHeaders":null},"grouping":{"useSeparator":true},"view":{"dataRefreshInterval":{"enable":false,"updateInterval":0,"isAll":true,"latestRecord":0},"conditionalFormatting":{"rules":[]},"usePagination":false,"expanderRowsSpacing":false,"collapseDrilldownByDefault":true,"pageSize":10,"pivotColumnsPerExportedPage":""},"printing":{"usePageBreakAfterSeparator":false},"isDirty":true},"selectedMetric":null,"settings":{},"title":{"text":"","properties":{},"settings":{"font":{"family":"Proxima Nova","size":14,"bold":true,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"collapsableList":[],"elements":[]},"description":{"text":"","properties":{},"settings":{"font":{"family":"Proxima Nova","size":14,"bold":false,"italic":false,"underline":false,"color":"","highlightColor":""},"alignment":{"alignment":""}},"collapsableList":[],"elements":[]},"expandedLevel":-1,"selectedExpandedLevel":0,"isCrossFiltering":true,"isFormatted":false,"hasTheme":false}', NULL, N'b649c6e2-22b7-4f78-92b4-923fa88796ea', 4, 0, CAST(N'2020-10-19T21:06:57.877' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:27:04.257' AS DateTime), N'System Admin', N'c4a5b7a5-66dc-44c6-8565-7d3ee2a01b04')
+INSERT [dbo].[IzendaCommonFilterField] ([Id], [Name], [DisplayName], [Value], [OperatorId], [OperatorSetting], [DataType], [DashboardId], [Position], [FilterFieldContent], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [Required]) VALUES (N'3e3b21f1-0018-40e6-bed4-64ed91f9536d', N'5ce630bc-6615-42c4-b11e-1d09c651eaae-ShipCountry-dd796e4b-0dd7-47c4-ba93-637b342ec6ed', N'Country', N'', N'5ce630bc-6615-42c4-b11e-1d09c651eaae', N'', NULL, N'747c77fb-fcef-4cb8-bca0-34bf3bcc29f3', 1, N'[{"filterFieldId":"31f3312b-daf9-4670-94b2-22efefb34e2a","dashboardPartId":"00000000-0000-0000-0000-000000000000","required":false},{"filterFieldId":"0deee27c-0287-4219-9937-ba965de4aaf6","dashboardPartId":"00000000-0000-0000-0000-000000000000","required":false}]', 2, 0, CAST(N'2020-10-19T21:24:46.703' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:25:12.850' AS DateTime), N'System Admin', 0)
+INSERT [dbo].[IzendaDashboard] ([Id], [Name], [Description], [CategoryId], [SubCategoryId], [TenantId], [ImageUrl], [StretchImage], [BackgroundColor], [ShowFilterDescription], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [Owner], [LastViewed], [NumberOfView], [RenderingTime], [OwnerId], [CreatedById], [ModifiedById], [SourceId], [IsGlobal]) VALUES (N'747c77fb-fcef-4cb8-bca0-34bf3bcc29f3', N'Orders Dashboard', NULL, NULL, NULL, NULL, NULL, 0, N'', 0, 1, 0, CAST(N'2020-11-13T17:14:27.877' AS DateTime), N'System Admin', CAST(N'2020-11-13T17:14:27.877' AS DateTime), N'System Admin', N'System Admin', CAST(N'2020-11-13T17:14:27.877' AS DateTime), 0, 0, N'9d2f1d51-0e3d-44db-bfc7-da94a7581bfe', N'9d2f1d51-0e3d-44db-bfc7-da94a7581bfe', N'9d2f1d51-0e3d-44db-bfc7-da94a7581bfe', N'd7479e52-f96c-4be2-a870-15ab3e6baf29', 0)
+INSERT [dbo].[IzendaDashboardPart] ([Id], [DashboardId], [Type], [Title], [ReportId], [ReportPartId], [NumberOfRecord], [FilterDescription], [Content], [PositionX], [PositionY], [Width], [Height], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [SourceId]) VALUES (N'5c62ffdb-bd54-4b08-9dda-697c2b90f2f3', N'747c77fb-fcef-4cb8-bca0-34bf3bcc29f3', N'reportPart', N'Example/Orders by Country per Year/Grid', N'b649c6e2-22b7-4f78-92b4-923fa88796ea', N'fb9703eb-3fc2-4fd5-b95b-9509b08e5990', -1, NULL, N'{"contentTitle":{"text":"","settings":{"fontFamily":"","fontSize":14,"fontBold":true,"fontItalic":false,"fontUnderline":false,"fontColor":"","fontHighlightColor":"","alignment":""}},"contentDescription":{"text":"","settings":{"fontFamily":"","fontSize":14,"fontBold":true,"fontItalic":false,"fontUnderline":false,"fontColor":"","fontHighlightColor":"","alignment":""}},"contentFromPreset":true,"textTypeContent":""}', 6, 0, 6, 8, 1, 0, CAST(N'2020-10-19T21:24:46.733' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:24:46.733' AS DateTime), N'System Admin', NULL)
+INSERT [dbo].[IzendaDashboardPart] ([Id], [DashboardId], [Type], [Title], [ReportId], [ReportPartId], [NumberOfRecord], [FilterDescription], [Content], [PositionX], [PositionY], [Width], [Height], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [SourceId]) VALUES (N'db900968-28c9-4037-b153-9d5234b07ce9', N'747c77fb-fcef-4cb8-bca0-34bf3bcc29f3', N'reportPart', N'Example/Orders by Customer by Country/Chart', N'2c309bc6-f9c7-424b-a51e-55cfc46a8e25', N'8bd60556-dbfc-41e3-b87b-205b4851fe84', -1, NULL, N'{"contentTitle":{"text":"","settings":{"fontFamily":"","fontSize":14,"fontBold":true,"fontItalic":false,"fontUnderline":false,"fontColor":"","fontHighlightColor":"","alignment":""}},"contentDescription":{"text":"","settings":{"fontFamily":"","fontSize":14,"fontBold":true,"fontItalic":false,"fontUnderline":false,"fontColor":"","fontHighlightColor":"","alignment":""}},"contentFromPreset":true,"textTypeContent":""}', 0, 4, 6, 4, 2, 0, CAST(N'2020-10-19T21:24:46.710' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:25:12.857' AS DateTime), N'System Admin', NULL)
+INSERT [dbo].[IzendaDashboardPart] ([Id], [DashboardId], [Type], [Title], [ReportId], [ReportPartId], [NumberOfRecord], [FilterDescription], [Content], [PositionX], [PositionY], [Width], [Height], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy], [SourceId]) VALUES (N'217d67ff-dd05-41a2-9fca-c5810029de9d', N'747c77fb-fcef-4cb8-bca0-34bf3bcc29f3', N'reportPart', N'Example/Orders by Country per Year/Chart', N'b649c6e2-22b7-4f78-92b4-923fa88796ea', N'7d763799-062f-42db-a2a7-02370010147c', -1, NULL, N'{"contentTitle":{"text":"","settings":{"fontFamily":"","fontSize":14,"fontBold":true,"fontItalic":false,"fontUnderline":false,"fontColor":"","fontHighlightColor":"","alignment":""}},"contentDescription":{"text":"","settings":{"fontFamily":"","fontSize":14,"fontBold":true,"fontItalic":false,"fontUnderline":false,"fontColor":"","fontHighlightColor":"","alignment":""}},"contentFromPreset":true,"textTypeContent":""}', 0, 0, 6, 4, 2, 0, CAST(N'2020-10-19T21:24:46.733' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:25:12.867' AS DateTime), N'System Admin', NULL)
+INSERT [dbo].[IzendaDashboardPartFilterField] ([Id], [FilterFieldId], [Value], [OperatorId], [OperatorSetting], [DashboardPartId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'55dd867b-0524-4a7f-897e-4d66b202df24', N'31f3312b-daf9-4670-94b2-22efefb34e2a', N'', N'5ce630bc-6615-42c4-b11e-1d09c651eaae', NULL, N'db900968-28c9-4037-b153-9d5234b07ce9', 1, 0, CAST(N'2020-10-19T21:24:46.727' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:24:46.727' AS DateTime), N'System Admin')
+INSERT [dbo].[IzendaDashboardPartFilterField] ([Id], [FilterFieldId], [Value], [OperatorId], [OperatorSetting], [DashboardPartId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'51df3311-ce2f-453e-8afe-6c549f8f0382', N'0deee27c-0287-4219-9937-ba965de4aaf6', N'', N'5ce630bc-6615-42c4-b11e-1d09c651eaae', NULL, N'5c62ffdb-bd54-4b08-9dda-697c2b90f2f3', 1, 0, CAST(N'2020-10-19T21:24:46.733' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:24:46.733' AS DateTime), N'System Admin')
+INSERT [dbo].[IzendaDashboardPartFilterField] ([Id], [FilterFieldId], [Value], [OperatorId], [OperatorSetting], [DashboardPartId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'55e7211e-fac5-4dc5-b3b9-b20938447665', N'0deee27c-0287-4219-9937-ba965de4aaf6', N'', N'5ce630bc-6615-42c4-b11e-1d09c651eaae', NULL, N'217d67ff-dd05-41a2-9fca-c5810029de9d', 1, 0, CAST(N'2020-10-19T21:24:46.733' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:24:46.733' AS DateTime), N'System Admin')
+INSERT [dbo].[IzendaDashboardPartFilterField] ([Id], [FilterFieldId], [Value], [OperatorId], [OperatorSetting], [DashboardPartId], [Version], [Deleted], [Created], [CreatedBy], [Modified], [ModifiedBy]) VALUES (N'3198577c-c90c-4cd5-8e81-d521478523f4', N'1833027a-2577-4c02-8a0a-d3ebec6a4b25', N'', N'5ce630bc-6615-42c4-b11e-1d09c651eaae', NULL, N'db900968-28c9-4037-b153-9d5234b07ce9', 1, 0, CAST(N'2020-10-19T21:24:46.727' AS DateTime), N'System Admin', CAST(N'2020-10-19T21:24:46.727' AS DateTime), N'System Admin')
+
+UPDATE IzendaDBVersion SET Version = '3.10.5';
+go
