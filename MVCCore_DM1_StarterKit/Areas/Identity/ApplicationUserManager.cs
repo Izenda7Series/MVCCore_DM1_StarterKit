@@ -56,7 +56,7 @@ namespace MVCCoreStarterKit.Areas.Identity
                 user = await dbContext.Users
                     .Include(x => x.Tenant)
                     .Where(x => x.UserName.Equals(username, StringComparison.InvariantCultureIgnoreCase))
-                    .Where(x => !x.Tenant_Id.HasValue)
+                    .Where(x => !x.TenantId.HasValue)
                     .SingleOrDefaultAsync();
             }
 
@@ -91,7 +91,7 @@ namespace MVCCoreStarterKit.Areas.Identity
                 user = await dbContext.Users
                     .Include(x => x.Tenant)
                     .Where(x => x.UserName.Equals(username, StringComparison.InvariantCultureIgnoreCase))
-                    .Where(x => !x.Tenant_Id.HasValue)
+                    .Where(x => !x.TenantId.HasValue)
                     .SingleOrDefaultAsync();
             }
 

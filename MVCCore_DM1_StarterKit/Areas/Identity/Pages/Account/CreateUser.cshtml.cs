@@ -92,7 +92,7 @@ namespace MVCCoreStarterKit.Areas.Identity.Pages.Account
                 {
                     UserName = Input.UserID,
                     Email = Input.UserID,
-                    Tenant_Id = tenantId,
+                    TenantId = tenantId,
                 };
 
                 var result = await _userManager.CreateAsync(user); // Save new user into client DB
