@@ -6,9 +6,9 @@ namespace MVCCoreStarterKit.Areas.Identity.Model
     public class IzendaUser : IdentityUser
     {
         #region Properties
-        public int? Tenant_Id { get; set; }
+        public int? TenantId { get; set; }
 
-        [ForeignKey("Tenant_Id")]
+        [ForeignKey("TenantId")]
         public Tenant Tenant { get; set; } 
         #endregion
     }
