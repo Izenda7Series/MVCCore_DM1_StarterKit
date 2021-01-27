@@ -18,51 +18,37 @@ namespace MVCCoreStarterKit.Services
         #region Methods
         Task<Tenant> SaveTenantAsync(Tenant tenant);
 
-        List<Tenant> GetAllTenants(); 
+        List<Tenant> GetAllTenants();
         #endregion
     }
 
     public class TenantManager : ITenantManager
     {
         #region Variables
-        private readonly ApplicationDbContext dbContext;
+        private readonly ApplicationDbContext _dbContext;
         #endregion
 
         #region CTOR
         public TenantManager(ApplicationDbContext dbContext)
         {
-            this.dbContext = dbContext;
-        } 
+            _dbContext = dbContext;
+        }
         #endregion
 
         #region Methods
-        public Tenant GetTenantByName(string name)
-        {
-            using (var context = dbContext)
-            {
-                var tenant = context.Tenants.Where(x => x.Name.Equals(name, StringComparison.InvariantCultureIgnoreCase)).SingleOrDefault();
-                return tenant;
-            }
-        }
+        public Tenant GetTenantByName(string name) => _dbContext.Tenants.Where(x => x.Name.Equals(name, StringComparison.InvariantCultureIgnoreCase)).SingleOrDefault();
 
-        public Tenant GetTenantById(int? id)
-        {
-            using (var context = dbContext)
-            {
-                var tenant = context.Tenants.Where(x => x.Id.Equals(id)).SingleOrDefault();
-                return tenant;
-            }
-        }
+        public Tenant GetTenantById(int? id) => _dbContext.Tenants.Where(x => x.Id.Equals(id)).SingleOrDefault();
 
-        public List<Tenant> GetAllTenants() => dbContext.Tenants.ToList();
+        public List<Tenant> GetAllTenants() => _dbContext.Tenants.ToList();
 
         public async Task<Tenant> SaveTenantAsync(Tenant tenant)
         {
-            dbContext.Tenants.Add(tenant);
-            await dbContext.SaveChangesAsync();
+            _dbContext.Tenants.Add(tenant);
+            await _dbContext.SaveChangesAsync();
 
             return tenant;
-        } 
+        }
         #endregion
     }
 }
