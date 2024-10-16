@@ -1,18 +1,17 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using MVCCoreStarterKit.Areas.Identity.Model
 @inject SignInManager<IzendaUser> SignInManager
-<li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link text-dark" })</li>
+<li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
 @if (SignInManager.IsSignedIn(User))
 {
-    <li>@Html.ActionLink("Izenda", "Izenda", "Home", null, new { @class = "nav-link text-dark" })</li>
-    <li>@Html.ActionLink("Settings", "Settings", "Home", null, new { @class = "nav-link text-dark" })</li>
+    <li>@Html.ActionLink("Izenda", "Izenda", "Home", null, new { @class = "nav-link" })</li>
+    <li>@Html.ActionLink("Settings", "Settings", "Home", null, new { @class = "nav-link" })</li>
     @*<li>@Html.ActionLink("Mixed Parts", "MixedParts", "Home", null, new { @class = "nav-link text-dark" })</li>*@
 
     @* Reports *@
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">
             Reports
-            <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
             <li>@Html.ActionLink("New Report", "ReportDesigner", "Home", null, new { @class = "nav-link text-dark" })</li>
@@ -25,9 +24,8 @@
 
     @* Dashboards *@
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">
             Dashboards
-            <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
             <li>@Html.ActionLink("New Dashboard", "DashboardDesigner", "Home", null, new { @class = "nav-link text-dark" })</li>
