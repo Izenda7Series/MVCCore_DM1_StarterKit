@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MVCCoreStarterKit</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="~/css/izenda_visualizations.css" rel="stylesheet" />
     @* Apply css based on the users tenant *@
@@ -13,28 +14,29 @@
     <link href=@ViewBag.izendaCssPath rel="stylesheet">
 </head>
 <body>
+
     <header>
-        <div class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <div class="navbar-header">
+                    <div class="navbar-header pull-left">
                         <a class="navbar-brand" href="https://www.izenda.com/" target="_blank" rel="noopener noreferrer">
                             <img src="https://3u8npt2xyr3u2fgvai49zopv-wpengine.netdna-ssl.com/wp-content/uploads/2019/05/izenda-logo-white.png"
                                  alt="Site Logo" style="height:18px; width: 100px" />
                         </a>
-                        @Html.ActionLink("MVC Core StarterKit", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                     </div>
-                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
+                    @Html.ActionLink("MVC Core StarterKit", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 </div>
-                <div id="navbarCollapse" class="navbar-collapse collapse d-sm-inline-flex flex-sm-wrap">
-                    <ul class="navbar-nav me-auto flex-sm-nowrap">
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="nav navbar-nav">
                         <partial name="_Header" />
                     </ul>
-                    <ul class="navbar-nav ms-auto flex-sm-nowrap">
-                        <partial name="_LoginPartial" />
-                    </ul>
+                    <partial name="_LoginPartial" />
                 </div>
             </div>
         </div>
@@ -49,6 +51,7 @@
     </div>
 
     <script rel="preload" src="~/js/jquery-1.10.2.min.js"></script>
+    <script rel="preload" src="~/js/bootstrap.min.js"></script>
     <script rel="preload" src="~/js/site.js" asp-append-version="true"></script>
     <script rel="preload" src="~/js/alertify.js"></script>
     <script rel="prefetch" src="~/js/izenda/izenda_common.js"></script>
@@ -58,33 +61,14 @@
     <script rel="prefetch" src="~/js/izenda.integrate.js"></script>
     <script rel="prefetch" src="~/js/izenda.utils.js"></script>
     <script rel="prefetch" src="~/js/izenda_visualizations.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function () {
             DoIzendaConfig();
+            $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="dropdown"]').dropdown();
             $("#reportPartLoader").hide();
             $("#reportPartLoaderText").hide();
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            $('[data-bs-toggle="dropdown"]').on('click', function (e) {
-                const dropdown = new window.bootstrap.Dropdown(e.target);
-                dropdown.toggle();
-            })
-
-            let isTransitioning = false;
-            $(".collapse").on('show.bs.collapse hide.bs.collapse', function (e) {
-                if (isTransitioning) {
-                    e.preventDefault();
-                    return;
-                }
-                else {
-                    isTransitioning = true;
-                }
-            });
-
-            $(".collapse").on('shown.bs.collapse hidden.bs.collapse', function (e) {
-                isTransitioning = false;
-            });
         });
     </script>
     @RenderSection("Scripts", required: false)

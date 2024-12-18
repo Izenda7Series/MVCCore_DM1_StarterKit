@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MVCCoreStarterKit</title>
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" />
 
     @* Apply css based on the users tenant *@
@@ -20,6 +22,7 @@
     </div>
 
     <script src="~/js/jquery-1.10.2.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/alertify.js"></script>
     <script src="~/js/izenda/izenda_common.js"></script>
@@ -32,6 +35,8 @@
     <script type="text/javascript">
         $(document).ready(function () {
             DoIzendaConfig();
+            $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="dropdown"]').dropdown();
             $("#reportPartLoader").hide();
             $("#reportPartLoaderText").hide();
         });
