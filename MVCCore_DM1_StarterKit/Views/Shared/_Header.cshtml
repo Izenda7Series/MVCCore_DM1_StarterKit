@@ -1,39 +1,41 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using MVCCoreStarterKit.Areas.Identity.Model
 @inject SignInManager<IzendaUser> SignInManager
-<li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link text-dark" })</li>
+<li class="nav-item">@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
 @if (SignInManager.IsSignedIn(User))
 {
-    <li>@Html.ActionLink("Izenda", "Izenda", "Home", null, new { @class = "nav-link text-dark" })</li>
-    <li>@Html.ActionLink("Settings", "Settings", "Home", null, new { @class = "nav-link text-dark" })</li>
-    @*<li>@Html.ActionLink("Mixed Parts", "MixedParts", "Home", null, new { @class = "nav-link text-dark" })</li>*@
+    <li class="nav-item">@Html.ActionLink("Izenda", "Izenda", "Home", null, new { @class = "nav-link" })</li>
+    <li class="nav-item">@Html.ActionLink("Settings", "Settings", "Home", null, new { @class = "nav-link" })</li>
+    @*<li>@Html.ActionLink("Mixed Parts", "MixedParts", "Home", null, new { @class = "nav-link" })</li>*@
 
     @* Reports *@
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0)">
             Reports
-            <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
-            <li>@Html.ActionLink("New Report", "ReportDesigner", "Home", null, new { @class = "nav-link text-dark" })</li>
-            <li>@Html.ActionLink("Report List", "Reports", "Home", null, new { @class = "nav-link text-dark" })</li>
+            <li>@Html.ActionLink("New Report", "ReportDesigner", "Home", null, new { @class = "dropdown-item" })</li>
+            <li>@Html.ActionLink("Report List", "Reports", "Home", null, new { @class = "dropdown-item" })</li>
             @* Add to report Viewer to Demo, hardcode Report ID to link user to a specific report - please update the report id with one created in your enviroment*@
-            <li>@Html.ActionLink("Report Viewer", "ReportViewer", "Report", new { id = "[your report id]" }, new { @class = "nav-link text-dark" })</li>
-            <li>@Html.ActionLink("Report Parts", "ReportParts", "Report", null, new { @class = "nav-link text-dark" })</li>
+            @*Updated report ID corresponds to QA DM0 env DB, replace this ID with matching your environment record*@
+            <li>@Html.ActionLink("Report Viewer", "ReportViewer", "Report", new { id = "ef19f8f6-f43f-448a-bea8-6cc482026629" }, new { @class = "dropdown-item" })</li>
+            <li>@Html.ActionLink("Report Parts", "ReportParts", "Report", null, new { @class = "dropdown-item" })</li>
         </ul>
     </li>
 
     @* Dashboards *@
     <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle text-dark" data-toggle="dropdown" href="#">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="javascript:void(0)">
             Dashboards
-            <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
-            <li>@Html.ActionLink("New Dashboard", "DashboardDesigner", "Home", null, new { @class = "nav-link text-dark" })</li>
-            <li>@Html.ActionLink("Dashboard List", "Dashboards", "Home", null, new { @class = "nav-link text-dark" })</li>
+            <li>@Html.ActionLink("New Dashboard", "DashboardDesigner", "Home", null, new { @class = "dropdown-item" })</li>
+            <li>@Html.ActionLink("Dashboard List", "Dashboards", "Home", null, new { @class = "dropdown-item" })</li>
             @* Add to report Viewer to Demo, hardcode Report ID to link user to a specific report - please update the report id with one created in your enviroment*@
-            <li>@Html.ActionLink("Dashboard Viewer", "DashboardViewer", "Dashboard", new { id = "[your dashboard id]" }, new { @class = "nav-link text-dark" })</li>
+            @*Updated dashboard ID corresponds to QA DM0 env DB, replace this ID with matching your environment record*@
+            <li>@Html.ActionLink("Dashboard Viewer", "DashboardViewer", "Dashboard", new { id = "e4cfe108-0b3c-4fed-9d5b-21a74ec17c80" }, new { @class = "dropdown-item" })</li>
         </ul>
     </li>
+
+    <li class="nav-item">@Html.ActionLink("Migration Manager", "MigrationManager", "Home", null, new { @class = "nav-link" })</li>
 }

@@ -19,8 +19,9 @@ namespace MVCCoreStarterKit.Areas.Identity
          IUserClaimsPrincipalFactory<IzendaUser> claimsFactory,
          IOptions<IdentityOptions> optionsAccessor,
          ILogger<ApplicationSignInManager> logger,
-         IAuthenticationSchemeProvider schemes)
-         : base(userManager, contextAccessor, claimsFactory, optionsAccessor, logger, schemes)
+         IAuthenticationSchemeProvider schemes,
+         IUserConfirmation<IzendaUser> confirmation)
+         : base(userManager, contextAccessor, claimsFactory, optionsAccessor, logger, schemes, confirmation)
         {
         }
         #endregion

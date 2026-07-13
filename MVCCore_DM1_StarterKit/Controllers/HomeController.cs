@@ -158,6 +158,16 @@ namespace MVCCoreStarterKit.Controllers
         {
             return View();
         }
+
+        /// <summary>
+        /// Action for rendering Izenda migration manager page
+        /// </summary>
+        /// <returns>MigrationManager View</returns>
+        [Theme]
+        public ActionResult MigrationManager()
+        {
+            return View();
+        }
         #endregion
     }
 }

@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "Report Parts";
+    ViewBag.LoadIzendaScripts = true;
 }
 
 @section scripts
@@ -30,6 +31,7 @@
     }
 </style>
 
+<div id="izenda-root" style="display:none;"></div>
 <div class="loader" id="reportPartLoader"> </div>
 <div class="izenda-container">
     <div class="report-part-chart" id="izenda-report-part1"></div>

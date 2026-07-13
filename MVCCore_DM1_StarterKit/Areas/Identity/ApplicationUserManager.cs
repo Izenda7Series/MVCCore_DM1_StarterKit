@@ -47,15 +47,15 @@ namespace MVCCoreStarterKit.Areas.Identity
             {
                 user = await dbContext.Users
                   .Include(x => x.Tenant)
-                  .Where(x => x.UserName.Equals(username, StringComparison.InvariantCultureIgnoreCase))
-                  .Where(x => x.Tenant.Name.Equals(tenant, StringComparison.InvariantCultureIgnoreCase))
+                  .Where(x => x.UserName == username)
+                  .Where(x => x.Tenant.Name == tenant)
                   .SingleOrDefaultAsync();
             }
             else
             {
                 user = await dbContext.Users
                     .Include(x => x.Tenant)
-                    .Where(x => x.UserName.Equals(username, StringComparison.InvariantCultureIgnoreCase))
+                    .Where(x => x.UserName == username)
                     .Where(x => !x.TenantId.HasValue)
                     .SingleOrDefaultAsync();
             }
@@ -82,15 +82,15 @@ namespace MVCCoreStarterKit.Areas.Identity
             {
                 user = await dbContext.Users
                   .Include(x => x.Tenant)
-                  .Where(x => x.UserName.Equals(username, StringComparison.InvariantCultureIgnoreCase))
-                  .Where(x => x.Tenant.Name.Equals(tenant, StringComparison.InvariantCultureIgnoreCase))
+                  .Where(x => x.UserName == username)
+                  .Where(x => x.Tenant.Name == tenant)
                   .SingleOrDefaultAsync();
             }
             else
             {
                 user = await dbContext.Users
                     .Include(x => x.Tenant)
-                    .Where(x => x.UserName.Equals(username, StringComparison.InvariantCultureIgnoreCase))
+                    .Where(x => x.UserName == username)
                     .Where(x => !x.TenantId.HasValue)
                     .SingleOrDefaultAsync();
             }
