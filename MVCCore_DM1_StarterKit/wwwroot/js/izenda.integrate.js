@@ -60,7 +60,9 @@ var izendaInit = function () {
         };
 
         IzendaSynergy.setCurrentUserContext(currentUserContext);
-        IzendaSynergy.render(document.getElementById('izenda-root'));
+        var izendaRoot = document.getElementById('izenda-root');
+        IzendaSynergy.unmountComponent(izendaRoot);
+        IzendaSynergy.render(izendaRoot);
     }
 
     this.DoRender(successFunc);
@@ -117,7 +119,7 @@ var izendaInitMixedParts = function (allParts) {
                 IzendaSynergy.renderDashboardViewerPage(element, item.id);
             }
         });
-        
+
     }
     this.DoRender(successFunc);
 }
@@ -131,19 +133,22 @@ var izendaInitReportPartDemo = function () {
             token: data.token
         };
 
-        // You can add report parts after creating reports using the context below 
+        // You can add report parts after creating reports using the context below
         // Add the report part ID's in the <add your report part id here> area
+        // Please update the report part id with one created in your environment.
+        // Updated ID not to show the report part instead of loading icon
+        // Updated report part id's corresponds to QA DM1 env.
         IzendaSynergy.setCurrentUserContext(currentUserContext);
         IzendaSynergy.renderReportPart(document.getElementById('izenda-report-part1'), {
-            "id": "[ID here]",
+            "id": "73cb2fd9-c0fd-457f-b5d7-7304f08f91f9",
         });
 
         IzendaSynergy.renderReportPart(document.getElementById('izenda-report-part2'), {
-            "id": "[ID here]",
+            "id": "b3e54979-375f-4dc8-9c05-d61850facd95",
         });
- 
+
         IzendaSynergy.renderReportPart(document.getElementById('izenda-report-part3'), {
-            "id": "[ID here]"
+            "id": "b3e54979-375f-4dc8-9c05-d61850facd95"
         });
     }
     this.DoRender(successFunc);
@@ -189,7 +194,9 @@ var izendaInitDashboardViewer = function (dashboardId, filters) {
             token: data.token
         };
         IzendaSynergy.setCurrentUserContext(currentUserContext);
-        IzendaSynergy.renderDashboardViewerPage(document.getElementById('izenda-root'), dashboardId, filters);
+        var izendaRoot = document.getElementById('izenda-root');
+        IzendaSynergy.unmountComponent(izendaRoot);
+        IzendaSynergy.render(izendaRoot);
     }
 
     this.DoRender(successFunc);
@@ -218,7 +225,9 @@ var izendaInitNewDashboard = function () {
         };
 
         IzendaSynergy.setCurrentUserContext(currentUserContext);
-        IzendaSynergy.renderNewDashboardPage(document.getElementById('izenda-root'));
+        var izendaRoot = document.getElementById('izenda-root');
+        IzendaSynergy.unmountComponent(izendaRoot);
+        IzendaSynergy.renderNewDashboardPage(izendaRoot);
     }
 
     this.DoRender(successFunc);
@@ -251,6 +260,18 @@ var izendaInitReportPartExportViewer = function (reportPartId, token) {
         useQueryParam: true,
         useHash: false
     });
+};
+
+var izendaInitMigrationManager = function () {
+    function successFunc(data, status) {
+        var currentUserContext = {
+            token: data.token
+        };
+
+        IzendaSynergy.setCurrentUserContext(currentUserContext);
+        IzendaSynergy.renderMigrationManagerPage(document.getElementById('izenda-root'));
+    }
+    this.DoRender(successFunc);
 };
 
 var izendaInitRenderExportManagerPage = function () {

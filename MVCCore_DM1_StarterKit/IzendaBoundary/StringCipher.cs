@@ -13,10 +13,6 @@ namespace MVCCoreStarterKit.IzendaBoundary
         private const string InitializationVector = "ALDAOQJkdak10314";
         #endregion
 
-        #region Variables
-        private static readonly AesCryptoServiceProvider Crypto = new AesCryptoServiceProvider();
-        #endregion
-
         #region Methods
         public static string Encrypt(string raw, string key)
         {
@@ -26,9 +22,12 @@ namespace MVCCoreStarterKit.IzendaBoundary
             var ivBytes = Encoding.ASCII.GetBytes(InitializationVector);
 
             byte[] inBlock = Encoding.UTF8.GetBytes(raw);
-            ICryptoTransform xfrm = Crypto.CreateEncryptor(keyBytes, ivBytes);
-            byte[] outBlock = xfrm.TransformFinalBlock(inBlock, 0, inBlock.Length);
-            return Convert.ToBase64String(outBlock);
+            using (var crypto = Aes.Create())
+            using (ICryptoTransform xfrm = crypto.CreateEncryptor(keyBytes, ivBytes))
+            {
+                byte[] outBlock = xfrm.TransformFinalBlock(inBlock, 0, inBlock.Length);
+                return Convert.ToBase64String(outBlock);
+            }
         }
 
         public static string Decrypt(string encrypted, string key)
@@ -39,10 +38,12 @@ namespace MVCCoreStarterKit.IzendaBoundary
             var ivBytes = Encoding.ASCII.GetBytes(InitializationVector);
 
             byte[] inBytes = Convert.FromBase64String(encrypted);
-            ICryptoTransform xfrm = Crypto.CreateDecryptor(keyBytes, ivBytes);
-            byte[] outBlock = xfrm.TransformFinalBlock(inBytes, 0, inBytes.Length);
-
-            return Encoding.UTF8.GetString(outBlock);
+            using (var crypto = Aes.Create())
+            using (ICryptoTransform xfrm = crypto.CreateDecryptor(keyBytes, ivBytes))
+            {
+                byte[] outBlock = xfrm.TransformFinalBlock(inBytes, 0, inBytes.Length);
+                return Encoding.UTF8.GetString(outBlock);
+            }
         }
 
         private static void EnsureKeyLength(string key)

@@ -1,9 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp2.2</TargetFrameworks>
+    <TargetFramework>net10.0</TargetFramework>
     <UserSecretsId>aspnet-MVCCoreStarterKit-D8F50BF2-7640-4165-9F4E-BD414DD7DE71</UserSecretsId>
-    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,10 +32,7 @@
     <None Remove="wwwroot\css\Content\**" />
   </ItemGroup>
   
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.2' ">
-    <PackageReference Include="Microsoft.AspNetCore.App" />
-  </ItemGroup>
-  
+
   <ItemGroup>
     <Compile Remove="Controllers\UserController.cs" />
     <Compile Remove="IzendaConfig.cs" />
@@ -52,21 +48,21 @@
   <ItemGroup>
     <PackageReference Include="Dapper" Version="1.60.6" />
     <PackageReference Include="log4net" Version="2.0.8" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="10.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="Quartz" Version="3.0.7" />
-    <PackageReference Include="System.ComponentModel.Composition" Version="4.5.0" />
-    <PackageReference Include="System.Composition" Version="1.0.31" />
-    <PackageReference Include="System.Composition.Hosting" Version="1.0.31" />
-    <PackageReference Include="System.DirectoryServices.AccountManagement" Version="4.7.0" />
-    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
-    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Owin" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.2.0" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="10.0.9" />
+    <PackageReference Include="System.Composition" Version="10.0.9" />
+    <PackageReference Include="System.Composition.Hosting" Version="10.0.9" />
+    <PackageReference Include="System.DirectoryServices.AccountManagement" Version="10.0.9" />
+    <PackageReference Include="System.Drawing.Common" Version="10.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Owin" Version="10.0.9" />
     <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="2.2.10" />
     <PackageReference Include="Nancy" Version="2.0.0" />
-    <PackageReference Include="System.Composition.TypedParts" Version="1.0.31" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+    <PackageReference Include="System.Composition.TypedParts" Version="10.0.9" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="10.0.2" />
   </ItemGroup>
 
   <ItemGroup>

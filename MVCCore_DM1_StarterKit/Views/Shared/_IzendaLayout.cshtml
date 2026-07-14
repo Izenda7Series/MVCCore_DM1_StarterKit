@@ -21,22 +21,24 @@
         @RenderBody()
     </div>
 
-    <script src="~/js/jquery-1.10.2.min.js"></script>
+    <script src="~/js/jquery-3.7.1.min.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/alertify.js"></script>
-    <script src="~/js/izenda/izenda_common.js"></script>
-    <script src="~/js/izenda/izenda_locales.js"></script>
     <script src="~/js/izenda/izenda_vendors.js"></script>
+    <!--<script src="~/js/izenda/izenda_config.js"></script>-->
+    <script src="~/js/izenda/izenda_locales.js"></script>
     <script src="~/js/izenda/izenda_ui.js"></script>
     <script src="~/js/izenda.integrate.js"></script>
     <script src="~/js/izenda.utils.js"></script>
     <script src="~/js/izenda_visualizations.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            DoIzendaConfig();
-            $('[data-toggle="tooltip"]').tooltip();
-            $('[data-toggle="dropdown"]').dropdown();
+            if (document.getElementById('izenda-root')) {
+                DoIzendaConfig();
+            }
+            var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            var tooltipList = Array.from(tooltipTriggerList).map(function (el) { return new bootstrap.Tooltip(el); });
             $("#reportPartLoader").hide();
             $("#reportPartLoaderText").hide();
         });

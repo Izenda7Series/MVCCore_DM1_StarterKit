@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.Extensions.DependencyInjection;
 using MVCCoreStarterKit.Areas.Identity.Model;
 using MVCCoreStarterKit.Data;
@@ -19,7 +18,7 @@ namespace MVCCoreStarterKit.Areas.Identity
                 services.AddScoped<ApplicationSignInManager, ApplicationSignInManager>();
                 services.AddScoped<ApplicationRoleManager, ApplicationRoleManager>();
                 services.AddIdentity<IzendaUser, IdentityRole>()
-                    .AddDefaultUI(UIFramework.Bootstrap4)
+                    .AddDefaultUI()
                     .AddEntityFrameworkStores<ApplicationDbContext>();
 
                 services.AddScoped<IUserClaimsPrincipalFactory<IzendaUser>, ApplicationUserClaimsPrincipalFactory>();

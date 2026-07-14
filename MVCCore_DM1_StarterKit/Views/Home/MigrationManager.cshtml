@@ -1,16 +1,14 @@
-﻿@{
-    ViewBag.Title = "Reports";
+@{
+    ViewBag.Title = "Migration Manager";
     ViewBag.LoadIzendaScripts = true;
 }
 
-@*@section title{ Izenda }*@
-@*@section customHeader{}*@
 @section scripts
     {
-
     <script type="text/javascript">
         $(document).ready(function () {
-            izendaInitReport();
+
+            izendaInitMigrationManager();
         });
     </script>
 }

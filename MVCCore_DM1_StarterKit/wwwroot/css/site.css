@@ -1,13 +1,44 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+/* Bootstrap 5 removed .jumbotron — restore styling to match Bootstrap 4 appearance */
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: 0.3rem;
+}
+
+@media (min-width: 576px) {
+    .jumbotron {
+        padding: 4rem 2rem;
+    }
+}
+
 html {
     font-size: 100%;
 }
 
+/* Normalize navbar brand to match nav-link appearance (Bootstrap 5 upsizes navbar-brand by default) */
+.navbar .navbar-brand {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Remove underline on hover/focus for all navbar links */
+.navbar a:hover,
+.navbar a:focus {
+    text-decoration: none;
+}
+
+/* Restore Bootstrap 4 behaviour: form labels are bold */
+.form-label {
+    font-weight: 600;
+}
+
 body {
     height: 100vh;
-    padding-top: 50px !important;
+    padding-top: 56px !important;
     padding-bottom: 40px !important;
 }
 

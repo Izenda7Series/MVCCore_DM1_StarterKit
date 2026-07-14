@@ -49,23 +49,24 @@ namespace MVCCoreStarterKit.IzendaBoundary
             IConfigurationRoot configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
 
             var rsaPrivateKey = configuration.GetValue<string>("AppSettings:Settings:rsaPrivateKey");
-            var cipher = new System.Security.Cryptography.RSACryptoServiceProvider();
 
             //Decrypt using RSA private key in PEM format.
             var rsaParam = ConvertPemToXmlFormat(rsaPrivateKey);
-            cipher.ImportParameters(rsaParam);
-            //End
+            using (var cipher = System.Security.Cryptography.RSA.Create())
+            {
+                cipher.ImportParameters(rsaParam);
 
-            var resultBytes = Convert.FromBase64String(encryptedMessage);
-            var decryptedBytes = cipher.Decrypt(resultBytes, false);
-            var decryptedData = System.Text.Encoding.UTF8.GetString(decryptedBytes);
+                var resultBytes = Convert.FromBase64String(encryptedMessage);
+                var decryptedBytes = cipher.Decrypt(resultBytes, System.Security.Cryptography.RSAEncryptionPadding.Pkcs1);
+                var decryptedData = System.Text.Encoding.UTF8.GetString(decryptedBytes);
 
-            var result = Newtonsoft.Json.JsonConvert.DeserializeObject<UserInfo>(decryptedData);
+                var result = Newtonsoft.Json.JsonConvert.DeserializeObject<UserInfo>(decryptedData);
 
-            return result;
+                return result;
+            }
         }
 
-        //Support to convert RSA key from PEM to XML, currently RSACryptoServiceProvider only support XML format.
+        //Support to convert RSA private key from PEM format to RSAParameters.
         private static System.Security.Cryptography.RSAParameters ConvertPemToXmlFormat(string privateKey)
         {
             var privateKeyBits = Convert.FromBase64String(privateKey);
