@@ -10,15 +10,18 @@ This Starterkit showcases how to embed the front-end of Izenda into a MVC Core a
 
  :warning: The MVC Core Kit is designed for demonstration purposes and should not be used as an “as-is” fully-integrated solution. You can use the kit for reference or a baseline but ensure that security and customization meet the standards of your company.
  
- :warning: This kit is based on .NET Core 2.2 version.
+ :warning: This kit is based on .NET 10 version.
 
 ### Deploying the standalone API and Izenda Configuration Database
 
-- Download and Install the <a href="https://dotnet.microsoft.com/download/dotnet-core/2.2">.Net Core Windows hosting bundle</a>. 
+- Download and Install the <a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0">.Net 
+ Windows hosting bundle</a>. 
 
--   Visit <a href="https://downloads.izenda.com">Izenda resource site</a> and download / deploy the Izenda .Net Core API to IIS. You need to create an API folder in your IIS and paste all Izenda API contents into that folder.
+-   Visit <a href="https://app.izenda.com">Izenda resource site</a> and download / deploy the Izenda .Net API to IIS. You need to create an API folder in your IIS and paste all Izenda API contents into that folder.
 
-- Run the mvc5core_izenda.sql under the DBScript folder to create a database named 'mvc5core_izenda' (This is the database for the Izenda configuration. It contains report definitions, dashboards,etc.). You may use any name of your choosing, just be sure to modify the script to USE the new database name.
+- Create database for this application. (Say mvc5core_izenda)
+
+- Run the mvc5core_izenda.sql in context of created database under the DBScript folder to create all necessary database object (This is the database for the Izenda configuration. It contains report definitions, dashboards,etc.). You may use any name of your choosing, just be sure to modify the script to USE the new database name.
 
 - Create a izendadb.config with inserting following line : {"ServerTypeId":"572bd576-8c92-4901-ab2a-b16e38144813","ServerTypeName":"[MSSQL] SQLServer","ConnectionString":"[YOUR CONNECTION STRING]","ConnectionId":"00000000-0000-0000-0000-000000000000"} You need to update your ConnectionString. If the connection string contains a ‘/’, ensure that you escape it ‘//’ The ServerTypeId and ServerTypeName can be updated too based on your database type. For more information, please refer to <a href="https://www.izenda.com/docs/ref/api_systemdb_and_license.html#get-databasesetup-supporteddatabasetype">this</a>.
 
@@ -48,11 +51,11 @@ appsettings.json
 
 - Update the connection string to point to your mcv5core database.
 
-Create a izenda folder under the js folder. Download the Izenda embedded UI from <a href="https://downloads.izenda.com">Izenda resource site</a>, and copy/store the files into the js/izenda folder.
+Create a izenda folder under the js folder. Download the Izenda embedded UI from <a href="https://app.izenda.com">Izenda resource site</a>, and copy/store the files into the js/izenda folder.
 
 ### Update RSA Keys
 
-- Use Izenda's RSA Key Generator Utility Located at http://downloads.izenda.com/Utilities/Izenda.Synergy.RSATool.zip
+- Use Izenda's RSA Key Generator Utility Located at https://github.com/Izenda7Series/RSATool.git
 
   1. AuthRSAPublicKey value in the IzendaSystemSettings table of the Izenda database (note: only use keysize < 1024 to generate because max-length for this field in database is 256) . This value is your public key and should be in XML format.
   2. And rsaPrivateKey value in appsettings file of the MVC Core Kit. This value is your private key and should be in PEM format.
